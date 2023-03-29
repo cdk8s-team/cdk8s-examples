@@ -14,6 +14,10 @@
       "type": "build"
     },
     {
+      "name": "lerna",
+      "type": "build"
+    },
+    {
       "name": "npm-check-updates",
       "version": "^16",
       "type": "build"

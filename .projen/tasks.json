@@ -101,15 +101,7 @@
     },
     "package": {
       "name": "package",
-      "description": "Creates the distribution package",
-      "steps": [
-        {
-          "exec": "mkdir -p dist/js"
-        },
-        {
-          "exec": "mv $(npm pack) dist/js/"
-        }
-      ]
+      "description": "Creates the distribution package"
     },
     "post-compile": {
       "name": "post-compile",
@@ -128,17 +120,7 @@
       "description": "Run tests",
       "steps": [
         {
-          "exec": "jest --passWithNoTests --coverageProvider=v8 --updateSnapshot",
-          "receiveArgs": true
-        }
-      ]
-    },
-    "test:watch": {
-      "name": "test:watch",
-      "description": "Run jest in watch mode",
-      "steps": [
-        {
-          "exec": "jest --watch"
+          "exec": "lerna run test:update"
         }
       ]
     },
