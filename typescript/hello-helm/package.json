@@ -8,7 +8,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "synth": "cdk8s synth",
+    "synth": "helm repo add bitnami https://charts.bitnami.com/bitnami && cdk8s synth",
     "test": "jest",
     "test:update": "jest -u"
   },
