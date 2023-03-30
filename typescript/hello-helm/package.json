@@ -6,9 +6,9 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "build": "tsc",
+    "build": "helm repo add bitnami https://charts.bitnami.com/bitnami && tsc",
     "watch": "tsc -w",
-    "synth": "helm repo add bitnami https://charts.bitnami.com/bitnami && cdk8s synth",
+    "synth": "cdk8s synth",
     "test": "jest",
     "test:update": "jest -u"
   },

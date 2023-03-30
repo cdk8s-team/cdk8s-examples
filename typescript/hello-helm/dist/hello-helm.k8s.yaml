@@ -21,7 +21,7 @@ metadata:
   name: hello-helm-redis-c87c6cc5
   namespace: default
 data:
-  redis-password: NUxnUjBsQTVIZQ==
+  redis-password: TzR4cjNMeVVmMw==
 type: Opaque
 ---
 apiVersion: v1
@@ -680,7 +680,7 @@ spec:
         checksum/configmap: b081be98e937a6e18f6a03cb91610688070f2c6f133806c008b614a1cb9b47a8
         checksum/health: 21fa0201ec350d1b3381c9d6a5968a6fb2838a8f9d00507af018213b9c901669
         checksum/scripts: a0687731a4a6baab4645d90042a612a5fffb11a391a5aaecf55feb6b1b5bee8d
-        checksum/secret: 38896818aea3f5c44f723dafd22037083e6c0da4cef824dc3883f4349cff9fe2
+        checksum/secret: 89eb63a9e7cb7b01e822347bcae62a0b80d88719b51442b5e2725a15313d449e
       labels:
         app.kubernetes.io/component: node
         app.kubernetes.io/instance: hello-helm-redis-c87c6cc5
