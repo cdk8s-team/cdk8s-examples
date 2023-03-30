@@ -2,11 +2,16 @@
 from constructs import Construct
 from cdk8s import App, Chart, Include
 
+
 class Dashboard(Chart):
     def __init__(self, scope: Construct, id: str):
-      super().__init__(scope, id)
+        super().__init__(scope, id)
 
-      Include(self, 'dashboard', url="https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml")
+        Include(
+            self,
+            "dashboard",
+            url="https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml",
+        )
 
 
 app = App()
