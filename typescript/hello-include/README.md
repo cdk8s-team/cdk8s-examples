@@ -1,6 +1,6 @@
-# Hello CRD
+# Hello Include
 
-This example application shows how to use cdk8s to define [custom resources](https://cdk8s.io/docs/latest/cli/import/#crds).
+This example application shows how to use the [`Include`](https://cdk8s.io/docs/latest/basics/include/) construct.
 
 #### 1) Synthesize the Kubernetes manifests
 
