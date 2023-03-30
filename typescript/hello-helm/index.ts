@@ -7,10 +7,14 @@ export class HelloHelm extends Chart {
     
     new Helm(this, 'redis', {
       chart: 'bitnami/redis',
+      version: '17.9.2',
       values: {
+        auth: {
+          password: 'sdweqweq'
+        },
         sentinel: {
           enabled: true
-        }
+        },
       }
     });
   }

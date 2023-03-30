@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "compile": "tsc",
-    "build": "npm run compile && npm run test:update",
+    "build": "npm run compile && npm run test:update && npm run synth",
     "watch": "tsc -w",
     "synth": "cdk8s synth",
     "test": "jest",

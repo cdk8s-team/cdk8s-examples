@@ -20,7 +20,7 @@ exports[`snapshot 1`] = `
   {
     "apiVersion": "v1",
     "data": {
-      "redis-password": "MVJtQ3lUZ1d0Sg==",
+      "redis-password": "c2R3ZXF3ZXE=",
     },
     "kind": "Secret",
     "metadata": {
@@ -716,7 +716,7 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
             "checksum/configmap": "b081be98e937a6e18f6a03cb91610688070f2c6f133806c008b614a1cb9b47a8",
             "checksum/health": "21fa0201ec350d1b3381c9d6a5968a6fb2838a8f9d00507af018213b9c901669",
             "checksum/scripts": "a0687731a4a6baab4645d90042a612a5fffb11a391a5aaecf55feb6b1b5bee8d",
-            "checksum/secret": "818081c4f41b767cc7dfe5e3447b770076aa1b374244c2867ed6b3939064b44a",
+            "checksum/secret": "c44f13c73629387ab4229d222072fb29512f493eaf16a67062bdf1564a8027ea",
           },
           "labels": {
             "app.kubernetes.io/component": "node",

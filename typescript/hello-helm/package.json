@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "compile": "tsc",
-    "build": "npm run compile && npm run test:update",
+    "build": "npm run compile && npm run test:update && npm run synth",
     "watch": "tsc -w",
     "helm:add": "helm repo add bitnami https://charts.bitnami.com/bitnami",
     "synth": "npm run helm:add && cdk8s synth",
