@@ -19,11 +19,15 @@ project.package.addField('workspaces', {
   ]
 });
 
-// override the default test task to run test across the repo
+// override the default tasks to run across the repo
 project.testTask.reset('lerna run test:update');
 project.tasks.removeTask('test:watch');
 project.tasks.removeTask('test:update');
 project.tasks.removeTask('test:compile');
+
+project.buildTask._locked = false
+project.buildTask.reset('lerna run build');
+project.buildTask._locked = true
 
 // no package task is needed
 project.packageTask.reset();

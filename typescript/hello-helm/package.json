@@ -6,11 +6,13 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "build": "helm repo add bitnami https://charts.bitnami.com/bitnami && tsc",
+    "compile": "tsc",
+    "build": "npm run compile && npm run test:update",
     "watch": "tsc -w",
-    "synth": "cdk8s synth",
-    "test": "jest",
-    "test:update": "jest -u"
+    "helm:add": "helm repo add bitnami https://charts.bitnami.com/bitnami",
+    "synth": "npm run helm:add && cdk8s synth",
+    "test": "npm run helm:add && jest",
+    "test:update": "npm run helm:add && jest -u"
   },
   "dependencies": {
     "cdk8s": "^2.7.48",

@@ -6,7 +6,8 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "build": "tsc",
+    "compile": "tsc",
+    "build": "npm run compile && npm run test:update",
     "watch": "tsc -w",
     "synth": "cdk8s synth",
     "test": "jest",
