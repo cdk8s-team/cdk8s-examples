@@ -1,5 +1,5 @@
 {
-  "name": "certificate",
+  "name": "web-cache-db",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "cdk8s": "^2.7.48",
-    "constructs": "^10.1.295"
+    "constructs": "^10.1.295",
+    "cdk8s-plus-26": "^2.2.16"
   },
   "devDependencies": {
     "cdk8s-cli": "^2.2.5",

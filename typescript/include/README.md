@@ -1,11 +1,7 @@
 # Include
 
-This example application shows how to use the [`Include`](https://cdk8s.io/docs/latest/basics/include/) construct.
+Example usage of the [`Include`](https://cdk8s.io/docs/latest/basics/include/) construct and to define it within a cdk8s application:
 
-#### 1) Synthesize the Kubernetes manifests
-
-```console
-$ yarn synth
-```
-
-You can also look at the generated manifests [here](./dist/).
+- `App` (Core)
+- `Chart` (Core)
+- `Include` (Core)

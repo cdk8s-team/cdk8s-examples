@@ -1,13 +1,13 @@
 import { Construct } from 'constructs';
 import { App, Chart } from 'cdk8s';
 
-import { Certificate } from './imports/cert-manager.io';
+import * as cert from './imports/cert-manager.io';
 
-export class Crd extends Chart {
+export class Certificate extends Chart {
   constructor(scope: Construct, id: string) {
     super(scope, id);
 
-    new Certificate(this, 'Certificate', {
+    new cert.Certificate(this, 'Certificate', {
       spec: {
         secretName: 'secret',
         issuerRef: {
@@ -20,5 +20,5 @@ export class Crd extends Chart {
 }
 
 const app = new App();
-new Crd(app, 'crd');
+new Certificate(app, 'certificate');
 app.synth();

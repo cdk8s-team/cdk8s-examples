@@ -1,11 +1,7 @@
 # CRD
 
-This example application shows how to use cdk8s to define [custom resources](https://cdk8s.io/docs/latest/cli/import/#crds).
+Example usage of [`Custom Resources Definitions`](https://cdk8s.io/docs/latest/cli/import/#crds) construct and to define them within a cdk8s application:
 
-#### 1) Synthesize the Kubernetes manifests
-
-```console
-$ yarn synth
-```
-
-You can also look at the generated manifests [here](./dist/).
+- `App` (Core)
+- `Chart` (Core)
+- `Certificate` (CRD)

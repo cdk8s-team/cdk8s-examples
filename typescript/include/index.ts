@@ -1,7 +1,7 @@
 import { Construct } from 'constructs';
 import { App, Chart, Include } from 'cdk8s';
 
-export class HelloInclude extends Chart {
+export class Dashboard extends Chart {
   constructor(scope: Construct, id: string) {
     super(scope, id);
 
@@ -13,5 +13,5 @@ export class HelloInclude extends Chart {
 }
 
 const app = new App();
-new HelloInclude(app, 'include');
+new Dashboard(app, 'dashboard');
 app.synth();

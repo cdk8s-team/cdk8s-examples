@@ -3,7 +3,7 @@ import { Testing } from 'cdk8s';
 
 test('snapshot', () => {
   const app = Testing.app();
-  const chart = new Redis(app, 'helm');
+  const chart = new Redis(app, 'redis');
 
   expect(Testing.synth(chart)).toMatchSnapshot();
 });

@@ -1,11 +1,7 @@
 # Composition
 
-This example shows how to compose multiple Kubernetes resources into a custom construct.
+Example of how to compose multiple Kubernetes resources into a custom construct within a cdk8s application:
 
-#### 1) Synthesize the Kubernetes manifests
-
-```console
-$ yarn synth
-```
-
-You can also look at the generated manifests [here](./dist/).
+- `App` (Core)
+- `Chart` (Core)
+- `WebService` (Composed)

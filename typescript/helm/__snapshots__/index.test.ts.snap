@@ -8,12 +8,12 @@ exports[`snapshot 1`] = `
     "kind": "ServiceAccount",
     "metadata": {
       "labels": {
-        "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+        "app.kubernetes.io/instance": "redis-c82bfc2f",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "redis",
         "helm.sh/chart": "redis-17.9.2",
       },
-      "name": "helm-redis-c82a01e7",
+      "name": "redis-c82bfc2f",
       "namespace": "default",
     },
   },
@@ -25,12 +25,12 @@ exports[`snapshot 1`] = `
     "kind": "Secret",
     "metadata": {
       "labels": {
-        "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+        "app.kubernetes.io/instance": "redis-c82bfc2f",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "redis",
         "helm.sh/chart": "redis-17.9.2",
       },
-      "name": "helm-redis-c82a01e7",
+      "name": "redis-c82bfc2f",
       "namespace": "default",
     },
     "type": "Opaque",
@@ -56,7 +56,7 @@ rename-command FLUSHALL ""
 # End of replica configuration",
       "sentinel.conf": "dir "/tmp"
 port 26379
-sentinel monitor mymaster helm-redis-c82a01e7-node-0.helm-redis-c82a01e7-headless.default.svc.cluster.local 6379 2
+sentinel monitor mymaster redis-c82bfc2f-node-0.redis-c82bfc2f-headless.default.svc.cluster.local 6379 2
 sentinel down-after-milliseconds mymaster 60000
 sentinel failover-timeout mymaster 180000
 sentinel parallel-syncs mymaster 1
@@ -66,12 +66,12 @@ sentinel parallel-syncs mymaster 1
     "kind": "ConfigMap",
     "metadata": {
       "labels": {
-        "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+        "app.kubernetes.io/instance": "redis-c82bfc2f",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "redis",
         "helm.sh/chart": "redis-17.9.2",
       },
-      "name": "helm-redis-c82a01e7-configuration",
+      "name": "redis-c82bfc2f-configuration",
       "namespace": "default",
     },
   },
@@ -202,12 +202,12 @@ fi",
     "kind": "ConfigMap",
     "metadata": {
       "labels": {
-        "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+        "app.kubernetes.io/instance": "redis-c82bfc2f",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "redis",
         "helm.sh/chart": "redis-17.9.2",
       },
-      "name": "helm-redis-c82a01e7-health",
+      "name": "redis-c82bfc2f-health",
       "namespace": "default",
     },
   },
@@ -231,8 +231,8 @@ is_master() {
     [[ "$REDIS_ROLE" == "master" ]]
 }
 
-HEADLESS_SERVICE="helm-redis-c82a01e7-headless.default.svc.cluster.local"
-SENTINEL_SERVICE_ENV_NAME=HELM_REDIS_C82A01E7_SERVICE_PORT_TCP_SENTINEL
+HEADLESS_SERVICE="redis-c82bfc2f-headless.default.svc.cluster.local"
+SENTINEL_SERVICE_ENV_NAME=REDIS_C82BFC2F_SERVICE_PORT_TCP_SENTINEL
 SENTINEL_SERVICE_PORT=\${!SENTINEL_SERVICE_ENV_NAME}
 
 get_full_hostname() {
@@ -254,7 +254,7 @@ sentinel_failover_finished() {
     [[ "$REDIS_MASTER_HOST" != "$(get_full_hostname $HOSTNAME)" ]]
 }
 
-REDIS_SERVICE="helm-redis-c82a01e7.default.svc.cluster.local"
+REDIS_SERVICE="redis-c82bfc2f.default.svc.cluster.local"
 
 # redis-cli automatically consumes credentials from the REDISCLI_AUTH variable
 [[ -n "$REDIS_PASSWORD" ]] && export REDISCLI_AUTH="$REDIS_PASSWORD"
@@ -280,8 +280,8 @@ fi
 . /opt/bitnami/scripts/libvalidations.sh
 . /opt/bitnami/scripts/libos.sh
 
-HEADLESS_SERVICE="helm-redis-c82a01e7-headless.default.svc.cluster.local"
-SENTINEL_SERVICE_ENV_NAME=HELM_REDIS_C82A01E7_SERVICE_PORT_TCP_SENTINEL
+HEADLESS_SERVICE="redis-c82bfc2f-headless.default.svc.cluster.local"
+SENTINEL_SERVICE_ENV_NAME=REDIS_C82BFC2F_SERVICE_PORT_TCP_SENTINEL
 SENTINEL_SERVICE_PORT=\${!SENTINEL_SERVICE_ENV_NAME}
 
 get_full_hostname() {
@@ -303,7 +303,7 @@ sentinel_failover_finished() {
   [[ "$REDIS_MASTER_HOST" != "$(get_full_hostname $HOSTNAME)" ]]
 }
 
-REDIS_SERVICE="helm-redis-c82a01e7.default.svc.cluster.local"
+REDIS_SERVICE="redis-c82bfc2f.default.svc.cluster.local"
 
 # redis-cli automatically consumes credentials from the REDISCLI_AUTH variable
 [[ -n "$REDIS_PASSWORD" ]] && export REDISCLI_AUTH="$REDIS_PASSWORD"
@@ -357,15 +357,15 @@ get_full_hostname() {
 
 REDISPORT=$(get_port "$HOSTNAME" "REDIS")
 
-HEADLESS_SERVICE="helm-redis-c82a01e7-headless.default.svc.cluster.local"
+HEADLESS_SERVICE="redis-c82bfc2f-headless.default.svc.cluster.local"
 
 if [ -n "$REDIS_EXTERNAL_MASTER_HOST" ]; then
     REDIS_SERVICE="$REDIS_EXTERNAL_MASTER_HOST"
 else
-    REDIS_SERVICE="helm-redis-c82a01e7.default.svc.cluster.local"
+    REDIS_SERVICE="redis-c82bfc2f.default.svc.cluster.local"
 fi
 
-SENTINEL_SERVICE_PORT=$(get_port "helm-redis-c82a01e7" "TCP_SENTINEL")
+SENTINEL_SERVICE_PORT=$(get_port "redis-c82bfc2f" "TCP_SENTINEL")
 validate_quorum() {
     if is_boolean_yes "$REDIS_TLS_ENABLED"; then
         quorum_info_command="REDISCLI_AUTH="\\$REDIS_PASSWORD" redis-cli -h $REDIS_SERVICE -p $SENTINEL_SERVICE_PORT --tls --cert \${REDIS_TLS_CERT_FILE} --key \${REDIS_TLS_KEY_FILE} --cacert \${REDIS_TLS_CA_FILE} sentinel master mymaster"
@@ -470,8 +470,8 @@ exec redis-server "\${ARGS[@]}"
 . /opt/bitnami/scripts/libvalidations.sh
 . /opt/bitnami/scripts/libfile.sh
 
-HEADLESS_SERVICE="helm-redis-c82a01e7-headless.default.svc.cluster.local"
-REDIS_SERVICE="helm-redis-c82a01e7.default.svc.cluster.local"
+HEADLESS_SERVICE="redis-c82bfc2f-headless.default.svc.cluster.local"
+REDIS_SERVICE="redis-c82bfc2f.default.svc.cluster.local"
 
 get_port() {
     hostname="$1"
@@ -502,7 +502,7 @@ get_full_hostname() {
 
 SERVPORT=$(get_port "$HOSTNAME" "SENTINEL")
 REDISPORT=$(get_port "$HOSTNAME" "REDIS")
-SENTINEL_SERVICE_PORT=$(get_port "helm-redis-c82a01e7" "TCP_SENTINEL")
+SENTINEL_SERVICE_PORT=$(get_port "redis-c82bfc2f" "TCP_SENTINEL")
 
 sentinel_conf_set() {
     local -r key="\${1:?missing key}"
@@ -589,7 +589,7 @@ add_known_replica() {
 
 # Add available hosts on the network as known replicas & sentinels
 for node in $(seq 0 $((3-1))); do
-    hostname="helm-redis-c82a01e7-node-$node"
+    hostname="redis-c82bfc2f-node-$node"
     ip="$(getent hosts "$hostname.$HEADLESS_SERVICE" | awk '{ print $1 }')"
     add_known_sentinel "$hostname" "$ip"
     add_known_replica "$hostname" "$ip"
@@ -606,12 +606,12 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
     "kind": "ConfigMap",
     "metadata": {
       "labels": {
-        "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+        "app.kubernetes.io/instance": "redis-c82bfc2f",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "redis",
         "helm.sh/chart": "redis-17.9.2",
       },
-      "name": "helm-redis-c82a01e7-scripts",
+      "name": "redis-c82bfc2f-scripts",
       "namespace": "default",
     },
   },
@@ -620,12 +620,12 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
     "kind": "Service",
     "metadata": {
       "labels": {
-        "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+        "app.kubernetes.io/instance": "redis-c82bfc2f",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "redis",
         "helm.sh/chart": "redis-17.9.2",
       },
-      "name": "helm-redis-c82a01e7-headless",
+      "name": "redis-c82bfc2f-headless",
       "namespace": "default",
     },
     "spec": {
@@ -644,7 +644,7 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
       ],
       "publishNotReadyAddresses": true,
       "selector": {
-        "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+        "app.kubernetes.io/instance": "redis-c82bfc2f",
         "app.kubernetes.io/name": "redis",
       },
       "type": "ClusterIP",
@@ -656,12 +656,12 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
     "metadata": {
       "labels": {
         "app.kubernetes.io/component": "node",
-        "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+        "app.kubernetes.io/instance": "redis-c82bfc2f",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "redis",
         "helm.sh/chart": "redis-17.9.2",
       },
-      "name": "helm-redis-c82a01e7",
+      "name": "redis-c82bfc2f",
       "namespace": "default",
     },
     "spec": {
@@ -679,7 +679,7 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
       ],
       "selector": {
         "app.kubernetes.io/component": "node",
-        "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+        "app.kubernetes.io/instance": "redis-c82bfc2f",
         "app.kubernetes.io/name": "redis",
       },
       "sessionAffinity": "None",
@@ -692,12 +692,12 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
     "metadata": {
       "labels": {
         "app.kubernetes.io/component": "node",
-        "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+        "app.kubernetes.io/instance": "redis-c82bfc2f",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "redis",
         "helm.sh/chart": "redis-17.9.2",
       },
-      "name": "helm-redis-c82a01e7-node",
+      "name": "redis-c82bfc2f-node",
       "namespace": "default",
     },
     "spec": {
@@ -705,22 +705,22 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
       "selector": {
         "matchLabels": {
           "app.kubernetes.io/component": "node",
-          "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+          "app.kubernetes.io/instance": "redis-c82bfc2f",
           "app.kubernetes.io/name": "redis",
         },
       },
-      "serviceName": "helm-redis-c82a01e7-headless",
+      "serviceName": "redis-c82bfc2f-headless",
       "template": {
         "metadata": {
           "annotations": {
-            "checksum/configmap": "0d8cfa644e59705b21b51fb2a701e12371a63b3b8e22d523e8c1a93232651325",
-            "checksum/health": "cf7d1f42544b598fe7232adea3f9f9845a1e685c9b905b8d2178e132d7f09da5",
-            "checksum/scripts": "cedc532f83cc2cd99ff3a5e8fb35ac5b8eb8b7924e5e25103a62bbb85deebfa2",
-            "checksum/secret": "9a03b85f85609091e486e4d9d9da260dde1cb4cec622041b9cc243cceadc29ea",
+            "checksum/configmap": "66c1c09c3d107fb7481548fabd782370b4470f147772e54cf65a71c54b22eb11",
+            "checksum/health": "a7f772d5e31765c4b5757c7c1f0486a2ba7f6fadb5bb31dadf6d2b6cac26cedb",
+            "checksum/scripts": "2a92ad1a525c05d4e251394e55dc6d94ea9b18200c5f9f10012dc38b24c91eb9",
+            "checksum/secret": "a0e3b9bfd410cc95ab66305a08487fa072523b7ee008eef8f713f8609a52fa80",
           },
           "labels": {
             "app.kubernetes.io/component": "node",
-            "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+            "app.kubernetes.io/instance": "redis-c82bfc2f",
             "app.kubernetes.io/managed-by": "Helm",
             "app.kubernetes.io/name": "redis",
             "helm.sh/chart": "redis-17.9.2",
@@ -735,7 +735,7 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
                     "labelSelector": {
                       "matchLabels": {
                         "app.kubernetes.io/component": "node",
-                        "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+                        "app.kubernetes.io/instance": "redis-c82bfc2f",
                         "app.kubernetes.io/name": "redis",
                       },
                     },
@@ -773,7 +773,7 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
                   "valueFrom": {
                     "secretKeyRef": {
                       "key": "redis-password",
-                      "name": "helm-redis-c82a01e7",
+                      "name": "redis-c82bfc2f",
                     },
                   },
                 },
@@ -782,7 +782,7 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
                   "valueFrom": {
                     "secretKeyRef": {
                       "key": "redis-password",
-                      "name": "helm-redis-c82a01e7",
+                      "name": "redis-c82bfc2f",
                     },
                   },
                 },
@@ -921,7 +921,7 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
                   "valueFrom": {
                     "secretKeyRef": {
                       "key": "redis-password",
-                      "name": "helm-redis-c82a01e7",
+                      "name": "redis-c82bfc2f",
                     },
                   },
                 },
@@ -1030,26 +1030,26 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
           "securityContext": {
             "fsGroup": 1001,
           },
-          "serviceAccountName": "helm-redis-c82a01e7",
+          "serviceAccountName": "redis-c82bfc2f",
           "terminationGracePeriodSeconds": 30,
           "volumes": [
             {
               "configMap": {
                 "defaultMode": 493,
-                "name": "helm-redis-c82a01e7-scripts",
+                "name": "redis-c82bfc2f-scripts",
               },
               "name": "start-scripts",
             },
             {
               "configMap": {
                 "defaultMode": 493,
-                "name": "helm-redis-c82a01e7-health",
+                "name": "redis-c82bfc2f-health",
               },
               "name": "health",
             },
             {
               "configMap": {
-                "name": "helm-redis-c82a01e7-configuration",
+                "name": "redis-c82bfc2f-configuration",
               },
               "name": "config",
             },
@@ -1076,7 +1076,7 @@ exec redis-server /opt/bitnami/redis-sentinel/etc/sentinel.conf --sentinel
           "metadata": {
             "labels": {
               "app.kubernetes.io/component": "node",
-              "app.kubernetes.io/instance": "helm-redis-c82a01e7",
+              "app.kubernetes.io/instance": "redis-c82bfc2f",
               "app.kubernetes.io/name": "redis",
             },
             "name": "redis-data",

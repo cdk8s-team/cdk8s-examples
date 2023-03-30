@@ -1,9 +1,9 @@
-import { Dashboard } from './index';
+import { HttpEcho } from './index';
 import { Testing } from 'cdk8s';
 
 test('snapshot', () => {
   const app = Testing.app();
-  const chart = new Dashboard(app, 'dashboard');
+  const chart = new HttpEcho(app, 'http-echo');
 
   expect(Testing.synth(chart)).toMatchSnapshot();
 });

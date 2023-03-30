@@ -1,0 +1,786 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+[
+  {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "web-cache-db-db-service-c8777995",
+    },
+    "spec": {
+      "clusterIP": "None",
+      "externalIPs": [],
+      "ports": [
+        {
+          "port": 8000,
+          "targetPort": 8000,
+        },
+      ],
+      "selector": {
+        "cdk8s.io/metadata.addr": "web-cache-db-DB-c89da2cb",
+      },
+      "type": "ClusterIP",
+    },
+  },
+  {
+    "apiVersion": "apps/v1",
+    "kind": "StatefulSet",
+    "metadata": {
+      "name": "web-cache-db-db-c8668594",
+    },
+    "spec": {
+      "minReadySeconds": 0,
+      "podManagementPolicy": "OrderedReady",
+      "replicas": 2,
+      "selector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "web-cache-db-DB-c89da2cb",
+        },
+      },
+      "serviceName": "web-cache-db-db-service-c8777995",
+      "template": {
+        "metadata": {
+          "labels": {
+            "cdk8s.io/metadata.addr": "web-cache-db-DB-c89da2cb",
+          },
+        },
+        "spec": {
+          "affinity": {
+            "nodeAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                  {
+                    "matchExpressions": [
+                      {
+                        "key": "optimized",
+                        "operator": "In",
+                        "values": [
+                          "storage",
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+            },
+            "podAntiAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": [
+                {
+                  "labelSelector": {
+                    "matchLabels": {
+                      "cdk8s.io/metadata.addr": "web-cache-db-DB-c89da2cb",
+                    },
+                  },
+                  "topologyKey": "kubernetes.io/hostname",
+                },
+                {
+                  "labelSelector": {
+                    "matchLabels": {
+                      "cdk8s.io/metadata.addr": "web-cache-db-DB-c89da2cb",
+                    },
+                  },
+                  "topologyKey": "topology.kubernetes.io/zone",
+                },
+              ],
+            },
+          },
+          "automountServiceAccountToken": false,
+          "containers": [
+            {
+              "image": "db",
+              "imagePullPolicy": "Always",
+              "name": "main",
+              "ports": [
+                {
+                  "containerPort": 8000,
+                },
+              ],
+              "resources": {
+                "limits": {
+                  "cpu": "1500m",
+                  "memory": "2048Mi",
+                },
+                "requests": {
+                  "cpu": "1000m",
+                  "memory": "512Mi",
+                },
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "privileged": false,
+                "readOnlyRootFilesystem": true,
+                "runAsNonRoot": true,
+              },
+              "startupProbe": {
+                "failureThreshold": 3,
+                "tcpSocket": {
+                  "port": 8000,
+                },
+              },
+            },
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
+          "securityContext": {
+            "fsGroupChangePolicy": "Always",
+            "runAsNonRoot": true,
+          },
+          "setHostnameAsFQDN": false,
+        },
+      },
+      "updateStrategy": {
+        "rollingUpdate": {
+          "partition": 0,
+        },
+        "type": "RollingUpdate",
+      },
+    },
+  },
+  {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "NetworkPolicy",
+    "metadata": {
+      "name": "web-cache-db-db-defaultdenyall-c8da1319",
+    },
+    "spec": {
+      "podSelector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "web-cache-db-DB-c89da2cb",
+        },
+      },
+      "policyTypes": [
+        "Egress",
+        "Ingress",
+      ],
+    },
+  },
+  {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "Role",
+    "metadata": {
+      "name": "rolec86525e0774d77eb60cd0de99fd358d384c391ab8-c867d947",
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "apps",
+        ],
+        "resourceNames": [
+          "web-cache-db-db-c8668594",
+        ],
+        "resources": [
+          "statefulsets",
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch",
+          "create",
+          "update",
+          "patch",
+          "delete",
+          "deletecollection",
+        ],
+      },
+    ],
+  },
+  {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "RoleBinding",
+    "metadata": {
+      "name": "rolebindingc86525e0774d77eb60cd0de99fd358d384-c8bc11b3",
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "Role",
+      "name": "rolec86525e0774d77eb60cd0de99fd358d384c391ab8-c867d947",
+    },
+    "subjects": [
+      {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "Group",
+        "name": "frontoffice",
+      },
+    ],
+  },
+  {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "web-cache-db-cache-c80d6033",
+    },
+    "spec": {
+      "minReadySeconds": 0,
+      "progressDeadlineSeconds": 600,
+      "replicas": 2,
+      "selector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "web-cache-db-Cache-c8f87d6f",
+        },
+      },
+      "strategy": {
+        "rollingUpdate": {
+          "maxSurge": "25%",
+          "maxUnavailable": "25%",
+        },
+        "type": "RollingUpdate",
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "cdk8s.io/metadata.addr": "web-cache-db-Cache-c8f87d6f",
+          },
+        },
+        "spec": {
+          "affinity": {
+            "nodeAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                  {
+                    "matchExpressions": [
+                      {
+                        "key": "optimized",
+                        "operator": "In",
+                        "values": [
+                          "memory",
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+            },
+            "podAntiAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": [
+                {
+                  "labelSelector": {
+                    "matchLabels": {
+                      "cdk8s.io/metadata.addr": "web-cache-db-Cache-c8f87d6f",
+                    },
+                  },
+                  "topologyKey": "kubernetes.io/hostname",
+                },
+                {
+                  "labelSelector": {
+                    "matchLabels": {
+                      "cdk8s.io/metadata.addr": "web-cache-db-Cache-c8f87d6f",
+                    },
+                  },
+                  "topologyKey": "topology.kubernetes.io/zone",
+                },
+              ],
+            },
+          },
+          "automountServiceAccountToken": false,
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "DB_HOST",
+                  "value": "web-cache-db-db-service-c8777995",
+                },
+                {
+                  "name": "DB_PORT",
+                  "value": "8000",
+                },
+              ],
+              "image": "cache",
+              "imagePullPolicy": "Always",
+              "name": "main",
+              "ports": [
+                {
+                  "containerPort": 7000,
+                },
+              ],
+              "resources": {
+                "limits": {
+                  "cpu": "1500m",
+                  "memory": "2048Mi",
+                },
+                "requests": {
+                  "cpu": "1000m",
+                  "memory": "512Mi",
+                },
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "privileged": false,
+                "readOnlyRootFilesystem": true,
+                "runAsNonRoot": true,
+              },
+              "startupProbe": {
+                "failureThreshold": 3,
+                "tcpSocket": {
+                  "port": 7000,
+                },
+              },
+            },
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
+          "securityContext": {
+            "fsGroupChangePolicy": "Always",
+            "runAsNonRoot": true,
+          },
+          "setHostnameAsFQDN": false,
+        },
+      },
+    },
+  },
+  {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "NetworkPolicy",
+    "metadata": {
+      "name": "web-cache-db-cache-defaultdenyall-c802063e",
+    },
+    "spec": {
+      "podSelector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "web-cache-db-Cache-c8f87d6f",
+        },
+      },
+      "policyTypes": [
+        "Egress",
+        "Ingress",
+      ],
+    },
+  },
+  {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "web-cache-db-cache-service-c89c708c",
+    },
+    "spec": {
+      "externalIPs": [],
+      "ports": [
+        {
+          "port": 7000,
+          "targetPort": 7000,
+        },
+      ],
+      "selector": {
+        "cdk8s.io/metadata.addr": "web-cache-db-Cache-c8f87d6f",
+      },
+      "type": "ClusterIP",
+    },
+  },
+  {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "NetworkPolicy",
+    "metadata": {
+      "name": "allowegressc89da2cbceb7c9d75572fb752497ec95bc-c8c00844",
+    },
+    "spec": {
+      "egress": [
+        {
+          "ports": [
+            {
+              "port": 8000,
+              "protocol": "TCP",
+            },
+          ],
+          "to": [
+            {
+              "podSelector": {
+                "matchLabels": {
+                  "cdk8s.io/metadata.addr": "web-cache-db-DB-c89da2cb",
+                },
+              },
+            },
+          ],
+        },
+      ],
+      "podSelector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "web-cache-db-Cache-c8f87d6f",
+        },
+      },
+      "policyTypes": [
+        "Egress",
+      ],
+    },
+  },
+  {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "NetworkPolicy",
+    "metadata": {
+      "name": "allowingressundefinedc89da2cbceb7c9d75572fb75-c80c3aef",
+    },
+    "spec": {
+      "ingress": [
+        {
+          "from": [
+            {
+              "podSelector": {
+                "matchLabels": {
+                  "cdk8s.io/metadata.addr": "web-cache-db-Cache-c8f87d6f",
+                },
+              },
+            },
+          ],
+          "ports": [
+            {
+              "port": 8000,
+              "protocol": "TCP",
+            },
+          ],
+        },
+      ],
+      "podSelector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "web-cache-db-DB-c89da2cb",
+        },
+      },
+      "policyTypes": [
+        "Ingress",
+      ],
+    },
+  },
+  {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "Role",
+    "metadata": {
+      "name": "rolec86525e0774d77eb60cd0de99fd358d384c391ab8-c81dd0ef",
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "apps",
+        ],
+        "resourceNames": [
+          "web-cache-db-cache-c80d6033",
+        ],
+        "resources": [
+          "deployments",
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch",
+          "create",
+          "update",
+          "patch",
+          "delete",
+          "deletecollection",
+        ],
+      },
+    ],
+  },
+  {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "RoleBinding",
+    "metadata": {
+      "name": "rolebindingc86525e0774d77eb60cd0de99fd358d384-c83fd176",
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "Role",
+      "name": "rolec86525e0774d77eb60cd0de99fd358d384c391ab8-c81dd0ef",
+    },
+    "subjects": [
+      {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "Group",
+        "name": "frontoffice",
+      },
+    ],
+  },
+  {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "web-cache-db-web-c81d4f35",
+    },
+    "spec": {
+      "minReadySeconds": 0,
+      "progressDeadlineSeconds": 600,
+      "replicas": 2,
+      "selector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "web-cache-db-Web-c80a671e",
+        },
+      },
+      "strategy": {
+        "rollingUpdate": {
+          "maxSurge": "25%",
+          "maxUnavailable": "25%",
+        },
+        "type": "RollingUpdate",
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "cdk8s.io/metadata.addr": "web-cache-db-Web-c80a671e",
+          },
+        },
+        "spec": {
+          "affinity": {
+            "nodeAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                  {
+                    "matchExpressions": [
+                      {
+                        "key": "optimized",
+                        "operator": "In",
+                        "values": [
+                          "memory",
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+            },
+            "podAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": [
+                {
+                  "labelSelector": {
+                    "matchLabels": {
+                      "cdk8s.io/metadata.addr": "web-cache-db-Cache-c8f87d6f",
+                    },
+                  },
+                  "topologyKey": "kubernetes.io/hostname",
+                },
+              ],
+            },
+            "podAntiAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": [
+                {
+                  "labelSelector": {
+                    "matchLabels": {
+                      "cdk8s.io/metadata.addr": "web-cache-db-Web-c80a671e",
+                    },
+                  },
+                  "topologyKey": "kubernetes.io/hostname",
+                },
+                {
+                  "labelSelector": {
+                    "matchLabels": {
+                      "cdk8s.io/metadata.addr": "web-cache-db-Web-c80a671e",
+                    },
+                  },
+                  "topologyKey": "topology.kubernetes.io/zone",
+                },
+              ],
+            },
+          },
+          "automountServiceAccountToken": false,
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "CACHE_HOST",
+                  "value": "web-cache-db-cache-service-c89c708c",
+                },
+                {
+                  "name": "CACHE_PORT",
+                  "value": "7000",
+                },
+              ],
+              "image": "web",
+              "imagePullPolicy": "Always",
+              "name": "main",
+              "ports": [
+                {
+                  "containerPort": 6000,
+                },
+              ],
+              "resources": {
+                "limits": {
+                  "cpu": "1500m",
+                  "memory": "2048Mi",
+                },
+                "requests": {
+                  "cpu": "1000m",
+                  "memory": "512Mi",
+                },
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "privileged": false,
+                "readOnlyRootFilesystem": true,
+                "runAsNonRoot": true,
+              },
+              "startupProbe": {
+                "failureThreshold": 3,
+                "tcpSocket": {
+                  "port": 6000,
+                },
+              },
+            },
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
+          "securityContext": {
+            "fsGroupChangePolicy": "Always",
+            "runAsNonRoot": true,
+          },
+          "setHostnameAsFQDN": false,
+        },
+      },
+    },
+  },
+  {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "NetworkPolicy",
+    "metadata": {
+      "name": "web-cache-db-web-defaultdenyall-c83b757c",
+    },
+    "spec": {
+      "podSelector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "web-cache-db-Web-c80a671e",
+        },
+      },
+      "policyTypes": [
+        "Egress",
+        "Ingress",
+      ],
+    },
+  },
+  {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "NetworkPolicy",
+    "metadata": {
+      "name": "allowegressc8f87d6f03ebfab41948060e451b8aa714-c8f06af0",
+    },
+    "spec": {
+      "egress": [
+        {
+          "ports": [
+            {
+              "port": 7000,
+              "protocol": "TCP",
+            },
+          ],
+          "to": [
+            {
+              "podSelector": {
+                "matchLabels": {
+                  "cdk8s.io/metadata.addr": "web-cache-db-Cache-c8f87d6f",
+                },
+              },
+            },
+          ],
+        },
+      ],
+      "podSelector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "web-cache-db-Web-c80a671e",
+        },
+      },
+      "policyTypes": [
+        "Egress",
+      ],
+    },
+  },
+  {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "NetworkPolicy",
+    "metadata": {
+      "name": "allowingressundefinedc8f87d6f03ebfab41948060e-c8374d18",
+    },
+    "spec": {
+      "ingress": [
+        {
+          "from": [
+            {
+              "podSelector": {
+                "matchLabels": {
+                  "cdk8s.io/metadata.addr": "web-cache-db-Web-c80a671e",
+                },
+              },
+            },
+          ],
+          "ports": [
+            {
+              "port": 7000,
+              "protocol": "TCP",
+            },
+          ],
+        },
+      ],
+      "podSelector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "web-cache-db-Cache-c8f87d6f",
+        },
+      },
+      "policyTypes": [
+        "Ingress",
+      ],
+    },
+  },
+  {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "Role",
+    "metadata": {
+      "name": "rolec86525e0774d77eb60cd0de99fd358d384c391ab8-c8f42100",
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "apps",
+        ],
+        "resourceNames": [
+          "web-cache-db-web-c81d4f35",
+        ],
+        "resources": [
+          "deployments",
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch",
+          "create",
+          "update",
+          "patch",
+          "delete",
+          "deletecollection",
+        ],
+      },
+    ],
+  },
+  {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "RoleBinding",
+    "metadata": {
+      "name": "rolebindingc86525e0774d77eb60cd0de99fd358d384-c8d24a75",
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "Role",
+      "name": "rolec86525e0774d77eb60cd0de99fd358d384c391ab8-c8f42100",
+    },
+    "subjects": [
+      {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "Group",
+        "name": "frontoffice",
+      },
+    ],
+  },
+  {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "web-cache-db-web-service-c88d0721",
+    },
+    "spec": {
+      "externalIPs": [],
+      "ports": [
+        {
+          "port": 6000,
+          "targetPort": 6000,
+        },
+      ],
+      "selector": {
+        "cdk8s.io/metadata.addr": "web-cache-db-Web-c80a671e",
+      },
+      "type": "LoadBalancer",
+    },
+  },
+]
+`;

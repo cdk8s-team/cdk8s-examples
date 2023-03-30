@@ -21,5 +21,5 @@ export class Redis extends Chart {
 }
 
 const app = new App();
-new Redis(app, 'helm');
+new Redis(app, 'redis');
 app.synth();

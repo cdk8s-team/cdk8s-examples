@@ -1,9 +1,9 @@
-import { Dashboard } from './index';
+import { PodInfo } from './index';
 import { Testing } from 'cdk8s';
 
 test('snapshot', () => {
   const app = Testing.app();
-  const chart = new Dashboard(app, 'dashboard');
+  const chart = new PodInfo(app, 'pod-info');
 
   expect(Testing.synth(chart)).toMatchSnapshot();
 });

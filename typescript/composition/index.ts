@@ -3,7 +3,7 @@ import { App, Chart } from 'cdk8s';
 
 import { WebService } from './web-service';
 
-export class Composition extends Chart {
+export class WebServices extends Chart {
   constructor(scope: Construct, id: string) {
     super(scope, id);
 
@@ -21,5 +21,5 @@ export class Composition extends Chart {
 }
 
 const app = new App();
-new Composition(app, 'composition');
+new WebServices(app, 'web-services');
 app.synth();
