@@ -4,7 +4,7 @@ from cdk8s import App, Chart
 
 from imports import k8s
 
-class MyChart(Chart):
+class Core(Chart):
     def __init__(self, scope: Construct, id: str):
         super().__init__(scope, id)
 
@@ -26,6 +26,6 @@ class MyChart(Chart):
 
 
 app = App()
-MyChart(app, "core")
+Core(app, "core")
 
 app.synth()
