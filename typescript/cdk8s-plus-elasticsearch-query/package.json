@@ -1,5 +1,5 @@
 {
-  "name": "elasticsearch-query-typescript",
+  "name": "cdk8s-plus-elasticsearch-query-typescript",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",

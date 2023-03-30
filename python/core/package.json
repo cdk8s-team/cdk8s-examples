@@ -1,5 +1,5 @@
 {
-  "name": "core-python",
+  "name": "cdk8s-core-python",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",

@@ -1,5 +1,5 @@
 {
-  "name": "certificate-typescript",
+  "name": "cdk8s-helm-typescript",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
@@ -8,7 +8,8 @@
   "scripts": {
     "import": "cdk8s import",
     "build": "npm run import && npm run synth",
-    "synth": "cdk8s synth"
+    "helm:add": "helm repo add bitnami https://charts.bitnami.com/bitnami",
+    "synth": "npm run helm:add && cdk8s synth"
   },
   "dependencies": {
     "cdk8s": "^2.7.48",

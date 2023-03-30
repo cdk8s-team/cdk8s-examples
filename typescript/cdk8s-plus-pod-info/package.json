@@ -1,5 +1,5 @@
 {
-  "name": "pod-info-typescript",
+  "name": "cdk8s-plus-pod-info-typescript",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",

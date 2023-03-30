@@ -1,5 +1,5 @@
 {
-  "name": "core-typescript",
+  "name": "cdk8s-include-typescript",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
