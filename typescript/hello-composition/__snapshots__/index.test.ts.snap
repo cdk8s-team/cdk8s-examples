@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+[
+  {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "hello-k8s-hello-service-c8eb0d8d",
+    },
+    "spec": {
+      "ports": [
+        {
+          "port": 80,
+          "targetPort": 8080,
+        },
+      ],
+      "selector": {
+        "app": "hello-k8s-hello-c84324f6",
+      },
+      "type": "LoadBalancer",
+    },
+  },
+  {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "hello-k8s-hello-deployment-c8a02ea8",
+    },
+    "spec": {
+      "replicas": 2,
+      "selector": {
+        "matchLabels": {
+          "app": "hello-k8s-hello-c84324f6",
+        },
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app": "hello-k8s-hello-c84324f6",
+          },
+        },
+        "spec": {
+          "containers": [
+            {
+              "image": "paulbouwer/hello-kubernetes:1.7",
+              "name": "web",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "hello-k8s-ghost-service-c8ef4fe1",
+    },
+    "spec": {
+      "ports": [
+        {
+          "port": 80,
+          "targetPort": 2368,
+        },
+      ],
+      "selector": {
+        "app": "hello-k8s-ghost-c8e5b471",
+      },
+      "type": "LoadBalancer",
+    },
+  },
+  {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "hello-k8s-ghost-deployment-c85c8033",
+    },
+    "spec": {
+      "replicas": 1,
+      "selector": {
+        "matchLabels": {
+          "app": "hello-k8s-ghost-c8e5b471",
+        },
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app": "hello-k8s-ghost-c8e5b471",
+          },
+        },
+        "spec": {
+          "containers": [
+            {
+              "image": "ghost",
+              "name": "web",
+              "ports": [
+                {
+                  "containerPort": 2368,
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+]
+`;
