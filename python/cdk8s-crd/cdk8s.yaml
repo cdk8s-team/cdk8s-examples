@@ -1,0 +1,5 @@
+language: python
+app: pipenv run python ./main.py
+imports:
+  - k8s@1.26.0
+  - https://raw.githubusercontent.com/cert-manager/cert-manager/master/deploy/crds/crd-certificates.yaml
