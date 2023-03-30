@@ -100,12 +100,12 @@
       "name": "pre-compile",
       "description": "Prepare the project for compilation"
     },
-    "test": {
-      "name": "test",
-      "description": "Run tests",
+    "test:watch": {
+      "name": "test:watch",
+      "description": "Run jest in watch mode",
       "steps": [
         {
-          "exec": "lerna run test:update"
+          "exec": "jest --watch"
         }
       ]
     },

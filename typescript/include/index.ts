@@ -6,7 +6,7 @@ export class Dashboard extends Chart {
     super(scope, id);
 
     new Include(this, 'dashboard', {
-      url: `${__dirname}/dashboard.yaml`
+      url: `https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml`
     });
 
   }
