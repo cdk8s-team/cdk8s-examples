@@ -6,7 +6,7 @@ exports[`snapshot 1`] = `
     "apiVersion": "v1",
     "kind": "Service",
     "metadata": {
-      "name": "hello-service-c8c17160",
+      "name": "hello-k8s-service-c82a8040",
     },
     "spec": {
       "ports": [
@@ -25,7 +25,7 @@ exports[`snapshot 1`] = `
     "apiVersion": "apps/v1",
     "kind": "Deployment",
     "metadata": {
-      "name": "hello-deployment-c8c7fda7",
+      "name": "hello-k8s-deployment-c85fa1b7",
     },
     "spec": {
       "replicas": 1,

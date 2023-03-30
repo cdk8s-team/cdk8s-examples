@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+[
+  {
+    "apiVersion": "cert-manager.io/v1",
+    "kind": "Certificate",
+    "metadata": {
+      "name": "hello-crd-certificate-c8b00ace",
+    },
+    "spec": {
+      "issuerRef": {
+        "name": "issuer",
+      },
+      "secretName": "secret",
+    },
+  },
+]
+`;

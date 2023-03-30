@@ -1,9 +1,9 @@
-import { HelloKube } from './index';
+import { HelloK8s } from './index';
 import { Testing } from 'cdk8s';
 
 test('snapshot', () => {
   const app = Testing.app();
-  const chart = new HelloKube(app, 'hello');
+  const chart = new HelloK8s(app, 'hello-k8s');
 
   expect(Testing.synth(chart)).toMatchSnapshot();
 });

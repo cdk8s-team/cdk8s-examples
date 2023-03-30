@@ -1,13 +1,14 @@
 {
-  "name": "hello",
+  "name": "hello-crd",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
+    "import": "cdk8s import",
     "compile": "tsc",
-    "build": "npm run compile && npm run test:update && npm run synth",
+    "build": "npm run import && npm run compile && npm run test:update && npm run synth",
     "watch": "tsc -w",
     "synth": "cdk8s synth",
     "test": "jest",

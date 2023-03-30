@@ -1,5 +1,5 @@
 {
-  "name": "hello-helm",
+  "name": "hello-k8s",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
@@ -10,10 +10,9 @@
     "compile": "tsc",
     "build": "npm run import && npm run compile && npm run test:update && npm run synth",
     "watch": "tsc -w",
-    "helm:add": "helm repo add bitnami https://charts.bitnami.com/bitnami",
-    "synth": "npm run helm:add && cdk8s synth",
-    "test": "npm run helm:add && jest",
-    "test:update": "npm run helm:add && jest -u"
+    "synth": "cdk8s synth",
+    "test": "jest",
+    "test:update": "jest -u"
   },
   "dependencies": {
     "cdk8s": "^2.7.48",

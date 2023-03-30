@@ -3,7 +3,7 @@ import { App, Chart } from 'cdk8s';
 
 import { KubeDeployment, KubeService, IntOrString  } from './imports/k8s';
 
-export class HelloKube extends Chart {
+export class HelloK8s extends Chart {
   constructor(scope: Construct, id: string) {
     super(scope, id);
 
@@ -41,5 +41,5 @@ export class HelloKube extends Chart {
 }
 
 const app = new App();
-new HelloKube(app, 'hello-k8s');
+new HelloK8s(app, 'hello-k8s');
 app.synth();
