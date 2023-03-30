@@ -1,0 +1,470 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+[
+  {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "Ingress",
+    "metadata": {
+      "name": "cdk8s-plus-ingress-ingress-c8b1b6e2",
+    },
+    "spec": {
+      "rules": [
+        {
+          "http": {
+            "paths": [
+              {
+                "backend": {
+                  "service": {
+                    "name": "cdk8s-plus-ingress-root-service-c80d82ee",
+                    "port": {
+                      "number": 5678,
+                    },
+                  },
+                },
+                "path": "/",
+                "pathType": "Prefix",
+              },
+              {
+                "backend": {
+                  "service": {
+                    "name": "cdk8s-plus-ingress-foo-service-c80292b6",
+                    "port": {
+                      "number": 5678,
+                    },
+                  },
+                },
+                "path": "/foo",
+                "pathType": "Prefix",
+              },
+              {
+                "backend": {
+                  "service": {
+                    "name": "cdk8s-plus-ingress-foo-bar-service-c818f4a9",
+                    "port": {
+                      "number": 5678,
+                    },
+                  },
+                },
+                "path": "/foo/bar",
+                "pathType": "Prefix",
+              },
+            ],
+          },
+        },
+        {
+          "host": "my.host",
+          "http": {
+            "paths": [
+              {
+                "backend": {
+                  "service": {
+                    "name": "cdk8s-plus-ingress-my.host-hey-service-c83b53a8",
+                    "port": {
+                      "number": 5678,
+                    },
+                  },
+                },
+                "path": "/",
+                "pathType": "Prefix",
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "cdk8s-plus-ingress-root-c803cb06",
+    },
+    "spec": {
+      "minReadySeconds": 0,
+      "progressDeadlineSeconds": 600,
+      "replicas": 2,
+      "selector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "cdk8s-plus-ingress-root-c8f3e029",
+        },
+      },
+      "strategy": {
+        "rollingUpdate": {
+          "maxSurge": "25%",
+          "maxUnavailable": "25%",
+        },
+        "type": "RollingUpdate",
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "cdk8s.io/metadata.addr": "cdk8s-plus-ingress-root-c8f3e029",
+          },
+        },
+        "spec": {
+          "automountServiceAccountToken": false,
+          "containers": [
+            {
+              "args": [
+                "-text",
+                "root",
+              ],
+              "image": "hashicorp/http-echo",
+              "imagePullPolicy": "Always",
+              "name": "main",
+              "ports": [
+                {
+                  "containerPort": 5678,
+                },
+              ],
+              "resources": {
+                "limits": {
+                  "cpu": "1500m",
+                  "memory": "2048Mi",
+                },
+                "requests": {
+                  "cpu": "1000m",
+                  "memory": "512Mi",
+                },
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "privileged": false,
+                "readOnlyRootFilesystem": true,
+                "runAsNonRoot": true,
+              },
+              "startupProbe": {
+                "failureThreshold": 3,
+                "tcpSocket": {
+                  "port": 5678,
+                },
+              },
+            },
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
+          "securityContext": {
+            "fsGroupChangePolicy": "Always",
+            "runAsNonRoot": true,
+          },
+          "setHostnameAsFQDN": false,
+        },
+      },
+    },
+  },
+  {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "cdk8s-plus-ingress-root-service-c80d82ee",
+    },
+    "spec": {
+      "externalIPs": [],
+      "ports": [
+        {
+          "port": 5678,
+        },
+      ],
+      "selector": {
+        "cdk8s.io/metadata.addr": "cdk8s-plus-ingress-root-c8f3e029",
+      },
+      "type": "ClusterIP",
+    },
+  },
+  {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "cdk8s-plus-ingress-foo-c823602b",
+    },
+    "spec": {
+      "minReadySeconds": 0,
+      "progressDeadlineSeconds": 600,
+      "replicas": 2,
+      "selector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "cdk8s-plus-ingress-foo-c8b50181",
+        },
+      },
+      "strategy": {
+        "rollingUpdate": {
+          "maxSurge": "25%",
+          "maxUnavailable": "25%",
+        },
+        "type": "RollingUpdate",
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "cdk8s.io/metadata.addr": "cdk8s-plus-ingress-foo-c8b50181",
+          },
+        },
+        "spec": {
+          "automountServiceAccountToken": false,
+          "containers": [
+            {
+              "args": [
+                "-text",
+                "foo",
+              ],
+              "image": "hashicorp/http-echo",
+              "imagePullPolicy": "Always",
+              "name": "main",
+              "ports": [
+                {
+                  "containerPort": 5678,
+                },
+              ],
+              "resources": {
+                "limits": {
+                  "cpu": "1500m",
+                  "memory": "2048Mi",
+                },
+                "requests": {
+                  "cpu": "1000m",
+                  "memory": "512Mi",
+                },
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "privileged": false,
+                "readOnlyRootFilesystem": true,
+                "runAsNonRoot": true,
+              },
+              "startupProbe": {
+                "failureThreshold": 3,
+                "tcpSocket": {
+                  "port": 5678,
+                },
+              },
+            },
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
+          "securityContext": {
+            "fsGroupChangePolicy": "Always",
+            "runAsNonRoot": true,
+          },
+          "setHostnameAsFQDN": false,
+        },
+      },
+    },
+  },
+  {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "cdk8s-plus-ingress-foo-service-c80292b6",
+    },
+    "spec": {
+      "externalIPs": [],
+      "ports": [
+        {
+          "port": 5678,
+        },
+      ],
+      "selector": {
+        "cdk8s.io/metadata.addr": "cdk8s-plus-ingress-foo-c8b50181",
+      },
+      "type": "ClusterIP",
+    },
+  },
+  {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "cdk8s-plus-ingress-foo-bar-c8878822",
+    },
+    "spec": {
+      "minReadySeconds": 0,
+      "progressDeadlineSeconds": 600,
+      "replicas": 2,
+      "selector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "cdk8s-plus-ingress-foo-bar-c8ee8e90",
+        },
+      },
+      "strategy": {
+        "rollingUpdate": {
+          "maxSurge": "25%",
+          "maxUnavailable": "25%",
+        },
+        "type": "RollingUpdate",
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "cdk8s.io/metadata.addr": "cdk8s-plus-ingress-foo-bar-c8ee8e90",
+          },
+        },
+        "spec": {
+          "automountServiceAccountToken": false,
+          "containers": [
+            {
+              "args": [
+                "-text",
+                "foo-bar",
+              ],
+              "image": "hashicorp/http-echo",
+              "imagePullPolicy": "Always",
+              "name": "main",
+              "ports": [
+                {
+                  "containerPort": 5678,
+                },
+              ],
+              "resources": {
+                "limits": {
+                  "cpu": "1500m",
+                  "memory": "2048Mi",
+                },
+                "requests": {
+                  "cpu": "1000m",
+                  "memory": "512Mi",
+                },
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "privileged": false,
+                "readOnlyRootFilesystem": true,
+                "runAsNonRoot": true,
+              },
+              "startupProbe": {
+                "failureThreshold": 3,
+                "tcpSocket": {
+                  "port": 5678,
+                },
+              },
+            },
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
+          "securityContext": {
+            "fsGroupChangePolicy": "Always",
+            "runAsNonRoot": true,
+          },
+          "setHostnameAsFQDN": false,
+        },
+      },
+    },
+  },
+  {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "cdk8s-plus-ingress-foo-bar-service-c818f4a9",
+    },
+    "spec": {
+      "externalIPs": [],
+      "ports": [
+        {
+          "port": 5678,
+        },
+      ],
+      "selector": {
+        "cdk8s.io/metadata.addr": "cdk8s-plus-ingress-foo-bar-c8ee8e90",
+      },
+      "type": "ClusterIP",
+    },
+  },
+  {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "cdk8s-plus-ingress-my.host-hey-c80bb588",
+    },
+    "spec": {
+      "minReadySeconds": 0,
+      "progressDeadlineSeconds": 600,
+      "replicas": 2,
+      "selector": {
+        "matchLabels": {
+          "cdk8s.io/metadata.addr": "cdk8s-plus-ingress-my.host-hey-c8d0b397",
+        },
+      },
+      "strategy": {
+        "rollingUpdate": {
+          "maxSurge": "25%",
+          "maxUnavailable": "25%",
+        },
+        "type": "RollingUpdate",
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "cdk8s.io/metadata.addr": "cdk8s-plus-ingress-my.host-hey-c8d0b397",
+          },
+        },
+        "spec": {
+          "automountServiceAccountToken": false,
+          "containers": [
+            {
+              "args": [
+                "-text",
+                "my.host/hey",
+              ],
+              "image": "hashicorp/http-echo",
+              "imagePullPolicy": "Always",
+              "name": "main",
+              "ports": [
+                {
+                  "containerPort": 5678,
+                },
+              ],
+              "resources": {
+                "limits": {
+                  "cpu": "1500m",
+                  "memory": "2048Mi",
+                },
+                "requests": {
+                  "cpu": "1000m",
+                  "memory": "512Mi",
+                },
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "privileged": false,
+                "readOnlyRootFilesystem": true,
+                "runAsNonRoot": true,
+              },
+              "startupProbe": {
+                "failureThreshold": 3,
+                "tcpSocket": {
+                  "port": 5678,
+                },
+              },
+            },
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
+          "securityContext": {
+            "fsGroupChangePolicy": "Always",
+            "runAsNonRoot": true,
+          },
+          "setHostnameAsFQDN": false,
+        },
+      },
+    },
+  },
+  {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "cdk8s-plus-ingress-my.host-hey-service-c83b53a8",
+    },
+    "spec": {
+      "externalIPs": [],
+      "ports": [
+        {
+          "port": 5678,
+        },
+      ],
+      "selector": {
+        "cdk8s.io/metadata.addr": "cdk8s-plus-ingress-my.host-hey-c8d0b397",
+      },
+      "type": "ClusterIP",
+    },
+  },
+]
+`;

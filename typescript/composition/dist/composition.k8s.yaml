@@ -1,0 +1,63 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: composition-hello-service-c8a2a75d
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: composition-hello-c88465a1
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: composition-hello-deployment-c8340af4
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: composition-hello-c88465a1
+  template:
+    metadata:
+      labels:
+        app: composition-hello-c88465a1
+    spec:
+      containers:
+        - image: paulbouwer/hello-kubernetes:1.7
+          name: web
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: composition-ghost-service-c84087ab
+spec:
+  ports:
+    - port: 80
+      targetPort: 2368
+  selector:
+    app: composition-ghost-c8fc7b72
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: composition-ghost-deployment-c821f10a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: composition-ghost-c8fc7b72
+  template:
+    metadata:
+      labels:
+        app: composition-ghost-c8fc7b72
+    spec:
+      containers:
+        - image: ghost
+          name: web
+          ports:
+            - containerPort: 2368

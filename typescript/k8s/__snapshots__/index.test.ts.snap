@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+[
+  {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "k8s-service-c8c744a4",
+    },
+    "spec": {
+      "ports": [
+        {
+          "port": 80,
+          "targetPort": 8080,
+        },
+      ],
+      "selector": {
+        "app": "hello-k8s",
+      },
+      "type": "LoadBalancer",
+    },
+  },
+  {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "k8s-deployment-c80b2516",
+    },
+    "spec": {
+      "replicas": 1,
+      "selector": {
+        "matchLabels": {
+          "app": "hello-k8s",
+        },
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app": "hello-k8s",
+          },
+        },
+        "spec": {
+          "containers": [
+            {
+              "image": "paulbouwer/hello-kubernetes:1.7",
+              "name": "hello-kubernetes",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+]
+`;
