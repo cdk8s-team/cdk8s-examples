@@ -1,5 +1,5 @@
 {
-  "name": "core",
+  "name": "core-typescript",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",

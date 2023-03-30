@@ -16,7 +16,8 @@
     "pre-compile": "npx projen pre-compile",
     "test:watch": "npx projen test:watch",
     "upgrade": "npx projen upgrade",
-    "projen": "npx projen"
+    "projen": "npx projen",
+    "install": "lerna run install"
   },
   "author": {
     "name": "Amazon Web Services",
