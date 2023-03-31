@@ -23,7 +23,14 @@ const project = new Cdk8sTeamNodeProject({
       uses: 'actions/setup-java@v3',
       with: {
         'distribution': 'adopt',
-        'java-version': '1.19'
+        'java-version': '19.0.2'
+      }
+    },
+    {
+      name: 'Install Maven',
+      uses: 'stCarolas/setup-maven@v4.5',
+      with: {
+        'maven-version': '3.9.1',
       }
     }
   ],
