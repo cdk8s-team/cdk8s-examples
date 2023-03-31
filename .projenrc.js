@@ -16,7 +16,7 @@ const project = new Cdk8sTeamNodeProject({
       },
     },
     {
-      name: 'Install pyenv',
+      name: 'Install pipenv',
       run: 'pip install pipenv'
     }
   ],
