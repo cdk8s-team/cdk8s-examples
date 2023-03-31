@@ -20,6 +20,6 @@ class Certificate(Chart):
 
 
 app = App()
-Certificate(app, "dashboard")
+Certificate(app, "certificate")
 
 app.synth()
