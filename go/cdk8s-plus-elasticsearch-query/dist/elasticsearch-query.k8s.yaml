@@ -57,7 +57,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   key: elastic
-                  name: 824633803072-es-elastic-user
+                  name: elasticsearch-query-elasticsearch-c8527bcb-es-elastic-user
             - name: ELASTIC_USERNAME
               value: elastic
           image: node:12.18.0-stretch

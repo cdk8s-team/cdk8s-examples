@@ -48,7 +48,7 @@ func NewElasticsearchQuery(scope constructs.Construct, id string) cdk8s.Chart {
 		},
 	})
 
-	passwordSecret := cdk8splus26.Secret_FromSecretName(chart, jsii.String("Secret"), jsii.String(fmt.Sprintf("%d-es-elastic-user", elastic.Name())))
+	passwordSecret := cdk8splus26.Secret_FromSecretName(chart, jsii.String("Secret"), jsii.String(fmt.Sprintf("%s-es-elastic-user", *elastic.Name())))
 
 	deployment := cdk8splus26.NewDeployment(chart, jsii.String("Deployment"), &cdk8splus26.DeploymentProps{
 		Replicas: jsii.Number(1),
