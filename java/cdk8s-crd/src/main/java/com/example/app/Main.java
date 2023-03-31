@@ -2,10 +2,6 @@ package com.example.app;
 
 import software.constructs.Construct;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-
 import org.cdk8s.App;
 import org.cdk8s.Chart;
 import org.cdk8s.ChartProps;
