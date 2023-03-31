@@ -31,7 +31,7 @@ func NewPodInfo(scope constructs.Construct, id string) cdk8s.Chart {
 		},
 		ImagePullPolicy: cdk8splus26.ImagePullPolicy_IF_NOT_PRESENT,
 		PortNumber:      jsii.Number(portNumber),
-		Liveness: cdk8splus26.Probe_FromCommand(&[]*string{jsii.String("podcli"), jsii.String("check"), jsii.String("http"), jsii.String(fmt.Sprint("localhost:%d/healthz", portNumber))}, &cdk8splus26.CommandProbeOptions{
+		Liveness: cdk8splus26.Probe_FromCommand(&[]*string{jsii.String("podcli"), jsii.String("check"), jsii.String("http"), jsii.String(fmt.Sprintf("localhost:%d/healthz", portNumber))}, &cdk8splus26.CommandProbeOptions{
 			InitialDelaySeconds: cdk8s.Duration_Seconds(jsii.Number(1)),
 			TimeoutSeconds:      cdk8s.Duration_Seconds(jsii.Number(5)),
 		}),
