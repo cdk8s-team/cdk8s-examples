@@ -1,4 +1,4 @@
-app: /opt/hostedtoolcache/maven/3.9.1/x64/bin/mvn exec:java -Dexec.mainClass="com.example.Main"
+app: mvn exec:java -Dexec.mainClass="com.example.Main"
 language: java
 imports:
   - k8s@1.26.0

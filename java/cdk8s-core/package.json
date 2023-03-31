@@ -9,6 +9,6 @@
     "install": "mvn install",
     "import": "cdk8s import && rm -rf imports",
     "build": "npm run import && npm run synth",
-    "synth": "cdk8s synth"
+    "synth": "mvn exec:java -Dexec.mainClass=\"com.example.Main\""
   }
 }
