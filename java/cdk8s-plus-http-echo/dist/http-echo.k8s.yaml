@@ -1,28 +1,28 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: pod-info-ingress-c8757dfd
+  name: http-echo-ingress-c82eea96
 spec:
   rules:
     - http:
         paths:
           - backend:
               service:
-                name: pod-info-root-service-c8b5eb66
+                name: http-echo-root-service-c846071c
                 port:
                   number: 5678
             path: /
             pathType: Prefix
           - backend:
               service:
-                name: pod-info-foo-service-c89c3b0d
+                name: http-echo-foo-service-c85e7e98
                 port:
                   number: 5678
             path: /foo
             pathType: Prefix
           - backend:
               service:
-                name: pod-info-foo-bar-service-c8e1b3b8
+                name: http-echo-foo-bar-service-c856aa2a
                 port:
                   number: 5678
             path: /foo/bar
@@ -32,7 +32,7 @@ spec:
         paths:
           - backend:
               service:
-                name: pod-info-my.host-hey-service-c8b994da
+                name: http-echo-my.host-hey-service-c8723d5b
                 port:
                   number: 5678
             path: /
@@ -41,14 +41,14 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pod-info-root-c8fe4f0d
+  name: http-echo-root-c849e9bf
 spec:
   minReadySeconds: 0
   progressDeadlineSeconds: 600
   replicas: 2
   selector:
     matchLabels:
-      cdk8s.io/metadata.addr: pod-info-root-c8d864b8
+      cdk8s.io/metadata.addr: http-echo-root-c8be56f3
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -57,7 +57,7 @@ spec:
   template:
     metadata:
       labels:
-        cdk8s.io/metadata.addr: pod-info-root-c8d864b8
+        cdk8s.io/metadata.addr: http-echo-root-c8be56f3
     spec:
       automountServiceAccountToken: false
       containers:
@@ -95,26 +95,26 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pod-info-root-service-c8b5eb66
+  name: http-echo-root-service-c846071c
 spec:
   externalIPs: []
   ports:
     - port: 5678
   selector:
-    cdk8s.io/metadata.addr: pod-info-root-c8d864b8
+    cdk8s.io/metadata.addr: http-echo-root-c8be56f3
   type: ClusterIP
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pod-info-foo-c87ac813
+  name: http-echo-foo-c84c3dac
 spec:
   minReadySeconds: 0
   progressDeadlineSeconds: 600
   replicas: 2
   selector:
     matchLabels:
-      cdk8s.io/metadata.addr: pod-info-foo-c89a116f
+      cdk8s.io/metadata.addr: http-echo-foo-c84976c8
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -123,7 +123,7 @@ spec:
   template:
     metadata:
       labels:
-        cdk8s.io/metadata.addr: pod-info-foo-c89a116f
+        cdk8s.io/metadata.addr: http-echo-foo-c84976c8
     spec:
       automountServiceAccountToken: false
       containers:
@@ -161,26 +161,26 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pod-info-foo-service-c89c3b0d
+  name: http-echo-foo-service-c85e7e98
 spec:
   externalIPs: []
   ports:
     - port: 5678
   selector:
-    cdk8s.io/metadata.addr: pod-info-foo-c89a116f
+    cdk8s.io/metadata.addr: http-echo-foo-c84976c8
   type: ClusterIP
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pod-info-foo-bar-c8714c61
+  name: http-echo-foo-bar-c8405efe
 spec:
   minReadySeconds: 0
   progressDeadlineSeconds: 600
   replicas: 2
   selector:
     matchLabels:
-      cdk8s.io/metadata.addr: pod-info-foo-bar-c89f3f77
+      cdk8s.io/metadata.addr: http-echo-foo-bar-c8968ad1
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -189,7 +189,7 @@ spec:
   template:
     metadata:
       labels:
-        cdk8s.io/metadata.addr: pod-info-foo-bar-c89f3f77
+        cdk8s.io/metadata.addr: http-echo-foo-bar-c8968ad1
     spec:
       automountServiceAccountToken: false
       containers:
@@ -227,26 +227,26 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pod-info-foo-bar-service-c8e1b3b8
+  name: http-echo-foo-bar-service-c856aa2a
 spec:
   externalIPs: []
   ports:
     - port: 5678
   selector:
-    cdk8s.io/metadata.addr: pod-info-foo-bar-c89f3f77
+    cdk8s.io/metadata.addr: http-echo-foo-bar-c8968ad1
   type: ClusterIP
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pod-info-my.host-hey-c8dc3da9
+  name: http-echo-my.host-hey-c897a807
 spec:
   minReadySeconds: 0
   progressDeadlineSeconds: 600
   replicas: 2
   selector:
     matchLabels:
-      cdk8s.io/metadata.addr: pod-info-my.host-hey-c87c133f
+      cdk8s.io/metadata.addr: http-echo-my.host-hey-c838da69
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -255,7 +255,7 @@ spec:
   template:
     metadata:
       labels:
-        cdk8s.io/metadata.addr: pod-info-my.host-hey-c87c133f
+        cdk8s.io/metadata.addr: http-echo-my.host-hey-c838da69
     spec:
       automountServiceAccountToken: false
       containers:
@@ -293,11 +293,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pod-info-my.host-hey-service-c8b994da
+  name: http-echo-my.host-hey-service-c8723d5b
 spec:
   externalIPs: []
   ports:
     - port: 5678
   selector:
-    cdk8s.io/metadata.addr: pod-info-my.host-hey-c87c133f
+    cdk8s.io/metadata.addr: http-echo-my.host-hey-c838da69
   type: ClusterIP

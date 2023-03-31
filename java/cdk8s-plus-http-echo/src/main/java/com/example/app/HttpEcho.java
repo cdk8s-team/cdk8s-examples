@@ -44,7 +44,7 @@ public class HttpEcho extends Chart {
         public static void main(String[] args) {
 
                 final App app = new App();
-                new HttpEcho(app, "pod-info");
+                new HttpEcho(app, "http-echo");
                 app.synth();
 
         }
