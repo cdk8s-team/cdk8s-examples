@@ -39,7 +39,7 @@ spec:
                 - podcli
                 - check
                 - http
-                - localhost:%d/healthz9898
+                - localhost:9898/healthz
             failureThreshold: 3
             initialDelaySeconds: 1
             timeoutSeconds: 5
