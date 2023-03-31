@@ -9,6 +9,7 @@
     "install": "pip install pipenv && pipenv install",
     "import": "cdk8s import",
     "build": "npm run import && npm run synth",
-    "synth": "cdk8s synth"
+    "helm:add": "helm repo add bitnami https://charts.bitnami.com/bitnami",
+    "synth": "npm run helm:add && cdk8s synth"
   }
 }
