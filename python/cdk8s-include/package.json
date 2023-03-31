@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "install": "pip install pipenv && pipenv install",
+    "install": "pip install pipenv && which pip && which pipenv && pipenv install",
     "import": "cdk8s import",
     "build": "npm run import && npm run synth",
     "synth": "cdk8s synth"
