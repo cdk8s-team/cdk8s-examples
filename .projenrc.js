@@ -7,12 +7,13 @@ const project = new Cdk8sTeamNodeProject({
     'lerna',
   ],
   release: false,
+  jest: false,
 });
 
 project.package.addField('private', true);
 project.package.addField('workspaces', {
   packages: [
-    'typescript/**/*', 
+    'typescript/**/*',
     'go/**/*',
     'python/**/*',
     'java/**/*',
