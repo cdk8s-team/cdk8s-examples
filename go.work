@@ -7,4 +7,5 @@ use (
 	./go/cdk8s-helm
 	./go/cdk8s-include
 	./go/cdk8s-plus-http-echo
+	./go/cdk8s-plus-pod-info
 )
