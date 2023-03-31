@@ -1,0 +1,303 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pod-info-ingress-c8757dfd
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                name: pod-info-root-service-c8b5eb66
+                port:
+                  number: 5678
+            path: /
+            pathType: Prefix
+          - backend:
+              service:
+                name: pod-info-foo-service-c89c3b0d
+                port:
+                  number: 5678
+            path: /foo
+            pathType: Prefix
+          - backend:
+              service:
+                name: pod-info-foo-bar-service-c8e1b3b8
+                port:
+                  number: 5678
+            path: /foo/bar
+            pathType: Prefix
+    - host: my.host
+      http:
+        paths:
+          - backend:
+              service:
+                name: pod-info-my.host-hey-service-c8b994da
+                port:
+                  number: 5678
+            path: /
+            pathType: Prefix
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-info-root-c8fe4f0d
+spec:
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 2
+  selector:
+    matchLabels:
+      cdk8s.io/metadata.addr: pod-info-root-c8d864b8
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        cdk8s.io/metadata.addr: pod-info-root-c8d864b8
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - args:
+            - -text
+            - root
+          image: hashicorp/http-echo
+          imagePullPolicy: Always
+          name: main
+          ports:
+            - containerPort: 5678
+          resources:
+            limits:
+              cpu: 1500m
+              memory: 2048Mi
+            requests:
+              cpu: 1000m
+              memory: 512Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          startupProbe:
+            failureThreshold: 3
+            tcpSocket:
+              port: 5678
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext:
+        fsGroupChangePolicy: Always
+        runAsNonRoot: true
+      setHostnameAsFQDN: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-info-root-service-c8b5eb66
+spec:
+  externalIPs: []
+  ports:
+    - port: 5678
+  selector:
+    cdk8s.io/metadata.addr: pod-info-root-c8d864b8
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-info-foo-c87ac813
+spec:
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 2
+  selector:
+    matchLabels:
+      cdk8s.io/metadata.addr: pod-info-foo-c89a116f
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        cdk8s.io/metadata.addr: pod-info-foo-c89a116f
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - args:
+            - -text
+            - foo
+          image: hashicorp/http-echo
+          imagePullPolicy: Always
+          name: main
+          ports:
+            - containerPort: 5678
+          resources:
+            limits:
+              cpu: 1500m
+              memory: 2048Mi
+            requests:
+              cpu: 1000m
+              memory: 512Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          startupProbe:
+            failureThreshold: 3
+            tcpSocket:
+              port: 5678
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext:
+        fsGroupChangePolicy: Always
+        runAsNonRoot: true
+      setHostnameAsFQDN: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-info-foo-service-c89c3b0d
+spec:
+  externalIPs: []
+  ports:
+    - port: 5678
+  selector:
+    cdk8s.io/metadata.addr: pod-info-foo-c89a116f
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-info-foo-bar-c8714c61
+spec:
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 2
+  selector:
+    matchLabels:
+      cdk8s.io/metadata.addr: pod-info-foo-bar-c89f3f77
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        cdk8s.io/metadata.addr: pod-info-foo-bar-c89f3f77
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - args:
+            - -text
+            - foo-bar
+          image: hashicorp/http-echo
+          imagePullPolicy: Always
+          name: main
+          ports:
+            - containerPort: 5678
+          resources:
+            limits:
+              cpu: 1500m
+              memory: 2048Mi
+            requests:
+              cpu: 1000m
+              memory: 512Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          startupProbe:
+            failureThreshold: 3
+            tcpSocket:
+              port: 5678
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext:
+        fsGroupChangePolicy: Always
+        runAsNonRoot: true
+      setHostnameAsFQDN: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-info-foo-bar-service-c8e1b3b8
+spec:
+  externalIPs: []
+  ports:
+    - port: 5678
+  selector:
+    cdk8s.io/metadata.addr: pod-info-foo-bar-c89f3f77
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-info-my.host-hey-c8dc3da9
+spec:
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 2
+  selector:
+    matchLabels:
+      cdk8s.io/metadata.addr: pod-info-my.host-hey-c87c133f
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        cdk8s.io/metadata.addr: pod-info-my.host-hey-c87c133f
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - args:
+            - -text
+            - my.host/hey
+          image: hashicorp/http-echo
+          imagePullPolicy: Always
+          name: main
+          ports:
+            - containerPort: 5678
+          resources:
+            limits:
+              cpu: 1500m
+              memory: 2048Mi
+            requests:
+              cpu: 1000m
+              memory: 512Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          startupProbe:
+            failureThreshold: 3
+            tcpSocket:
+              port: 5678
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext:
+        fsGroupChangePolicy: Always
+        runAsNonRoot: true
+      setHostnameAsFQDN: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-info-my.host-hey-service-c8b994da
+spec:
+  externalIPs: []
+  ports:
+    - port: 5678
+  selector:
+    cdk8s.io/metadata.addr: pod-info-my.host-hey-c87c133f
+  type: ClusterIP

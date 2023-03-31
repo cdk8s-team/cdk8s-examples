@@ -44,7 +44,7 @@ public class Main extends Chart {
         public static void main(String[] args) {
 
                 final App app = new App();
-                new Main(app, "dashboard");
+                new Main(app, "pod-info");
                 app.synth();
 
         }
