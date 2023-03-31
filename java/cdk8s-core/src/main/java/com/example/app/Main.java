@@ -27,55 +27,55 @@ import imports.k8s.ServiceSpec;
 
 public class Main extends Chart {
 
-  public Main(final Construct scope, final String id) {
-    this(scope, id, null);
-  }
+    public Main(final Construct scope, final String id) {
+        this(scope, id, null);
+    }
 
-  public Main(final Construct scope, final String id, final ChartProps props) {
-    super(scope, id, props);
+    public Main(final Construct scope, final String id, final ChartProps props) {
+        super(scope, id, props);
 
-    Map<String, String> label = Collections.singletonMap("app", "hello-k8s");
+        Map<String, String> label = Collections.singletonMap("app", "hello-k8s");
 
-    new KubeService(this, "service", KubeServiceProps.builder()
-        .spec(ServiceSpec.builder()
-            .type("LoadBalancer")
-            .ports(List.of(ServicePort.builder()
-                .port(80)
-                .targetPort(IntOrString.fromNumber(8080))
-                .build()))
-            .selector(label)
-            .build())
-        .build());
+        new KubeService(this, "service", KubeServiceProps.builder()
+                .spec(ServiceSpec.builder()
+                        .type("LoadBalancer")
+                        .ports(List.of(ServicePort.builder()
+                                .port(80)
+                                .targetPort(IntOrString.fromNumber(8080))
+                                .build()))
+                        .selector(label)
+                        .build())
+                .build());
 
-    new KubeDeployment(this, "deployment", KubeDeploymentProps.builder()
-        .spec(DeploymentSpec.builder()
-            .replicas(1)
-            .selector(LabelSelector.builder()
-                .matchLabels(label)
-                .build())
-            .template(PodTemplateSpec.builder()
-                .metadata(ObjectMeta.builder().labels(label)
-                    .build())
-                .spec(PodSpec.builder()
-                    .containers(List.of(Container.builder()
-                        .name("hello-kubernetes")
-                        .image("paulbouwer/hello-kubernetes:1.7")
-                        .ports(List.of(ContainerPort.builder()
-                            .containerPort(8080)
-                            .build()))
-                        .build()))
-                    .build())
-                .build())
-            .build())
-        .build());
+        new KubeDeployment(this, "deployment", KubeDeploymentProps.builder()
+                .spec(DeploymentSpec.builder()
+                        .replicas(1)
+                        .selector(LabelSelector.builder()
+                                .matchLabels(label)
+                                .build())
+                        .template(PodTemplateSpec.builder()
+                                .metadata(ObjectMeta.builder().labels(label)
+                                        .build())
+                                .spec(PodSpec.builder()
+                                        .containers(List.of(Container.builder()
+                                                .name("hello-kubernetes")
+                                                .image("paulbouwer/hello-kubernetes:1.7")
+                                                .ports(List.of(ContainerPort.builder()
+                                                        .containerPort(8080)
+                                                        .build()))
+                                                .build()))
+                                        .build())
+                                .build())
+                        .build())
+                .build());
 
-  }
+    }
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    final App app = new App();
-    new Main(app, "core");
-    app.synth();
+        final App app = new App();
+        new Main(app, "core");
+        app.synth();
 
-  }
+    }
 }

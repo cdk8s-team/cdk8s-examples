@@ -5,7 +5,7 @@
   <artifactId>cdk8s-core-java</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>my-app</name>
+  <name>cdk8s-core</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
