@@ -18,27 +18,27 @@ public class Main extends Chart {
         public Main(final Construct scope, final String id, final ChartProps props) {
                 super(scope, id, props);
 
-            Ingress ingress = new Ingress(this, "Ingress");
-            ingress.addRule("/", this.echoBackend("root"));
-            ingress.addRule("/foo", this.echoBackend("foo"));
-            ingress.addRule("/foo/bar", this.echoBackend("foo-bar"));
-            ingress.addHostDefaultBackend("my.host", this.echoBackend("my.host/hey"));
+                Ingress ingress = new Ingress(this, "Ingress");
+                ingress.addRule("/", this.echoBackend("root"));
+                ingress.addRule("/foo", this.echoBackend("foo"));
+                ingress.addRule("/foo/bar", this.echoBackend("foo-bar"));
+                ingress.addHostDefaultBackend("my.host", this.echoBackend("my.host/hey"));
         }
 
         private IngressBackend echoBackend(String text) {
-            Deployment deploy = new Deployment(this, text, DeploymentProps.builder()
-                    .containers(List.of(ContainerProps.builder()
-                                    .image("hashicorp/http-echo")
-                                    .args(List.of("-text", text))
-                                    .portNumber(5678)
-                            .build()))
-                    .build());
+                Deployment deploy = new Deployment(this, text, DeploymentProps.builder()
+                                .containers(List.of(ContainerProps.builder()
+                                                .image("hashicorp/http-echo")
+                                                .args(List.of("-text", text))
+                                                .portNumber(5678)
+                                                .build()))
+                                .build());
 
-            return IngressBackend.fromService(deploy.exposeViaService(ExposeDeploymentViaIngressOptions.builder()
-                            .ports(List.of(ServicePort.builder()
-                                            .port(5678)
-                                    .build()))
-                    .build());
+                return IngressBackend.fromService(deploy.exposeViaService(ExposeDeploymentViaIngressOptions.builder()
+                                .ports(List.of(ServicePort.builder()
+                                                .port(5678)
+                                                .build()))
+                                .build()));
         }
 
         public static void main(String[] args) {
