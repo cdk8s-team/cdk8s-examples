@@ -1,9 +1,7 @@
-# Core
+# Composition
 
-Example usage of core Kubernetes resources and how to define them within a cdk8s applications:
+Example of how to compose multiple Kubernetes resources into a custom construct within a cdk8s application:
 
 - `App` (Core)
 - `Chart` (Core)
-- `KubeService` (Core)
-- `KubeDeployment` (Core)
-
+- `WebService` (Composed)
