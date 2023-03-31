@@ -1,4 +1,4 @@
-app: mvn exec:java -Dexec.mainClass="com.example.Main"
+app: mvn exec:java -Dexec.mainClass="com.example.app.Main"
 language: java
 imports:
   - k8s@1.26.0
