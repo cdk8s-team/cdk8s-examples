@@ -8,6 +8,18 @@ const project = new Cdk8sTeamNodeProject({
   ],
   release: false,
   jest: false,
+  workflowBootstrapSteps: [
+    {
+      uses: 'actions/setup-python@v4',
+      with: {
+        'python-version': '3.10.4'
+      },
+    },
+    {
+      name: 'Install pyenv',
+      run: 'pip install pipenv'
+    }
+  ],
 });
 
 project.package.addField('private', true);
