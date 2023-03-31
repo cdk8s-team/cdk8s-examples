@@ -6,4 +6,5 @@ use (
 	./go/cdk8s-crd
 	./go/cdk8s-helm
 	./go/cdk8s-include
+	./go/cdk8s-plus-http-echo
 )
