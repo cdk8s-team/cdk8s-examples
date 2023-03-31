@@ -48,3 +48,4 @@ jspm_packages/
 !/.github/workflows/security.yml
 !/.github/workflows/triage.yml
 !/.github/workflows/stale.yml
+.vscode

@@ -19,8 +19,12 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 3.10.4
-      - name: Install pyenv
+      - name: Install pipenv
         run: pip install pipenv
+      - uses: actions/setup-java@v3
+        with:
+          distribution: adopt
+          java-version: "1.19"
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:

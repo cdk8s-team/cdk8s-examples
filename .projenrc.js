@@ -18,6 +18,13 @@ const project = new Cdk8sTeamNodeProject({
     {
       name: 'Install pipenv',
       run: 'pip install pipenv'
+    },
+    {
+      uses: 'actions/setup-java@v3',
+      with: {
+        'distribution': 'adopt',
+        'java-version': '1.19'
+      }
     }
   ],
 });
@@ -44,6 +51,8 @@ project.packageTask.reset();
 project.addScripts({
   install: 'lerna run install'
 });
+
+project.gitignore.exclude('.vscode')
 
 project.tasks.removeTask('test');
 project.tasks.removeTask('test:update');
