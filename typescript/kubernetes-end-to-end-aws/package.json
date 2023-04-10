@@ -1,0 +1,25 @@
+{
+  "name": "kubernetes-end-to-end-aws",
+  "version": "0.0.0",
+  "main": "main.js",
+  "types": "main.d.ts",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run synth",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy"
+  },
+  "dependencies": {
+    "cdk8s": "^2.7.34",
+    "cdk8s-plus-25": "^2.5.8",
+    "aws-cdk-lib": "^2.69.0",
+    "constructs": "^10.1.279",
+    "@aws-cdk/lambda-layer-kubectl-v25": "^2.0.3"
+  },
+  "devDependencies": {
+    "aws-cdk": "^2.69.0",
+    "ts-node": "^10.9.1"
+  }
+}
