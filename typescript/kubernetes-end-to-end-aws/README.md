@@ -1,8 +1,6 @@
 # Kubernetes End-2-End | AWS
 
-Example of how to define and deploy a cdk8s application onto an Amazon EKS cluster. 
-
-At a high-level, it consists of:
+Example of how to define and deploy a cdk8s application onto an Amazon EKS cluster. At a high-level, it consists of:
 
 - An Amazon EKS cluster defined with the AWS CDK.
 - A Kubernetes workload defined with cdk8s.
@@ -29,6 +27,7 @@ import * as ecr from 'aws-cdk-lib/aws-ecr-assets';
 import * as path from 'path';
 
 const image = new ecr.DockerImageAsset(this, 'Image', {
+  // this directory must also contain the Dockerfile that builds the image.
   directory: path.join(__dirname, 'server'),
 });
 image.repository.grantPull(cluster.defaultNodegroup!.role)
