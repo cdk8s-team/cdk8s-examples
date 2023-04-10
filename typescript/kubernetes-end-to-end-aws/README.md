@@ -16,30 +16,6 @@ deploy Kubernetes manifests.
 
 ![](./architecture.png)
 
-## Deploy
-
-```console
-git clone https://github.com/cdk8s-team/cdk8s-examples.git
-```
-
-```console
-cd cdk8s-examples/typescript/kubernetes-end-to-end-aws
-```
-
-```console
-npm install
-```
-
-```console
-npm run deploy
-```
-
-## Destroy 
-
-```console
-npm run destroy
-```
-
 ## Including Application Code (Optional)
 
 AWS CDK can build docker images and upload it to an ECR repository. This allows us 
@@ -69,8 +45,6 @@ const deployment = new kplus.Deployment(chart, 'Deployment', {
 });
 ```
 
-Deploying this code is done exactly the same as we just did.
-
 ## Imported Clusters (Optional)
 
 In some cases, the pipeline that creates the EKS cluster will not be the same as the
@@ -89,4 +63,26 @@ const cluster = eks.Cluster.fromClusterAttributes(this, 'Cluster', {
 With this code, a new EKS cluster will not be provisioned. Instead, the existing cluster
 is referenced, and is used to apply Kubernetes manifests to.
 
-Deploying this code is done exactly the same as we just did.
+## Deploy
+
+```console
+git clone https://github.com/cdk8s-team/cdk8s-examples.git
+```
+
+```console
+cd cdk8s-examples/typescript/kubernetes-end-to-end-aws
+```
+
+```console
+npm install
+```
+
+```console
+npm run deploy
+```
+
+## Destroy 
+
+```console
+npm run destroy
+```
