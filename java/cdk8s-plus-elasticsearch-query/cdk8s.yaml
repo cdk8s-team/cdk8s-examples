@@ -1,0 +1,5 @@
+app: mvn exec:java -Dexec.mainClass="com.example.app.ElasticsearchQuery"
+language: java
+imports:
+  - k8s@1.26.0
+  - https://download.elastic.co/downloads/eck/1.1.2/all-in-one.yaml

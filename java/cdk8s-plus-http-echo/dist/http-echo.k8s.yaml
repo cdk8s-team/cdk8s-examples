@@ -1,0 +1,303 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: http-echo-ingress-c82eea96
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                name: http-echo-root-service-c846071c
+                port:
+                  number: 5678
+            path: /
+            pathType: Prefix
+          - backend:
+              service:
+                name: http-echo-foo-service-c85e7e98
+                port:
+                  number: 5678
+            path: /foo
+            pathType: Prefix
+          - backend:
+              service:
+                name: http-echo-foo-bar-service-c856aa2a
+                port:
+                  number: 5678
+            path: /foo/bar
+            pathType: Prefix
+    - host: my.host
+      http:
+        paths:
+          - backend:
+              service:
+                name: http-echo-my.host-hey-service-c8723d5b
+                port:
+                  number: 5678
+            path: /
+            pathType: Prefix
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-echo-root-c849e9bf
+spec:
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 2
+  selector:
+    matchLabels:
+      cdk8s.io/metadata.addr: http-echo-root-c8be56f3
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        cdk8s.io/metadata.addr: http-echo-root-c8be56f3
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - args:
+            - -text
+            - root
+          image: hashicorp/http-echo
+          imagePullPolicy: Always
+          name: main
+          ports:
+            - containerPort: 5678
+          resources:
+            limits:
+              cpu: 1500m
+              memory: 2048Mi
+            requests:
+              cpu: 1000m
+              memory: 512Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          startupProbe:
+            failureThreshold: 3
+            tcpSocket:
+              port: 5678
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext:
+        fsGroupChangePolicy: Always
+        runAsNonRoot: true
+      setHostnameAsFQDN: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: http-echo-root-service-c846071c
+spec:
+  externalIPs: []
+  ports:
+    - port: 5678
+  selector:
+    cdk8s.io/metadata.addr: http-echo-root-c8be56f3
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-echo-foo-c84c3dac
+spec:
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 2
+  selector:
+    matchLabels:
+      cdk8s.io/metadata.addr: http-echo-foo-c84976c8
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        cdk8s.io/metadata.addr: http-echo-foo-c84976c8
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - args:
+            - -text
+            - foo
+          image: hashicorp/http-echo
+          imagePullPolicy: Always
+          name: main
+          ports:
+            - containerPort: 5678
+          resources:
+            limits:
+              cpu: 1500m
+              memory: 2048Mi
+            requests:
+              cpu: 1000m
+              memory: 512Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          startupProbe:
+            failureThreshold: 3
+            tcpSocket:
+              port: 5678
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext:
+        fsGroupChangePolicy: Always
+        runAsNonRoot: true
+      setHostnameAsFQDN: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: http-echo-foo-service-c85e7e98
+spec:
+  externalIPs: []
+  ports:
+    - port: 5678
+  selector:
+    cdk8s.io/metadata.addr: http-echo-foo-c84976c8
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-echo-foo-bar-c8405efe
+spec:
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 2
+  selector:
+    matchLabels:
+      cdk8s.io/metadata.addr: http-echo-foo-bar-c8968ad1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        cdk8s.io/metadata.addr: http-echo-foo-bar-c8968ad1
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - args:
+            - -text
+            - foo-bar
+          image: hashicorp/http-echo
+          imagePullPolicy: Always
+          name: main
+          ports:
+            - containerPort: 5678
+          resources:
+            limits:
+              cpu: 1500m
+              memory: 2048Mi
+            requests:
+              cpu: 1000m
+              memory: 512Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          startupProbe:
+            failureThreshold: 3
+            tcpSocket:
+              port: 5678
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext:
+        fsGroupChangePolicy: Always
+        runAsNonRoot: true
+      setHostnameAsFQDN: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: http-echo-foo-bar-service-c856aa2a
+spec:
+  externalIPs: []
+  ports:
+    - port: 5678
+  selector:
+    cdk8s.io/metadata.addr: http-echo-foo-bar-c8968ad1
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-echo-my.host-hey-c897a807
+spec:
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 2
+  selector:
+    matchLabels:
+      cdk8s.io/metadata.addr: http-echo-my.host-hey-c838da69
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        cdk8s.io/metadata.addr: http-echo-my.host-hey-c838da69
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - args:
+            - -text
+            - my.host/hey
+          image: hashicorp/http-echo
+          imagePullPolicy: Always
+          name: main
+          ports:
+            - containerPort: 5678
+          resources:
+            limits:
+              cpu: 1500m
+              memory: 2048Mi
+            requests:
+              cpu: 1000m
+              memory: 512Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          startupProbe:
+            failureThreshold: 3
+            tcpSocket:
+              port: 5678
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext:
+        fsGroupChangePolicy: Always
+        runAsNonRoot: true
+      setHostnameAsFQDN: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: http-echo-my.host-hey-service-c8723d5b
+spec:
+  externalIPs: []
+  ports:
+    - port: 5678
+  selector:
+    cdk8s.io/metadata.addr: http-echo-my.host-hey-c838da69
+  type: ClusterIP

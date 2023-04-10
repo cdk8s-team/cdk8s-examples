@@ -1,0 +1,212 @@
+apiVersion: elasticsearch.k8s.elastic.co/v1
+kind: Elasticsearch
+metadata:
+  name: elasticseach-query-elasticsearch-c82f8599
+spec:
+  http:
+    service:
+      spec:
+        ports:
+          - port: 9200
+    tls:
+      selfSignedCertificate:
+        disabled: true
+  nodeSets:
+    - config:
+        node.data: true
+        node.ingest: true
+        node.master: true
+        node.store.allow_mmap: false
+        xpack.security.enabled: true
+        xpack.security.http.ssl.enabled: false
+      count: 1
+      name: default
+  version: 7.7.1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elasticseach-query-deployment-c84ea90f
+spec:
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 1
+  selector:
+    matchLabels:
+      cdk8s.io/metadata.addr: elasticseach-query-Deployment-c8cf3f8d
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        cdk8s.io/metadata.addr: elasticseach-query-Deployment-c8cf3f8d
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - command:
+            - node
+            - query.js
+            - "8000"
+          env:
+            - name: ELASTIC_USERNAME
+              value: elastic
+            - name: ELASTIC_ENDPOINT
+              value: http://$elasticseach-query-elasticsearch-c82f8599-es-http:$9200
+            - name: ELASTIC_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: elastic
+                  name: $elasticseach-query-elasticsearch-c82f8599-es-elastic-user
+          image: node:12.18.0-stretch
+          imagePullPolicy: Always
+          name: main
+          ports:
+            - containerPort: 8000
+          resources:
+            limits:
+              cpu: 1500m
+              memory: 2048Mi
+            requests:
+              cpu: 1000m
+              memory: 512Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          startupProbe:
+            failureThreshold: 3
+            tcpSocket:
+              port: 8000
+          volumeMounts:
+            - mountPath: /root
+              name: configmap-elasticseach-query-config-c898f9c1
+          workingDir: /root
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext:
+        fsGroupChangePolicy: Always
+        runAsNonRoot: true
+      setHostnameAsFQDN: false
+      volumes:
+        - configMap:
+            name: elasticseach-query-config-c898f9c1
+          name: configmap-elasticseach-query-config-c898f9c1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: elasticseach-query-deployment-service-c8dcc99d
+spec:
+  externalIPs: []
+  ports:
+    - port: 8000
+      targetPort: 8000
+  selector:
+    cdk8s.io/metadata.addr: elasticseach-query-Deployment-c8cf3f8d
+  type: ClusterIP
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elasticseach-query-config-c898f9c1
+data:
+  query.js: |-
+    const http = require('http');
+    const querystring = require('querystring')
+
+    const endpoint = process.env.ELASTIC_ENDPOINT;
+    const username = process.env.ELASTIC_USERNAME;
+    const password = process.env.ELASTIC_PASSWORD;
+
+    if (!endpoint) {
+      throw new Error('ELASTIC_ENDPOINT env variable is required');
+    }
+
+    if (!password) {
+      throw new Error('ELASTIC_PASSWORD env variable is required');
+    }
+
+    if (!username) {
+      throw new Error('ELASTIC_USERNAME env variable is required');
+    }
+
+    var port = process.argv[2];
+
+    console.log('Creating a server...');
+    http.createServer(function (req, res) {
+
+      function sendResponse(data) {
+        res.write(data);
+        res.end();
+      }
+
+      try {
+
+        console.log(`Received request: ${req.url}`);
+
+        let uri = req.url?.split('?')[1];
+
+        if (!uri) {
+          throw new Error('URI is undefined');
+        }
+
+        doSearch(uri, sendResponse);
+
+
+      } catch (err) {
+        if (err instanceof Error) {
+          sendResponse(err.message);
+        }
+      }
+
+    }).listen(port);
+
+    function doSearch(uri, callback) {
+
+      console.log(`URI is: ${uri}`);
+
+      const queryParams = querystring.parse(uri);
+
+      if (!queryParams) {
+        throw new Error('Illegal Query. Use ?search=<free-text>');
+      }
+
+      console.log(`Params: ${JSON.stringify(queryParams)}`);
+
+      const search = queryParams['search'];
+
+      const hostAndPort = endpoint.split('//')[1].split(':');
+
+      const options = {
+        headers: {
+          'Authorization': 'Basic ' + Buffer.from(username + ':' + password).toString('base64'),
+        },
+        path: `/_search?q=${search}`,
+        port: hostAndPort[1],
+        host: hostAndPort[0]
+      }
+
+      console.log(`Sending search query to elasticsearch: ${JSON.stringify(options)}`);
+
+      http.get(options, (esResponse) => {
+
+        let data = '';
+
+        esResponse.on('data', (chunk) => {
+          data += chunk;
+        });
+
+        esResponse.on('end', () => {
+          callback(data);
+        });
+
+      }).on('error', (err) => {
+        callback(err.message);
+      });
+
+    }
+immutable: false

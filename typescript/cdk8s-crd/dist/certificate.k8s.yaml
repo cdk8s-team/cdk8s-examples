@@ -1,0 +1,8 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: certificate-c81e1064
+spec:
+  issuerRef:
+    name: issuer
+  secretName: secret

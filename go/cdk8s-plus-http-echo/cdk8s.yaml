@@ -1,0 +1,4 @@
+app: go run .
+language: go
+imports:
+  - k8s@1.26.0

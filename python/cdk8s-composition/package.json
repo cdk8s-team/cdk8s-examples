@@ -1,0 +1,14 @@
+{
+  "name": "cdk8s-composition-python",
+  "version": "0.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "install": "pipenv install",
+    "import": "cdk8s import",
+    "build": "npm run import && npm run synth",
+    "synth": "cdk8s synth"
+  }
+}

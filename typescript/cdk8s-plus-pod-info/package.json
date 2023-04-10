@@ -1,0 +1,23 @@
+{
+  "name": "cdk8s-plus-pod-info-typescript",
+  "version": "0.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "import": "cdk8s import",
+    "build": "npm run import && npm run synth",
+    "synth": "cdk8s synth"
+  },
+  "dependencies": {
+    "cdk8s": "^2.7.48",
+    "constructs": "^10.1.295",
+    "cdk8s-plus-26": "^2.2.16"
+  },
+  "devDependencies": {
+    "cdk8s-cli": "^2.2.5",
+    "typescript": "^4.9.5",
+    "ts-node": "^10.9.1"
+  }
+}
