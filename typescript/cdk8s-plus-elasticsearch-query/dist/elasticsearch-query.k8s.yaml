@@ -86,6 +86,7 @@ spec:
               name: configmap-elasticsearch-query-config-c86376ea
           workingDir: /root
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
