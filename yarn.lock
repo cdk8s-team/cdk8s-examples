@@ -1637,9 +1637,9 @@ combined-stream@^1.0.8:
     delayed-stream "~1.0.0"
 
 commander@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-10.0.0.tgz#71797971162cd3cf65f0b9d24eb28f8d303acdf1"
-  integrity sha512-zS5PnTI22FIRM6ylNW8G4Ap0IEOyk62fhLSD0+uHRT9McRCLGpkVNvao4bjimpK/GShynyQkFFxHhwMcETmduA==
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-10.0.1.tgz#881ee46b4f77d1c1dccc5823433aa39b022cbe06"
+  integrity sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==
 
 comment-json@4.2.2:
   version "4.2.2"
@@ -1723,9 +1723,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.1.295, constructs@^10.1.299:
-  version "10.1.311"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.311.tgz#5d89ac088028cc20ddfe6f77949c711c17f976a9"
-  integrity sha512-/54vqCTAtbSAqi8WDWzj8CJqxxLo1UIprQb24reCH1c8Qe9eAjROJIEjBf/H2ul0NqYczNZvYwiRUFY+2/ZcNw==
+  version "10.1.312"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.312.tgz#2f7cc2792fed431bfa02265a230173799d0e306c"
+  integrity sha512-eC6tBCDIz/arXAvJwqlv+fPZb6tly4Z58kcTFygSLDp+XuqOxuLTaEyBcLcJQy20+zeUopgWw7K2Go0EWmJ8NQ==
 
 conventional-changelog-angular@5.0.12:
   version "5.0.12"
@@ -3165,9 +3165,9 @@ jsii-rosetta@^1.80.0:
     yargs "^16.2.0"
 
 jsii-srcmak@^0.1.871:
-  version "0.1.882"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.882.tgz#fe1753215163f08b85fa703e7ee3749aa3b27523"
-  integrity sha512-UxWZUPdKZIVwlKEjFNE/GsDtd0xLE8avahvf0+Gaf9G35vHZcXpu1XCzbsGpgp6nukOo1bChgexKTIoA02CQuw==
+  version "0.1.883"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.883.tgz#2c4f56f24488722b166f905b56e88fb39608cdba"
+  integrity sha512-tODPQoV+U70xuAIGo7wVwMyXwy2QzHrZ7UUVhHAZeNYvOqzVd0CJCOIfLclEHSxbNA4UtA+/wFiwKnMnOEHMlw==
   dependencies:
     fs-extra "^9.1.0"
     jsii "^1.80.0"
@@ -4679,10 +4679,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.71.7:
-  version "0.71.7"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.71.7.tgz#46f59a6d10bf3a865631b4f927f9915abce618d9"
-  integrity sha512-pkOPyYWKA2X5lg7n2IXM36PMcHz9Vts1r9Z/rna7D4ep4mjg1xwbESIEGtbX1W03OMwkQrnPpvLZbc0JnTMC4g==
+projen@^0.71.9:
+  version "0.71.9"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.71.9.tgz#da732db618a3890ab933086c81c3193492c87a6e"
+  integrity sha512-iUFEus6eTHg91fG6A1ABTN0rvgYspkfhY1SBKYfP2A0bIYN5NNC4F++5TADmfWTSYAu4UbqL7Nyx5feUFnsuCA==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -4697,7 +4697,6 @@ projen@^0.71.7:
     xmlbuilder2 "^2.4.1"
     yaml "2.0.0"
     yargs "^16.2.0"
-    zlib "^1.0.5"
 
 promise-all-reject-late@^1.0.0:
   version "1.0.1"
@@ -6249,8 +6248,3 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
-
-zlib@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/zlib/-/zlib-1.0.5.tgz#6e7c972fc371c645a6afb03ab14769def114fcc0"
-  integrity sha512-40fpE2II+Cd3k8HWTWONfeKE2jL+P42iWJ1zzps5W51qcTsOUKM5Q5m2PFb0CLxlmFAaUuUdJGc3OfZy947v0w==
