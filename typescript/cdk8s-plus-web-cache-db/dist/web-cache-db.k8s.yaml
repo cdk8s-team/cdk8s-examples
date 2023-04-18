@@ -72,6 +72,7 @@ spec:
             tcpSocket:
               port: 8000
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
@@ -197,6 +198,7 @@ spec:
             tcpSocket:
               port: 7000
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
@@ -375,6 +377,7 @@ spec:
             tcpSocket:
               port: 6000
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always

@@ -86,6 +86,7 @@ spec:
             tcpSocket:
               port: 5678
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
@@ -152,6 +153,7 @@ spec:
             tcpSocket:
               port: 5678
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
@@ -218,6 +220,7 @@ spec:
             tcpSocket:
               port: 5678
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
@@ -284,6 +287,7 @@ spec:
             tcpSocket:
               port: 5678
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
