@@ -7,8 +7,9 @@
   "private": true,
   "scripts": {
     "install": "mvn install",
-    "import": "cdk8s import && rm -rf imports",
-    "build": "mvn clean compile && npm run import && npm run synth",
+    "cleanImports": "rm -rf src/main/java/imports && rm -rf src/main/resources/imports && rm -rf imports",
+    "import": "npm run cleanImports && cdk8s import k8s --language java",
+    "build": "npm run import && mvn clean compile && npm run synth",
     "synth": "cdk8s synth"
   }
 }
