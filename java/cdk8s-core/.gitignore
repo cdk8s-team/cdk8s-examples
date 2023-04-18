@@ -1,2 +1,4 @@
 !src/main/resources/imports/k8s/k8s@0.0.0.jsii.tgz
 target/
+dist
+.idea
