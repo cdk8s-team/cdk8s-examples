@@ -20,7 +20,7 @@ const dbSecretKeys = [
 	"MYSQL_PASSWORD",
 ];
 
-const YAMLS_PATH = "../yamls/";
+const YAMLS_PATH = "yamls/";
 const CONFIG_PATH = path.join(YAMLS_PATH, "config.yaml");
 const FILES_ENCODING = "utf8";
 const STORAGE_CLASS = "rawfile-btrfs";

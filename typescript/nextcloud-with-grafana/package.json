@@ -7,11 +7,11 @@
   "private": true,
   "scripts": {
     "import": "cdk8s import",
-    "synth": "cdk8s synth",
+    "synth": "npm run helm:add && cdk8s synth",
     "compile": "tsc --build",
     "watch": "tsc --build -w",
-    "test": "jest",
-    "build": "npm run compile && npm run test && npm run synth",
+    "helm:add": "helm repo add traefik https://helm.traefik.io/traefik && helm repo add jetstack https://charts.jetstack.io",
+    "build": "npm run compile && npm run synth",
     "upgrade": "npm i cdk8s@latest cdk8s-cli@latest",
     "upgrade:next": "npm i cdk8s@next cdk8s-cli@next"
   },
