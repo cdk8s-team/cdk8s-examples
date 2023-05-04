@@ -10,4 +10,5 @@ use (
 	./go/cdk8s-plus-http-echo
 	./go/cdk8s-plus-pod-info
 	./go/cdk8s-plus-web-cache-db
+	./go/kubernetes-end-to-end-aws
 )

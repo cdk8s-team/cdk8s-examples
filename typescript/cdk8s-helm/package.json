@@ -6,8 +6,7 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "import": "cdk8s import",
-    "build": "npm run import && npm run synth",
+    "build": "npm run synth",
     "helm:add": "helm repo add bitnami https://charts.bitnami.com/bitnami",
     "synth": "npm run helm:add && cdk8s synth"
   },

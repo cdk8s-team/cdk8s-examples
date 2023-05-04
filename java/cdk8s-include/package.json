@@ -7,8 +7,7 @@
   "private": true,
   "scripts": {
     "install": "mvn install",
-    "import": "cdk8s import && rm -rf imports",
-    "build": "mvn clean compile && npm run import && npm run synth",
+    "build": "mvn clean compile && npm run synth",
     "synth": "cdk8s synth"
   }
 }

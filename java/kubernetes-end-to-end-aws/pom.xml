@@ -15,8 +15,8 @@
     </dependency>
     <dependency>
       <groupId>org.cdk8s</groupId>
-      <artifactId>cdk8s-plus-26</artifactId>
-      <version>2.2.16</version>
+      <artifactId>cdk8s-plus-25</artifactId>
+      <version>2.7.17</version>
     </dependency>
     <dependency>
       <groupId>software.constructs</groupId>

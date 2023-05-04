@@ -1,6 +1,6 @@
 package com.example.app;
 
-import org.cdk8s.plus26.*;
+import org.cdk8s.plus25.*;
 
 import software.amazon.awscdk.App;
 import software.amazon.awscdk.CfnOutput;

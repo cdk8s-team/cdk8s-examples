@@ -7,8 +7,7 @@
   "private": true,
   "scripts": {
     "install": "pipenv install",
-    "import": "cdk8s import",
-    "build": "npm run import && npm run synth",
+    "build": "npm run synth",
     "synth": "cdk8s synth"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "cdk8s-helm-go",
+  "name": "kubernetes-end-to-end-aws-go",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
@@ -8,7 +8,8 @@
   "scripts": {
     "install": "go mod download && go mod tidy",
     "build": "npm run synth",
-    "helm:add": "helm repo add bitnami https://charts.bitnami.com/bitnami",
-    "synth": "npm run helm:add && cdk8s synth"
+    "synth": "cdk synth",
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy"
   }
 }
