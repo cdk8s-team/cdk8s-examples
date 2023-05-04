@@ -8,12 +8,16 @@ github.com/aws/jsii-runtime-go v1.80.0 h1:INbbvOdx/UV/+qH4cGmKStCWL4SrEoRwF34nR/
 github.com/aws/jsii-runtime-go v1.80.0/go.mod h1:bV9T+Vxxczx5bK5CKZraDQS+enxb1sgdjAo/AhePGlM=
 github.com/cdk8s-team/cdk8s-core-go/cdk8s/v2 v2.7.56 h1:MII3uQctjuH5Q3bEJBX1v/5lzbQLvpdkAsdrgDQYwks=
 github.com/cdk8s-team/cdk8s-core-go/cdk8s/v2 v2.7.56/go.mod h1:f73P66FF93PCEIQL4JxUd9TJ9/w0M9Fv6E1MmiSFWug=
+github.com/cdk8s-team/cdk8s-plus-go/cdk8splus25/v2 v2.7.17 h1:KxeyagtTNXQTuZh8qpoie21A47bO9zSzYyJ696G3R40=
+github.com/cdk8s-team/cdk8s-plus-go/cdk8splus25/v2 v2.7.17/go.mod h1:6xnw0bKg+xv4P8H71JA1ODs3QktsUKjN8jZdpbQdLrE=
 github.com/cdklabs/awscdk-asset-awscli-go/awscliv1/v2 v2.2.154 h1:Z4KYh4Cjrpfpkq9cezx/IosnCxX5qllbWMnmZ0wt7o4=
 github.com/cdklabs/awscdk-asset-awscli-go/awscliv1/v2 v2.2.154/go.mod h1:9C2/RJqB6OU4j+G4MPx/p6sNQauLsr8/xeSAacytVU8=
 github.com/cdklabs/awscdk-asset-kubectl-go/kubectlv20/v2 v2.1.1 h1:l5N27aCCjAB5cgW5pI4/ujnasPL8hUcJ9KBxrKk6UiQ=
 github.com/cdklabs/awscdk-asset-kubectl-go/kubectlv20/v2 v2.1.1/go.mod h1:CvFHBo0qcg8LUkJqIxQtP1rD/sNGv9bX3L2vHT2FUAo=
 github.com/cdklabs/awscdk-asset-node-proxy-agent-go/nodeproxyagentv5/v2 v2.0.129 h1:aq7Do8axAulzPLZSHc13pxJhYwV7L6ymMC1v05YyX9I=
 github.com/cdklabs/awscdk-asset-node-proxy-agent-go/nodeproxyagentv5/v2 v2.0.129/go.mod h1:qQDQrtZoVB1KTN/m6HJswaL7RMHAj8QCV8NGU5gDIE0=
+github.com/cdklabs/awscdk-kubectl-go/kubectlv25/v2 v2.0.3 h1:t/VUGbiCESM/qMRA5RRIFZA4lXUchriCkYefF+Ffgsg=
+github.com/cdklabs/awscdk-kubectl-go/kubectlv25/v2 v2.0.3/go.mod h1:brT2k7isZIkVe5U3hHQfNX5Jw1AXaZljC3qnsgDBdOg=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/mattn/go-isatty v0.0.18 h1:DOKFKCQ7FNG2L1rbrmstDN4QVRdS89Nkh85u68Uwp98=
 github.com/mattn/go-isatty v0.0.18/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=

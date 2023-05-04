@@ -60,6 +60,7 @@ project.addScripts({
 });
 
 project.gitignore.exclude('.vscode')
+project.gitignore.include('*.tgz')
 
 project.tasks.removeTask('test');
 project.tasks.removeTask('test:update');
