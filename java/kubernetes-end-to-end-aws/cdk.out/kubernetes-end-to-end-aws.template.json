@@ -13,7 +13,7 @@
     "LicenseInfo": "Apache-2.0"
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Kubectl/Resource",
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Kubectl/Resource",
     "aws:asset:path": "asset.ebc48a9a74e277f463f78c5a0b3bcf489a891efe25ece75b5b439b9e89bee4ac.zip",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Content"
@@ -29,12 +29,12 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/Resource"
    }
   },
   "ClusterDefaultVpcPublicSubnet1Subnet3BFE1BDA": {
@@ -68,12 +68,12 @@
      },
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet1"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet1/Subnet"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1/Subnet"
    }
   },
   "ClusterDefaultVpcPublicSubnet1RouteTable1DCCDD98": {
@@ -89,12 +89,12 @@
      },
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet1"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet1/RouteTable"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1/RouteTable"
    }
   },
   "ClusterDefaultVpcPublicSubnet1RouteTableAssociationAFBE6789": {
@@ -108,7 +108,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet1/RouteTableAssociation"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1/RouteTableAssociation"
    }
   },
   "ClusterDefaultVpcPublicSubnet1DefaultRouteCF22EF6E": {
@@ -126,7 +126,7 @@
     "ClusterDefaultVpcVPCGWC1D00388"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet1/DefaultRoute"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1/DefaultRoute"
    }
   },
   "ClusterDefaultVpcPublicSubnet1EIP498E2BD2": {
@@ -140,12 +140,12 @@
      },
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet1"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet1/EIP"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1/EIP"
    }
   },
   "ClusterDefaultVpcPublicSubnet1NATGateway6E21013E": {
@@ -167,7 +167,7 @@
      },
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet1"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1"
      }
     ]
    },
@@ -176,7 +176,7 @@
     "ClusterDefaultVpcPublicSubnet1RouteTableAssociationAFBE6789"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet1/NATGateway"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1/NATGateway"
    }
   },
   "ClusterDefaultVpcPublicSubnet2SubnetC4E9A966": {
@@ -210,12 +210,12 @@
      },
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet2"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet2/Subnet"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2/Subnet"
    }
   },
   "ClusterDefaultVpcPublicSubnet2RouteTable6F1F5F47": {
@@ -231,12 +231,12 @@
      },
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet2"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet2/RouteTable"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2/RouteTable"
    }
   },
   "ClusterDefaultVpcPublicSubnet2RouteTableAssociationA8539C50": {
@@ -250,7 +250,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet2/RouteTableAssociation"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2/RouteTableAssociation"
    }
   },
   "ClusterDefaultVpcPublicSubnet2DefaultRoute1FA8621E": {
@@ -268,7 +268,7 @@
     "ClusterDefaultVpcVPCGWC1D00388"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet2/DefaultRoute"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2/DefaultRoute"
    }
   },
   "ClusterDefaultVpcPublicSubnet2EIP265F4810": {
@@ -282,12 +282,12 @@
      },
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet2"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet2/EIP"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2/EIP"
    }
   },
   "ClusterDefaultVpcPublicSubnet2NATGateway4AF4B728": {
@@ -309,7 +309,7 @@
      },
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet2"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2"
      }
     ]
    },
@@ -318,7 +318,7 @@
     "ClusterDefaultVpcPublicSubnet2RouteTableAssociationA8539C50"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet2/NATGateway"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2/NATGateway"
    }
   },
   "ClusterDefaultVpcPrivateSubnet1Subnet03F39409": {
@@ -352,12 +352,12 @@
      },
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet1"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet1"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet1/Subnet"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet1/Subnet"
    }
   },
   "ClusterDefaultVpcPrivateSubnet1RouteTable7844020C": {
@@ -373,12 +373,12 @@
      },
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet1"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet1"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet1/RouteTable"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet1/RouteTable"
    }
   },
   "ClusterDefaultVpcPrivateSubnet1RouteTableAssociationF8A67D95": {
@@ -392,7 +392,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet1/RouteTableAssociation"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet1/RouteTableAssociation"
    }
   },
   "ClusterDefaultVpcPrivateSubnet1DefaultRouteD624C8BD": {
@@ -407,7 +407,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet1/DefaultRoute"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet1/DefaultRoute"
    }
   },
   "ClusterDefaultVpcPrivateSubnet2SubnetA526AEA7": {
@@ -441,12 +441,12 @@
      },
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet2"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet2"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet2/Subnet"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet2/Subnet"
    }
   },
   "ClusterDefaultVpcPrivateSubnet2RouteTable1F9A5298": {
@@ -462,12 +462,12 @@
      },
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet2"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet2"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet2/RouteTable"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet2/RouteTable"
    }
   },
   "ClusterDefaultVpcPrivateSubnet2RouteTableAssociationE1240DF2": {
@@ -481,7 +481,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet2/RouteTableAssociation"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet2/RouteTableAssociation"
    }
   },
   "ClusterDefaultVpcPrivateSubnet2DefaultRouteAB55737C": {
@@ -496,7 +496,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet2/DefaultRoute"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet2/DefaultRoute"
    }
   },
   "ClusterDefaultVpcIGW756BE43E": {
@@ -505,12 +505,12 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "kubernetes-end-to-end/Cluster/DefaultVpc"
+      "Value": "kubernetes-end-to-end-aws/Cluster/DefaultVpc"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/IGW"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/IGW"
    }
   },
   "ClusterDefaultVpcVPCGWC1D00388": {
@@ -524,7 +524,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/DefaultVpc/VPCGW"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/DefaultVpc/VPCGW"
    }
   },
   "ClusterRoleFA261979": {
@@ -558,7 +558,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/Role/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/Role/Resource"
    }
   },
   "ClusterControlPlaneSecurityGroupD274242C": {
@@ -577,7 +577,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/ControlPlaneSecurityGroup/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/ControlPlaneSecurityGroup/Resource"
    }
   },
   "ClusterCreationRole360249B6": {
@@ -637,7 +637,7 @@
     "ClusterDefaultVpcVPCGWC1D00388"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/Resource/CreationRole/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/Resource/CreationRole/Resource"
    }
   },
   "ClusterCreationRoleDefaultPolicyE8BDFC7B": {
@@ -742,7 +742,7 @@
     "ClusterDefaultVpcVPCGWC1D00388"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/Resource/CreationRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/Resource/CreationRole/DefaultPolicy/Resource"
    }
   },
   "Cluster9EE0221C": {
@@ -751,7 +751,7 @@
     "ServiceToken": {
      "Fn::GetAtt": [
       "awscdkawseksClusterResourceProviderNestedStackawscdkawseksClusterResourceProviderNestedStackResource9827C454",
-      "Outputs.kubernetesendtoendawscdkawseksClusterResourceProviderframeworkonEvent2529EE1FArn"
+      "Outputs.kubernetesendtoendawsawscdkawseksClusterResourceProviderframeworkonEvent483954A1Arn"
      ]
     },
     "Config": {
@@ -827,7 +827,7 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/Resource/Resource/Default"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/Resource/Resource/Default"
    }
   },
   "ClusterKubectlReadyBarrier200052AF": {
@@ -842,7 +842,7 @@
     "Cluster9EE0221C"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/KubectlReadyBarrier"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/KubectlReadyBarrier"
    }
   },
   "ClusterMastersRole9AA35625": {
@@ -877,7 +877,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/MastersRole/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/MastersRole/Resource"
    }
   },
   "ClusterAwsAuthmanifestFE51F8AE": {
@@ -886,14 +886,14 @@
     "ServiceToken": {
      "Fn::GetAtt": [
       "awscdkawseksKubectlProviderNestedStackawscdkawseksKubectlProviderNestedStackResourceA7AEBA6B",
-      "Outputs.kubernetesendtoendawscdkawseksKubectlProviderframeworkonEvent5CD61922Arn"
+      "Outputs.kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn"
      ]
     },
     "Manifest": {
      "Fn::Join": [
       "",
       [
-       "[{\"apiVersion\":\"v1\",\"kind\":\"ConfigMap\",\"metadata\":{\"name\":\"aws-auth\",\"namespace\":\"kube-system\",\"labels\":{\"aws.cdk.eks/prune-c835efc6b28be6bc8e0d05d89d5c15acc5ba56b314\":\"\"}},\"data\":{\"mapRoles\":\"[{\\\"rolearn\\\":\\\"",
+       "[{\"apiVersion\":\"v1\",\"kind\":\"ConfigMap\",\"metadata\":{\"name\":\"aws-auth\",\"namespace\":\"kube-system\",\"labels\":{\"aws.cdk.eks/prune-c8c065aa4e126347d9f13248ad46e4a1df79710cf0\":\"\"}},\"data\":{\"mapRoles\":\"[{\\\"rolearn\\\":\\\"",
        {
         "Fn::GetAtt": [
          "ClusterMastersRole9AA35625",
@@ -927,7 +927,7 @@
       "Arn"
      ]
     },
-    "PruneLabel": "aws.cdk.eks/prune-c835efc6b28be6bc8e0d05d89d5c15acc5ba56b314",
+    "PruneLabel": "aws.cdk.eks/prune-c8c065aa4e126347d9f13248ad46e4a1df79710cf0",
     "Overwrite": true
    },
    "DependsOn": [
@@ -936,7 +936,7 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/AwsAuth/manifest/Resource/Default"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/AwsAuth/manifest/Resource/Default"
    }
   },
   "ClusterOpenIdConnectProviderE7EB0530": {
@@ -957,12 +957,12 @@
       "OpenIdConnectIssuerUrl"
      ]
     },
-    "CodeHash": "ffa3d5f3876afed62c60735ced8dafb4db2ccbd70a8b2f6b0d9e6eaa5823d631"
+    "CodeHash": "48e9fd6cee1d2c5f41da5c382b67d28876e6930ade034bffcfe0739f878fec68"
    },
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/OpenIdConnectProvider/Resource/Default"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/OpenIdConnectProvider/Resource/Default"
    }
   },
   "ClusterNodegroupDefaultCapacityNodeGroupRole55953B04": {
@@ -1020,7 +1020,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/NodegroupDefaultCapacity/NodeGroupRole/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/NodegroupDefaultCapacity/NodeGroupRole/Resource"
    }
   },
   "ClusterNodegroupDefaultCapacityDA0920A3": {
@@ -1055,7 +1055,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/NodegroupDefaultCapacity/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/NodegroupDefaultCapacity/Resource"
    }
   },
   "ClusterchartKubeViewF1713CA9": {
@@ -1064,7 +1064,7 @@
     "ServiceToken": {
      "Fn::GetAtt": [
       "awscdkawseksKubectlProviderNestedStackawscdkawseksKubectlProviderNestedStackResourceA7AEBA6B",
-      "Outputs.kubernetesendtoendawscdkawseksKubectlProviderframeworkonEvent5CD61922Arn"
+      "Outputs.kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn"
      ]
     },
     "ClusterName": {
@@ -1076,7 +1076,7 @@
       "Arn"
      ]
     },
-    "Release": "kubernetesendtoendclusterchartkubeviewf395e94a",
+    "Release": "kubernetesendtoendawsclusterchartkubeviewc323e5c1",
     "Chart": "kubeview",
     "Values": "{\"fullnameOverride\":\"kubeview\"}",
     "Namespace": "kube-system",
@@ -1089,7 +1089,7 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/chart-KubeView/Resource/Default"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/chart-KubeView/Resource/Default"
    }
   },
   "ClusterkubeviewLoadBalancerAddress8DEA0726": {
@@ -1098,7 +1098,7 @@
     "ServiceToken": {
      "Fn::GetAtt": [
       "awscdkawseksKubectlProviderNestedStackawscdkawseksKubectlProviderNestedStackResourceA7AEBA6B",
-      "Outputs.kubernetesendtoendawscdkawseksKubectlProviderframeworkonEvent5CD61922Arn"
+      "Outputs.kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn"
      ]
     },
     "ClusterName": {
@@ -1122,7 +1122,7 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/kubeviewLoadBalancerAddress/Resource/Default"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/kubeviewLoadBalancerAddress/Resource/Default"
    }
   },
   "ClusterHttpEcho0BEFA7A4": {
@@ -1131,10 +1131,10 @@
     "ServiceToken": {
      "Fn::GetAtt": [
       "awscdkawseksKubectlProviderNestedStackawscdkawseksKubectlProviderNestedStackResourceA7AEBA6B",
-      "Outputs.kubernetesendtoendawscdkawseksKubectlProviderframeworkonEvent5CD61922Arn"
+      "Outputs.kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn"
      ]
     },
-    "Manifest": "[{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"name\":\"httpecho-deployment-c87db546\",\"labels\":{\"aws.cdk.eks/prune-c8fd09752341dcfdf5fdcfe7037819908c7cfb81bb\":\"\"}},\"spec\":{\"minReadySeconds\":0,\"progressDeadlineSeconds\":600,\"replicas\":2,\"selector\":{\"matchLabels\":{\"cdk8s.io/metadata.addr\":\"HttpEcho-Deployment-c8a5d42d\"}},\"strategy\":{\"rollingUpdate\":{\"maxSurge\":\"25%\",\"maxUnavailable\":\"25%\"},\"type\":\"RollingUpdate\"},\"template\":{\"metadata\":{\"labels\":{\"cdk8s.io/metadata.addr\":\"HttpEcho-Deployment-c8a5d42d\"}},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"image\":\"paulbouwer/hello-kubernetes:1.5\",\"imagePullPolicy\":\"Always\",\"name\":\"main\",\"ports\":[{\"containerPort\":8080}],\"resources\":{\"limits\":{\"cpu\":\"1500m\",\"memory\":\"2048Mi\"},\"requests\":{\"cpu\":\"1000m\",\"memory\":\"512Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"privileged\":false,\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true,\"runAsUser\":1005},\"startupProbe\":{\"failureThreshold\":3,\"tcpSocket\":{\"port\":8080}}}],\"dnsPolicy\":\"ClusterFirst\",\"hostNetwork\":false,\"restartPolicy\":\"Always\",\"securityContext\":{\"fsGroupChangePolicy\":\"Always\",\"runAsNonRoot\":true},\"setHostnameAsFQDN\":false}}}},{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"name\":\"httpecho-deployment-service-c8266ea6\",\"labels\":{\"aws.cdk.eks/prune-c8fd09752341dcfdf5fdcfe7037819908c7cfb81bb\":\"\"}},\"spec\":{\"externalIPs\":[],\"ports\":[{\"port\":8080,\"targetPort\":8080}],\"selector\":{\"cdk8s.io/metadata.addr\":\"HttpEcho-Deployment-c8a5d42d\"},\"type\":\"NodePort\"}},{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"Ingress\",\"metadata\":{\"name\":\"httpecho-ingress-c8dc70a7\",\"labels\":{\"aws.cdk.eks/prune-c8fd09752341dcfdf5fdcfe7037819908c7cfb81bb\":\"\"},\"annotations\":{\"kubernetes.io/ingress.class\":\"alb\",\"alb.ingress.kubernetes.io/scheme\":\"internet-facing\"}},\"spec\":{\"rules\":[{\"http\":{\"paths\":[{\"backend\":{\"service\":{\"name\":\"httpecho-deployment-service-c8266ea6\",\"port\":{\"number\":8080}}},\"path\":\"/\",\"pathType\":\"Prefix\"}]}}]}}]",
+    "Manifest": "[{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"name\":\"httpecho-deployment-c87db546\",\"labels\":{\"aws.cdk.eks/prune-c879b22fbad083af9ce1653fa5d5fbea46a8d33ba8\":\"\"}},\"spec\":{\"minReadySeconds\":0,\"progressDeadlineSeconds\":600,\"replicas\":2,\"selector\":{\"matchLabels\":{\"cdk8s.io/metadata.addr\":\"HttpEcho-Deployment-c8a5d42d\"}},\"strategy\":{\"rollingUpdate\":{\"maxSurge\":\"25%\",\"maxUnavailable\":\"25%\"},\"type\":\"RollingUpdate\"},\"template\":{\"metadata\":{\"labels\":{\"cdk8s.io/metadata.addr\":\"HttpEcho-Deployment-c8a5d42d\"}},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"image\":\"paulbouwer/hello-kubernetes:1.5\",\"imagePullPolicy\":\"Always\",\"name\":\"main\",\"ports\":[{\"containerPort\":8080}],\"resources\":{\"limits\":{\"cpu\":\"1500m\",\"memory\":\"2048Mi\"},\"requests\":{\"cpu\":\"1000m\",\"memory\":\"512Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"privileged\":false,\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true,\"runAsUser\":1005},\"startupProbe\":{\"failureThreshold\":3,\"tcpSocket\":{\"port\":8080}}}],\"dnsPolicy\":\"ClusterFirst\",\"restartPolicy\":\"Always\",\"securityContext\":{\"fsGroupChangePolicy\":\"Always\",\"runAsNonRoot\":true},\"setHostnameAsFQDN\":false}}}},{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"name\":\"httpecho-deployment-service-c8266ea6\",\"labels\":{\"aws.cdk.eks/prune-c879b22fbad083af9ce1653fa5d5fbea46a8d33ba8\":\"\"}},\"spec\":{\"externalIPs\":[],\"ports\":[{\"port\":8080,\"targetPort\":8080}],\"selector\":{\"cdk8s.io/metadata.addr\":\"HttpEcho-Deployment-c8a5d42d\"},\"type\":\"NodePort\"}},{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"Ingress\",\"metadata\":{\"name\":\"httpecho-ingress-c8dc70a7\",\"labels\":{\"aws.cdk.eks/prune-c879b22fbad083af9ce1653fa5d5fbea46a8d33ba8\":\"\"},\"annotations\":{\"kubernetes.io/ingress.class\":\"alb\",\"alb.ingress.kubernetes.io/scheme\":\"internet-facing\"}},\"spec\":{\"rules\":[{\"http\":{\"paths\":[{\"backend\":{\"service\":{\"name\":\"httpecho-deployment-service-c8266ea6\",\"port\":{\"number\":8080}}},\"path\":\"/\",\"pathType\":\"Prefix\"}]}}]}}]",
     "ClusterName": {
      "Ref": "Cluster9EE0221C"
     },
@@ -1144,20 +1144,20 @@
       "Arn"
      ]
     },
-    "PruneLabel": "aws.cdk.eks/prune-c8fd09752341dcfdf5fdcfe7037819908c7cfb81bb"
+    "PruneLabel": "aws.cdk.eks/prune-c879b22fbad083af9ce1653fa5d5fbea46a8d33ba8"
    },
    "DependsOn": [
     "ClusterKubectlReadyBarrier200052AF",
-    "kubernetesendtoendCluster80063B22AlbControlleralbsaConditionJson6FB09016",
-    "kubernetesendtoendCluster80063B22AlbControlleralbsamanifestalbsaServiceAccountResource2F71F570",
-    "kubernetesendtoendCluster80063B22AlbControlleralbsaRoleDefaultPolicy00045729",
-    "kubernetesendtoendCluster80063B22AlbControlleralbsaRole33570734",
-    "kubernetesendtoendCluster80063B22AlbController58BEE4CD"
+    "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaConditionJson6F53A68E",
+    "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsamanifestalbsaServiceAccountResource6651548C",
+    "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaRoleDefaultPolicyE63A5473",
+    "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaRoleE4E0F8A4",
+    "kubernetesendtoendawsCluster3E3D3F76AlbControllerA7930E56"
    ],
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/HttpEcho/Resource/Default"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/HttpEcho/Resource/Default"
    }
   },
   "Clusterhttpechoingressc8dc70a7LoadBalancerAddress0760BE37": {
@@ -1166,7 +1166,7 @@
     "ServiceToken": {
      "Fn::GetAtt": [
       "awscdkawseksKubectlProviderNestedStackawscdkawseksKubectlProviderNestedStackResourceA7AEBA6B",
-      "Outputs.kubernetesendtoendawscdkawseksKubectlProviderframeworkonEvent5CD61922Arn"
+      "Outputs.kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn"
      ]
     },
     "ClusterName": {
@@ -1190,7 +1190,7 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Cluster/httpecho-ingress-c8dc70a7LoadBalancerAddress/Resource/Default"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Cluster/httpecho-ingress-c8dc70a7LoadBalancerAddress/Resource/Default"
    }
   },
   "awscdkawseksClusterResourceProviderNestedStackawscdkawseksClusterResourceProviderNestedStackResource9827C454": {
@@ -1212,12 +1212,12 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/4f9db4cb4ef9c162b664f9ba2446b4b311f2ce9eccb4ec11d914c05db6c607df.json"
+       "/69e830f2f81b5281dba606a6119bb410413e0bf2476020a17d77b21c3eb98b20.json"
       ]
      ]
     },
     "Parameters": {
-     "referencetokubernetesendtoendClusterCreationRole7361842EArn": {
+     "referencetokubernetesendtoendawsClusterCreationRoleB04B6EE4Arn": {
       "Fn::GetAtt": [
        "ClusterCreationRole360249B6",
        "Arn"
@@ -1228,8 +1228,8 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStack/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStackResource",
-    "aws:asset:path": "kubernetesendtoendawscdkawseksClusterResourceProviderCD7C6152.nested.template.json",
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStack/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStackResource",
+    "aws:asset:path": "kubernetesendtoendawsawscdkawseksClusterResourceProvider5E6E6F1A.nested.template.json",
     "aws:asset:property": "TemplateURL"
    }
   },
@@ -1252,33 +1252,33 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/f90518e6f16487dfde900bf53a7c7dae157833b7afdceecb64bc9f0dc25a071c.json"
+       "/b214fbcd50e94d256353272eae8befce9d7510d9317f73b2f47dac76ee606110.json"
       ]
      ]
     },
     "Parameters": {
-     "referencetokubernetesendtoendCluster81EDAB07Arn": {
+     "referencetokubernetesendtoendawsCluster42F39FFFArn": {
       "Fn::GetAtt": [
        "Cluster9EE0221C",
        "Arn"
       ]
      },
-     "referencetokubernetesendtoendClusterCreationRole7361842EArn": {
+     "referencetokubernetesendtoendawsClusterCreationRoleB04B6EE4Arn": {
       "Fn::GetAtt": [
        "ClusterCreationRole360249B6",
        "Arn"
       ]
      },
-     "referencetokubernetesendtoendKubectl37714510Ref": {
+     "referencetokubernetesendtoendawsKubectl55510B5ARef": {
       "Ref": "Kubectl85A5A23F"
      },
-     "referencetokubernetesendtoendClusterDefaultVpcPrivateSubnet1Subnet0309CF62Ref": {
+     "referencetokubernetesendtoendawsClusterDefaultVpcPrivateSubnet1Subnet5D689C1ERef": {
       "Ref": "ClusterDefaultVpcPrivateSubnet1Subnet03F39409"
      },
-     "referencetokubernetesendtoendClusterDefaultVpcPrivateSubnet2Subnet6E2BE4A8Ref": {
+     "referencetokubernetesendtoendawsClusterDefaultVpcPrivateSubnet2SubnetDA868D8BRef": {
       "Ref": "ClusterDefaultVpcPrivateSubnet2SubnetA526AEA7"
      },
-     "referencetokubernetesendtoendCluster81EDAB07ClusterSecurityGroupId": {
+     "referencetokubernetesendtoendawsCluster42F39FFFClusterSecurityGroupId": {
       "Fn::GetAtt": [
        "Cluster9EE0221C",
        "ClusterSecurityGroupId"
@@ -1295,12 +1295,12 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider.NestedStack/@aws-cdk--aws-eks.KubectlProvider.NestedStackResource",
-    "aws:asset:path": "kubernetesendtoendawscdkawseksKubectlProviderC63F8B74.nested.template.json",
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider.NestedStack/@aws-cdk--aws-eks.KubectlProvider.NestedStackResource",
+    "aws:asset:path": "kubernetesendtoendawsawscdkawseksKubectlProvider1BCE4654.nested.template.json",
     "aws:asset:property": "TemplateURL"
    }
   },
-  "kubernetesendtoendCluster80063B22AlbControlleralbsaConditionJson6FB09016": {
+  "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaConditionJson6F53A68E": {
    "Type": "Custom::AWSCDKCfnJson",
    "Properties": {
     "ServiceToken": {
@@ -1353,10 +1353,10 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/kubernetesendtoendCluster80063B22-AlbController/alb-sa/ConditionJson/Resource/Default"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/kubernetesendtoendawsCluster3E3D3F76-AlbController/alb-sa/ConditionJson/Resource/Default"
    }
   },
-  "kubernetesendtoendCluster80063B22AlbControlleralbsaRole33570734": {
+  "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaRoleE4E0F8A4": {
    "Type": "AWS::IAM::Role",
    "Properties": {
     "AssumeRolePolicyDocument": {
@@ -1366,7 +1366,7 @@
        "Condition": {
         "StringEquals": {
          "Fn::GetAtt": [
-          "kubernetesendtoendCluster80063B22AlbControlleralbsaConditionJson6FB09016",
+          "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaConditionJson6F53A68E",
           "Value"
          ]
         }
@@ -1387,10 +1387,10 @@
     "ClusterNodegroupDefaultCapacityDA0920A3"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/kubernetesendtoendCluster80063B22-AlbController/alb-sa/Role/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/kubernetesendtoendawsCluster3E3D3F76-AlbController/alb-sa/Role/Resource"
    }
   },
-  "kubernetesendtoendCluster80063B22AlbControlleralbsaRoleDefaultPolicy00045729": {
+  "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaRoleDefaultPolicyE63A5473": {
    "Type": "AWS::IAM::Policy",
    "Properties": {
     "PolicyDocument": {
@@ -1606,10 +1606,10 @@
      ],
      "Version": "2012-10-17"
     },
-    "PolicyName": "kubernetesendtoendCluster80063B22AlbControlleralbsaRoleDefaultPolicy00045729",
+    "PolicyName": "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaRoleDefaultPolicyE63A5473",
     "Roles": [
      {
-      "Ref": "kubernetesendtoendCluster80063B22AlbControlleralbsaRole33570734"
+      "Ref": "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaRoleE4E0F8A4"
      }
     ]
    },
@@ -1618,26 +1618,26 @@
     "ClusterNodegroupDefaultCapacityDA0920A3"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/kubernetesendtoendCluster80063B22-AlbController/alb-sa/Role/DefaultPolicy/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/kubernetesendtoendawsCluster3E3D3F76-AlbController/alb-sa/Role/DefaultPolicy/Resource"
    }
   },
-  "kubernetesendtoendCluster80063B22AlbControlleralbsamanifestalbsaServiceAccountResource2F71F570": {
+  "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsamanifestalbsaServiceAccountResource6651548C": {
    "Type": "Custom::AWSCDK-EKS-KubernetesResource",
    "Properties": {
     "ServiceToken": {
      "Fn::GetAtt": [
       "awscdkawseksKubectlProviderNestedStackawscdkawseksKubectlProviderNestedStackResourceA7AEBA6B",
-      "Outputs.kubernetesendtoendawscdkawseksKubectlProviderframeworkonEvent5CD61922Arn"
+      "Outputs.kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn"
      ]
     },
     "Manifest": {
      "Fn::Join": [
       "",
       [
-       "[{\"apiVersion\":\"v1\",\"kind\":\"ServiceAccount\",\"metadata\":{\"name\":\"aws-load-balancer-controller\",\"namespace\":\"kube-system\",\"labels\":{\"aws.cdk.eks/prune-c83476105973128732d0b0473af920aa194568c29b\":\"\",\"app.kubernetes.io/name\":\"aws-load-balancer-controller\"},\"annotations\":{\"eks.amazonaws.com/role-arn\":\"",
+       "[{\"apiVersion\":\"v1\",\"kind\":\"ServiceAccount\",\"metadata\":{\"name\":\"aws-load-balancer-controller\",\"namespace\":\"kube-system\",\"labels\":{\"aws.cdk.eks/prune-c8615b59933ec0100b46d04299c056e23612858bd0\":\"\",\"app.kubernetes.io/name\":\"aws-load-balancer-controller\"},\"annotations\":{\"eks.amazonaws.com/role-arn\":\"",
        {
         "Fn::GetAtt": [
-         "kubernetesendtoendCluster80063B22AlbControlleralbsaRole33570734",
+         "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaRoleE4E0F8A4",
          "Arn"
         ]
        },
@@ -1654,7 +1654,7 @@
       "Arn"
      ]
     },
-    "PruneLabel": "aws.cdk.eks/prune-c83476105973128732d0b0473af920aa194568c29b"
+    "PruneLabel": "aws.cdk.eks/prune-c8615b59933ec0100b46d04299c056e23612858bd0"
    },
    "DependsOn": [
     "ClusterKubectlReadyBarrier200052AF",
@@ -1664,16 +1664,16 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/kubernetesendtoendCluster80063B22-AlbController/alb-sa/manifest-alb-saServiceAccountResource/Resource/Default"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/kubernetesendtoendawsCluster3E3D3F76-AlbController/alb-sa/manifest-alb-saServiceAccountResource/Resource/Default"
    }
   },
-  "kubernetesendtoendCluster80063B22AlbController58BEE4CD": {
+  "kubernetesendtoendawsCluster3E3D3F76AlbControllerA7930E56": {
    "Type": "Custom::AWSCDK-EKS-HelmChart",
    "Properties": {
     "ServiceToken": {
      "Fn::GetAtt": [
       "awscdkawseksKubectlProviderNestedStackawscdkawseksKubectlProviderNestedStackResourceA7AEBA6B",
-      "Outputs.kubernetesendtoendawscdkawseksKubectlProviderframeworkonEvent5CD61922Arn"
+      "Outputs.kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn"
      ]
     },
     "ClusterName": {
@@ -1720,15 +1720,15 @@
     "ClusterNodegroupDefaultCapacityNodeGroupRole55953B04",
     "ClusterNodegroupDefaultCapacityDA0920A3",
     "ClusterOpenIdConnectProviderE7EB0530",
-    "kubernetesendtoendCluster80063B22AlbControlleralbsaConditionJson6FB09016",
-    "kubernetesendtoendCluster80063B22AlbControlleralbsamanifestalbsaServiceAccountResource2F71F570",
-    "kubernetesendtoendCluster80063B22AlbControlleralbsaRoleDefaultPolicy00045729",
-    "kubernetesendtoendCluster80063B22AlbControlleralbsaRole33570734"
+    "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaConditionJson6F53A68E",
+    "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsamanifestalbsaServiceAccountResource6651548C",
+    "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaRoleDefaultPolicyE63A5473",
+    "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaRoleE4E0F8A4"
    ],
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/kubernetesendtoendCluster80063B22-AlbController/Resource/Resource/Default"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/kubernetesendtoendawsCluster3E3D3F76-AlbController/Resource/Resource/Default"
    }
   },
   "CustomAWSCDKOpenIdConnectProviderCustomResourceProviderRole517FED65": {
@@ -1774,7 +1774,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Role"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Role"
    }
   },
   "CustomAWSCDKOpenIdConnectProviderCustomResourceProviderHandlerF2C543E0": {
@@ -1784,7 +1784,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "ffa3d5f3876afed62c60735ced8dafb4db2ccbd70a8b2f6b0d9e6eaa5823d631.zip"
+     "S3Key": "48e9fd6cee1d2c5f41da5c382b67d28876e6930ade034bffcfe0739f878fec68.zip"
     },
     "Timeout": 900,
     "MemorySize": 128,
@@ -1801,8 +1801,8 @@
     "CustomAWSCDKOpenIdConnectProviderCustomResourceProviderRole517FED65"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Handler",
-    "aws:asset:path": "asset.ffa3d5f3876afed62c60735ced8dafb4db2ccbd70a8b2f6b0d9e6eaa5823d631",
+    "aws:cdk:path": "kubernetes-end-to-end-aws/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Handler",
+    "aws:asset:path": "asset.48e9fd6cee1d2c5f41da5c382b67d28876e6930ade034bffcfe0739f878fec68",
     "aws:asset:property": "Code"
    }
   },
@@ -1828,7 +1828,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/AWSCDKCfnUtilsProviderCustomResourceProvider/Role"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/AWSCDKCfnUtilsProviderCustomResourceProvider/Role"
    }
   },
   "AWSCDKCfnUtilsProviderCustomResourceProviderHandlerCF82AA57": {
@@ -1838,7 +1838,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "a913a2614f4e118cb83fa3c0dd17575c9adbbdbad4da17aecd505282a25513f8.zip"
+     "S3Key": "28739348edff6f1084f6a50d8d934e2d3fc2a3bb77442d8a9a1361d51ccd03c0.zip"
     },
     "Timeout": 900,
     "MemorySize": 128,
@@ -1849,24 +1849,24 @@
       "Arn"
      ]
     },
-    "Runtime": "nodejs14.x"
+    "Runtime": "nodejs16.x"
    },
    "DependsOn": [
     "AWSCDKCfnUtilsProviderCustomResourceProviderRoleFE0EE867"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/AWSCDKCfnUtilsProviderCustomResourceProvider/Handler",
-    "aws:asset:path": "asset.a913a2614f4e118cb83fa3c0dd17575c9adbbdbad4da17aecd505282a25513f8",
+    "aws:cdk:path": "kubernetes-end-to-end-aws/AWSCDKCfnUtilsProviderCustomResourceProvider/Handler",
+    "aws:asset:path": "asset.28739348edff6f1084f6a50d8d934e2d3fc2a3bb77442d8a9a1361d51ccd03c0",
     "aws:asset:property": "Code"
    }
   },
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VSwW7bMAz9lt5ptXVa7DrXGLqs3WIkg6+FLLOJYlkKJMpBYPjfR9vN3J74SIkP5HtMRf9tJe5u5Dkkqm4SoyvR70iqBrj01ofVmwwBKYhsDBBW4imqBulJBgQj26qWIn+3r/KCvkQftLOATRB9bmIg9JCdQxbpAC+xQm+RMPyWVr9jINic0K7r3FmLigrvOl1zwx9X4967eALmXZKfaNr8ID19YtpUR+4spYkImamYibwzhkl26DutMFPKRUsDoEpFX57UyFkWORSxMlrtYsU8Y21BWxcJ/8rK4FJfaqyCU1rSuOb18wh+rItpXEnPkvAsL1B43TFciNeWprGvH+ZJPrKMWPNDi5Z4dBW9psvzVYMvhQG0bEW/dfN8Uywc7zIRzmgYYHKLfdxru4ctBhe94ga2xLVLyv2f8CbSKc5qTAfA4FcY9/zS9d8nfmbBaz1qMcCdWN18/7ii2/kuEjMeRdKwXYpM0qWP4mXGZfo4HcwAlv0Vx3Db3T+I9J45jkHrxLNnukWxneM/tOFpV6UCAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VSwW7bMAz9ltxlNXNQdLvNNYY27boYyeBrIctsolqWDIlyEBj+91F2M7cnPtLiM/keUz7cfefrlTj7RNZNolXFhwMK2TAqvQ5+8yq8B/Q8i4H5Db8PsgG8Fx6YFm1VC56/md/iAq4E55U1DBrPh1wHj+BYdvZZwBN7DhU4Awj+RRj1Bh7ZrgOzrXNrDEgsnO1VTQ1/bA1HZ0PHiHdJHkG3+Uk4/MS0q96psxQ6AMt0RUzorNZEcgDXKwmZlDYYHBnIlA9lJyNnWeSsCJVW8hAq4om1Be1tQPgrKg1LfamRClYqgXHN6+MIfm2LaVyBDwLhLC6scKonuBBvDU5jXx/Mk3xkGZLmpxYM0ugyOIWXh6sGXwojU6Llw97O802xsLTLRDijcWSTW+TjUZkj24O3wUlqIEtsu6TU/wnvAnZhVmM6AAJPPu75peu/T/T5RXRd/AFB0r5WUZaRrflm9fPjoG7mE0l0vI+kIeck6qRPb/nzjMv0drqdkT2JXtx8+8HXPF29e6USR86pFvh+jv8A//IGrqsCAAA="
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/CDKMetadata/Default"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/CDKMetadata/Default"
    },
    "Condition": "CDKMetadataAvailable"
   }
@@ -1950,6 +1950,109 @@
       }
      ]
     ]
+   }
+  }
+ },
+ "Mappings": {
+  "DefaultCrNodeVersionMap": {
+   "af-south-1": {
+    "value": "nodejs16.x"
+   },
+   "ap-east-1": {
+    "value": "nodejs16.x"
+   },
+   "ap-northeast-1": {
+    "value": "nodejs16.x"
+   },
+   "ap-northeast-2": {
+    "value": "nodejs16.x"
+   },
+   "ap-northeast-3": {
+    "value": "nodejs16.x"
+   },
+   "ap-south-1": {
+    "value": "nodejs16.x"
+   },
+   "ap-south-2": {
+    "value": "nodejs16.x"
+   },
+   "ap-southeast-1": {
+    "value": "nodejs16.x"
+   },
+   "ap-southeast-2": {
+    "value": "nodejs16.x"
+   },
+   "ap-southeast-3": {
+    "value": "nodejs16.x"
+   },
+   "ca-central-1": {
+    "value": "nodejs16.x"
+   },
+   "cn-north-1": {
+    "value": "nodejs16.x"
+   },
+   "cn-northwest-1": {
+    "value": "nodejs16.x"
+   },
+   "eu-central-1": {
+    "value": "nodejs16.x"
+   },
+   "eu-central-2": {
+    "value": "nodejs16.x"
+   },
+   "eu-north-1": {
+    "value": "nodejs16.x"
+   },
+   "eu-south-1": {
+    "value": "nodejs16.x"
+   },
+   "eu-south-2": {
+    "value": "nodejs16.x"
+   },
+   "eu-west-1": {
+    "value": "nodejs16.x"
+   },
+   "eu-west-2": {
+    "value": "nodejs16.x"
+   },
+   "eu-west-3": {
+    "value": "nodejs16.x"
+   },
+   "me-central-1": {
+    "value": "nodejs16.x"
+   },
+   "me-south-1": {
+    "value": "nodejs16.x"
+   },
+   "sa-east-1": {
+    "value": "nodejs16.x"
+   },
+   "us-east-1": {
+    "value": "nodejs16.x"
+   },
+   "us-east-2": {
+    "value": "nodejs16.x"
+   },
+   "us-gov-east-1": {
+    "value": "nodejs16.x"
+   },
+   "us-gov-west-1": {
+    "value": "nodejs16.x"
+   },
+   "us-iso-east-1": {
+    "value": "nodejs14.x"
+   },
+   "us-iso-west-1": {
+    "value": "nodejs14.x"
+   },
+   "us-isob-east-1": {
+    "value": "nodejs14.x"
+   },
+   "us-west-1": {
+    "value": "nodejs16.x"
+   },
+   "us-west-2": {
+    "value": "nodejs16.x"
    }
   }
  },

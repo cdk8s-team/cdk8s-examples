@@ -1,5 +1,5 @@
 {
-  "name": "kubernetes-end-to-end-aws",
+  "name": "kubernetes-end-to-end-aws-typescript",
   "version": "0.0.0",
   "main": "main.js",
   "types": "main.d.ts",

@@ -8,7 +8,7 @@ Example of how to define and deploy a cdk8s application onto an Amazon EKS clust
 Everything is deployed via the AWS CDK, which can natively integrate with cdk8s to 
 deploy Kubernetes manifests.
 
-> More detailed information is available inline with the [code](./index.ts).
+> More detailed information is available inline with the [code](./src/main/java/com/example/app/KubernetesEnd2EndAws.java).
 
 ## Architecture
 

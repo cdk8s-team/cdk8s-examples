@@ -7,13 +7,13 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "81679f44041b616804767bcfdbc5d509ff630848eb51dfe91b6a44351ec90b5f.zip"
+     "S3Key": "75dfa9114a30421542432dcb55212f010f591a9e3bd203ae98ba3f9bedf5bb31.zip"
     },
     "Description": "/opt/nodejs/node_modules/proxy-agent"
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/NodeProxyAgentLayer/Resource",
-    "aws:asset:path": "asset.81679f44041b616804767bcfdbc5d509ff630848eb51dfe91b6a44351ec90b5f.zip",
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/NodeProxyAgentLayer/Resource",
+    "aws:asset:path": "asset.75dfa9114a30421542432dcb55212f010f591a9e3bd203ae98ba3f9bedf5bb31.zip",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Content"
    }
@@ -49,7 +49,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/Resource"
    }
   },
   "OnEventHandlerServiceRoleDefaultPolicyC57085D4": {
@@ -61,7 +61,7 @@
        "Action": "sts:AssumeRole",
        "Effect": "Allow",
        "Resource": {
-        "Ref": "referencetokubernetesendtoendClusterCreationRole7361842EArn"
+        "Ref": "referencetokubernetesendtoendawsClusterCreationRoleB04B6EE4Arn"
        }
       }
      ],
@@ -75,7 +75,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/DefaultPolicy/Resource"
    }
   },
   "OnEventHandler42BEBAE0": {
@@ -85,7 +85,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "4f38ec7164c1b9c7bae70f79b9af9cbcd59f45e4f927cacc58e9979783bebd7a.zip"
+     "S3Key": "cb7696790fde992c4d0e6a005e67ece7988e273b67d9b2162af67cd408e5fb8f.zip"
     },
     "Role": {
      "Fn::GetAtt": [
@@ -113,8 +113,8 @@
     "OnEventHandlerServiceRole15A26729"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Resource",
-    "aws:asset:path": "asset.4f38ec7164c1b9c7bae70f79b9af9cbcd59f45e4f927cacc58e9979783bebd7a",
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Resource",
+    "aws:asset:path": "asset.cb7696790fde992c4d0e6a005e67ece7988e273b67d9b2162af67cd408e5fb8f",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -150,7 +150,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/Resource"
    }
   },
   "IsCompleteHandlerServiceRoleDefaultPolicy8F64197B": {
@@ -162,7 +162,7 @@
        "Action": "sts:AssumeRole",
        "Effect": "Allow",
        "Resource": {
-        "Ref": "referencetokubernetesendtoendClusterCreationRole7361842EArn"
+        "Ref": "referencetokubernetesendtoendawsClusterCreationRoleB04B6EE4Arn"
        }
       }
      ],
@@ -176,7 +176,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/DefaultPolicy/Resource"
    }
   },
   "IsCompleteHandler7073F4DA": {
@@ -186,7 +186,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "4f38ec7164c1b9c7bae70f79b9af9cbcd59f45e4f927cacc58e9979783bebd7a.zip"
+     "S3Key": "cb7696790fde992c4d0e6a005e67ece7988e273b67d9b2162af67cd408e5fb8f.zip"
     },
     "Role": {
      "Fn::GetAtt": [
@@ -214,8 +214,8 @@
     "IsCompleteHandlerServiceRole5810CC58"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Resource",
-    "aws:asset:path": "asset.4f38ec7164c1b9c7bae70f79b9af9cbcd59f45e4f927cacc58e9979783bebd7a",
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Resource",
+    "aws:asset:path": "asset.cb7696790fde992c4d0e6a005e67ece7988e273b67d9b2162af67cd408e5fb8f",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -251,7 +251,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/Resource"
    }
   },
   "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133": {
@@ -329,7 +329,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource"
    }
   },
   "ProviderframeworkonEvent83C1D0A7": {
@@ -339,7 +339,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "1eabd374284db340b74179e3429008132f5b6b0b7b28d472d852807d7f5f9746.zip"
+     "S3Key": "8e3d635893ea17fa3158623489cd42c680fad925b38de1ef51cb10d84f6e245e.zip"
     },
     "Role": {
      "Fn::GetAtt": [
@@ -347,7 +347,7 @@
       "Arn"
      ]
     },
-    "Description": "AWS CDK resource provider framework - onEvent (kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
+    "Description": "AWS CDK resource provider framework - onEvent (kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
     "Environment": {
      "Variables": {
       "USER_ON_EVENT_FUNCTION_ARN": {
@@ -376,8 +376,8 @@
     "ProviderframeworkonEventServiceRole9FF04296"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Resource",
-    "aws:asset:path": "asset.1eabd374284db340b74179e3429008132f5b6b0b7b28d472d852807d7f5f9746",
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Resource",
+    "aws:asset:path": "asset.8e3d635893ea17fa3158623489cd42c680fad925b38de1ef51cb10d84f6e245e",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -413,7 +413,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/Resource"
    }
   },
   "ProviderframeworkisCompleteServiceRoleDefaultPolicy2E7140AC": {
@@ -484,7 +484,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/DefaultPolicy/Resource"
    }
   },
   "ProviderframeworkisComplete26D7B0CB": {
@@ -494,7 +494,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "1eabd374284db340b74179e3429008132f5b6b0b7b28d472d852807d7f5f9746.zip"
+     "S3Key": "8e3d635893ea17fa3158623489cd42c680fad925b38de1ef51cb10d84f6e245e.zip"
     },
     "Role": {
      "Fn::GetAtt": [
@@ -502,7 +502,7 @@
       "Arn"
      ]
     },
-    "Description": "AWS CDK resource provider framework - isComplete (kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
+    "Description": "AWS CDK resource provider framework - isComplete (kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
     "Environment": {
      "Variables": {
       "USER_ON_EVENT_FUNCTION_ARN": {
@@ -528,8 +528,8 @@
     "ProviderframeworkisCompleteServiceRoleB1087139"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Resource",
-    "aws:asset:path": "asset.1eabd374284db340b74179e3429008132f5b6b0b7b28d472d852807d7f5f9746",
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Resource",
+    "aws:asset:path": "asset.8e3d635893ea17fa3158623489cd42c680fad925b38de1ef51cb10d84f6e245e",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -565,7 +565,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/Resource"
    }
   },
   "ProviderframeworkonTimeoutServiceRoleDefaultPolicy2688969F": {
@@ -636,7 +636,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/DefaultPolicy/Resource"
    }
   },
   "ProviderframeworkonTimeout0B47CA38": {
@@ -646,7 +646,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "1eabd374284db340b74179e3429008132f5b6b0b7b28d472d852807d7f5f9746.zip"
+     "S3Key": "8e3d635893ea17fa3158623489cd42c680fad925b38de1ef51cb10d84f6e245e.zip"
     },
     "Role": {
      "Fn::GetAtt": [
@@ -654,7 +654,7 @@
       "Arn"
      ]
     },
-    "Description": "AWS CDK resource provider framework - onTimeout (kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
+    "Description": "AWS CDK resource provider framework - onTimeout (kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
     "Environment": {
      "Variables": {
       "USER_ON_EVENT_FUNCTION_ARN": {
@@ -680,8 +680,8 @@
     "ProviderframeworkonTimeoutServiceRole28643D26"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Resource",
-    "aws:asset:path": "asset.1eabd374284db340b74179e3429008132f5b6b0b7b28d472d852807d7f5f9746",
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Resource",
+    "aws:asset:path": "asset.8e3d635893ea17fa3158623489cd42c680fad925b38de1ef51cb10d84f6e245e",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -711,7 +711,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/Resource"
    }
   },
   "ProviderwaiterstatemachineRoleDefaultPolicyD3C3DA1A": {
@@ -782,7 +782,7 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/DefaultPolicy/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/DefaultPolicy/Resource"
    }
   },
   "Providerwaiterstatemachine5D4A9DF0": {
@@ -822,16 +822,16 @@
     "ProviderwaiterstatemachineRole0C7159F9"
    ],
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Resource"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Resource"
    }
   },
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zVPy27CMBD8Fu7OtpBKPQNSTxShVOrVMvY2WuLYkdemjaL8e+1ATjOzj9nZHbzX8LpRv1xp01WWrjCdkSOar6h0J6zqr0ZJq0YM0nmDcgj+b5SqRRfhnAuXovdFnsqQyFZy4loqZowM+wKCazgk3WE8KManKUzHH7fsfGNg8k58JKdjIbmx8lmQ6mFqvMVSXvDiLemxyAebZ7GcyZFbcq1okH0KGoVOHH0vw1Mz5LB3MjllsVqnMj96Z2g9/amGIdvMovwLN365b99gt4V6c2OiKiQXqUdoHvgPwmYcREIBAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zVOy27CMBD8Fu7OlsKB9ghIPVQFoVTq1VrsbeTGsSOvTRtF+ffagZxmZh8zs4HdC6xX+MuV0m1lzRXGM3Ek/RlRtcJid9UoLQ4UpPOaZB/83yCxIRfhnAeXovdFfpQjka3kyFuJzBQZ9gUEb+GQVEvxgEwPUxiP327++aLAxjvxlpyKheTFwidhsIOx9pbKeMaLt0YNRd7ZNIk5JldujGtETexTUCRU4ug7GR6aIZe9GZ1bFqvlKvOjd9os0Sfs+2wziXe84dPzK6xhs/phY6qQXDQdQX3Hfxw/X8c9AQAA"
    },
    "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/CDKMetadata/Default"
+    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/CDKMetadata/Default"
    },
    "Condition": "CDKMetadataAvailable"
   }
@@ -1134,7 +1134,7 @@
   }
  },
  "Outputs": {
-  "kubernetesendtoendawscdkawseksClusterResourceProviderframeworkonEvent2529EE1FArn": {
+  "kubernetesendtoendawsawscdkawseksClusterResourceProviderframeworkonEvent483954A1Arn": {
    "Value": {
     "Fn::GetAtt": [
      "ProviderframeworkonEvent83C1D0A7",
@@ -1144,7 +1144,7 @@
   }
  },
  "Parameters": {
-  "referencetokubernetesendtoendClusterCreationRole7361842EArn": {
+  "referencetokubernetesendtoendawsClusterCreationRoleB04B6EE4Arn": {
    "Type": "String"
   }
  }

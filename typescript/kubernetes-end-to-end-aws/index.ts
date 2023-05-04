@@ -11,6 +11,7 @@ export class KubernetesEnd2End extends aws.Stack {
 
     // AWS CDK provides a construct library for defining EKS clusters. All you need to do
     // is specify a version, and it will create a 2 node cluster inside a dedicated VPC.
+    // this can also be an imported cluster that has been pre-created with the AWS CDK.
     const cluster = new eks.Cluster(this, 'Cluster', {
       version: eks.KubernetesVersion.V1_25,
 
