@@ -76,6 +76,7 @@ spec:
             - mountPath: /data
               name: data
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
