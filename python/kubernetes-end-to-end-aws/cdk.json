@@ -1,0 +1,3 @@
+{
+  "app": "pipenv run python ./main.py"
+}

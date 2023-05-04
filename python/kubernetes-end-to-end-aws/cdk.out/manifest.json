@@ -1,0 +1,646 @@
+{
+  "version": "31.0.0",
+  "artifacts": {
+    "kubernetes-end-to-end-aws.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "kubernetes-end-to-end-aws.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "kubernetes-end-to-end-aws": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "kubernetes-end-to-end-aws.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/520c48797eb5289a0dc9798f0de1da08f5656d7b72bb2f7032ff4ec215ab13ea.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "kubernetes-end-to-end-aws.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "kubernetes-end-to-end-aws.assets"
+      ],
+      "metadata": {
+        "/kubernetes-end-to-end-aws/Kubectl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Kubectl85A5A23F"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcFA9F2722"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPublicSubnet1Subnet3BFE1BDA"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPublicSubnet1RouteTable1DCCDD98"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPublicSubnet1RouteTableAssociationAFBE6789"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPublicSubnet1DefaultRouteCF22EF6E"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPublicSubnet1EIP498E2BD2"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPublicSubnet1NATGateway6E21013E"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPublicSubnet2SubnetC4E9A966"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPublicSubnet2RouteTable6F1F5F47"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPublicSubnet2RouteTableAssociationA8539C50"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPublicSubnet2DefaultRoute1FA8621E"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPublicSubnet2EIP265F4810"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPublicSubnet2NATGateway4AF4B728"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPrivateSubnet1Subnet03F39409"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPrivateSubnet1RouteTable7844020C"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPrivateSubnet1RouteTableAssociationF8A67D95"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPrivateSubnet1DefaultRouteD624C8BD"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPrivateSubnet2SubnetA526AEA7"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPrivateSubnet2RouteTable1F9A5298"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPrivateSubnet2RouteTableAssociationE1240DF2"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcPrivateSubnet2DefaultRouteAB55737C"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcIGW756BE43E"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/DefaultVpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterDefaultVpcVPCGWC1D00388"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterRoleFA261979"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/ControlPlaneSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterControlPlaneSecurityGroupD274242C"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/Resource/CreationRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterCreationRole360249B6"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/Resource/CreationRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterCreationRoleDefaultPolicyE8BDFC7B"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/Resource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Cluster9EE0221C"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/KubectlReadyBarrier": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterKubectlReadyBarrier200052AF"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/MastersRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterMastersRole9AA35625"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/AwsAuth/manifest/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterAwsAuthmanifestFE51F8AE"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/OpenIdConnectProvider/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterOpenIdConnectProviderE7EB0530"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/NodegroupDefaultCapacity/NodeGroupRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterNodegroupDefaultCapacityNodeGroupRole55953B04"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/NodegroupDefaultCapacity/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterNodegroupDefaultCapacityDA0920A3"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/ConfigCommand": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterConfigCommand43AAE40F"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/GetTokenCommand": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterGetTokenCommand06AE992E"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/chart-KubeView/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterchartKubeViewF1713CA9"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/kubeviewLoadBalancerAddress/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterkubeviewLoadBalancerAddress8DEA0726"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/HttpEcho/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterHttpEcho0BEFA7A4"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/httpecho-ingress-c8dc70a7LoadBalancerAddress/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Clusterhttpechoingressc8dc70a7LoadBalancerAddress0760BE37"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/NodeProxyAgentLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NodeProxyAgentLayer924C1971"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnEventHandlerServiceRole15A26729"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnEventHandlerServiceRoleDefaultPolicyC57085D4"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnEventHandler42BEBAE0"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsCompleteHandlerServiceRole5810CC58"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsCompleteHandlerServiceRoleDefaultPolicy8F64197B"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsCompleteHandler7073F4DA"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRole9FF04296"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEvent83C1D0A7"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkisCompleteServiceRoleB1087139"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkisCompleteServiceRoleDefaultPolicy2E7140AC"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkisComplete26D7B0CB"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonTimeoutServiceRole28643D26"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonTimeoutServiceRoleDefaultPolicy2688969F"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonTimeout0B47CA38"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderwaiterstatemachineRole0C7159F9"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderwaiterstatemachineRoleDefaultPolicyD3C3DA1A"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Providerwaiterstatemachine5D4A9DF0"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Service-principalMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceprincipalMap"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/kubernetesendtoendawsawscdkawseksClusterResourceProviderframeworkonEvent483954A1Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "kubernetesendtoendawsawscdkawseksClusterResourceProviderframeworkonEvent483954A1Arn"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/reference-to-kubernetesendtoendawsClusterCreationRoleB04B6EE4Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetokubernetesendtoendawsClusterCreationRoleB04B6EE4Arn"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStack/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awscdkawseksClusterResourceProviderNestedStackawscdkawseksClusterResourceProviderNestedStackResource9827C454"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/Handler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HandlerServiceRoleFCDC14AE"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/Handler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HandlerServiceRoleDefaultPolicyCBD0CC91"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/Handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Handler886CB40B"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsCliLayerF44AAF94"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/HasEcrPublic": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HasEcrPublic"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRole9FF04296"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEvent83C1D0A7"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendawsCluster42F39FFFArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetokubernetesendtoendawsCluster42F39FFFArn"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendawsClusterCreationRoleB04B6EE4Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetokubernetesendtoendawsClusterCreationRoleB04B6EE4Arn"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendawsKubectl55510B5ARef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetokubernetesendtoendawsKubectl55510B5ARef"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendawsClusterDefaultVpcPrivateSubnet1Subnet5D689C1ERef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetokubernetesendtoendawsClusterDefaultVpcPrivateSubnet1Subnet5D689C1ERef"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendawsClusterDefaultVpcPrivateSubnet2SubnetDA868D8BRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetokubernetesendtoendawsClusterDefaultVpcPrivateSubnet2SubnetDA868D8BRef"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendawsCluster42F39FFFClusterSecurityGroupId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetokubernetesendtoendawsCluster42F39FFFClusterSecurityGroupId"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider.NestedStack/@aws-cdk--aws-eks.KubectlProvider.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awscdkawseksKubectlProviderNestedStackawscdkawseksKubectlProviderNestedStackResourceA7AEBA6B"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/kubernetesendtoendawsCluster3E3D3F76-AlbController/alb-sa/ConditionJson/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaConditionJson6F53A68E"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/kubernetesendtoendawsCluster3E3D3F76-AlbController/alb-sa/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaRoleE4E0F8A4"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/kubernetesendtoendawsCluster3E3D3F76-AlbController/alb-sa/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsaRoleDefaultPolicyE63A5473"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/kubernetesendtoendawsCluster3E3D3F76-AlbController/alb-sa/manifest-alb-saServiceAccountResource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "kubernetesendtoendawsCluster3E3D3F76AlbControlleralbsamanifestalbsaServiceAccountResource6651548C"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/kubernetesendtoendawsCluster3E3D3F76-AlbController/Resource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "kubernetesendtoendawsCluster3E3D3F76AlbControllerA7930E56"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomAWSCDKOpenIdConnectProviderCustomResourceProviderRole517FED65"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomAWSCDKOpenIdConnectProviderCustomResourceProviderHandlerF2C543E0"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/DefaultCrNodeVersionMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DefaultCrNodeVersionMap"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/AWSCDKCfnUtilsProviderCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSCDKCfnUtilsProviderCustomResourceProviderRoleFE0EE867"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/AWSCDKCfnUtilsProviderCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSCDKCfnUtilsProviderCustomResourceProviderHandlerCF82AA57"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/KubeViewEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KubeViewEndpoint"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/ApplicationEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApplicationEndpoint"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "kubernetes-end-to-end-aws"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
