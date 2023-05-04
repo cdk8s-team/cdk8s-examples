@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * ClusterRoleList is a collection of ClusterRoles.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.866Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.792Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeClusterRoleListProps")
 @software.amazon.jsii.Jsii.Proxy(KubeClusterRoleListProps.Jsii$Proxy.class)
 public interface KubeClusterRoleListProps extends software.amazon.jsii.JsiiSerializable {

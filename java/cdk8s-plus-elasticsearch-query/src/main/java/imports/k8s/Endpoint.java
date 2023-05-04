@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * Endpoint represents a single logical "backend" implementing a service.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.837Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.764Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.Endpoint")
 @software.amazon.jsii.Jsii.Proxy(Endpoint.Jsii$Proxy.class)
 public interface Endpoint extends software.amazon.jsii.JsiiSerializable {

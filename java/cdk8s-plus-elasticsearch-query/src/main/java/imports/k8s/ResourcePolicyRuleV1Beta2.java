@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * A ResourcePolicyRule matches a resource request if and only if: (a) at least one member of verbs matches the request, (b) at least one member of apiGroups matches the request, (c) at least one member of resources matches the request, and (d) either (d1) the request does not specify a namespace (i.e., <code>Namespace==""</code>) and clusterScope is true or (d2) the request specifies a namespace and least one member of namespaces matches the request's namespace.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.946Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.938Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.ResourcePolicyRuleV1Beta2")
 @software.amazon.jsii.Jsii.Proxy(ResourcePolicyRuleV1Beta2.Jsii$Proxy.class)
 public interface ResourcePolicyRuleV1Beta2 extends software.amazon.jsii.JsiiSerializable {

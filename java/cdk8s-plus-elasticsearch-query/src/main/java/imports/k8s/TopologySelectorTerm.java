@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * A null or empty topology selector term matches no objects. The requirements of them are ANDed. It provides a subset of functionality as NodeSelectorTerm. This is an alpha feature and may change in the future.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.957Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.945Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.TopologySelectorTerm")
 @software.amazon.jsii.Jsii.Proxy(TopologySelectorTerm.Jsii$Proxy.class)
 public interface TopologySelectorTerm extends software.amazon.jsii.JsiiSerializable {

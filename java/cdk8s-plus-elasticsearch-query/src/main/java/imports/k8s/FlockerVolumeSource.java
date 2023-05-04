@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.845Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.769Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.FlockerVolumeSource")
 @software.amazon.jsii.Jsii.Proxy(FlockerVolumeSource.Jsii$Proxy.class)
 public interface FlockerVolumeSource extends software.amazon.jsii.JsiiSerializable {

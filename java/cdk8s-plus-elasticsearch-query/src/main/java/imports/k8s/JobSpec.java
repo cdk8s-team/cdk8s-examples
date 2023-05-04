@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * JobSpec describes how the job execution will look like.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.857Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.777Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.JobSpec")
 @software.amazon.jsii.Jsii.Proxy(JobSpec.Jsii$Proxy.class)
 public interface JobSpec extends software.amazon.jsii.JsiiSerializable {

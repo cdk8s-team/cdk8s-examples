@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * It has enough information to retrieve secret in any namespace
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.948Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.940Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.SecretReference")
 @software.amazon.jsii.Jsii.Proxy(SecretReference.Jsii$Proxy.class)
 public interface SecretReference extends software.amazon.jsii.JsiiSerializable {

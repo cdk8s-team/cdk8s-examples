@@ -1,4 +1,2 @@
 language: python
 app: pipenv run python ./main.py
-imports:
-  - k8s@1.26.0

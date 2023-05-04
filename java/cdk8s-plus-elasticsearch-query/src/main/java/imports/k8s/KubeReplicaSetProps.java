@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * ReplicaSet ensures that a specified number of pod replicas are running at any given time.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.900Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.845Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeReplicaSetProps")
 @software.amazon.jsii.Jsii.Proxy(KubeReplicaSetProps.Jsii$Proxy.class)
 public interface KubeReplicaSetProps extends software.amazon.jsii.JsiiSerializable {

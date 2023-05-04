@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * ObjectMetricSource indicates how to scale on a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.930Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.877Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.ObjectMetricSourceV2")
 @software.amazon.jsii.Jsii.Proxy(ObjectMetricSourceV2.Jsii$Proxy.class)
 public interface ObjectMetricSourceV2 extends software.amazon.jsii.JsiiSerializable {

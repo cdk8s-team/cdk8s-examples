@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * RBD volumes support ownership management and SELinux relabeling.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.944Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.891Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.RbdPersistentVolumeSource")
 @software.amazon.jsii.Jsii.Proxy(RbdPersistentVolumeSource.Jsii$Proxy.class)
 public interface RbdPersistentVolumeSource extends software.amazon.jsii.JsiiSerializable {

@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * The contents of the target ConfigMap's Data field will be presented in a volume as files using the keys in the Data field as the file names, unless the items element is populated with specific mappings of keys to paths. ConfigMap volumes support ownership management and SELinux relabeling.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.823Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.750Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.ConfigMapVolumeSource")
 @software.amazon.jsii.Jsii.Proxy(ConfigMapVolumeSource.Jsii$Proxy.class)
 public interface ConfigMapVolumeSource extends software.amazon.jsii.JsiiSerializable {

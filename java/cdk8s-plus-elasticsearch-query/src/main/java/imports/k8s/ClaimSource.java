@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * Exactly one of these fields should be set.  Consumers of this type must treat an empty object as if it has an unknown value.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.820Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.747Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.ClaimSource")
 @software.amazon.jsii.Jsii.Proxy(ClaimSource.Jsii$Proxy.class)
 public interface ClaimSource extends software.amazon.jsii.JsiiSerializable {

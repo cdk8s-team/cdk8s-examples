@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * Volume represents a named volume in a pod that may be accessed by any container in the pod.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.962Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.985Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.Volume")
 @software.amazon.jsii.Jsii.Proxy(Volume.Jsii$Proxy.class)
 public interface Volume extends software.amazon.jsii.JsiiSerializable {

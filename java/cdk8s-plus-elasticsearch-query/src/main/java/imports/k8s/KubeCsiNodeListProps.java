@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * CSINodeList is a collection of CSINode objects.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.872Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.804Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeCsiNodeListProps")
 @software.amazon.jsii.Jsii.Proxy(KubeCsiNodeListProps.Jsii$Proxy.class)
 public interface KubeCsiNodeListProps extends software.amazon.jsii.JsiiSerializable {

@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * CustomResourceDefinitionVersion describes a version for CRD.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.834Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.756Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.CustomResourceDefinitionVersion")
 @software.amazon.jsii.Jsii.Proxy(CustomResourceDefinitionVersion.Jsii$Proxy.class)
 public interface CustomResourceDefinitionVersion extends software.amazon.jsii.JsiiSerializable {

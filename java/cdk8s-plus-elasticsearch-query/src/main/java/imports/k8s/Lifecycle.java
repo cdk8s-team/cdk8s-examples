@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * For the PostStart and PreStop lifecycle handlers, management of the container blocks until the action is complete, unless the container process fails, in which case the handler is aborted.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.917Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.861Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.Lifecycle")
 @software.amazon.jsii.Jsii.Proxy(Lifecycle.Jsii$Proxy.class)
 public interface Lifecycle extends software.amazon.jsii.JsiiSerializable {

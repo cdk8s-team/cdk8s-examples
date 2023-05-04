@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * The contents of the target Secret's Data field will be presented in a volume as files using the keys in the Data field as the file names. Secret volumes support ownership management and SELinux relabeling.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.948Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.940Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.SecretVolumeSource")
 @software.amazon.jsii.Jsii.Proxy(SecretVolumeSource.Jsii$Proxy.class)
 public interface SecretVolumeSource extends software.amazon.jsii.JsiiSerializable {

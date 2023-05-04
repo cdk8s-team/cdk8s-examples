@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * TypedLocalObjectReference contains enough information to let you locate the typed referenced object inside the same namespace.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.958Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.945Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.TypedLocalObjectReference")
 @software.amazon.jsii.Jsii.Proxy(TypedLocalObjectReference.Jsii$Proxy.class)
 public interface TypedLocalObjectReference extends software.amazon.jsii.JsiiSerializable {

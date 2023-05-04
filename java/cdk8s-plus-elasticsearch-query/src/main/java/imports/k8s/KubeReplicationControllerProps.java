@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * ReplicationController represents the configuration of a replication controller.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.903Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.845Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeReplicationControllerProps")
 @software.amazon.jsii.Jsii.Proxy(KubeReplicationControllerProps.Jsii$Proxy.class)
 public interface KubeReplicationControllerProps extends software.amazon.jsii.JsiiSerializable {

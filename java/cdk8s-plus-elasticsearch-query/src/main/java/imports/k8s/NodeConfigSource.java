@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * Exactly one subfield (excluding metadata) must be non-nil. This API is deprecated since 1.22
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.928Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.870Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.NodeConfigSource")
 @software.amazon.jsii.Jsii.Proxy(NodeConfigSource.Jsii$Proxy.class)
 public interface NodeConfigSource extends software.amazon.jsii.JsiiSerializable {

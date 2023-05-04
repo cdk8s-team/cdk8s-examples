@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * CronJob represents the configuration of a single cron job.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.871Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.803Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeCronJobProps")
 @software.amazon.jsii.Jsii.Proxy(KubeCronJobProps.Jsii$Proxy.class)
 public interface KubeCronJobProps extends software.amazon.jsii.JsiiSerializable {

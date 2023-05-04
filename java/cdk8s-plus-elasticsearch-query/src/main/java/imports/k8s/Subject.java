@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * This can either hold a direct API object reference, or a value for non-objects such as user and group names.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.952Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.944Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.Subject")
 @software.amazon.jsii.Jsii.Proxy(Subject.Jsii$Proxy.class)
 public interface Subject extends software.amazon.jsii.JsiiSerializable {

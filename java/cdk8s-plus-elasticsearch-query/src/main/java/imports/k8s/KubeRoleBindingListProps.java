@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * RoleBindingList is a collection of RoleBindings.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.907Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.849Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeRoleBindingListProps")
 @software.amazon.jsii.Jsii.Proxy(KubeRoleBindingListProps.Jsii$Proxy.class)
 public interface KubeRoleBindingListProps extends software.amazon.jsii.JsiiSerializable {

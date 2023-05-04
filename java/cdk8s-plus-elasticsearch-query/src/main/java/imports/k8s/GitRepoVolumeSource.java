@@ -7,7 +7,7 @@ package imports.k8s;
  * <p>
  * DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.846Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.771Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.GitRepoVolumeSource")
 @software.amazon.jsii.Jsii.Proxy(GitRepoVolumeSource.Jsii$Proxy.class)
 public interface GitRepoVolumeSource extends software.amazon.jsii.JsiiSerializable {

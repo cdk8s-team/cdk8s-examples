@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * TCPSocketAction describes an action based on opening a socket.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.957Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.944Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.TcpSocketAction")
 @software.amazon.jsii.Jsii.Proxy(TcpSocketAction.Jsii$Proxy.class)
 public interface TcpSocketAction extends software.amazon.jsii.JsiiSerializable {

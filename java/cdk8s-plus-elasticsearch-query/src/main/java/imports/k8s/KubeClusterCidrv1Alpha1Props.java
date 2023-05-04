@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * A cluster may have any number of ClusterCIDR resources, all of which will be considered when allocating a CIDR for a Node.  A ClusterCIDR is eligible to be used for a given Node when the node selector matches the node in question and has free CIDRs to allocate.  In case of multiple matching ClusterCIDR resources, the allocator will attempt to break ties using internal heuristics, but any ClusterCIDR whose node selector matches the Node may be used.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.865Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.791Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeClusterCidrv1Alpha1Props")
 @software.amazon.jsii.Jsii.Proxy(KubeClusterCidrv1Alpha1Props.Jsii$Proxy.class)
 public interface KubeClusterCidrv1Alpha1Props extends software.amazon.jsii.JsiiSerializable {

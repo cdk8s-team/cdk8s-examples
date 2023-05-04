@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * WebhookConversion describes how to call a conversion webhook.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.963Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.986Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.WebhookConversion")
 @software.amazon.jsii.Jsii.Proxy(WebhookConversion.Jsii$Proxy.class)
 public interface WebhookConversion extends software.amazon.jsii.JsiiSerializable {

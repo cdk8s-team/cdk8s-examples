@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * The <code>ingressclass.kubernetes.io/is-default-class</code> annotation can be used to indicate that an IngressClass should be considered default. When a single IngressClass resource has this annotation set to true, new Ingress resources without a class specified will be assigned this default class.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.889Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.816Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeIngressClassProps")
 @software.amazon.jsii.Jsii.Proxy(KubeIngressClassProps.Jsii$Proxy.class)
 public interface KubeIngressClassProps extends software.amazon.jsii.JsiiSerializable {

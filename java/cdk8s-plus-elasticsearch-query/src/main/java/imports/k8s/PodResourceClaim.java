@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * It adds a name to it that uniquely identifies the ResourceClaim inside the Pod. Containers that need access to the ResourceClaim reference it with this name.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.936Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.884Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.PodResourceClaim")
 @software.amazon.jsii.Jsii.Proxy(PodResourceClaim.Jsii$Proxy.class)
 public interface PodResourceClaim extends software.amazon.jsii.JsiiSerializable {

@@ -7,7 +7,7 @@ package imports.k8s;
  * <p>
  * To add an ephemeral container, use the ephemeralcontainers subresource of an existing Pod. Ephemeral containers may not be removed or restarted.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.840Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.766Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.EphemeralContainer")
 @software.amazon.jsii.Jsii.Proxy(EphemeralContainer.Jsii$Proxy.class)
 public interface EphemeralContainer extends software.amazon.jsii.JsiiSerializable {

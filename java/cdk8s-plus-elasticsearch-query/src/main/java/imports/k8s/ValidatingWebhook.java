@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * ValidatingWebhook describes an admission webhook and the resources and operations it applies to.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.959Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.946Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.ValidatingWebhook")
 @software.amazon.jsii.Jsii.Proxy(ValidatingWebhook.Jsii$Proxy.class)
 public interface ValidatingWebhook extends software.amazon.jsii.JsiiSerializable {

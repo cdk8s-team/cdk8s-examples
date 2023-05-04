@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * A NonResourcePolicyRule matches a request if and only if both (a) at least one member of verbs matches the request and (b) at least one member of nonResourceURLs matches the request.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.929Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.876Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.NonResourcePolicyRuleV1Beta3")
 @software.amazon.jsii.Jsii.Proxy(NonResourcePolicyRuleV1Beta3.Jsii$Proxy.class)
 public interface NonResourcePolicyRuleV1Beta3 extends software.amazon.jsii.JsiiSerializable {

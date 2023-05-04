@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * HTTPGetAction describes an action based on HTTP Get requests.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.849Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.773Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.HttpGetAction")
 @software.amazon.jsii.Jsii.Proxy(HttpGetAction.Jsii$Proxy.class)
 public interface HttpGetAction extends software.amazon.jsii.JsiiSerializable {

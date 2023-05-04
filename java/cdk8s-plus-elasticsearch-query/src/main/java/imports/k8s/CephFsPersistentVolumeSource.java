@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.814Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.738Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.CephFsPersistentVolumeSource")
 @software.amazon.jsii.Jsii.Proxy(CephFsPersistentVolumeSource.Jsii$Proxy.class)
 public interface CephFsPersistentVolumeSource extends software.amazon.jsii.JsiiSerializable {

@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * The values will be averaged together before being compared to the target value.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.941Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.887Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.PodsMetricSourceV2")
 @software.amazon.jsii.Jsii.Proxy(PodsMetricSourceV2.Jsii$Proxy.class)
 public interface PodsMetricSourceV2 extends software.amazon.jsii.JsiiSerializable {

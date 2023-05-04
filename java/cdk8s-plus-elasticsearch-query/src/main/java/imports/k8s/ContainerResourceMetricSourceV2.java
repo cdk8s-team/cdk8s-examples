@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * ContainerResourceMetricSource indicates how to scale on a resource metric known to Kubernetes, as specified in requests and limits, describing each pod in the current scale target (e.g. CPU or memory).  The values will be averaged together before being compared to the target.  Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.  Only one "target" type should be set.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.825Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.752Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.ContainerResourceMetricSourceV2")
 @software.amazon.jsii.Jsii.Proxy(ContainerResourceMetricSourceV2.Jsii$Proxy.class)
 public interface ContainerResourceMetricSourceV2 extends software.amazon.jsii.JsiiSerializable {

@@ -1,4 +1,2 @@
 app: mvn exec:java -Dexec.mainClass="com.example.app.Redis"
 language: java
-imports:
-  - k8s@1.26.0

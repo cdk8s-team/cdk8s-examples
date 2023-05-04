@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * FlowSchemaList is a list of FlowSchema objects.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.885Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.811Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeFlowSchemaListV1Beta3Props")
 @software.amazon.jsii.Jsii.Proxy(KubeFlowSchemaListV1Beta3Props.Jsii$Proxy.class)
 public interface KubeFlowSchemaListV1Beta3Props extends software.amazon.jsii.JsiiSerializable {

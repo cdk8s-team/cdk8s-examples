@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * ResourceClassParametersReference contains enough information to let you locate the parameters for a ResourceClass.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.945Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.893Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.ResourceClassParametersReferenceV1Alpha1")
 @software.amazon.jsii.Jsii.Proxy(ResourceClassParametersReferenceV1Alpha1.Jsii$Proxy.class)
 public interface ResourceClassParametersReferenceV1Alpha1 extends software.amazon.jsii.JsiiSerializable {

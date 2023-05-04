@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * TokenRequest requests a token for a given service account.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.915Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.859Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeTokenRequestProps")
 @software.amazon.jsii.Jsii.Proxy(KubeTokenRequestProps.Jsii$Proxy.class)
 public interface KubeTokenRequestProps extends software.amazon.jsii.JsiiSerializable {

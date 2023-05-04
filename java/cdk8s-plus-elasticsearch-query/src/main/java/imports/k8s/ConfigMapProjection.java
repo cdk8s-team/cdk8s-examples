@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * The contents of the target ConfigMap's Data field will be presented in a projected volume as files using the keys in the Data field as the file names, unless the items element is populated with specific mappings of keys to paths. Note that this is identical to a configmap volume source without the default mode.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.822Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.749Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.ConfigMapProjection")
 @software.amazon.jsii.Jsii.Proxy(ConfigMapProjection.Jsii$Proxy.class)
 public interface ConfigMapProjection extends software.amazon.jsii.JsiiSerializable {

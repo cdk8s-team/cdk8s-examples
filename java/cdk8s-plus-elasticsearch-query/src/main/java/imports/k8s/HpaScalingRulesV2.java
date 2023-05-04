@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * These Rules are applied after calculating DesiredReplicas from metrics for the HPA. They can limit the scaling velocity by specifying scaling policies. They can prevent flapping by specifying the stabilization window, so that the number of replicas is not set instantly, instead, the safest value from the stabilization window is chosen.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.848Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.773Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.HpaScalingRulesV2")
 @software.amazon.jsii.Jsii.Proxy(HpaScalingRulesV2.Jsii$Proxy.class)
 public interface HpaScalingRulesV2 extends software.amazon.jsii.JsiiSerializable {

@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * NamespaceSpec describes the attributes on a Namespace.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.926Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.867Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.NamespaceSpec")
 @software.amazon.jsii.Jsii.Proxy(NamespaceSpec.Jsii$Proxy.class)
 public interface NamespaceSpec extends software.amazon.jsii.JsiiSerializable {

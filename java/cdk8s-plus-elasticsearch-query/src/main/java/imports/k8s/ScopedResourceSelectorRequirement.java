@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * A scoped-resource selector requirement is a selector that contains values, a scope name, and an operator that relates the scope name and values.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.947Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.939Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.ScopedResourceSelectorRequirement")
 @software.amazon.jsii.Jsii.Proxy(ScopedResourceSelectorRequirement.Jsii$Proxy.class)
 public interface ScopedResourceSelectorRequirement extends software.amazon.jsii.JsiiSerializable {

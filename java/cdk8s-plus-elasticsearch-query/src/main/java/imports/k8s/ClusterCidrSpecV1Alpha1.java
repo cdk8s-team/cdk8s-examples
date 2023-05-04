@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * ClusterCIDRSpec defines the desired state of ClusterCIDR.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.821Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.748Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.ClusterCidrSpecV1Alpha1")
 @software.amazon.jsii.Jsii.Proxy(ClusterCidrSpecV1Alpha1.Jsii$Proxy.class)
 public interface ClusterCidrSpecV1Alpha1 extends software.amazon.jsii.JsiiSerializable {

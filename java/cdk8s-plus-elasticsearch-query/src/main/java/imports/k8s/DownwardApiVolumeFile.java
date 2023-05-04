@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * DownwardAPIVolumeFile represents information to create the file containing the pod field.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.837Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.758Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.DownwardApiVolumeFile")
 @software.amazon.jsii.Jsii.Proxy(DownwardApiVolumeFile.Jsii$Proxy.class)
 public interface DownwardApiVolumeFile extends software.amazon.jsii.JsiiSerializable {

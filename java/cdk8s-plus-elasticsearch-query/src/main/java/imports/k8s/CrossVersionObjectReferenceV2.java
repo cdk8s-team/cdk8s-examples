@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * CrossVersionObjectReference contains enough information to let you identify the referred resource.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.826Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.752Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.CrossVersionObjectReferenceV2")
 @software.amazon.jsii.Jsii.Proxy(CrossVersionObjectReferenceV2.Jsii$Proxy.class)
 public interface CrossVersionObjectReferenceV2 extends software.amazon.jsii.JsiiSerializable {

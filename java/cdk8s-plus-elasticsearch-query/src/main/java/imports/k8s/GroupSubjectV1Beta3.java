@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * GroupSubject holds detailed information for group-kind subject.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.847Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.772Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.GroupSubjectV1Beta3")
 @software.amazon.jsii.Jsii.Proxy(GroupSubjectV1Beta3.Jsii$Proxy.class)
 public interface GroupSubjectV1Beta3 extends software.amazon.jsii.JsiiSerializable {

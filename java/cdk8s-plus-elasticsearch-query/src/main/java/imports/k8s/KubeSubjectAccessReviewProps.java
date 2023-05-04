@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * SubjectAccessReview checks whether or not a user or group can perform an action.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.914Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.859Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeSubjectAccessReviewProps")
 @software.amazon.jsii.Jsii.Proxy(KubeSubjectAccessReviewProps.Jsii$Proxy.class)
 public interface KubeSubjectAccessReviewProps extends software.amazon.jsii.JsiiSerializable {

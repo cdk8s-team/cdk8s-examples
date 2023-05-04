@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * Right now only PersistenVolumes can be attached via external attacher, in future we may allow also inline volumes in pods. Exactly one member can be set.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.962Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.986Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.VolumeAttachmentSource")
 @software.amazon.jsii.Jsii.Proxy(VolumeAttachmentSource.Jsii$Proxy.class)
 public interface VolumeAttachmentSource extends software.amazon.jsii.JsiiSerializable {

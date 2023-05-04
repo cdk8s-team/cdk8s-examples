@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * StatusCause provides more information about an api.Status failure, including cases when multiple errors are encountered.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.952Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.943Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.StatusCause")
 @software.amazon.jsii.Jsii.Proxy(StatusCause.Jsii$Proxy.class)
 public interface StatusCause extends software.amazon.jsii.JsiiSerializable {

@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * In the example: http://<host>/<path>?<searchpart> -&gt; backend where where parts of the url correspond to RFC 3986, this resource will be used to match against everything after the last '/' and before the first '?' or '#'.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.850Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.773Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.HttpIngressRuleValue")
 @software.amazon.jsii.Jsii.Proxy(HttpIngressRuleValue.Jsii$Proxy.class)
 public interface HttpIngressRuleValue extends software.amazon.jsii.JsiiSerializable {

@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * Empty directory volumes support ownership management and SELinux relabeling.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.837Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.764Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.EmptyDirVolumeSource")
 @software.amazon.jsii.Jsii.Proxy(EmptyDirVolumeSource.Jsii$Proxy.class)
 public interface EmptyDirVolumeSource extends software.amazon.jsii.JsiiSerializable {

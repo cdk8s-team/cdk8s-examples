@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * SelfSubjectRulesReviewSpec defines the specification for SelfSubjectRulesReview.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.948Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.940Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.SelfSubjectRulesReviewSpec")
 @software.amazon.jsii.Jsii.Proxy(SelfSubjectRulesReviewSpec.Jsii$Proxy.class)
 public interface SelfSubjectRulesReviewSpec extends software.amazon.jsii.JsiiSerializable {

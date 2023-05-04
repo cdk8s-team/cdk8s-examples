@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.867Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.792Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeClusterRoleProps")
 @software.amazon.jsii.Jsii.Proxy(KubeClusterRoleProps.Jsii$Proxy.class)
 public interface KubeClusterRoleProps extends software.amazon.jsii.JsiiSerializable {

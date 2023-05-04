@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * PriorityLevelConfigurationSpec specifies the configuration of a priority level.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.942Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.890Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.PriorityLevelConfigurationSpecV1Beta2")
 @software.amazon.jsii.Jsii.Proxy(PriorityLevelConfigurationSpecV1Beta2.Jsii$Proxy.class)
 public interface PriorityLevelConfigurationSpecV1Beta2 extends software.amazon.jsii.JsiiSerializable {

@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * ForZone provides information about which zones should consume this endpoint.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.846Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.770Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.ForZone")
 @software.amazon.jsii.Jsii.Proxy(ForZone.Jsii$Proxy.class)
 public interface ForZone extends software.amazon.jsii.JsiiSerializable {

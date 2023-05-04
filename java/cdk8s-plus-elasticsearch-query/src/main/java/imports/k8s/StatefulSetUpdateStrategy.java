@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * It includes any additional parameters necessary to perform the update for the indicated strategy.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.951Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.943Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.StatefulSetUpdateStrategy")
 @software.amazon.jsii.Jsii.Proxy(StatefulSetUpdateStrategy.Jsii$Proxy.class)
 public interface StatefulSetUpdateStrategy extends software.amazon.jsii.JsiiSerializable {

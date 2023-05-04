@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * This volume finds the bound PV and mounts that volume for the pod. A PersistentVolumeClaimVolumeSource is, essentially, a wrapper around another type of volume that is owned by someone else (the system).
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.932Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.880Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.PersistentVolumeClaimVolumeSource")
 @software.amazon.jsii.Jsii.Proxy(PersistentVolumeClaimVolumeSource.Jsii$Proxy.class)
 public interface PersistentVolumeClaimVolumeSource extends software.amazon.jsii.JsiiSerializable {

@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * In particular, it lookups the .state.terminated.exitCode for each app container and init container status, represented by the .status.containerStatuses and .status.initContainerStatuses fields in the Pod status, respectively. Containers completed with success (exit code 0) are excluded from the requirement check.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.935Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.882Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.PodFailurePolicyOnExitCodesRequirement")
 @software.amazon.jsii.Jsii.Proxy(PodFailurePolicyOnExitCodesRequirement.Jsii$Proxy.class)
 public interface PodFailurePolicyOnExitCodesRequirement extends software.amazon.jsii.JsiiSerializable {

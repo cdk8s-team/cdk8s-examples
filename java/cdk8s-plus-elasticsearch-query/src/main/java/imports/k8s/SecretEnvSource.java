@@ -5,7 +5,7 @@ package imports.k8s;
  * <p>
  * The contents of the target Secret's Data field will represent the key-value pairs as environment variables.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.948Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.940Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.SecretEnvSource")
 @software.amazon.jsii.Jsii.Proxy(SecretEnvSource.Jsii$Proxy.class)
 public interface SecretEnvSource extends software.amazon.jsii.JsiiSerializable {

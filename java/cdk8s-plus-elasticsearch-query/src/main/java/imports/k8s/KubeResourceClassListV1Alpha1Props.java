@@ -3,7 +3,7 @@ package imports.k8s;
 /**
  * ResourceClassList is a collection of classes.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.79.0 (build b22f628)", date = "2023-03-31T12:32:10.905Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.80.0 (build bce6a1d)", date = "2023-05-04T19:06:51.846Z")
 @software.amazon.jsii.Jsii(module = imports.k8s.$Module.class, fqn = "k8s.KubeResourceClassListV1Alpha1Props")
 @software.amazon.jsii.Jsii.Proxy(KubeResourceClassListV1Alpha1Props.Jsii$Proxy.class)
 public interface KubeResourceClassListV1Alpha1Props extends software.amazon.jsii.JsiiSerializable {
