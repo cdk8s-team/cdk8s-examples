@@ -63,6 +63,23 @@
         }
       ]
     },
+    "deps": {
+      "name": "deps",
+      "steps": [
+        {
+          "exec": "lerna run install --scope \"@typescript/*\""
+        },
+        {
+          "exec": "lerna run install --scope \"@python/*\""
+        },
+        {
+          "exec": "lerna run install --scope \"@go/*\""
+        },
+        {
+          "exec": "lerna run install --scope \"@java/*\" --concurrency 1"
+        }
+      ]
+    },
     "eject": {
       "name": "eject",
       "description": "Remove projen from the project",
