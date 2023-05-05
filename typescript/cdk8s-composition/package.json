@@ -1,5 +1,5 @@
 {
-  "name": "cdk8s-composition-typescript",
+  "name": "@ts/cdk8s-composition-typescript",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",

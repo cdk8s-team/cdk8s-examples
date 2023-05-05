@@ -1,14 +1,12 @@
 {
-  "name": "cdk8s-plus-web-cache-db-java",
+  "name": "@java/cdk8s-plus-web-cache-db",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "install": "mvn install",
-    "import": "cdk8s import && rm -rf imports",
-    "build": "mvn clean compile && npm run import && npm run synth",
+    "build": "npm run synth",
     "synth": "cdk8s synth"
   }
 }

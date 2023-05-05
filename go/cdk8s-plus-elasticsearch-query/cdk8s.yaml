@@ -1,5 +1,4 @@
-app: go run .
+app: go mod download && go mod tidy && go run .
 language: go
 imports:
-  - k8s@1.26.0
   - https://download.elastic.co/downloads/eck/1.1.2/all-in-one.yaml

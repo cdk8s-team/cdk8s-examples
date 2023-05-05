@@ -1,0 +1,3 @@
+{
+  "app": "mvn clean compile && mvn exec:java -Dexec.mainClass=\"com.example.ke2e.KubernetesEnd2EndAws\""
+}

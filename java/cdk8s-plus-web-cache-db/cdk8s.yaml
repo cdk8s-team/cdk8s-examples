@@ -1,4 +1,2 @@
-app: mvn exec:java -Dexec.mainClass="com.example.app.WebCacheDB"
+app: mvn clean compile && mvn exec:java -Dexec.mainClass="com.example.webcachedb.WebCacheDB"
 language: java
-imports:
-  - k8s@1.26.0
