@@ -28,6 +28,7 @@ node_modules/
 jspm_packages/
 *.tsbuildinfo
 .eslintcache
+*.tgz
 .yarn-integrity
 .cache
 !/.projenrc.js
@@ -49,4 +50,3 @@ jspm_packages/
 !/.github/workflows/triage.yml
 !/.github/workflows/stale.yml
 .vscode
-!*.tgz
