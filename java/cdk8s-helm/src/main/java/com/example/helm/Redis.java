@@ -1,4 +1,4 @@
-package com.example.app;
+package com.example.helm;
 
 import software.constructs.Construct;
 

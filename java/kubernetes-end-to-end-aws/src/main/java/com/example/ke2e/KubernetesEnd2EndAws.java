@@ -1,4 +1,4 @@
-package com.example.app;
+package com.example.ke2e;
 
 import org.cdk8s.plus25.*;
 

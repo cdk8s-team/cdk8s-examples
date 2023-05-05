@@ -1,4 +1,4 @@
-package com.example.app;
+package com.example.webcachedb;
 
 import org.cdk8s.Duration;
 import org.cdk8s.plus26.*;
@@ -25,29 +25,29 @@ public class WebCacheDB extends Chart {
                 LabeledNode memoryNodes = Node.labeled(NodeLabelQuery.is("optimized", "memory"));
 
                 StatefulSet db = new StatefulSet(this, "DB", StatefulSetProps.builder()
-                        .containers(List.of(ContainerProps.builder()
-                                .image("db")
-                                .portNumber(8000)
-                                .build()))
-                        .replicas(2)
-                        .spread(true)
-                        .isolate(true)
-                        .build());
+                                .containers(List.of(ContainerProps.builder()
+                                                .image("db")
+                                                .portNumber(8000)
+                                                .build()))
+                                .replicas(2)
+                                .spread(true)
+                                .isolate(true)
+                                .build());
                 db.getScheduling().attract(storageNodes);
 
                 Map<String, EnvValue> cacheEnv = new HashMap<>();
                 cacheEnv.put("DB_HOST", EnvValue.fromValue(db.getService().getName()));
                 cacheEnv.put("DB_PORT", EnvValue.fromValue(db.getService().getPort().toString()));
                 Deployment cache = new Deployment(this, "Cache", DeploymentProps.builder()
-                        .containers(List.of(ContainerProps.builder()
-                                .image("'cache'")
-                                .portNumber(7000)
-                                .envVariables(cacheEnv)
-                                .build()))
-                        .replicas(2)
-                        .spread(true)
-                        .isolate(true)
-                        .build());
+                                .containers(List.of(ContainerProps.builder()
+                                                .image("'cache'")
+                                                .portNumber(7000)
+                                                .envVariables(cacheEnv)
+                                                .build()))
+                                .replicas(2)
+                                .spread(true)
+                                .isolate(true)
+                                .build());
                 cache.getScheduling().attract(memoryNodes);
 
                 Service cacheService = cache.exposeViaService();
@@ -57,15 +57,15 @@ public class WebCacheDB extends Chart {
                 cacheEnv.put("CACHE_PORT", EnvValue.fromValue(cacheService.getPort().toString()));
 
                 Deployment web = new Deployment(this, "Web", DeploymentProps.builder()
-                        .containers(List.of(ContainerProps.builder()
-                                .image("web")
-                                .portNumber(6000)
-                                .envVariables(webEnv)
-                                .build()))
-                        .replicas(2)
-                        .spread(true)
-                        .isolate(true)
-                        .build());
+                                .containers(List.of(ContainerProps.builder()
+                                                .image("web")
+                                                .portNumber(6000)
+                                                .envVariables(webEnv)
+                                                .build()))
+                                .replicas(2)
+                                .spread(true)
+                                .isolate(true)
+                                .build());
                 web.getScheduling().attract(memoryNodes);
                 web.getScheduling().colocate(cache);
 

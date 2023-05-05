@@ -1,4 +1,4 @@
-package com.example.app;
+package com.example.crd;
 
 import software.constructs.Construct;
 

@@ -1,2 +1,2 @@
-app: mvn exec:java -Dexec.mainClass="com.example.app.HttpEcho"
+app: mvn exec:java -Dexec.mainClass="com.example.echo.HttpEcho"
 language: java

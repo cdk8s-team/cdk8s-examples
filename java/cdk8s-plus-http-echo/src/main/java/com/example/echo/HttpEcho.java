@@ -1,4 +1,4 @@
-package com.example.app;
+package com.example.echo;
 
 import org.cdk8s.plus26.*;
 import software.constructs.Construct;

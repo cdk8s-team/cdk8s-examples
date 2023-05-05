@@ -1,4 +1,4 @@
-package com.example.app;
+package com.example.composition;
 
 import imports.k8s.*;
 import org.cdk8s.Names;
