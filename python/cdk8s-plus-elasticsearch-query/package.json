@@ -1,5 +1,5 @@
 {
-  "name": "cdk8s-plus-elasticsearch-query-python",
+  "name": "@python/cdk8s-plus-elasticsearch-query",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",

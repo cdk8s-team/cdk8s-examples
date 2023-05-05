@@ -1,5 +1,5 @@
 {
-  "name": "cdk8s-core-go",
+  "name": "@go/cdk8s-core",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",

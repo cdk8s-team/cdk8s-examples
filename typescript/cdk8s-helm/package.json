@@ -1,5 +1,5 @@
 {
-  "name": "cdk8s-helm-typescript",
+  "name": "@typescript/cdk8s-helm",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",

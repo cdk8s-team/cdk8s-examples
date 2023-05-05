@@ -1,5 +1,5 @@
 {
-  "name": "cdk8s-plus-web-cache-db-python",
+  "name": "@python/cdk8s-plus-web-cache-db",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",

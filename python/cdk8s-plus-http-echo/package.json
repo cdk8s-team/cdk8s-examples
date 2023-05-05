@@ -1,5 +1,5 @@
 {
-  "name": "cdk8s-plus-http-echo-python",
+  "name": "@python/cdk8s-plus-http-echo",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",

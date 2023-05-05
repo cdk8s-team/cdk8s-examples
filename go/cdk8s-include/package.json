@@ -1,5 +1,5 @@
 {
-  "name": "cdk8s-include-go",
+  "name": "@go/cdk8s-include",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",

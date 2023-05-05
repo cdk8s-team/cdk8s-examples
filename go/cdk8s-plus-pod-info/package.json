@@ -1,5 +1,5 @@
 {
-  "name": "cdk8s-plus-pod-info-go",
+  "name": "@go/cdk8s-plus-pod-info",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",

@@ -1,12 +1,12 @@
 {
-  "name": "cdk8s-include-java",
+  "name": "@java/cdk8s-include",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "install": "mvn install",
+    "install": "mvn dependency:resolve",
     "build": "mvn clean compile && npm run synth",
     "synth": "cdk8s synth"
   }

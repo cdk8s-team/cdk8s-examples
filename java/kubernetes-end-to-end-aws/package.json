@@ -1,5 +1,5 @@
 {
-  "name": "kubernetes-end-to-end-aws-java",
+  "name": "@java/kubernetes-end-to-end-aws",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
