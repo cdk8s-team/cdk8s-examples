@@ -6,7 +6,6 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "install": "go mod download && go mod tidy",
     "import": "cdk8s import",
     "build": "npm run import && npm run synth",
     "synth": "cdk8s synth"

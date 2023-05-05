@@ -1,4 +1,4 @@
-app: mvn exec:java -Dexec.mainClass="com.example.query.ElasticsearchQuery"
+app: mvn clean compile && mvn exec:java -Dexec.mainClass="com.example.query.ElasticsearchQuery"
 language: java
 imports:
   - https://download.elastic.co/downloads/eck/1.1.2/all-in-one.yaml

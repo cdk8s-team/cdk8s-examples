@@ -1,2 +1,2 @@
-app: mvn exec:java -Dexec.mainClass="com.example.webcachedb.WebCacheDB"
+app: mvn clean compile && mvn exec:java -Dexec.mainClass="com.example.webcachedb.WebCacheDB"
 language: java

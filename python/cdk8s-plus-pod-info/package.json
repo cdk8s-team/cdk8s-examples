@@ -6,7 +6,6 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "install": "pipenv install",
     "build": "npm run synth",
     "synth": "cdk8s synth"
   }

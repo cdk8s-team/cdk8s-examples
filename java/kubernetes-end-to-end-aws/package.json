@@ -6,8 +6,7 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "install": "mvn dependency:resolve",
-    "build": "mvn clean compile && npm run synth",
+    "build": "npm run synth",
     "synth": "cdk synth",
     "deploy": "cdk deploy",
     "destroy": "cdk destroy"

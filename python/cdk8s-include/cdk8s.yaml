@@ -1,2 +1,2 @@
 language: python
-app: pipenv run python ./main.py
+app: pipenv install && pipenv run python ./main.py

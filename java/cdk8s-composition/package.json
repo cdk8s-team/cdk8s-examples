@@ -6,9 +6,8 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "install": "mvn dependency:resolve",
     "import": "cdk8s import && rm -rf imports",
-    "build": "npm run import && mvn clean compile && npm run synth",
-    "synth": "mvn exec:java -Dexec.mainClass=\"com.example.composition.WebServices\""
+    "build": "npm run import && npm run synth",
+    "synth": "cdk8s synth"
   }
 }

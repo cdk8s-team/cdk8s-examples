@@ -5,15 +5,6 @@
       "description": "Full release build",
       "steps": [
         {
-          "exec": "lerna run install --scope \"@go/*\""
-        },
-        {
-          "exec": "lerna run install --scope \"@python/*\""
-        },
-        {
-          "exec": "lerna run install --scope \"@java/*\""
-        },
-        {
           "exec": "lerna run build"
         }
       ]
