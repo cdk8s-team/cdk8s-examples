@@ -5,7 +5,16 @@
       "description": "Full release build",
       "steps": [
         {
-          "exec": "lerna run build"
+          "exec": "lerna run build --scope \"@typescript/*\""
+        },
+        {
+          "exec": "lerna run build --scope \"@python/*\""
+        },
+        {
+          "exec": "lerna run build --scope \"@go/*\""
+        },
+        {
+          "exec": "lerna run build --scope \"@java/*\" --concurrency 1"
         }
       ]
     },

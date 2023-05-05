@@ -49,7 +49,11 @@ project.package.addField('workspaces', {
 project.testTask.reset();
 
 project.buildTask._locked = false
-project.buildTask.reset('lerna run build');
+project.buildTask.reset();
+project.buildTask.exec('lerna run build --scope "@typescript/*"')
+project.buildTask.exec('lerna run build --scope "@python/*"')
+project.buildTask.exec('lerna run build --scope "@go/*"')
+project.buildTask.exec('lerna run build --scope "@java/*" --concurrency 1')
 project.buildTask._locked = true
 
 // no package task is needed
