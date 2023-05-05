@@ -5,16 +5,16 @@
       "description": "Full release build",
       "steps": [
         {
-          "exec": "lerna run build --scope \"@typescript/*\""
+          "exec": "lerna run install --scope \"@go/*\""
         },
         {
-          "exec": "lerna run build --scope \"@python/*\""
+          "exec": "lerna run install --scope \"@python/*\""
         },
         {
-          "exec": "lerna run build --scope \"@go/*\""
+          "exec": "lerna run install --scope \"@java/*\""
         },
         {
-          "exec": "lerna run build --scope \"@java/*\" --concurrency 1"
+          "exec": "lerna run build"
         }
       ]
     },
@@ -60,23 +60,6 @@
       "steps": [
         {
           "exec": "node .projenrc.js"
-        }
-      ]
-    },
-    "deps": {
-      "name": "deps",
-      "steps": [
-        {
-          "exec": "lerna run install --scope \"@typescript/*\""
-        },
-        {
-          "exec": "lerna run install --scope \"@python/*\""
-        },
-        {
-          "exec": "lerna run install --scope \"@go/*\""
-        },
-        {
-          "exec": "lerna run install --scope \"@java/*\" --concurrency 1"
         }
       ]
     },

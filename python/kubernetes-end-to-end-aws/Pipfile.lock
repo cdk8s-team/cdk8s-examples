@@ -34,11 +34,11 @@
         },
         "aws-cdk.asset-awscli-v1": {
             "hashes": [
-                "sha256:0be6a9a75ab4361798979232f4d7261556403cdbbfadbad5c3d83a73ed5181cd",
-                "sha256:937479ca32b3e097e3cb0dd920ec894095997ff41004a814079a51729c0122ef"
+                "sha256:9e638e6ba5ba44d3dafeb4596661a8a8c9fede7c6faef7bf0de7131327575f4a",
+                "sha256:e2f5981d0a5431dd3d2621b4783a3af4735a36d655de78c33b4c38a4ced358a3"
             ],
             "markers": "python_version ~= '3.7'",
-            "version": "==2.2.161"
+            "version": "==2.2.162"
         },
         "aws-cdk.asset-kubectl-v20": {
             "hashes": [
@@ -50,11 +50,11 @@
         },
         "aws-cdk.asset-node-proxy-agent-v5": {
             "hashes": [
-                "sha256:0a309116d192e27f7757b52df2bf88561ddc9c327dee7815684db81d588514a6",
-                "sha256:9e97fcc1e7e879a61f34df8d9c26fcb0f9e0177f67f313f81b30e3cfc7fa11a6"
+                "sha256:7a4fc44c8c8b21092130d329507a8b6f0d562beb28e2bcc3d2d57d68fa845381",
+                "sha256:89b1d26fadc5567791c8def7b1955bd9cb6c577a89487ecd0251ea6c171d52c9"
             ],
             "markers": "python_version ~= '3.7'",
-            "version": "==2.0.135"
+            "version": "==2.0.136"
         },
         "aws-cdk.lambda-layer-kubectl-v25": {
             "hashes": [
@@ -132,7 +132,7 @@
                 "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86",
                 "sha256:961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2'",
             "version": "==2.8.2"
         },
         "six": {
@@ -140,7 +140,7 @@
                 "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926",
                 "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2'",
             "version": "==1.16.0"
         },
         "typeguard": {

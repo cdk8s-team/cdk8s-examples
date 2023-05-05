@@ -48,26 +48,16 @@ project.package.addField('workspaces', {
 
 project.testTask.reset();
 
-const deps = project.addTask('deps');
-deps.exec('lerna run install --scope "@typescript/*"')
-deps.exec('lerna run install --scope "@python/*"')
-deps.exec('lerna run install --scope "@go/*"')
-deps.exec('lerna run install --scope "@java/*" --concurrency 1')
-
 project.buildTask._locked = false
 project.buildTask.reset();
-project.buildTask.exec('lerna run build --scope "@typescript/*"')
-project.buildTask.exec('lerna run build --scope "@python/*"')
-project.buildTask.exec('lerna run build --scope "@go/*"')
-project.buildTask.exec('lerna run build --scope "@java/*" --concurrency 1')
+project.buildTask.exec('lerna run install --scope "@go/*"')
+project.buildTask.exec('lerna run install --scope "@python/*"')
+project.buildTask.exec('lerna run install --scope "@java/*"')
+project.buildTask.exec('lerna run build')
 project.buildTask._locked = true
 
 // no package task is needed
 project.packageTask.reset();
-
-project.addScripts({
-  install: `npx projen ${deps.name}`
-});
 
 project.gitignore.exclude('.vscode')
 

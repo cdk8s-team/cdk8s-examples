@@ -9,15 +9,13 @@
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "default": "npx projen default",
-    "deps": "npx projen deps",
     "eject": "npx projen eject",
     "package": "npx projen package",
     "post-compile": "npx projen post-compile",
     "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
     "upgrade": "npx projen upgrade",
-    "projen": "npx projen",
-    "install": "npx projen deps"
+    "projen": "npx projen"
   },
   "author": {
     "name": "Amazon Web Services",
