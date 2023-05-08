@@ -3,9 +3,9 @@
 
 
 "@aws-cdk/asset-awscli-v1@^2.2.97":
-  version "2.2.163"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.163.tgz#f02099824333f6249cf6e1a3948d0722f64f841a"
-  integrity sha512-4HfyzBxnsewMw7V4dvPEf31qogJUqRqYwoTBC41rA51JkfM7BwgaofRIW2ykJroMVNBB3KQQUFjntKkVlEXHPA==
+  version "2.2.164"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.164.tgz#3b10003dd9aa7b4eb4935ea2ea3becc0b8fd5458"
+  integrity sha512-8lxqMeURT4fCdf7JxiXXGSv9TdwtyphkAYF92uVPJcj7EvqGU8Lu0eiHej10UCcgENnobVQRMWr8Wxlp4LYGhQ==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -13,9 +13,9 @@
   integrity sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==
 
 "@aws-cdk/asset-node-proxy-agent-v5@^2.0.77":
-  version "2.0.137"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.137.tgz#2586d863a744a8f5bc57ceec5ed24eb6d4553e6f"
-  integrity sha512-sAkyTuX50bm0VkisMQRohav56q6mIig3pTLVVY97yQwgPMu46MQ9u4py66EONQlEnOdcudt4bk7SWwHC4hLieQ==
+  version "2.0.138"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.138.tgz#9fcc3f45f706d546e81febe82425070247bce750"
+  integrity sha512-T9uCDBJoxkj6J1KCRhZHN0N9frZanVb74gz6WfB5BuxwW+u+r1McyRMT/GIdj88IMV0j5nPVU64sR1FL3B1lPA==
 
 "@aws-cdk/lambda-layer-kubectl-v25@^2.0.3":
   version "2.0.3"
@@ -48,10 +48,10 @@
   resolved "https://registry.yarnpkg.com/@balena/dockerignore/-/dockerignore-1.0.2.tgz#9ffe4726915251e8eb69f44ef3547e0da2c03e0d"
   integrity sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q==
 
-"@cdk8s/projen-common@^0.0.331":
-  version "0.0.331"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.331.tgz#f1bdb0bd0dd84d2be7de8ea291daa53236831ae5"
-  integrity sha512-HJeH9UDrhqG9eFjLrAAAVZQSxs5qVbHrsZCnMg6c1aWf5zgMBJ8AkCtDAMAhp49IxMlyDj7JXNXLGcb4pcoMvA==
+"@cdk8s/projen-common@^0.0.332":
+  version "0.0.332"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.332.tgz#d3fbdbb48b30e113149bd2ab0ec9da6916e0fedb"
+  integrity sha512-rzPTpR9z7ATgbqyxglZ++ABJG8hkNg67T1mkjJnnDbW5QyaMsk9X8mR1ixrEg3ii9PAemsr9p/fGIAPmmuot3Q==
   dependencies:
     codemaker "^1.80.0"
 
@@ -1224,18 +1224,18 @@ bl@^4.0.3, bl@^4.1.0:
     readable-stream "^3.4.0"
 
 boxen@^7.0.0:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/boxen/-/boxen-7.0.2.tgz#465dd03e846c11f2d4c7eb0d1b3a39d66bd7057e"
-  integrity sha512-1Z4UJabXUP1/R9rLpoU3O2lEMnG3pPLAs/ZD2lF3t2q7qD5lM8rqbtnvtvm4N0wEyNlE+9yZVTVAGmd1V5jabg==
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/boxen/-/boxen-7.1.0.tgz#ba10a9ef4e73a9e220105b5f8c07a56d359a4cb4"
+  integrity sha512-ScG8CDo8dj7McqCZ5hz4dIBp20xj4unQ2lXIDa7ff6RcZElCpuNzutdwzKVvRikfNjm7CFAlR3HJHcoHkDOExQ==
   dependencies:
     ansi-align "^3.0.1"
-    camelcase "^7.0.0"
-    chalk "^5.0.1"
+    camelcase "^7.0.1"
+    chalk "^5.2.0"
     cli-boxes "^3.0.0"
     string-width "^5.1.2"
     type-fest "^2.13.0"
     widest-line "^4.0.1"
-    wrap-ansi "^8.0.1"
+    wrap-ansi "^8.1.0"
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -1381,7 +1381,7 @@ camelcase@^6.3.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-6.3.0.tgz#5685b95eb209ac9c0c177467778c9c84df58ba9a"
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
-camelcase@^7.0.0:
+camelcase@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-7.0.1.tgz#f02e50af9fd7782bc8b88a3558c32fd3a388f048"
   integrity sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==
@@ -1416,16 +1416,16 @@ cdk8s-cli@^2.2.5:
     backport "8.5.0"
 
 cdk8s-plus-25@^2.5.8, cdk8s-plus-25@^2.7.19:
-  version "2.7.20"
-  resolved "https://registry.yarnpkg.com/cdk8s-plus-25/-/cdk8s-plus-25-2.7.20.tgz#899c95fa055e285c0c22965d1674260b75f181b2"
-  integrity sha512-N0wP6STJzlhT8V8GcXM1wa0f6M1KurpfhVB5OHBlcOi1Tz83z4idlr8G/0pzqBeLTxafbV20jBo5bJvK4AhqYw==
+  version "2.7.21"
+  resolved "https://registry.yarnpkg.com/cdk8s-plus-25/-/cdk8s-plus-25-2.7.21.tgz#9852e85dfb5f845479a92d1b7f42bf49d0235a23"
+  integrity sha512-V0Etx8SOo3YsSZJYEkSDYs2YDqZ55Q8Q0FN15H/5L1jZwjfnjMrbtcbi2VQcmFf+ZiQl1UeCCXnIZDfjztZvIQ==
   dependencies:
     minimatch "^3.1.2"
 
 cdk8s-plus-26@^2.2.16:
-  version "2.3.20"
-  resolved "https://registry.yarnpkg.com/cdk8s-plus-26/-/cdk8s-plus-26-2.3.20.tgz#efa0270c3a25f330abbd2bb52714c1eee17b57c9"
-  integrity sha512-xN5CfrS4oMUKFo5gKUG5zwSj1dRZlyIdmsI7ZDXcDOdWWDNbInJQUoLHcNBuWg4ibWfHmrASsdnJIWU90AEnlA==
+  version "2.3.21"
+  resolved "https://registry.yarnpkg.com/cdk8s-plus-26/-/cdk8s-plus-26-2.3.21.tgz#cdd10c4a4e1da3cbb6a02a56d686bce5a5b1911e"
+  integrity sha512-8GwoizqG+jU2rDwUQGlFlt2Y8kolpHoif65j/2xx72JrGEawaKyHTRsYcupixBhzWwETwS96GSdonCAzFT0GjQ==
   dependencies:
     minimatch "^3.1.2"
 
@@ -4716,10 +4716,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.71.44:
-  version "0.71.44"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.71.44.tgz#ea8887086686fe41d92bdfe9e3b08fc1ce7b4c4e"
-  integrity sha512-L2OgONRCYr94cBq1jxYf9BcYL9MfraqUgEaeKnbsP41x40fH4xrSQ0ozzXWW+BWqDuMn0El29AS2JsXvBer6+g==
+projen@^0.71.45:
+  version "0.71.45"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.71.45.tgz#1c1c13a925eedd8c325ab5f076f29e04349b059f"
+  integrity sha512-otu2DMsjti0luWpoVK62cTQ4d+iyjwPpQf6e8a0qhfugeCEinvJzIi0vDzNZzbwnichltywrzK8OpmHcY+FfKg==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -6091,7 +6091,7 @@ wrap-ansi@^6.2.0:
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
 
-wrap-ansi@^8.0.1, wrap-ansi@^8.1.0:
+wrap-ansi@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-8.1.0.tgz#56dc22368ee570face1b49819975d9b9a5ead214"
   integrity sha512-si7QWI6zUMq56bESFvagtmzMdGOtoxfR+Sez11Mobfc7tm+VkUckk9bW2UeffTGVUbOksxmSw0AA2gs8g71NCQ==
