@@ -1,4 +1,3 @@
-// cert-managerio
 package certmanagerio
 
 
