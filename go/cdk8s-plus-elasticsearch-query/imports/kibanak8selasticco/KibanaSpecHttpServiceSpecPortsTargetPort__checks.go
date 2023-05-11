@@ -1,6 +1,5 @@
 //go:build !no_runtime_type_checking
 
-// kibanak8selasticco
 package kibanak8selasticco
 
 import (
