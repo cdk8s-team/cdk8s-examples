@@ -22,10 +22,10 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.338",
+    "@cdk8s/projen-common": "^0.0.339",
     "lerna": "^6.6.2",
     "npm-check-updates": "^16",
-    "projen": "^0.71.54"
+    "projen": "^0.71.55"
   },
   "engines": {
     "node": ">= 14.17.0"
