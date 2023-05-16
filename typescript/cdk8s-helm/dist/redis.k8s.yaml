@@ -711,7 +711,7 @@ spec:
             - name: REDIS_MASTER_PORT_NUMBER
               value: "6379"
             - name: ALLOW_EMPTY_PASSWORD
-              value: "no"
+              value: no
             - name: REDIS_PASSWORD
               valueFrom:
                 secretKeyRef:
@@ -723,11 +723,11 @@ spec:
                   key: redis-password
                   name: redis-c82bfc2f
             - name: REDIS_TLS_ENABLED
-              value: "no"
+              value: no
             - name: REDIS_PORT
               value: "6379"
             - name: REDIS_SENTINEL_TLS_ENABLED
-              value: "no"
+              value: no
             - name: REDIS_SENTINEL_PORT
               value: "26379"
             - name: REDIS_DATA_DIR
@@ -810,7 +810,7 @@ spec:
                   key: redis-password
                   name: redis-c82bfc2f
             - name: REDIS_SENTINEL_TLS_ENABLED
-              value: "no"
+              value: no
             - name: REDIS_SENTINEL_PORT
               value: "26379"
           image: docker.io/bitnami/redis-sentinel:7.0.10-debian-11-r1
