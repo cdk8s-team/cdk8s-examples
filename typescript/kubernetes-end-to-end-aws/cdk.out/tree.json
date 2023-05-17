@@ -1029,7 +1029,7 @@
                 },
                 "constructInfo": {
                   "fqn": "constructs.Construct",
-                  "version": "10.2.24"
+                  "version": "10.2.25"
                 }
               },
               "KubectlReadyBarrier": {
@@ -2681,7 +2681,7 @@
                     },
                     "constructInfo": {
                       "fqn": "constructs.Construct",
-                      "version": "10.2.24"
+                      "version": "10.2.25"
                     }
                   }
                 },
@@ -2713,7 +2713,7 @@
                 },
                 "constructInfo": {
                   "fqn": "constructs.Construct",
-                  "version": "10.2.24"
+                  "version": "10.2.25"
                 }
               },
               "Service-principalMap": {
@@ -2794,7 +2794,7 @@
             },
             "constructInfo": {
               "fqn": "constructs.Construct",
-              "version": "10.2.24"
+              "version": "10.2.25"
             }
           },
           "@aws-cdk--aws-eks.KubectlProvider": {
@@ -3371,7 +3371,7 @@
                 },
                 "constructInfo": {
                   "fqn": "constructs.Construct",
-                  "version": "10.2.24"
+                  "version": "10.2.25"
                 }
               },
               "kubernetesendtoendawscdkawseksKubectlProviderframeworkonEvent5CD61922Arn": {
@@ -3505,7 +3505,7 @@
             },
             "constructInfo": {
               "fqn": "constructs.Construct",
-              "version": "10.2.24"
+              "version": "10.2.25"
             }
           },
           "kubernetesendtoendCluster80063B22-AlbController": {
@@ -4022,7 +4022,7 @@
             },
             "constructInfo": {
               "fqn": "constructs.Construct",
-              "version": "10.2.24"
+              "version": "10.2.25"
             }
           },
           "BootstrapVersion": {
@@ -4052,7 +4052,7 @@
         "path": "Tree",
         "constructInfo": {
           "fqn": "constructs.Construct",
-          "version": "10.2.24"
+          "version": "10.2.25"
         }
       }
     },
