@@ -1029,7 +1029,7 @@
                 },
                 "constructInfo": {
                   "fqn": "constructs.Construct",
-                  "version": "10.2.31"
+                  "version": "10.2.35"
                 }
               },
               "KubectlReadyBarrier": {
@@ -1481,7 +1481,7 @@
                           "s3Bucket": {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "s3Key": "75dfa9114a30421542432dcb55212f010f591a9e3bd203ae98ba3f9bedf5bb31.zip"
+                          "s3Key": "25f7dc8c7a6d65604d70050f2d9d19d6bfc5060a3d74662fc86589f4385e3a1b.zip"
                         },
                         "description": "/opt/nodejs/node_modules/proxy-agent"
                       }
@@ -2681,7 +2681,7 @@
                     },
                     "constructInfo": {
                       "fqn": "constructs.Construct",
-                      "version": "10.2.31"
+                      "version": "10.2.35"
                     }
                   }
                 },
@@ -2713,7 +2713,7 @@
                 },
                 "constructInfo": {
                   "fqn": "constructs.Construct",
-                  "version": "10.2.31"
+                  "version": "10.2.35"
                 }
               },
               "Service-principalMap": {
@@ -2772,7 +2772,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/69e830f2f81b5281dba606a6119bb410413e0bf2476020a17d77b21c3eb98b20.json"
+                          "/0119e7769dc3e1494b773bc54912362a21753a04132b83089c0affe29722f692.json"
                         ]
                       ]
                     },
@@ -2794,7 +2794,7 @@
             },
             "constructInfo": {
               "fqn": "constructs.Construct",
-              "version": "10.2.31"
+              "version": "10.2.35"
             }
           },
           "@aws-cdk--aws-eks.KubectlProvider": {
@@ -3371,7 +3371,7 @@
                 },
                 "constructInfo": {
                   "fqn": "constructs.Construct",
-                  "version": "10.2.31"
+                  "version": "10.2.35"
                 }
               },
               "kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn": {
@@ -3505,7 +3505,7 @@
             },
             "constructInfo": {
               "fqn": "constructs.Construct",
-              "version": "10.2.31"
+              "version": "10.2.35"
             }
           },
           "kubernetesendtoendawsCluster3E3D3F76-AlbController": {
@@ -4022,7 +4022,7 @@
             },
             "constructInfo": {
               "fqn": "constructs.Construct",
-              "version": "10.2.31"
+              "version": "10.2.35"
             }
           },
           "BootstrapVersion": {
@@ -4052,7 +4052,7 @@
         "path": "Tree",
         "constructInfo": {
           "fqn": "constructs.Construct",
-          "version": "10.2.31"
+          "version": "10.2.35"
         }
       }
     },
