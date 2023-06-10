@@ -557,9 +557,9 @@
     universal-user-agent "^6.0.0"
 
 "@octokit/endpoint@^7.0.0":
-  version "7.0.5"
-  resolved "https://registry.yarnpkg.com/@octokit/endpoint/-/endpoint-7.0.5.tgz#2bb2a911c12c50f10014183f5d596ce30ac67dd1"
-  integrity sha512-LG4o4HMY1Xoaec87IqQ41TQ+glvIeTKqfjkCEmt5AIwDZJwQeVZFIEYXrYY6yLwK+pAScb9Gj4q+Nz2qSw1roA==
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@octokit/endpoint/-/endpoint-7.0.6.tgz#791f65d3937555141fb6c08f91d618a7d645f1e2"
+  integrity sha512-5L4fseVRUsDFGR00tMWD/Trdeeihn999rTMGRMC1G/Ldi1uWlWJzI98H4Iak5DB/RVvQuyMYKqSK/R6mbSOQyg==
   dependencies:
     "@octokit/types" "^9.0.0"
     is-plain-object "^5.0.0"
@@ -593,10 +593,10 @@
   resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-14.0.0.tgz#949c5019028c93f189abbc2fb42f333290f7134a"
   integrity sha512-HNWisMYlR8VCnNurDU6os2ikx0s0VyEjDYHNS/h4cgb8DeOxQ0n72HyinUtdDVxJhFy3FWLGl0DJhfEWk3P5Iw==
 
-"@octokit/openapi-types@^17.2.0":
-  version "17.2.0"
-  resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-17.2.0.tgz#f1800b5f9652b8e1b85cc6dfb1e0dc888810bdb5"
-  integrity sha512-MazrFNx4plbLsGl+LFesMo96eIXkFgEtaKbnNpdh4aQ0VM10aoylFsTYP1AEjkeoRNZiiPe3T6Gl2Hr8dJWdlQ==
+"@octokit/openapi-types@^18.0.0":
+  version "18.0.0"
+  resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-18.0.0.tgz#f43d765b3c7533fd6fb88f3f25df079c24fccf69"
+  integrity sha512-V8GImKs3TeQRxRtXFpG2wl19V7444NIOTDF24AWuIbmNaNYOQMWRbjcGDXV5B+0n887fgDcuMNOmlul+k+oJtw==
 
 "@octokit/plugin-enterprise-rest@6.0.1":
   version "6.0.1"
@@ -715,11 +715,11 @@
     "@octokit/openapi-types" "^14.0.0"
 
 "@octokit/types@^9.0.0":
-  version "9.2.3"
-  resolved "https://registry.yarnpkg.com/@octokit/types/-/types-9.2.3.tgz#d0af522f394d74b585cefb7efd6197ca44d183a9"
-  integrity sha512-MMeLdHyFIALioycq+LFcA71v0S2xpQUX2cw6pPbHQjaibcHYwLnmK/kMZaWuGfGfjBJZ3wRUq+dOaWsvrPJVvA==
+  version "9.3.0"
+  resolved "https://registry.yarnpkg.com/@octokit/types/-/types-9.3.0.tgz#2e3433a9999f200a6cfc431c81b27ac38fd0d23d"
+  integrity sha512-ZNO1In0QuWZLDngSLcn5H4ExRhYOd1rDcWnwc/LuR55cO1d6Sex6+T6RiSQwp/tyEg7eNWx+MUdJGL7Fu1kMjw==
   dependencies:
-    "@octokit/openapi-types" "^17.2.0"
+    "@octokit/openapi-types" "^18.0.0"
 
 "@oozcitak/dom@1.15.10":
   version "1.15.10"
