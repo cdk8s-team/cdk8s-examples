@@ -23,13 +23,13 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.379",
+    "@cdk8s/projen-common": "^0.0.381",
     "lerna": "^6.6.2",
     "npm-check-updates": "^16",
-    "projen": "^0.71.101"
+    "projen": "^0.71.103"
   },
   "engines": {
-    "node": ">= 14.17.0"
+    "node": ">= 16.20.0"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
