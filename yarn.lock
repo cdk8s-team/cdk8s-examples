@@ -48,10 +48,10 @@
   resolved "https://registry.yarnpkg.com/@balena/dockerignore/-/dockerignore-1.0.2.tgz#9ffe4726915251e8eb69f44ef3547e0da2c03e0d"
   integrity sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q==
 
-"@cdk8s/projen-common@^0.0.399":
-  version "0.0.399"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.399.tgz#0c7827e37aac5107a69558f1859a401356c79c63"
-  integrity sha512-nWqTN5VjllCiiZ4ijRgTkMEXsXuBey1P7l1lhiGhUWVr/umvTrVnQlwXuyJSbassgbcN+oVXC/+ucvzKP9GzxA==
+"@cdk8s/projen-common@^0.0.401":
+  version "0.0.401"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.401.tgz#6e502801e757e50f7bdc1832235cb57af778c12e"
+  integrity sha512-udWMsttlsgNRaJ8oIdBbuqIN07dfjaJ1SP+GwAYAT9my+prwn8q8PmVgNg9cls0yByq+91G910iUbrxaNXuG4Q==
   dependencies:
     codemaker "^1.84.0"
 
@@ -4775,10 +4775,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.71.127:
-  version "0.71.127"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.71.127.tgz#aaedcce31945fc81e68a61c44789171cb9bed82b"
-  integrity sha512-JXPqDq+9BsUC1IRc1pty+hmK/HYyIN6Q0yl8UZqkOtQgpX1AU5xp43T7gH1h/j3+OMTjwCtfA9uI/VUHH4ecYA==
+projen@^0.71.129:
+  version "0.71.129"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.71.129.tgz#1039ea9b2e54b7dbe6140ceca32e52b5923ae163"
+  integrity sha512-nP+RN+rl8fvcdveq+MXG8tpV0ka22tvr2VtvZn3jhU1usIo2OicBN0TenF3sO39OLi4EP87NkCrmKjrusQ8RQw==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -4788,7 +4788,7 @@ projen@^0.71.127:
     fast-json-patch "^3.1.1"
     glob "^8"
     ini "^2.0.0"
-    semver "^7.5.3"
+    semver "^7.5.4"
     shx "^0.3.4"
     xmlbuilder2 "^3.1.1"
     yaml "^2.2.2"
@@ -5259,7 +5259,7 @@ semver@^6.0.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
-semver@^7.0.0, semver@^7.1.1, semver@^7.3.4, semver@^7.3.5, semver@^7.3.7, semver@^7.3.8, semver@^7.5.3:
+semver@^7.0.0, semver@^7.1.1, semver@^7.3.4, semver@^7.3.5, semver@^7.3.7, semver@^7.3.8, semver@^7.5.3, semver@^7.5.4:
   version "7.5.4"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.4.tgz#483986ec4ed38e1c6c48c34894a9182dbff68a6e"
   integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
