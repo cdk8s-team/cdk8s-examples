@@ -15,7 +15,8 @@
     "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
     "upgrade-configuration": "npx projen upgrade-configuration",
-    "upgrade-dependencies": "npx projen upgrade-dependencies",
+    "upgrade-dev-dependencies": "npx projen upgrade-dev-dependencies",
+    "upgrade-runtime-dependencies": "npx projen upgrade-runtime-dependencies",
     "projen": "npx projen"
   },
   "author": {
@@ -23,10 +24,10 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.410",
+    "@cdk8s/projen-common": "^0.0.414",
     "lerna": "^6.6.2",
     "npm-check-updates": "^16",
-    "projen": "^0.71.142"
+    "projen": "^0.71.145"
   },
   "engines": {
     "node": ">= 16.20.0"
