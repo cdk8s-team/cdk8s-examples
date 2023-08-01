@@ -92,6 +92,7 @@ spec:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
 ---
 apiVersion: v1
 kind: Service
@@ -159,6 +160,7 @@ spec:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
 ---
 apiVersion: v1
 kind: Service
@@ -226,6 +228,7 @@ spec:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
 ---
 apiVersion: v1
 kind: Service
@@ -293,6 +296,7 @@ spec:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
 ---
 apiVersion: v1
 kind: Service

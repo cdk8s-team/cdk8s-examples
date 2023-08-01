@@ -82,6 +82,7 @@ spec:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
       volumes:
         - emptyDir: {}
           name: data
