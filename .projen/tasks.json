@@ -192,7 +192,7 @@
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade lerna npm-check-updates"
+          "exec": "yarn upgrade "
         },
         {
           "exec": "npx projen"
