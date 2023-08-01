@@ -92,6 +92,7 @@ spec:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
       volumes:
         - configMap:
             name: elasticsearch-query-config-c86376ea

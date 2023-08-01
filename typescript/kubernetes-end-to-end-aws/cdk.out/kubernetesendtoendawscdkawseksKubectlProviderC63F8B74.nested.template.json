@@ -1,116 +1,5 @@
 {
  "Resources": {
-  "HandlerServiceRoleFCDC14AE": {
-   "Type": "AWS::IAM::Role",
-   "Properties": {
-    "AssumeRolePolicyDocument": {
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Principal": {
-        "Service": "lambda.amazonaws.com"
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "ManagedPolicyArns": [
-     {
-      "Fn::Join": [
-       "",
-       [
-        "arn:",
-        {
-         "Ref": "AWS::Partition"
-        },
-        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-       ]
-      ]
-     },
-     {
-      "Fn::Join": [
-       "",
-       [
-        "arn:",
-        {
-         "Ref": "AWS::Partition"
-        },
-        ":iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
-       ]
-      ]
-     },
-     {
-      "Fn::Join": [
-       "",
-       [
-        "arn:",
-        {
-         "Ref": "AWS::Partition"
-        },
-        ":iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
-       ]
-      ]
-     },
-     {
-      "Fn::If": [
-       "HasEcrPublic",
-       {
-        "Fn::Join": [
-         "",
-         [
-          "arn:",
-          {
-           "Ref": "AWS::Partition"
-          },
-          ":iam::aws:policy/AmazonElasticContainerRegistryPublicReadOnly"
-         ]
-        ]
-       },
-       {
-        "Ref": "AWS::NoValue"
-       }
-      ]
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/Handler/ServiceRole/Resource"
-   }
-  },
-  "HandlerServiceRoleDefaultPolicyCBD0CC91": {
-   "Type": "AWS::IAM::Policy",
-   "Properties": {
-    "PolicyDocument": {
-     "Statement": [
-      {
-       "Action": "eks:DescribeCluster",
-       "Effect": "Allow",
-       "Resource": {
-        "Ref": "referencetokubernetesendtoendCluster81EDAB07Arn"
-       }
-      },
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Resource": {
-        "Ref": "referencetokubernetesendtoendClusterCreationRole7361842EArn"
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "PolicyName": "HandlerServiceRoleDefaultPolicyCBD0CC91",
-    "Roles": [
-     {
-      "Ref": "HandlerServiceRoleFCDC14AE"
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/Handler/ServiceRole/DefaultPolicy/Resource"
-   }
-  },
   "Handler886CB40B": {
    "Type": "AWS::Lambda::Function",
    "Properties": {
@@ -119,12 +8,6 @@
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
      "S3Key": "9017774b84ae2457b1b2ad6fcbb4860d8ce2537062c77010b24d9b156ced5a1b.zip"
-    },
-    "Role": {
-     "Fn::GetAtt": [
-      "HandlerServiceRoleFCDC14AE",
-      "Arn"
-     ]
     },
     "Description": "onEvent handler for EKS kubectl resource provider",
     "Handler": "index.handler",
@@ -137,6 +20,9 @@
      }
     ],
     "MemorySize": 1024,
+    "Role": {
+     "Ref": "referencetokubernetesendtoendClusterKubectlHandlerRoleCD163246Arn"
+    },
     "Runtime": "python3.7",
     "Timeout": 900,
     "VpcConfig": {
@@ -155,10 +41,6 @@
      ]
     }
    },
-   "DependsOn": [
-    "HandlerServiceRoleDefaultPolicyCBD0CC91",
-    "HandlerServiceRoleFCDC14AE"
-   ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/Handler/Resource",
     "aws:asset:path": "asset.9017774b84ae2457b1b2ad6fcbb4860d8ce2537062c77010b24d9b156ced5a1b",
@@ -173,13 +55,13 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "10972873dd8a3bc33ae1cb91d834617be249fd84bed5bdbb6ffbb581650aea83.zip"
+     "S3Key": "e2277687077a2abf9ae1af1cc9565e6715e2ebb62f79ec53aa75a1af9298f642.zip"
     },
     "Description": "/opt/awscli/aws"
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/AwsCliLayer/Resource",
-    "aws:asset:path": "asset.10972873dd8a3bc33ae1cb91d834617be249fd84bed5bdbb6ffbb581650aea83.zip",
+    "aws:asset:path": "asset.e2277687077a2abf9ae1af1cc9565e6715e2ebb62f79ec53aa75a1af9298f642.zip",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Content"
    }
@@ -282,13 +164,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "8e3d635893ea17fa3158623489cd42c680fad925b38de1ef51cb10d84f6e245e.zip"
-    },
-    "Role": {
-     "Fn::GetAtt": [
-      "ProviderframeworkonEventServiceRole9FF04296",
-      "Arn"
-     ]
+     "S3Key": "f2d30cfc360482320a52a4fcde8a70f3569df79ab30be24650fda58eb60052cf.zip"
     },
     "Description": "AWS CDK resource provider framework - onEvent (kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/Provider)",
     "Environment": {
@@ -302,7 +178,13 @@
      }
     },
     "Handler": "framework.onEvent",
-    "Runtime": "nodejs14.x",
+    "Role": {
+     "Fn::GetAtt": [
+      "ProviderframeworkonEventServiceRole9FF04296",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
     "Timeout": 900,
     "VpcConfig": {
      "SecurityGroupIds": [
@@ -326,7 +208,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/Resource",
-    "aws:asset:path": "asset.8e3d635893ea17fa3158623489cd42c680fad925b38de1ef51cb10d84f6e245e",
+    "aws:asset:path": "asset.f2d30cfc360482320a52a4fcde8a70f3569df79ab30be24650fda58eb60052cf",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -334,7 +216,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02PzarCMBCFn8V9Ov5cuOJSC268C+kFtyFNRpk2TSCTKFL67ja1iKtzzhyY+WYD2x2sF+rBhTZtYamGfgyyx5bhlGrU0Z6Dv5PBIKzqaqOgPyanI3knyqv79n/qieGCgcc8CFId9JW3mKtJz96Sfub4doPgH6mYMTLss4wZDkm3GA+KcRAVsk9Bo5ja/6hu5G4zhrT5mhxhtSXYP7i0NAHk/aV3hiYsnTj6ToZ5E8Pnm0w1TwfhvEFoeHlf/8JmBatFw0RFSC5Sh1C99QWbfyDXLQEAAA=="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02QT4vCMBDFP8ve01lXQdyjFrzsHqSC15AmszJtmkAmUaT0u5vUP+zpvR/M483MEjbfsPhQV6606StLLYwZ5Ig9w09qUUd7CP5CBoOwamiNgnGfnI7knaj/3H//q24YThg48yR4JRUzRoZtkcywS7rHuFOMgtQAY+MtluCsB29J3wo+3DSJOXiM6kzu/GyXtpTIvKO2BNsr15bmXtEg+xQ0Cp04+kGGJzO8DyhVr6nsa+8MxXlZ5w1Cx5+XrzUsF/kjHRNVIblIA0Lz0DuAfo89LQEAAA=="
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/CDKMetadata/Default"
@@ -343,14 +225,6 @@
   }
  },
  "Conditions": {
-  "HasEcrPublic": {
-   "Fn::Equals": [
-    {
-     "Ref": "AWS::Partition"
-    },
-    "aws"
-   ]
-  },
   "CDKMetadataAvailable": {
    "Fn::Or": [
     {
@@ -555,13 +429,10 @@
   }
  },
  "Parameters": {
-  "referencetokubernetesendtoendCluster81EDAB07Arn": {
-   "Type": "String"
-  },
-  "referencetokubernetesendtoendClusterCreationRole7361842EArn": {
-   "Type": "String"
-  },
   "referencetokubernetesendtoendKubectl37714510Ref": {
+   "Type": "String"
+  },
+  "referencetokubernetesendtoendClusterKubectlHandlerRoleCD163246Arn": {
    "Type": "String"
   },
   "referencetokubernetesendtoendClusterDefaultVpcPrivateSubnet1Subnet0309CF62Ref": {
