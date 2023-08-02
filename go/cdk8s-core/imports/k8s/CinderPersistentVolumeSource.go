@@ -16,6 +16,8 @@ type CinderPersistentVolumeSource struct {
 	// readOnly is Optional: Defaults to false (read/write).
 	//
 	// ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+	// Default: false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+	//
 	ReadOnly *bool `field:"optional" json:"readOnly" yaml:"readOnly"`
 	// secretRef is Optional: points to a secret object containing parameters used to connect to OpenStack.
 	SecretRef *SecretReference `field:"optional" json:"secretRef" yaml:"secretRef"`

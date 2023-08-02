@@ -83,6 +83,8 @@ type JsonSchemaProps struct {
 	// used to identify them. Order is preserved upon merge. The map tag
 	// must only be used on a list with elements of type object.
 	// Defaults to atomic for arrays.
+	// Default: atomic for arrays.
+	//
 	XKubernetesListType *string `field:"optional" json:"xKubernetesListType" yaml:"xKubernetesListType"`
 	// x-kubernetes-map-type annotates an object to further describe its topology.
 	//

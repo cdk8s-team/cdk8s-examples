@@ -20,6 +20,8 @@ type AzureDiskVolumeSource struct {
 	// readOnly Defaults to false (read/write).
 	//
 	// ReadOnly here will force the ReadOnly setting in VolumeMounts.
+	// Default: false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+	//
 	ReadOnly *bool `field:"optional" json:"readOnly" yaml:"readOnly"`
 }
 

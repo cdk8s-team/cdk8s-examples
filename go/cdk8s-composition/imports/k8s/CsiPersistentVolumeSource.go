@@ -38,6 +38,8 @@ type CsiPersistentVolumeSource struct {
 	// readOnly value to pass to ControllerPublishVolumeRequest.
 	//
 	// Defaults to false (read/write).
+	// Default: false (read/write).
+	//
 	ReadOnly *bool `field:"optional" json:"readOnly" yaml:"readOnly"`
 	// volumeAttributes of the volume to publish.
 	VolumeAttributes *map[string]*string `field:"optional" json:"volumeAttributes" yaml:"volumeAttributes"`

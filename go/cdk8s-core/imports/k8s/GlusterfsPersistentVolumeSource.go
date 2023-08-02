@@ -20,6 +20,8 @@ type GlusterfsPersistentVolumeSource struct {
 	// readOnly here will force the Glusterfs volume to be mounted with read-only permissions.
 	//
 	// Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+	// Default: false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+	//
 	ReadOnly *bool `field:"optional" json:"readOnly" yaml:"readOnly"`
 }
 

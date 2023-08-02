@@ -10,6 +10,8 @@ type ValidatingAdmissionPolicySpecV1Alpha1 struct {
 	// FailurePolicy defines how to handle failures for the admission policy.
 	//
 	// Failures can occur from invalid or mis-configured policy definitions or bindings. A policy is invalid if spec.paramKind refers to a non-existent Kind. A binding is invalid if spec.paramRef.name refers to a non-existent resource. Allowed values are Ignore or Fail. Defaults to Fail.
+	// Default: Fail.
+	//
 	FailurePolicy *string `field:"optional" json:"failurePolicy" yaml:"failurePolicy"`
 	// MatchConstraints specifies what resources this policy is designed to validate.
 	//

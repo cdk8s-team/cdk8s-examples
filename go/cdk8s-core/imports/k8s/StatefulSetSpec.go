@@ -18,6 +18,8 @@ type StatefulSetSpec struct {
 	// Minimum number of seconds for which a newly created pod should be ready without any of its container crashing for it to be considered available.
 	//
 	// Defaults to 0 (pod will be considered available as soon as it is ready).
+	// Default: 0 (pod will be considered available as soon as it is ready).
+	//
 	MinReadySeconds *float64 `field:"optional" json:"minReadySeconds" yaml:"minReadySeconds"`
 	// ordinals controls the numbering of replica indices in a StatefulSet.
 	//

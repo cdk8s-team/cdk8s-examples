@@ -14,6 +14,8 @@ type WindowsSecurityContextOptions struct {
 	// The UserName in Windows to run the entrypoint of the container process.
 	//
 	// Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
+	// Default: the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
+	//
 	RunAsUserName *string `field:"optional" json:"runAsUserName" yaml:"runAsUserName"`
 }
 

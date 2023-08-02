@@ -16,6 +16,8 @@ type EndpointPort struct {
 	// The IP protocol for this port.
 	//
 	// Must be UDP, TCP, or SCTP. Default is TCP.
+	// Default: TCP.
+	//
 	Protocol *string `field:"optional" json:"protocol" yaml:"protocol"`
 }
 

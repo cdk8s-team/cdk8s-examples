@@ -16,14 +16,20 @@ type VolumeMount struct {
 	// Mounted read-only if true, read-write otherwise (false or unspecified).
 	//
 	// Defaults to false.
+	// Default: false.
+	//
 	ReadOnly *bool `field:"optional" json:"readOnly" yaml:"readOnly"`
 	// Path within the volume from which the container's volume should be mounted.
 	//
 	// Defaults to "" (volume's root).
+	// Default: volume's root).
+	//
 	SubPath *string `field:"optional" json:"subPath" yaml:"subPath"`
 	// Expanded path within the volume from which the container's volume should be mounted.
 	//
 	// Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to "" (volume's root). SubPathExpr and SubPath are mutually exclusive.
+	// Default: volume's root). SubPathExpr and SubPath are mutually exclusive.
+	//
 	SubPathExpr *string `field:"optional" json:"subPathExpr" yaml:"subPathExpr"`
 }
 

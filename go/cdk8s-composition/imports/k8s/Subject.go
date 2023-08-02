@@ -14,6 +14,8 @@ type Subject struct {
 	// APIGroup holds the API group of the referenced subject.
 	//
 	// Defaults to "" for ServiceAccount subjects. Defaults to "rbac.authorization.k8s.io" for User and Group subjects.
+	// Default: for ServiceAccount subjects. Defaults to "rbac.authorization.k8s.io" for User and Group subjects.
+	//
 	ApiGroup *string `field:"optional" json:"apiGroup" yaml:"apiGroup"`
 	// Namespace of the referenced object.
 	//

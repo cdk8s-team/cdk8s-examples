@@ -22,10 +22,14 @@ type PodSpec struct {
 	// Set DNS policy for the pod.
 	//
 	// Defaults to "ClusterFirst". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'.
+	// Default: ClusterFirst". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'.
+	//
 	DnsPolicy *string `field:"optional" json:"dnsPolicy" yaml:"dnsPolicy"`
 	// EnableServiceLinks indicates whether information about services should be injected into pod's environment variables, matching the syntax of Docker links.
 	//
 	// Optional: Defaults to true.
+	// Default: true.
+	//
 	EnableServiceLinks *bool `field:"optional" json:"enableServiceLinks" yaml:"enableServiceLinks"`
 	// List of ephemeral containers run in this pod.
 	//
@@ -38,20 +42,28 @@ type PodSpec struct {
 	// Use the host's ipc namespace.
 	//
 	// Optional: Default to false.
+	// Default: false.
+	//
 	HostIpc *bool `field:"optional" json:"hostIpc" yaml:"hostIpc"`
 	// Specifies the hostname of the Pod If not specified, the pod's hostname will be set to a system-defined value.
 	Hostname *string `field:"optional" json:"hostname" yaml:"hostname"`
 	// Host networking requested for this pod.
 	//
 	// Use the host's network namespace. If this option is set, the ports that will be used must be specified. Default to false.
+	// Default: false.
+	//
 	HostNetwork *bool `field:"optional" json:"hostNetwork" yaml:"hostNetwork"`
 	// Use the host's pid namespace.
 	//
 	// Optional: Default to false.
+	// Default: false.
+	//
 	HostPid *bool `field:"optional" json:"hostPid" yaml:"hostPid"`
 	// Use the host's user namespace.
 	//
 	// Optional: Default to true. If set to true or not present, the pod will be run in the host user namespace, useful for when the pod needs a feature only available to the host user namespace, such as loading a kernel module with CAP_SYS_MODULE. When set to false, a new userns is created for the pod. Setting false is useful for mitigating container breakout vulnerabilities even allowing users to run their containers as root without actually having root privileges on the host. This field is alpha-level and is only honored by servers that enable the UserNamespacesSupport feature.
+	// Default: true. If set to true or not present, the pod will be run in the host user namespace, useful for when the pod needs a feature only available to the host user namespace, such as loading a kernel module with CAP_SYS_MODULE. When set to false, a new userns is created for the pod. Setting false is useful for mitigating container breakout vulnerabilities even allowing users to run their containers as root without actually having root privileges on the host. This field is alpha-level and is only honored by servers that enable the UserNamespacesSupport feature.
+	//
 	HostUsers *bool `field:"optional" json:"hostUsers" yaml:"hostUsers"`
 	// ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec.
 	//
@@ -84,6 +96,8 @@ type PodSpec struct {
 	// PreemptionPolicy is the Policy for preempting pods with lower priority.
 	//
 	// One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset.
+	// Default: PreemptLowerPriority if unset.
+	//
 	PreemptionPolicy *string `field:"optional" json:"preemptionPolicy" yaml:"preemptionPolicy"`
 	// The priority value.
 	//
@@ -108,6 +122,8 @@ type PodSpec struct {
 	// Restart policy for all containers within the pod.
 	//
 	// One of Always, OnFailure, Never. Default to Always. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy
+	// Default: Always. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy
+	//
 	RestartPolicy *string `field:"optional" json:"restartPolicy" yaml:"restartPolicy"`
 	// RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class.
 	RuntimeClassName *string `field:"optional" json:"runtimeClassName" yaml:"runtimeClassName"`
@@ -122,6 +138,8 @@ type PodSpec struct {
 	// SecurityContext holds pod-level security attributes and common container settings.
 	//
 	// Optional: Defaults to empty.  See type description for default values of each field.
+	// Default: empty.  See type description for default values of each field.
+	//
 	SecurityContext *PodSecurityContext `field:"optional" json:"securityContext" yaml:"securityContext"`
 	// DeprecatedServiceAccount is a depreciated alias for ServiceAccountName.
 	//
@@ -134,16 +152,22 @@ type PodSpec struct {
 	// If true the pod's hostname will be configured as the pod's FQDN, rather than the leaf name (the default).
 	//
 	// In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false.
+	// Default: false.
+	//
 	SetHostnameAsFqdn *bool `field:"optional" json:"setHostnameAsFqdn" yaml:"setHostnameAsFqdn"`
 	// Share a single process namespace between all of the containers in a pod.
 	//
 	// When this is set containers will be able to view and signal processes from other containers in the same pod, and the first process in each container will not be assigned PID 1. HostPID and ShareProcessNamespace cannot both be set. Optional: Default to false.
+	// Default: false.
+	//
 	ShareProcessNamespace *bool `field:"optional" json:"shareProcessNamespace" yaml:"shareProcessNamespace"`
 	// If specified, the fully qualified Pod hostname will be "<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>". If not specified, the pod will not have a domainname at all.
 	Subdomain *string `field:"optional" json:"subdomain" yaml:"subdomain"`
 	// Optional duration in seconds the pod needs to terminate gracefully.
 	//
 	// May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.
+	// Default: 30 seconds.
+	//
 	TerminationGracePeriodSeconds *float64 `field:"optional" json:"terminationGracePeriodSeconds" yaml:"terminationGracePeriodSeconds"`
 	// If specified, the pod's tolerations.
 	Tolerations *[]*Toleration `field:"optional" json:"tolerations" yaml:"tolerations"`

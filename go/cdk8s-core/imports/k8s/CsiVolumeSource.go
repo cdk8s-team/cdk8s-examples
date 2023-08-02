@@ -18,6 +18,8 @@ type CsiVolumeSource struct {
 	// readOnly specifies a read-only configuration for the volume.
 	//
 	// Defaults to false (read/write).
+	// Default: false (read/write).
+	//
 	ReadOnly *bool `field:"optional" json:"readOnly" yaml:"readOnly"`
 	// volumeAttributes stores driver-specific properties that are passed to the CSI driver.
 	//

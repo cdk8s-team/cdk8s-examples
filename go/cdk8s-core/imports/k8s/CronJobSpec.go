@@ -14,6 +14,8 @@ type CronJobSpec struct {
 	// The number of failed finished jobs to retain.
 	//
 	// Value must be non-negative integer. Defaults to 1.
+	// Default: 1.
+	//
 	FailedJobsHistoryLimit *float64 `field:"optional" json:"failedJobsHistoryLimit" yaml:"failedJobsHistoryLimit"`
 	// Optional deadline in seconds for starting the job if it misses scheduled time for any reason.
 	//
@@ -22,10 +24,14 @@ type CronJobSpec struct {
 	// The number of successful finished jobs to retain.
 	//
 	// Value must be non-negative integer. Defaults to 3.
+	// Default: 3.
+	//
 	SuccessfulJobsHistoryLimit *float64 `field:"optional" json:"successfulJobsHistoryLimit" yaml:"successfulJobsHistoryLimit"`
 	// This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.
 	//
 	// Defaults to false.
+	// Default: false.
+	//
 	Suspend *bool `field:"optional" json:"suspend" yaml:"suspend"`
 	// The time zone name for the given schedule, see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones. If not specified, this will default to the time zone of the kube-controller-manager process. The set of valid time zone names and the time zone offset is loaded from the system-wide time zone database by the API server during CronJob validation and the controller manager during execution. If no system-wide time zone database can be found a bundled version of the database is used instead. If the time zone name becomes invalid during the lifetime of a CronJob or due to a change in host configuration, the controller will stop creating new new Jobs and will create a system event with the reason UnknownTimeZone. More information can be found in https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#time-zones This is beta field and must be enabled via the `CronJobTimeZone` feature gate.
 	TimeZone *string `field:"optional" json:"timeZone" yaml:"timeZone"`

@@ -10,6 +10,8 @@ type DaemonSetUpdateStrategy struct {
 	// Type of daemon set update.
 	//
 	// Can be "RollingUpdate" or "OnDelete". Default is RollingUpdate.
+	// Default: RollingUpdate.
+	//
 	Type *string `field:"optional" json:"type" yaml:"type"`
 }
 

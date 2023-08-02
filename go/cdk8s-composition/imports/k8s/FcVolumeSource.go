@@ -14,6 +14,8 @@ type FcVolumeSource struct {
 	// readOnly is Optional: Defaults to false (read/write).
 	//
 	// ReadOnly here will force the ReadOnly setting in VolumeMounts.
+	// Default: false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+	//
 	ReadOnly *bool `field:"optional" json:"readOnly" yaml:"readOnly"`
 	// targetWWNs is Optional: FC target worldwide names (WWNs).
 	TargetWwNs *[]*string `field:"optional" json:"targetWwNs" yaml:"targetWwNs"`

@@ -14,6 +14,8 @@ type JobSpec struct {
 	// Specifies the number of retries before marking this job failed.
 	//
 	// Defaults to 6.
+	// Default: 6.
+	//
 	BackoffLimit *float64 `field:"optional" json:"backoffLimit" yaml:"backoffLimit"`
 	// CompletionMode specifies how Pod completions are tracked. It can be `NonIndexed` (default) or `Indexed`.
 	//
@@ -48,6 +50,8 @@ type JobSpec struct {
 	// Suspend specifies whether the Job controller should create Pods or not.
 	//
 	// If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. Defaults to false.
+	// Default: false.
+	//
 	Suspend *bool `field:"optional" json:"suspend" yaml:"suspend"`
 	// ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution (either Complete or Failed).
 	//

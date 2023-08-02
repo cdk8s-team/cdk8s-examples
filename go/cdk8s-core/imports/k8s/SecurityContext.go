@@ -12,10 +12,14 @@ type SecurityContext struct {
 	// The capabilities to add/drop when running containers.
 	//
 	// Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.
+	// Default: the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.
+	//
 	Capabilities *Capabilities `field:"optional" json:"capabilities" yaml:"capabilities"`
 	// Run container in privileged mode.
 	//
 	// Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. Note that this field cannot be set when spec.os.name is windows.
+	// Default: false. Note that this field cannot be set when spec.os.name is windows.
+	//
 	Privileged *bool `field:"optional" json:"privileged" yaml:"privileged"`
 	// procMount denotes the type of proc mount to use for the containers.
 	//
@@ -24,6 +28,8 @@ type SecurityContext struct {
 	// Whether this container has a read-only root filesystem.
 	//
 	// Default is false. Note that this field cannot be set when spec.os.name is windows.
+	// Default: false. Note that this field cannot be set when spec.os.name is windows.
+	//
 	ReadOnlyRootFilesystem *bool `field:"optional" json:"readOnlyRootFilesystem" yaml:"readOnlyRootFilesystem"`
 	// The GID to run the entrypoint of the container process.
 	//
@@ -36,6 +42,8 @@ type SecurityContext struct {
 	// The UID to run the entrypoint of the container process.
 	//
 	// Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows.
+	// Default: user specified in image metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows.
+	//
 	RunAsUser *float64 `field:"optional" json:"runAsUser" yaml:"runAsUser"`
 	// The seccomp options to use by this container.
 	//

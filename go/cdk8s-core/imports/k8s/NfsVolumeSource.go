@@ -16,6 +16,8 @@ type NfsVolumeSource struct {
 	// readOnly here will force the NFS export to be mounted with read-only permissions.
 	//
 	// Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+	// Default: false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+	//
 	ReadOnly *bool `field:"optional" json:"readOnly" yaml:"readOnly"`
 }
 
