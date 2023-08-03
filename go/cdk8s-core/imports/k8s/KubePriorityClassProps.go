@@ -22,6 +22,8 @@ type KubePriorityClassProps struct {
 	// PreemptionPolicy is the Policy for preempting pods with lower priority.
 	//
 	// One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset.
+	// Default: PreemptLowerPriority if unset.
+	//
 	PreemptionPolicy *string `field:"optional" json:"preemptionPolicy" yaml:"preemptionPolicy"`
 }
 

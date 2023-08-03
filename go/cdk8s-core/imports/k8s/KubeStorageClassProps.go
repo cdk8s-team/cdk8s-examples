@@ -24,6 +24,8 @@ type KubeStorageClassProps struct {
 	// Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy.
 	//
 	// Defaults to Delete.
+	// Default: Delete.
+	//
 	ReclaimPolicy *string `field:"optional" json:"reclaimPolicy" yaml:"reclaimPolicy"`
 	// VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.
 	//

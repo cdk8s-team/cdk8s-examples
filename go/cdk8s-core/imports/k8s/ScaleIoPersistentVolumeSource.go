@@ -14,6 +14,8 @@ type ScaleIoPersistentVolumeSource struct {
 	// fsType is the filesystem type to mount.
 	//
 	// Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs"
+	// Default: xfs".
+	//
 	FsType *string `field:"optional" json:"fsType" yaml:"fsType"`
 	// protectionDomain is the name of the ScaleIO Protection Domain for the configured storage.
 	ProtectionDomain *string `field:"optional" json:"protectionDomain" yaml:"protectionDomain"`
@@ -26,6 +28,8 @@ type ScaleIoPersistentVolumeSource struct {
 	// storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned.
 	//
 	// Default is ThinProvisioned.
+	// Default: ThinProvisioned.
+	//
 	StorageMode *string `field:"optional" json:"storageMode" yaml:"storageMode"`
 	// storagePool is the ScaleIO Storage Pool associated with the protection domain.
 	StoragePool *string `field:"optional" json:"storagePool" yaml:"storagePool"`

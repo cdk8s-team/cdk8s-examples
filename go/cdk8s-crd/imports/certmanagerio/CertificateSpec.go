@@ -58,6 +58,8 @@ type CertificateSpec struct {
 	// Usages is the set of x509 usages that are requested for the certificate.
 	//
 	// Defaults to `digital signature` and `key encipherment` if not specified.
+	// Default: digital signature` and `key encipherment` if not specified.
+	//
 	Usages *[]CertificateSpecUsages `field:"optional" json:"usages" yaml:"usages"`
 }
 

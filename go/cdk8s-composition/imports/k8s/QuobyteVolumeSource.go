@@ -10,14 +10,20 @@ type QuobyteVolumeSource struct {
 	// volume is a string that references an already created Quobyte volume by name.
 	Volume *string `field:"required" json:"volume" yaml:"volume"`
 	// group to map volume access to Default is no group.
+	// Default: no group.
+	//
 	Group *string `field:"optional" json:"group" yaml:"group"`
 	// readOnly here will force the Quobyte volume to be mounted with read-only permissions.
 	//
 	// Defaults to false.
+	// Default: false.
+	//
 	ReadOnly *bool `field:"optional" json:"readOnly" yaml:"readOnly"`
 	// tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin.
 	Tenant *string `field:"optional" json:"tenant" yaml:"tenant"`
 	// user to map volume access to Defaults to serivceaccount user.
+	// Default: serivceaccount user.
+	//
 	User *string `field:"optional" json:"user" yaml:"user"`
 }
 

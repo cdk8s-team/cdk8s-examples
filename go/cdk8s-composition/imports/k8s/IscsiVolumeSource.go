@@ -28,6 +28,8 @@ type IscsiVolumeSource struct {
 	// iscsiInterface is the interface Name that uses an iSCSI transport.
 	//
 	// Defaults to 'default' (tcp).
+	// Default: default' (tcp).
+	//
 	IscsiInterface *string `field:"optional" json:"iscsiInterface" yaml:"iscsiInterface"`
 	// portals is the iSCSI Target Portal List.
 	//
@@ -36,6 +38,8 @@ type IscsiVolumeSource struct {
 	// readOnly here will force the ReadOnly setting in VolumeMounts.
 	//
 	// Defaults to false.
+	// Default: false.
+	//
 	ReadOnly *bool `field:"optional" json:"readOnly" yaml:"readOnly"`
 	// secretRef is the CHAP Secret for iSCSI target and initiator authentication.
 	SecretRef *LocalObjectReference `field:"optional" json:"secretRef" yaml:"secretRef"`

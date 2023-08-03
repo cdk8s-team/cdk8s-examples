@@ -16,6 +16,8 @@ type CustomResourceDefinitionNames struct {
 	// listKind is the serialized kind of the list for this resource.
 	//
 	// Defaults to "`kind`List".
+	// Default: kind`List".
+	//
 	ListKind *string `field:"optional" json:"listKind" yaml:"listKind"`
 	// shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`.
 	//
@@ -24,6 +26,8 @@ type CustomResourceDefinitionNames struct {
 	// singular is the singular name of the resource.
 	//
 	// It must be all lowercase. Defaults to lowercased `kind`.
+	// Default: lowercased `kind`.
+	//
 	Singular *string `field:"optional" json:"singular" yaml:"singular"`
 }
 

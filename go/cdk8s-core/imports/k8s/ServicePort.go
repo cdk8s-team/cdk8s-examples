@@ -20,6 +20,8 @@ type ServicePort struct {
 	// The IP protocol for this port.
 	//
 	// Supports "TCP", "UDP", and "SCTP". Default is TCP.
+	// Default: TCP.
+	//
 	Protocol *string `field:"optional" json:"protocol" yaml:"protocol"`
 	// Number or name of the port to access on the pods targeted by the service.
 	//

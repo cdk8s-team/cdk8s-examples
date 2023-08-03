@@ -10,10 +10,14 @@ type CertificateSpecPrivateKey struct {
 	// The private key cryptography standards (PKCS) encoding for this certificate's private key to be encoded in.
 	//
 	// If provided, allowed values are `PKCS1` and `PKCS8` standing for PKCS#1 and PKCS#8, respectively. Defaults to `PKCS1` if not specified.
+	// Default: PKCS1` if not specified.
+	//
 	Encoding CertificateSpecPrivateKeyEncoding `field:"optional" json:"encoding" yaml:"encoding"`
 	// RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.
 	//
 	// If set to Never, a private key will only be generated if one does not already exist in the target `spec.secretName`. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to Always, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is 'Never' for backward compatibility.
+	// Default: Never' for backward compatibility.
+	//
 	RotationPolicy CertificateSpecPrivateKeyRotationPolicy `field:"optional" json:"rotationPolicy" yaml:"rotationPolicy"`
 	// Size is the key bit size of the corresponding private key for this certificate.
 	//
