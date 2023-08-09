@@ -27,7 +27,7 @@
     "@cdk8s/projen-common": "^0.0.436",
     "lerna": "^6.6.2",
     "npm-check-updates": "^16",
-    "projen": "^0.72.6"
+    "projen": "^0.72.7"
   },
   "engines": {
     "node": ">= 16.20.0"
