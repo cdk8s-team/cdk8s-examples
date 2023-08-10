@@ -1,4 +1,3 @@
-// elasticsearchk8selasticco
 package elasticsearchk8selasticco
 
 import (

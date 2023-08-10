@@ -1,4 +1,3 @@
-// k8s
 package k8s
 
 
@@ -21,6 +20,8 @@ type GcePersistentDiskVolumeSource struct {
 	// readOnly here will force the ReadOnly setting in VolumeMounts.
 	//
 	// Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+	// Default: false. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+	//
 	ReadOnly *bool `field:"optional" json:"readOnly" yaml:"readOnly"`
 }
 

@@ -703,7 +703,7 @@ class CertificateSpecKeystoresJks:
     ) -> None:
         '''JKS configures options for storing a JKS keystore in the ``spec.secretName`` Secret resource.
 
-        :param create: Create enables JKS keystore creation for the Certificate. If true, a file named ``keystore.jks`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef``. The keystore file will be updated immediately. A file named ``truststore.jks`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
+        :param create: Create enables JKS keystore creation for the Certificate. If true, a file named ``keystore.jks`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef``. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named ``truststore.jks`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
         :param password_secret_ref: PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the JKS keystore.
 
         :schema: CertificateSpecKeystoresJks
@@ -723,7 +723,7 @@ class CertificateSpecKeystoresJks:
     def create(self) -> builtins.bool:
         '''Create enables JKS keystore creation for the Certificate.
 
-        If true, a file named ``keystore.jks`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef``. The keystore file will be updated immediately. A file named ``truststore.jks`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
+        If true, a file named ``keystore.jks`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef``. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named ``truststore.jks`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
 
         :schema: CertificateSpecKeystoresJks#create
         '''
@@ -831,7 +831,7 @@ class CertificateSpecKeystoresPkcs12:
     ) -> None:
         '''PKCS12 configures options for storing a PKCS12 keystore in the ``spec.secretName`` Secret resource.
 
-        :param create: Create enables PKCS12 keystore creation for the Certificate. If true, a file named ``keystore.p12`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef``. The keystore file will be updated immediately. A file named ``truststore.p12`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
+        :param create: Create enables PKCS12 keystore creation for the Certificate. If true, a file named ``keystore.p12`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef``. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named ``truststore.p12`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
         :param password_secret_ref: PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the PKCS12 keystore.
 
         :schema: CertificateSpecKeystoresPkcs12
@@ -851,7 +851,7 @@ class CertificateSpecKeystoresPkcs12:
     def create(self) -> builtins.bool:
         '''Create enables PKCS12 keystore creation for the Certificate.
 
-        If true, a file named ``keystore.p12`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef``. The keystore file will be updated immediately. A file named ``truststore.p12`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
+        If true, a file named ``keystore.p12`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef``. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named ``truststore.p12`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
 
         :schema: CertificateSpecKeystoresPkcs12#create
         '''

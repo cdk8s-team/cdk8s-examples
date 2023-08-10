@@ -1,5 +1,4 @@
-app: go run .
+app: go mod download && go mod tidy && go run .
 language: go
 imports:
-  - k8s@1.26.0
   - https://raw.githubusercontent.com/cert-manager/cert-manager/master/deploy/crds/crd-certificates.yaml

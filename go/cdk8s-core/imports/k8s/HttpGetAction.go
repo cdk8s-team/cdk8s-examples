@@ -1,4 +1,3 @@
-// k8s
 package k8s
 
 
@@ -21,6 +20,8 @@ type HttpGetAction struct {
 	// Scheme to use for connecting to the host.
 	//
 	// Defaults to HTTP.
+	// Default: HTTP.
+	//
 	Scheme *string `field:"optional" json:"scheme" yaml:"scheme"`
 }
 

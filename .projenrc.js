@@ -55,10 +55,6 @@ project.buildTask._locked = true
 // no package task is needed
 project.packageTask.reset();
 
-project.addScripts({
-  install: 'lerna run install'
-});
-
 project.gitignore.exclude('.vscode')
 
 project.tasks.removeTask('test');

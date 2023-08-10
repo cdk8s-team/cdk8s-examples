@@ -1,4 +1,3 @@
-// k8s
 package k8s
 
 
@@ -21,6 +20,8 @@ type ContainerPort struct {
 	// Protocol for port.
 	//
 	// Must be UDP, TCP, or SCTP. Defaults to "TCP".
+	// Default: TCP".
+	//
 	Protocol *string `field:"optional" json:"protocol" yaml:"protocol"`
 }
 

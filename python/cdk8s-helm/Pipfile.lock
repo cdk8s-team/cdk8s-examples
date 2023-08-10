@@ -34,19 +34,19 @@
         },
         "cdk8s": {
             "hashes": [
-                "sha256:c88faa31f346aa4570f7b5d39bd35799236d77b53788215396da4ff6535cd071",
-                "sha256:e833b52e7995df7be0f08766b39d9047bcb9e30c5330d9d71ea17408f6b68f0c"
+                "sha256:27215b18ed22f42f63c99aedf07a07db4bfd25cecc439c9a9cca761f489e93fe",
+                "sha256:94f07aa0aab984e397ef57d6ec2271ac5eea82f165f11f1884f55ead8d50d530"
             ],
             "index": "pypi",
-            "version": "==2.7.49"
+            "version": "==2.7.56"
         },
         "constructs": {
             "hashes": [
-                "sha256:a50d90b44e27467dc520aa2d080720f592cfdc3492285a72c6547ef4e32bef41",
-                "sha256:f7c546ec91fa45199402f7d683c7da1be14e2b33d60dd506d5cec59a2d74f5ed"
+                "sha256:389c336c0f91471232dee07e3dbd7a218d85f99b07423c3f93e326d68fb2d857",
+                "sha256:852faf1acbb74355f172f4f4ead8029d085c0ad46e4a131203d216917a588daa"
             ],
             "index": "pypi",
-            "version": "==10.1.296"
+            "version": "==10.1.314"
         },
         "exceptiongroup": {
             "hashes": [
@@ -66,11 +66,11 @@
         },
         "jsii": {
             "hashes": [
-                "sha256:0a771bfb6f5775cfc0ba7b77c021d3bdf52f71fb52b75ad8ef7c038a23e49e74",
-                "sha256:325dd57a57f57cd150bc92699b91d5414c2e042e1f81c12c97b9de53088e4ed3"
+                "sha256:4da63ab99f2696cd063574460c94221f0a7de9d345e71dfb19dfbcecf8ca8355",
+                "sha256:ea3cace063f6a47cdf0a74c929618d779efab426fedb7692a8ac1b9b29797f8c"
             ],
             "markers": "python_version ~= '3.7'",
-            "version": "==1.79.0"
+            "version": "==1.80.0"
         },
         "publication": {
             "hashes": [
@@ -84,7 +84,7 @@
                 "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86",
                 "sha256:961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2'",
             "version": "==2.8.2"
         },
         "six": {
@@ -92,7 +92,7 @@
                 "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926",
                 "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2'",
             "version": "==1.16.0"
         },
         "typeguard": {

@@ -1,6 +1,5 @@
 //go:build !no_runtime_type_checking
 
-// elasticsearchk8selasticco
 package elasticsearchk8selasticco
 
 import (

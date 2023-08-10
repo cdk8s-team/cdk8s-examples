@@ -1,4 +1,3 @@
-// k8s
 package k8s
 
 
@@ -11,6 +10,8 @@ type DeploymentStrategy struct {
 	// Type of deployment.
 	//
 	// Can be "Recreate" or "RollingUpdate". Default is RollingUpdate.
+	// Default: RollingUpdate.
+	//
 	Type *string `field:"optional" json:"type" yaml:"type"`
 }
 

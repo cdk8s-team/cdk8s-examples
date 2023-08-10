@@ -1,0 +1,14 @@
+{
+  "name": "@python/kubernetes-end-to-end-aws",
+  "version": "0.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run synth",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy"
+  }
+}
