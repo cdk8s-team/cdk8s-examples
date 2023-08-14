@@ -49,12 +49,12 @@
   resolved "https://registry.yarnpkg.com/@balena/dockerignore/-/dockerignore-1.0.2.tgz#9ffe4726915251e8eb69f44ef3547e0da2c03e0d"
   integrity sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q==
 
-"@cdk8s/projen-common@^0.0.438":
-  version "0.0.438"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.438.tgz#8f7bdbaf689b257634376c15f7b0258b465c9bfd"
-  integrity sha512-PLYfJPEx2N+N4ATotZUVDbWrv2yAJ2pgYYFrKkLM2PvmOdnwbHwOpxJa2VcAajRpWh7H83FoRanVGFeFUMeyCg==
+"@cdk8s/projen-common@^0.0.441":
+  version "0.0.441"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.441.tgz#824e46827c17ebe2c21a70e473b665b5122905a4"
+  integrity sha512-j0WZBoSDQcoM4Lm3cXRsLzy4tatx9SayHbtW4nO//FuvtW63331aAqIH7nAFRnR/OUKpbMgQI9E/iDq45Xm2Fw==
   dependencies:
-    codemaker "^1.86.1"
+    codemaker "^1.87.0"
 
 "@colors/colors@1.5.0":
   version "1.5.0"
@@ -1624,6 +1624,15 @@ codemaker@^1.86.1:
   version "1.86.1"
   resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.86.1.tgz#2e34bdab7201ac712532bccba61b8d571348417d"
   integrity sha512-W35+XgDv/ZNxWTFsvy7xf8XSIwZ8zkJUOlVq0zoOBiZCjk4j0n7HEWy25rI83OZj76ndmyL7EhTyLSTw1PzobA==
+  dependencies:
+    camelcase "^6.3.0"
+    decamelize "^5.0.1"
+    fs-extra "^10.1.0"
+
+codemaker@^1.87.0:
+  version "1.87.0"
+  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.87.0.tgz#87af3e2e338a14fcaf192f9e60dce1d6ff61414d"
+  integrity sha512-PxEtigxOiIWWQV95OQK18xYMSPpqQDj/z1jSlouNp+4y2muygO+fTc19kf9Z950ryprHCoasnO62dmyhMZvluQ==
   dependencies:
     camelcase "^6.3.0"
     decamelize "^5.0.1"
@@ -3959,9 +3968,9 @@ minipass@^5.0.0:
   integrity sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==
 
 "minipass@^5.0.0 || ^6.0.2 || ^7.0.0":
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/minipass/-/minipass-7.0.2.tgz#58a82b7d81c7010da5bd4b2c0c85ac4b4ec5131e"
-  integrity sha512-eL79dXrE1q9dBbDCLg7xfn/vl7MS4F1gvJAgjJrQli/jbQWdUttuVawphqpffoIYfRdq78LHx6GP4bU/EQ2ATA==
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/minipass/-/minipass-7.0.3.tgz#05ea638da44e475037ed94d1c7efcc76a25e1974"
+  integrity sha512-LhbbwCfz3vsb12j/WkWQPZfKTsgqIe1Nf/ti1pKjYESGLHIVjWU96G9/ljLH4F9mWNVhlQOm0VySdAWzf05dpg==
 
 minizlib@^2.1.1, minizlib@^2.1.2:
   version "2.1.2"
@@ -4154,9 +4163,9 @@ npm-bundled@^3.0.0:
     npm-normalize-package-bin "^3.0.0"
 
 npm-check-updates@^16:
-  version "16.10.18"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.10.18.tgz#6f6fcbc57c519e7ad12d370a18de8afdf021b597"
-  integrity sha512-dmfhCMX7+UNrBeftBGb1rMX4Qi6+FOI5cuu1VkLeE4LIazbiEYsdgTG+GQywYry+BR9R3EfOXITYPfgRhcdznw==
+  version "16.11.1"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.11.1.tgz#023d400b2eb75cc400d6e2d4b1858ab64a370a71"
+  integrity sha512-FgfhQc/LpY1u2BZpg+Y/FVoa8XxTjTpnAuSGdHM6CRqOO9pSPFrQ618HS9zf71ox7hPUQqpPvTaIuCpa4px38Q==
   dependencies:
     chalk "^5.3.0"
     cli-table3 "^0.6.3"
@@ -4775,10 +4784,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.72.9:
-  version "0.72.9"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.72.9.tgz#2628d774184b3d0ed54a7583e604e58f45176af7"
-  integrity sha512-TO3mrhahPOHc/GZFMYJ06PrbT3fOt27MFCb/Rkw/vjJrpMkHl1yVS20T8Mqaeq5h8Z8w+OQbGK7BNNkLZF5pUA==
+projen@^0.72.12:
+  version "0.72.12"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.72.12.tgz#8e04e50658dd578c2c3fd2492fe99a20cd311600"
+  integrity sha512-kYXLrYkYfk+VbVd9wTTA5aW37kC4iQzV4RLl2vPqSAfJpOiqyKwJHhY6PIF8VgugGahCIXbBCVVHR8FVTcaEnQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
