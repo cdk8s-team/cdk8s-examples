@@ -29,6 +29,9 @@
     "npm-check-updates": "^16",
     "projen": "^0.72.15"
   },
+  "resolutions": {
+    "@yarnpkg/parsers": "3.0.0-rc.48.1"
+  },
   "engines": {
     "node": ">= 16.20.0"
   },
