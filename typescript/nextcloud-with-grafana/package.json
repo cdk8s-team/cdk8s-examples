@@ -18,11 +18,14 @@
   "dependencies": {
     "cdk8s": "^2.7.3",
     "cdk8s-plus-25": "^2.4.24",
-    "constructs": "^10.1.253"
+    "constructs": "^10.1.253",
+    "yaml": "^2.3.1"
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",
     "@types/node": "^14.18.36",
+    "@typescript-eslint/eslint-plugin": "^5",
+    "@typescript-eslint/parser": "^5",
     "cdk8s-cli": "^2.1.135",
     "jest": "^26.6.3",
     "prettier": "2.8.4",

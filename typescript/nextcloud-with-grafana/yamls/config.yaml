@@ -35,4 +35,4 @@ storage:
 helm:
   cert_manager: true
   traefik: false
-secrets_path: secrets.yaml
+database_credentials_path: database_credentials.yaml
