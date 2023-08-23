@@ -24,10 +24,13 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.443",
+    "@cdk8s/projen-common": "^0.0.448",
     "lerna": "^6.6.2",
     "npm-check-updates": "^16",
-    "projen": "^0.72.15"
+    "projen": "^0.72.22"
+  },
+  "resolutions": {
+    "@yarnpkg/parsers": "3.0.0-rc.48.1"
   },
   "engines": {
     "node": ">= 16.20.0"
