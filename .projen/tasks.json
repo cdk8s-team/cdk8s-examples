@@ -111,7 +111,7 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --filter=projen,@cdk8s/projen-common"
+          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=projen,@cdk8s/projen-common"
         },
         {
           "exec": "yarn install --check-files"
@@ -138,7 +138,7 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --filter=lerna,npm-check-updates"
+          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev --filter=lerna,npm-check-updates"
         },
         {
           "exec": "yarn install --check-files"
