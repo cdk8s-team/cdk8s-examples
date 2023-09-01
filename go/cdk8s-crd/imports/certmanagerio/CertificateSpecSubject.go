@@ -1,7 +1,10 @@
 package certmanagerio
 
 
-// Full X509 name specification (https://golang.org/pkg/crypto/x509/pkix/#Name).
+// Requested set of X509 certificate subject attributes.
+//
+// More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
+// The common name attribute is specified separately in the `commonName` field. Cannot be set if the `literalSubject` field is set.
 type CertificateSpecSubject struct {
 	// Countries to be used on the Certificate.
 	Countries *[]*string `field:"optional" json:"countries" yaml:"countries"`

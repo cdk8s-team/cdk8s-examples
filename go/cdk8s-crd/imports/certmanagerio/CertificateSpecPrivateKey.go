@@ -1,11 +1,13 @@
 package certmanagerio
 
 
-// Options to control private keys used for the Certificate.
+// Private key options.
+//
+// These include the key algorithm and size, the used encoding and the rotation policy.
 type CertificateSpecPrivateKey struct {
 	// Algorithm is the private key algorithm of the corresponding private key for this certificate.
 	//
-	// If provided, allowed values are either `RSA`,`Ed25519` or `ECDSA` If `algorithm` is specified and `size` is not provided, key size of 256 will be used for `ECDSA` key algorithm and key size of 2048 will be used for `RSA` key algorithm. key size is ignored when using the `Ed25519` key algorithm.
+	// If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`. If `algorithm` is specified and `size` is not provided, key size of 2048 will be used for `RSA` key algorithm and key size of 256 will be used for `ECDSA` key algorithm. key size is ignored when using the `Ed25519` key algorithm.
 	Algorithm CertificateSpecPrivateKeyAlgorithm `field:"optional" json:"algorithm" yaml:"algorithm"`
 	// The private key cryptography standards (PKCS) encoding for this certificate's private key to be encoded in.
 	//
@@ -15,8 +17,8 @@ type CertificateSpecPrivateKey struct {
 	Encoding CertificateSpecPrivateKeyEncoding `field:"optional" json:"encoding" yaml:"encoding"`
 	// RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.
 	//
-	// If set to Never, a private key will only be generated if one does not already exist in the target `spec.secretName`. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to Always, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is 'Never' for backward compatibility.
-	// Default: Never' for backward compatibility.
+	// If set to `Never`, a private key will only be generated if one does not already exist in the target `spec.secretName`. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to `Always`, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is `Never` for backward compatibility.
+	// Default: Never` for backward compatibility.
 	//
 	RotationPolicy CertificateSpecPrivateKeyRotationPolicy `field:"optional" json:"rotationPolicy" yaml:"rotationPolicy"`
 	// Size is the key bit size of the corresponding private key for this certificate.

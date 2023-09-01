@@ -1,7 +1,7 @@
 package certmanagerio
 
 
-// Keystores configures additional keystore output formats stored in the `secretName` Secret resource.
+// Additional keystore output formats to be stored in the Certificate's Secret.
 type CertificateSpecKeystores struct {
 	// JKS configures options for storing a JKS keystore in the `spec.secretName` Secret resource.
 	Jks *CertificateSpecKeystoresJks `field:"optional" json:"jks" yaml:"jks"`
