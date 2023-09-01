@@ -21,7 +21,7 @@ class Certificate(
     metaclass=jsii.JSIIMeta,
     jsii_type="iocert-manager.Certificate",
 ):
-    '''A Certificate resource should be created to ensure an up to date and signed x509 certificate is stored in the Kubernetes Secret resource named in ``spec.secretName``.  The stored certificate will be renewed before it expires (as configured by ``spec.renewBefore``).
+    '''A Certificate resource should be created to ensure an up to date and signed X.509 certificate is stored in the Kubernetes Secret resource named in ``spec.secretName``.  The stored certificate will be renewed before it expires (as configured by ``spec.renewBefore``).
 
     :schema: Certificate
     '''
@@ -31,21 +31,21 @@ class Certificate(
         scope: _constructs_77d1e7e8.Construct,
         id: builtins.str,
         *,
-        spec: typing.Union["CertificateSpec", typing.Dict[builtins.str, typing.Any]],
         metadata: typing.Optional[typing.Union[_cdk8s_d3d9af27.ApiObjectMetadata, typing.Dict[builtins.str, typing.Any]]] = None,
+        spec: typing.Optional[typing.Union["CertificateSpec", typing.Dict[builtins.str, typing.Any]]] = None,
     ) -> None:
         '''Defines a "Certificate" API object.
 
         :param scope: the scope in which to define this object.
         :param id: a scope-local name for the object.
-        :param spec: Desired state of the Certificate resource.
         :param metadata: 
+        :param spec: Specification of the desired state of the Certificate resource. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
         '''
         if __debug__:
             type_hints = typing.get_type_hints(_typecheckingstub__83eb4f4530b52ea6853e7191f39bd5a69bc44c12fc79ff4293d5c610eaab4318)
             check_type(argname="argument scope", value=scope, expected_type=type_hints["scope"])
             check_type(argname="argument id", value=id, expected_type=type_hints["id"])
-        props = CertificateProps(spec=spec, metadata=metadata)
+        props = CertificateProps(metadata=metadata, spec=spec)
 
         jsii.create(self.__class__, self, [scope, id, props])
 
@@ -54,17 +54,17 @@ class Certificate(
     def manifest(
         cls,
         *,
-        spec: typing.Union["CertificateSpec", typing.Dict[builtins.str, typing.Any]],
         metadata: typing.Optional[typing.Union[_cdk8s_d3d9af27.ApiObjectMetadata, typing.Dict[builtins.str, typing.Any]]] = None,
+        spec: typing.Optional[typing.Union["CertificateSpec", typing.Dict[builtins.str, typing.Any]]] = None,
     ) -> typing.Any:
         '''Renders a Kubernetes manifest for "Certificate".
 
         This can be used to inline resource manifests inside other objects (e.g. as templates).
 
-        :param spec: Desired state of the Certificate resource.
         :param metadata: 
+        :param spec: Specification of the desired state of the Certificate resource. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
         '''
-        props = CertificateProps(spec=spec, metadata=metadata)
+        props = CertificateProps(metadata=metadata, spec=spec)
 
         return typing.cast(typing.Any, jsii.sinvoke(cls, "manifest", [props]))
 
@@ -83,45 +83,35 @@ class Certificate(
 @jsii.data_type(
     jsii_type="iocert-manager.CertificateProps",
     jsii_struct_bases=[],
-    name_mapping={"spec": "spec", "metadata": "metadata"},
+    name_mapping={"metadata": "metadata", "spec": "spec"},
 )
 class CertificateProps:
     def __init__(
         self,
         *,
-        spec: typing.Union["CertificateSpec", typing.Dict[builtins.str, typing.Any]],
         metadata: typing.Optional[typing.Union[_cdk8s_d3d9af27.ApiObjectMetadata, typing.Dict[builtins.str, typing.Any]]] = None,
+        spec: typing.Optional[typing.Union["CertificateSpec", typing.Dict[builtins.str, typing.Any]]] = None,
     ) -> None:
-        '''A Certificate resource should be created to ensure an up to date and signed x509 certificate is stored in the Kubernetes Secret resource named in ``spec.secretName``. The stored certificate will be renewed before it expires (as configured by ``spec.renewBefore``).
+        '''A Certificate resource should be created to ensure an up to date and signed X.509 certificate is stored in the Kubernetes Secret resource named in ``spec.secretName``. The stored certificate will be renewed before it expires (as configured by ``spec.renewBefore``).
 
-        :param spec: Desired state of the Certificate resource.
         :param metadata: 
+        :param spec: Specification of the desired state of the Certificate resource. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
         :schema: Certificate
         '''
-        if isinstance(spec, dict):
-            spec = CertificateSpec(**spec)
         if isinstance(metadata, dict):
             metadata = _cdk8s_d3d9af27.ApiObjectMetadata(**metadata)
+        if isinstance(spec, dict):
+            spec = CertificateSpec(**spec)
         if __debug__:
             type_hints = typing.get_type_hints(_typecheckingstub__45dc788c1d2b0c9f9222a2fa306cf217f2020644af3fa92be5fa925ad20fa0c3)
-            check_type(argname="argument spec", value=spec, expected_type=type_hints["spec"])
             check_type(argname="argument metadata", value=metadata, expected_type=type_hints["metadata"])
-        self._values: typing.Dict[builtins.str, typing.Any] = {
-            "spec": spec,
-        }
+            check_type(argname="argument spec", value=spec, expected_type=type_hints["spec"])
+        self._values: typing.Dict[builtins.str, typing.Any] = {}
         if metadata is not None:
             self._values["metadata"] = metadata
-
-    @builtins.property
-    def spec(self) -> "CertificateSpec":
-        '''Desired state of the Certificate resource.
-
-        :schema: Certificate#spec
-        '''
-        result = self._values.get("spec")
-        assert result is not None, "Required property 'spec' is missing"
-        return typing.cast("CertificateSpec", result)
+        if spec is not None:
+            self._values["spec"] = spec
 
     @builtins.property
     def metadata(self) -> typing.Optional[_cdk8s_d3d9af27.ApiObjectMetadata]:
@@ -130,6 +120,17 @@ class CertificateProps:
         '''
         result = self._values.get("metadata")
         return typing.cast(typing.Optional[_cdk8s_d3d9af27.ApiObjectMetadata], result)
+
+    @builtins.property
+    def spec(self) -> typing.Optional["CertificateSpec"]:
+        '''Specification of the desired state of the Certificate resource.
+
+        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+
+        :schema: Certificate#spec
+        '''
+        result = self._values.get("spec")
+        return typing.cast(typing.Optional["CertificateSpec"], result)
 
     def __eq__(self, rhs: typing.Any) -> builtins.bool:
         return isinstance(rhs, self.__class__) and rhs._values == self._values
@@ -192,27 +193,29 @@ class CertificateSpec:
         uris: typing.Optional[typing.Sequence[builtins.str]] = None,
         usages: typing.Optional[typing.Sequence["CertificateSpecUsages"]] = None,
     ) -> None:
-        '''Desired state of the Certificate resource.
+        '''Specification of the desired state of the Certificate resource.
 
-        :param issuer_ref: IssuerRef is a reference to the issuer for this certificate. If the ``kind`` field is not set, or set to ``Issuer``, an Issuer resource with the given name in the same namespace as the Certificate will be used. If the ``kind`` field is set to ``ClusterIssuer``, a ClusterIssuer with the provided name will be used. The ``name`` field in this stanza is required at all times.
-        :param secret_name: SecretName is the name of the secret resource that will be automatically created and managed by this Certificate resource. It will be populated with a private key and certificate, signed by the denoted issuer.
-        :param additional_output_formats: AdditionalOutputFormats defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret. This is an Alpha Feature and is only enabled with the ``--feature-gates=AdditionalCertificateOutputFormats=true`` option on both the controller and webhook components.
-        :param common_name: CommonName is a common name to be used on the Certificate. The CommonName should have a length of 64 characters or fewer to avoid generating invalid CSRs. This value is ignored by TLS clients when any subject alt name is set. This is x509 behaviour: https://tools.ietf.org/html/rfc6125#section-6.4.4
-        :param dns_names: DNSNames is a list of DNS subjectAltNames to be set on the Certificate.
-        :param duration: The requested 'duration' (i.e. lifetime) of the Certificate. This option may be ignored/overridden by some issuer types. If unset this defaults to 90 days. Certificate will be renewed either 2/3 through its duration or ``renewBefore`` period before its expiry, whichever is later. Minimum accepted duration is 1 hour. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
-        :param email_addresses: EmailAddresses is a list of email subjectAltNames to be set on the Certificate.
-        :param encode_usages_in_request: EncodeUsagesInRequest controls whether key usages should be present in the CertificateRequest.
-        :param ip_addresses: IPAddresses is a list of IP address subjectAltNames to be set on the Certificate.
-        :param is_ca: IsCA will mark this Certificate as valid for certificate signing. This will automatically add the ``cert sign`` usage to the list of ``usages``.
-        :param keystores: Keystores configures additional keystore output formats stored in the ``secretName`` Secret resource.
-        :param literal_subject: LiteralSubject is an LDAP formatted string that represents the `X.509 Subject field <https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6>`_. Use this *instead* of the Subject field if you need to ensure the correct ordering of the RDN sequence, such as when issuing certs for LDAP authentication. See https://github.com/cert-manager/cert-manager/issues/3203, https://github.com/cert-manager/cert-manager/issues/4424. This field is alpha level and is only supported by cert-manager installations where LiteralCertificateSubject feature gate is enabled on both cert-manager controller and webhook.
-        :param private_key: Options to control private keys used for the Certificate.
-        :param renew_before: How long before the currently issued certificate's expiry cert-manager should renew the certificate. The default is 2/3 of the issued certificate's duration. Minimum accepted value is 5 minutes. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration
-        :param revision_history_limit: revisionHistoryLimit is the maximum number of CertificateRequest revisions that are maintained in the Certificate's history. Each revision represents a single ``CertificateRequest`` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number. If set, revisionHistoryLimit must be a value of ``1`` or greater. If unset (``nil``), revisions will not be garbage collected. Default value is ``nil``.
-        :param secret_template: SecretTemplate defines annotations and labels to be copied to the Certificate's Secret. Labels and annotations on the Secret will be changed as they appear on the SecretTemplate when added or removed. SecretTemplate annotations are added in conjunction with, and cannot overwrite, the base set of annotations cert-manager sets on the Certificate's Secret.
-        :param subject: Full X509 name specification (https://golang.org/pkg/crypto/x509/pkix/#Name).
-        :param uris: URIs is a list of URI subjectAltNames to be set on the Certificate.
-        :param usages: Usages is the set of x509 usages that are requested for the certificate. Defaults to ``digital signature`` and ``key encipherment`` if not specified. Default: digital signature``and``key encipherment` if not specified.
+        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+
+        :param issuer_ref: Reference to the issuer responsible for issuing the certificate. If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace. The ``name`` field of the reference must always be specified.
+        :param secret_name: Name of the Secret resource that will be automatically created and managed by this Certificate resource. It will be populated with a private key and certificate, signed by the denoted issuer. The Secret resource lives in the same namespace as the Certificate resource.
+        :param additional_output_formats: Defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret. This is an Alpha Feature and is only enabled with the ``--feature-gates=AdditionalCertificateOutputFormats=true`` option set on both the controller and webhook components.
+        :param common_name: Requested common name X509 certificate subject attribute. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6 NOTE: TLS clients will ignore this value when any subject alternative name is set (see https://tools.ietf.org/html/rfc6125#section-6.4.4). Should have a length of 64 characters or fewer to avoid generating invalid CSRs. Cannot be set if the ``literalSubject`` field is set.
+        :param dns_names: Requested DNS subject alternative names.
+        :param duration: Requested 'duration' (i.e. lifetime) of the Certificate. Note that the issuer may choose to ignore the requested duration, just like any other requested attribute. If unset, this defaults to 90 days. Minimum accepted duration is 1 hour. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
+        :param email_addresses: Requested email subject alternative names.
+        :param encode_usages_in_request: Whether the KeyUsage and ExtKeyUsage extensions should be set in the encoded CSR. This option defaults to true, and should only be disabled if the target issuer does not support CSRs with these X509 KeyUsage/ ExtKeyUsage extensions.
+        :param ip_addresses: Requested IP address subject alternative names.
+        :param is_ca: Requested basic constraints isCA value. The isCA value is used to set the ``isCA`` field on the created CertificateRequest resources. Note that the issuer may choose to ignore the requested isCA value, just like any other requested attribute. If true, this will automatically add the ``cert sign`` usage to the list of requested ``usages``.
+        :param keystores: Additional keystore output formats to be stored in the Certificate's Secret.
+        :param literal_subject: Requested X.509 certificate subject, represented using the LDAP "String Representation of a Distinguished Name" [1]. Important: the LDAP string format also specifies the order of the attributes in the subject, this is important when issuing certs for LDAP authentication. Example: ``CN=foo,DC=corp,DC=example,DC=com`` More info [1]: https://datatracker.ietf.org/doc/html/rfc4514 More info: https://github.com/cert-manager/cert-manager/issues/3203 More info: https://github.com/cert-manager/cert-manager/issues/4424 Cannot be set if the ``subject`` or ``commonName`` field is set. This is an Alpha Feature and is only enabled with the ``--feature-gates=LiteralCertificateSubject=true`` option set on both the controller and webhook components.
+        :param private_key: Private key options. These include the key algorithm and size, the used encoding and the rotation policy.
+        :param renew_before: How long before the currently issued certificate's expiry cert-manager should renew the certificate. For example, if a certificate is valid for 60 minutes, and ``renewBefore=10m``, cert-manager will begin to attempt to renew the certificate 50 minutes after it was issued (i.e. when there are 10 minutes remaining until the certificate is no longer valid). NOTE: The actual lifetime of the issued certificate is used to determine the renewal time. If an issuer returns a certificate with a different lifetime than the one requested, cert-manager will use the lifetime of the issued certificate. If unset, this defaults to 1/3 of the issued certificate's lifetime. Minimum accepted value is 5 minutes. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
+        :param revision_history_limit: The maximum number of CertificateRequest revisions that are maintained in the Certificate's history. Each revision represents a single ``CertificateRequest`` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number. If set, revisionHistoryLimit must be a value of ``1`` or greater. If unset (``nil``), revisions will not be garbage collected. Default value is ``nil``.
+        :param secret_template: Defines annotations and labels to be copied to the Certificate's Secret. Labels and annotations on the Secret will be changed as they appear on the SecretTemplate when added or removed. SecretTemplate annotations are added in conjunction with, and cannot overwrite, the base set of annotations cert-manager sets on the Certificate's Secret.
+        :param subject: Requested set of X509 certificate subject attributes. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6 The common name attribute is specified separately in the ``commonName`` field. Cannot be set if the ``literalSubject`` field is set.
+        :param uris: Requested URI subject alternative names.
+        :param usages: Requested key usages and extended key usages. These usages are used to set the ``usages`` field on the created CertificateRequest resources. If ``encodeUsagesInRequest`` is unset or set to ``true``, the usages will additionally be encoded in the ``request`` field which contains the CSR blob. If unset, defaults to ``digital signature`` and ``key encipherment``.
 
         :schema: CertificateSpec
         '''
@@ -288,9 +291,10 @@ class CertificateSpec:
 
     @builtins.property
     def issuer_ref(self) -> "CertificateSpecIssuerRef":
-        '''IssuerRef is a reference to the issuer for this certificate.
+        '''Reference to the issuer responsible for issuing the certificate.
 
-        If the ``kind`` field is not set, or set to ``Issuer``, an Issuer resource with the given name in the same namespace as the Certificate will be used. If the ``kind`` field is set to ``ClusterIssuer``, a ClusterIssuer with the provided name will be used. The ``name`` field in this stanza is required at all times.
+        If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace.
+        The ``name`` field of the reference must always be specified.
 
         :schema: CertificateSpec#issuerRef
         '''
@@ -300,9 +304,9 @@ class CertificateSpec:
 
     @builtins.property
     def secret_name(self) -> builtins.str:
-        '''SecretName is the name of the secret resource that will be automatically created and managed by this Certificate resource.
+        '''Name of the Secret resource that will be automatically created and managed by this Certificate resource.
 
-        It will be populated with a private key and certificate, signed by the denoted issuer.
+        It will be populated with a private key and certificate, signed by the denoted issuer. The Secret resource lives in the same namespace as the Certificate resource.
 
         :schema: CertificateSpec#secretName
         '''
@@ -314,9 +318,9 @@ class CertificateSpec:
     def additional_output_formats(
         self,
     ) -> typing.Optional[typing.List["CertificateSpecAdditionalOutputFormats"]]:
-        '''AdditionalOutputFormats defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret.
+        '''Defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret.
 
-        This is an Alpha Feature and is only enabled with the ``--feature-gates=AdditionalCertificateOutputFormats=true`` option on both the controller and webhook components.
+        This is an Alpha Feature and is only enabled with the ``--feature-gates=AdditionalCertificateOutputFormats=true`` option set on both the controller and webhook components.
 
         :schema: CertificateSpec#additionalOutputFormats
         '''
@@ -325,9 +329,10 @@ class CertificateSpec:
 
     @builtins.property
     def common_name(self) -> typing.Optional[builtins.str]:
-        '''CommonName is a common name to be used on the Certificate.
+        '''Requested common name X509 certificate subject attribute.
 
-        The CommonName should have a length of 64 characters or fewer to avoid generating invalid CSRs. This value is ignored by TLS clients when any subject alt name is set. This is x509 behaviour: https://tools.ietf.org/html/rfc6125#section-6.4.4
+        More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6 NOTE: TLS clients will ignore this value when any subject alternative name is set (see https://tools.ietf.org/html/rfc6125#section-6.4.4).
+        Should have a length of 64 characters or fewer to avoid generating invalid CSRs. Cannot be set if the ``literalSubject`` field is set.
 
         :schema: CertificateSpec#commonName
         '''
@@ -336,7 +341,7 @@ class CertificateSpec:
 
     @builtins.property
     def dns_names(self) -> typing.Optional[typing.List[builtins.str]]:
-        '''DNSNames is a list of DNS subjectAltNames to be set on the Certificate.
+        '''Requested DNS subject alternative names.
 
         :schema: CertificateSpec#dnsNames
         '''
@@ -345,7 +350,7 @@ class CertificateSpec:
 
     @builtins.property
     def duration(self) -> typing.Optional[builtins.str]:
-        '''The requested 'duration' (i.e. lifetime) of the Certificate. This option may be ignored/overridden by some issuer types. If unset this defaults to 90 days. Certificate will be renewed either 2/3 through its duration or ``renewBefore`` period before its expiry, whichever is later. Minimum accepted duration is 1 hour. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
+        '''Requested 'duration' (i.e. lifetime) of the Certificate. Note that the issuer may choose to ignore the requested duration, just like any other requested attribute. If unset, this defaults to 90 days. Minimum accepted duration is 1 hour. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
 
         :schema: CertificateSpec#duration
         '''
@@ -354,7 +359,7 @@ class CertificateSpec:
 
     @builtins.property
     def email_addresses(self) -> typing.Optional[typing.List[builtins.str]]:
-        '''EmailAddresses is a list of email subjectAltNames to be set on the Certificate.
+        '''Requested email subject alternative names.
 
         :schema: CertificateSpec#emailAddresses
         '''
@@ -363,7 +368,9 @@ class CertificateSpec:
 
     @builtins.property
     def encode_usages_in_request(self) -> typing.Optional[builtins.bool]:
-        '''EncodeUsagesInRequest controls whether key usages should be present in the CertificateRequest.
+        '''Whether the KeyUsage and ExtKeyUsage extensions should be set in the encoded CSR.
+
+        This option defaults to true, and should only be disabled if the target issuer does not support CSRs with these X509 KeyUsage/ ExtKeyUsage extensions.
 
         :schema: CertificateSpec#encodeUsagesInRequest
         '''
@@ -372,7 +379,7 @@ class CertificateSpec:
 
     @builtins.property
     def ip_addresses(self) -> typing.Optional[typing.List[builtins.str]]:
-        '''IPAddresses is a list of IP address subjectAltNames to be set on the Certificate.
+        '''Requested IP address subject alternative names.
 
         :schema: CertificateSpec#ipAddresses
         '''
@@ -381,9 +388,10 @@ class CertificateSpec:
 
     @builtins.property
     def is_ca(self) -> typing.Optional[builtins.bool]:
-        '''IsCA will mark this Certificate as valid for certificate signing.
+        '''Requested basic constraints isCA value.
 
-        This will automatically add the ``cert sign`` usage to the list of ``usages``.
+        The isCA value is used to set the ``isCA`` field on the created CertificateRequest resources. Note that the issuer may choose to ignore the requested isCA value, just like any other requested attribute.
+        If true, this will automatically add the ``cert sign`` usage to the list of requested ``usages``.
 
         :schema: CertificateSpec#isCA
         '''
@@ -392,7 +400,7 @@ class CertificateSpec:
 
     @builtins.property
     def keystores(self) -> typing.Optional["CertificateSpecKeystores"]:
-        '''Keystores configures additional keystore output formats stored in the ``secretName`` Secret resource.
+        '''Additional keystore output formats to be stored in the Certificate's Secret.
 
         :schema: CertificateSpec#keystores
         '''
@@ -401,7 +409,7 @@ class CertificateSpec:
 
     @builtins.property
     def literal_subject(self) -> typing.Optional[builtins.str]:
-        '''LiteralSubject is an LDAP formatted string that represents the `X.509 Subject field <https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6>`_. Use this *instead* of the Subject field if you need to ensure the correct ordering of the RDN sequence, such as when issuing certs for LDAP authentication. See https://github.com/cert-manager/cert-manager/issues/3203, https://github.com/cert-manager/cert-manager/issues/4424. This field is alpha level and is only supported by cert-manager installations where LiteralCertificateSubject feature gate is enabled on both cert-manager controller and webhook.
+        '''Requested X.509 certificate subject, represented using the LDAP "String Representation of a Distinguished Name" [1]. Important: the LDAP string format also specifies the order of the attributes in the subject, this is important when issuing certs for LDAP authentication. Example: ``CN=foo,DC=corp,DC=example,DC=com`` More info [1]: https://datatracker.ietf.org/doc/html/rfc4514 More info: https://github.com/cert-manager/cert-manager/issues/3203 More info: https://github.com/cert-manager/cert-manager/issues/4424 Cannot be set if the ``subject`` or ``commonName`` field is set. This is an Alpha Feature and is only enabled with the ``--feature-gates=LiteralCertificateSubject=true`` option set on both the controller and webhook components.
 
         :schema: CertificateSpec#literalSubject
         '''
@@ -410,7 +418,9 @@ class CertificateSpec:
 
     @builtins.property
     def private_key(self) -> typing.Optional["CertificateSpecPrivateKey"]:
-        '''Options to control private keys used for the Certificate.
+        '''Private key options.
+
+        These include the key algorithm and size, the used encoding and the rotation policy.
 
         :schema: CertificateSpec#privateKey
         '''
@@ -421,7 +431,9 @@ class CertificateSpec:
     def renew_before(self) -> typing.Optional[builtins.str]:
         '''How long before the currently issued certificate's expiry cert-manager should renew the certificate.
 
-        The default is 2/3 of the issued certificate's duration. Minimum accepted value is 5 minutes. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration
+        For example, if a certificate is valid for 60 minutes, and ``renewBefore=10m``, cert-manager will begin to attempt to renew the certificate 50 minutes after it was issued (i.e. when there are 10 minutes remaining until the certificate is no longer valid).
+        NOTE: The actual lifetime of the issued certificate is used to determine the renewal time. If an issuer returns a certificate with a different lifetime than the one requested, cert-manager will use the lifetime of the issued certificate.
+        If unset, this defaults to 1/3 of the issued certificate's lifetime. Minimum accepted value is 5 minutes. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
 
         :schema: CertificateSpec#renewBefore
         '''
@@ -430,9 +442,10 @@ class CertificateSpec:
 
     @builtins.property
     def revision_history_limit(self) -> typing.Optional[jsii.Number]:
-        '''revisionHistoryLimit is the maximum number of CertificateRequest revisions that are maintained in the Certificate's history.
+        '''The maximum number of CertificateRequest revisions that are maintained in the Certificate's history.
 
-        Each revision represents a single ``CertificateRequest`` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number. If set, revisionHistoryLimit must be a value of ``1`` or greater. If unset (``nil``), revisions will not be garbage collected. Default value is ``nil``.
+        Each revision represents a single ``CertificateRequest`` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number.
+        If set, revisionHistoryLimit must be a value of ``1`` or greater. If unset (``nil``), revisions will not be garbage collected. Default value is ``nil``.
 
         :schema: CertificateSpec#revisionHistoryLimit
         '''
@@ -441,7 +454,7 @@ class CertificateSpec:
 
     @builtins.property
     def secret_template(self) -> typing.Optional["CertificateSpecSecretTemplate"]:
-        '''SecretTemplate defines annotations and labels to be copied to the Certificate's Secret.
+        '''Defines annotations and labels to be copied to the Certificate's Secret.
 
         Labels and annotations on the Secret will be changed as they appear on the SecretTemplate when added or removed. SecretTemplate annotations are added in conjunction with, and cannot overwrite, the base set of annotations cert-manager sets on the Certificate's Secret.
 
@@ -452,7 +465,10 @@ class CertificateSpec:
 
     @builtins.property
     def subject(self) -> typing.Optional["CertificateSpecSubject"]:
-        '''Full X509 name specification (https://golang.org/pkg/crypto/x509/pkix/#Name).
+        '''Requested set of X509 certificate subject attributes.
+
+        More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
+        The common name attribute is specified separately in the ``commonName`` field. Cannot be set if the ``literalSubject`` field is set.
 
         :schema: CertificateSpec#subject
         '''
@@ -461,7 +477,7 @@ class CertificateSpec:
 
     @builtins.property
     def uris(self) -> typing.Optional[typing.List[builtins.str]]:
-        '''URIs is a list of URI subjectAltNames to be set on the Certificate.
+        '''Requested URI subject alternative names.
 
         :schema: CertificateSpec#uris
         '''
@@ -470,11 +486,10 @@ class CertificateSpec:
 
     @builtins.property
     def usages(self) -> typing.Optional[typing.List["CertificateSpecUsages"]]:
-        '''Usages is the set of x509 usages that are requested for the certificate.
+        '''Requested key usages and extended key usages.
 
-        Defaults to ``digital signature`` and ``key encipherment`` if not specified.
-
-        :default: digital signature``and``key encipherment` if not specified.
+        These usages are used to set the ``usages`` field on the created CertificateRequest resources. If ``encodeUsagesInRequest`` is unset or set to ``true``, the usages will additionally be encoded in the ``request`` field which contains the CSR blob.
+        If unset, defaults to ``digital signature`` and ``key encipherment``.
 
         :schema: CertificateSpec#usages
         '''
@@ -563,9 +578,10 @@ class CertificateSpecIssuerRef:
         group: typing.Optional[builtins.str] = None,
         kind: typing.Optional[builtins.str] = None,
     ) -> None:
-        '''IssuerRef is a reference to the issuer for this certificate.
+        '''Reference to the issuer responsible for issuing the certificate.
 
-        If the ``kind`` field is not set, or set to ``Issuer``, an Issuer resource with the given name in the same namespace as the Certificate will be used. If the ``kind`` field is set to ``ClusterIssuer``, a ClusterIssuer with the provided name will be used. The ``name`` field in this stanza is required at all times.
+        If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace.
+        The ``name`` field of the reference must always be specified.
 
         :param name: Name of the resource being referred to.
         :param group: Group of the resource being referred to.
@@ -638,7 +654,7 @@ class CertificateSpecKeystores:
         jks: typing.Optional[typing.Union["CertificateSpecKeystoresJks", typing.Dict[builtins.str, typing.Any]]] = None,
         pkcs12: typing.Optional[typing.Union["CertificateSpecKeystoresPkcs12", typing.Dict[builtins.str, typing.Any]]] = None,
     ) -> None:
-        '''Keystores configures additional keystore output formats stored in the ``secretName`` Secret resource.
+        '''Additional keystore output formats to be stored in the Certificate's Secret.
 
         :param jks: JKS configures options for storing a JKS keystore in the ``spec.secretName`` Secret resource.
         :param pkcs12: PKCS12 configures options for storing a PKCS12 keystore in the ``spec.secretName`` Secret resource.
@@ -964,11 +980,13 @@ class CertificateSpecPrivateKey:
         rotation_policy: typing.Optional["CertificateSpecPrivateKeyRotationPolicy"] = None,
         size: typing.Optional[jsii.Number] = None,
     ) -> None:
-        '''Options to control private keys used for the Certificate.
+        '''Private key options.
 
-        :param algorithm: Algorithm is the private key algorithm of the corresponding private key for this certificate. If provided, allowed values are either ``RSA``,``Ed25519`` or ``ECDSA`` If ``algorithm`` is specified and ``size`` is not provided, key size of 256 will be used for ``ECDSA`` key algorithm and key size of 2048 will be used for ``RSA`` key algorithm. key size is ignored when using the ``Ed25519`` key algorithm.
+        These include the key algorithm and size, the used encoding and the rotation policy.
+
+        :param algorithm: Algorithm is the private key algorithm of the corresponding private key for this certificate. If provided, allowed values are either ``RSA``, ``ECDSA`` or ``Ed25519``. If ``algorithm`` is specified and ``size`` is not provided, key size of 2048 will be used for ``RSA`` key algorithm and key size of 256 will be used for ``ECDSA`` key algorithm. key size is ignored when using the ``Ed25519`` key algorithm.
         :param encoding: The private key cryptography standards (PKCS) encoding for this certificate's private key to be encoded in. If provided, allowed values are ``PKCS1`` and ``PKCS8`` standing for PKCS#1 and PKCS#8, respectively. Defaults to ``PKCS1`` if not specified. Default: PKCS1` if not specified.
-        :param rotation_policy: RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed. If set to Never, a private key will only be generated if one does not already exist in the target ``spec.secretName``. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to Always, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is 'Never' for backward compatibility. Default: Never' for backward compatibility.
+        :param rotation_policy: RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed. If set to ``Never``, a private key will only be generated if one does not already exist in the target ``spec.secretName``. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to ``Always``, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is ``Never`` for backward compatibility. Default: Never` for backward compatibility.
         :param size: Size is the key bit size of the corresponding private key for this certificate. If ``algorithm`` is set to ``RSA``, valid values are ``2048``, ``4096`` or ``8192``, and will default to ``2048`` if not specified. If ``algorithm`` is set to ``ECDSA``, valid values are ``256``, ``384`` or ``521``, and will default to ``256`` if not specified. If ``algorithm`` is set to ``Ed25519``, Size is ignored. No other values are allowed.
 
         :schema: CertificateSpecPrivateKey
@@ -993,7 +1011,7 @@ class CertificateSpecPrivateKey:
     def algorithm(self) -> typing.Optional["CertificateSpecPrivateKeyAlgorithm"]:
         '''Algorithm is the private key algorithm of the corresponding private key for this certificate.
 
-        If provided, allowed values are either ``RSA``,``Ed25519`` or ``ECDSA`` If ``algorithm`` is specified and ``size`` is not provided, key size of 256 will be used for ``ECDSA`` key algorithm and key size of 2048 will be used for ``RSA`` key algorithm. key size is ignored when using the ``Ed25519`` key algorithm.
+        If provided, allowed values are either ``RSA``, ``ECDSA`` or ``Ed25519``. If ``algorithm`` is specified and ``size`` is not provided, key size of 2048 will be used for ``RSA`` key algorithm and key size of 256 will be used for ``ECDSA`` key algorithm. key size is ignored when using the ``Ed25519`` key algorithm.
 
         :schema: CertificateSpecPrivateKey#algorithm
         '''
@@ -1019,9 +1037,9 @@ class CertificateSpecPrivateKey:
     ) -> typing.Optional["CertificateSpecPrivateKeyRotationPolicy"]:
         '''RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.
 
-        If set to Never, a private key will only be generated if one does not already exist in the target ``spec.secretName``. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to Always, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is 'Never' for backward compatibility.
+        If set to ``Never``, a private key will only be generated if one does not already exist in the target ``spec.secretName``. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to ``Always``, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is ``Never`` for backward compatibility.
 
-        :default: Never' for backward compatibility.
+        :default: Never` for backward compatibility.
 
         :schema: CertificateSpecPrivateKey#rotationPolicy
         '''
@@ -1055,7 +1073,7 @@ class CertificateSpecPrivateKey:
 class CertificateSpecPrivateKeyAlgorithm(enum.Enum):
     '''Algorithm is the private key algorithm of the corresponding private key for this certificate.
 
-    If provided, allowed values are either ``RSA``,``Ed25519`` or ``ECDSA`` If ``algorithm`` is specified and ``size`` is not provided, key size of 256 will be used for ``ECDSA`` key algorithm and key size of 2048 will be used for ``RSA`` key algorithm. key size is ignored when using the ``Ed25519`` key algorithm.
+    If provided, allowed values are either ``RSA``, ``ECDSA`` or ``Ed25519``. If ``algorithm`` is specified and ``size`` is not provided, key size of 2048 will be used for ``RSA`` key algorithm and key size of 256 will be used for ``ECDSA`` key algorithm. key size is ignored when using the ``Ed25519`` key algorithm.
 
     :schema: CertificateSpecPrivateKeyAlgorithm
     '''
@@ -1089,9 +1107,9 @@ class CertificateSpecPrivateKeyEncoding(enum.Enum):
 class CertificateSpecPrivateKeyRotationPolicy(enum.Enum):
     '''RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.
 
-    If set to Never, a private key will only be generated if one does not already exist in the target ``spec.secretName``. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to Always, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is 'Never' for backward compatibility.
+    If set to ``Never``, a private key will only be generated if one does not already exist in the target ``spec.secretName``. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to ``Always``, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is ``Never`` for backward compatibility.
 
-    :default: Never' for backward compatibility.
+    :default: Never` for backward compatibility.
 
     :schema: CertificateSpecPrivateKeyRotationPolicy
     '''
@@ -1114,7 +1132,7 @@ class CertificateSpecSecretTemplate:
         annotations: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
         labels: typing.Optional[typing.Mapping[builtins.str, builtins.str]] = None,
     ) -> None:
-        '''SecretTemplate defines annotations and labels to be copied to the Certificate's Secret.
+        '''Defines annotations and labels to be copied to the Certificate's Secret.
 
         Labels and annotations on the Secret will be changed as they appear on the SecretTemplate when added or removed. SecretTemplate annotations are added in conjunction with, and cannot overwrite, the base set of annotations cert-manager sets on the Certificate's Secret.
 
@@ -1192,7 +1210,10 @@ class CertificateSpecSubject:
         serial_number: typing.Optional[builtins.str] = None,
         street_addresses: typing.Optional[typing.Sequence[builtins.str]] = None,
     ) -> None:
-        '''Full X509 name specification (https://golang.org/pkg/crypto/x509/pkix/#Name).
+        '''Requested set of X509 certificate subject attributes.
+
+        More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
+        The common name attribute is specified separately in the ``commonName`` field. Cannot be set if the ``literalSubject`` field is set.
 
         :param countries: Countries to be used on the Certificate.
         :param localities: Cities to be used on the Certificate.
@@ -1402,16 +1423,16 @@ def _typecheckingstub__83eb4f4530b52ea6853e7191f39bd5a69bc44c12fc79ff4293d5c610e
     scope: _constructs_77d1e7e8.Construct,
     id: builtins.str,
     *,
-    spec: typing.Union[CertificateSpec, typing.Dict[builtins.str, typing.Any]],
     metadata: typing.Optional[typing.Union[_cdk8s_d3d9af27.ApiObjectMetadata, typing.Dict[builtins.str, typing.Any]]] = None,
+    spec: typing.Optional[typing.Union[CertificateSpec, typing.Dict[builtins.str, typing.Any]]] = None,
 ) -> None:
     """Type checking stubs"""
     pass
 
 def _typecheckingstub__45dc788c1d2b0c9f9222a2fa306cf217f2020644af3fa92be5fa925ad20fa0c3(
     *,
-    spec: typing.Union[CertificateSpec, typing.Dict[builtins.str, typing.Any]],
     metadata: typing.Optional[typing.Union[_cdk8s_d3d9af27.ApiObjectMetadata, typing.Dict[builtins.str, typing.Any]]] = None,
+    spec: typing.Optional[typing.Union[CertificateSpec, typing.Dict[builtins.str, typing.Any]]] = None,
 ) -> None:
     """Type checking stubs"""
     pass

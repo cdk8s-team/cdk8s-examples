@@ -1,9 +1,10 @@
 package certmanagerio
 
 
-// IssuerRef is a reference to the issuer for this certificate.
+// Reference to the issuer responsible for issuing the certificate.
 //
-// If the `kind` field is not set, or set to `Issuer`, an Issuer resource with the given name in the same namespace as the Certificate will be used. If the `kind` field is set to `ClusterIssuer`, a ClusterIssuer with the provided name will be used. The `name` field in this stanza is required at all times.
+// If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace.
+// The `name` field of the reference must always be specified.
 type CertificateSpecIssuerRef struct {
 	// Name of the resource being referred to.
 	Name *string `field:"required" json:"name" yaml:"name"`
