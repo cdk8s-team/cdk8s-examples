@@ -49,10 +49,10 @@
   resolved "https://registry.yarnpkg.com/@balena/dockerignore/-/dockerignore-1.0.2.tgz#9ffe4726915251e8eb69f44ef3547e0da2c03e0d"
   integrity sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q==
 
-"@cdk8s/projen-common@^0.0.456":
-  version "0.0.456"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.456.tgz#83776f4147d6f4d06c44e68c304be79774eb43a5"
-  integrity sha512-aeKRmeG2dDnuvzMOCEMAUkoMaEtRTO/jOPj/UnVVwLZHftBEkYkVaK0kb9DBGrf+2Z3tQmtN7/MKb5Sx0kEcCA==
+"@cdk8s/projen-common@^0.0.457":
+  version "0.0.457"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.457.tgz#bfa657a9c7bb3ab9b8f8fca7c2dfd252b3b75c56"
+  integrity sha512-OEcjZ3xV1r9Y47lGu4J+xhoGYt9huipWrhYtzC8Bx8h5l9+nYij0NHEOYJHt3KT7dm5BoKJW9peTvgBndsJ62w==
   dependencies:
     codemaker "^1.88.0"
     deepmerge "^4.3.1"
@@ -4793,9 +4793,9 @@ progress@^2.0.3:
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
 projen@^0.73.0:
-  version "0.73.21"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.73.21.tgz#230e670958e86e558d8aa23cc5bf06177d6d50e3"
-  integrity sha512-miAH6VS6l59nuy2vZC3+ay9GahBHbPD1QwdISkL/mohVbO3U3SYMOOpTpe7N0spCENEkbKaoja0IkX6Bh/iz1w==
+  version "0.73.22"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.73.22.tgz#535632fb9af03fb21c58920bcf0edcace649f6ad"
+  integrity sha512-OazEG+uJXsyodIECy90NWsIWiUQffAn7Q5f5TigIaztrLlVKMh3Cl17ObHz4CakIuI6gNnUHGvxRIXbpCjzV9A==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -5129,16 +5129,7 @@ resolve-from@^4.0.0:
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
   integrity sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==
 
-resolve@^1.1.6:
-  version "1.22.5"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.5.tgz#a83c145cf04ffcd19b1f3f5f9e0ae8b9053f0615"
-  integrity sha512-qWhv7PF1V95QPvRoUGHxOtnAlEvlXBylMZcjUR9pAumMmveFtcHJRXGIr+TkjfNJVQypqv2qcDiiars2y1PsSg==
-  dependencies:
-    is-core-module "^2.13.0"
-    path-parse "^1.0.7"
-    supports-preserve-symlinks-flag "^1.0.0"
-
-resolve@^1.10.0:
+resolve@^1.1.6, resolve@^1.10.0:
   version "1.22.6"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.6.tgz#dd209739eca3aef739c626fea1b4f3c506195362"
   integrity sha512-njhxM7mV12JfufShqGy3Rz8j11RPdLy4xi15UurGJeoHLfJpVXKdh3ueuOqbYUcDZnffr6X739JBo5LzyahEsw==
