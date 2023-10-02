@@ -1134,7 +1134,7 @@
       "Outputs.kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn"
      ]
     },
-    "Manifest": "[{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"name\":\"httpecho-deployment-c87db546\",\"labels\":{\"aws.cdk.eks/prune-c879b22fbad083af9ce1653fa5d5fbea46a8d33ba8\":\"\"}},\"spec\":{\"minReadySeconds\":0,\"progressDeadlineSeconds\":600,\"replicas\":2,\"selector\":{\"matchLabels\":{\"cdk8s.io/metadata.addr\":\"HttpEcho-Deployment-c8a5d42d\"}},\"strategy\":{\"rollingUpdate\":{\"maxSurge\":\"25%\",\"maxUnavailable\":\"25%\"},\"type\":\"RollingUpdate\"},\"template\":{\"metadata\":{\"labels\":{\"cdk8s.io/metadata.addr\":\"HttpEcho-Deployment-c8a5d42d\"}},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"image\":\"paulbouwer/hello-kubernetes:1.5\",\"imagePullPolicy\":\"Always\",\"name\":\"main\",\"ports\":[{\"containerPort\":8080}],\"resources\":{\"limits\":{\"cpu\":\"1500m\",\"memory\":\"2048Mi\"},\"requests\":{\"cpu\":\"1000m\",\"memory\":\"512Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"privileged\":false,\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true,\"runAsUser\":1005},\"startupProbe\":{\"failureThreshold\":3,\"tcpSocket\":{\"port\":8080}}}],\"dnsPolicy\":\"ClusterFirst\",\"restartPolicy\":\"Always\",\"securityContext\":{\"fsGroupChangePolicy\":\"Always\",\"runAsNonRoot\":true},\"setHostnameAsFQDN\":false}}}},{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"name\":\"httpecho-deployment-service-c8266ea6\",\"labels\":{\"aws.cdk.eks/prune-c879b22fbad083af9ce1653fa5d5fbea46a8d33ba8\":\"\"}},\"spec\":{\"externalIPs\":[],\"ports\":[{\"port\":8080,\"targetPort\":8080}],\"selector\":{\"cdk8s.io/metadata.addr\":\"HttpEcho-Deployment-c8a5d42d\"},\"type\":\"NodePort\"}},{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"Ingress\",\"metadata\":{\"name\":\"httpecho-ingress-c8dc70a7\",\"labels\":{\"aws.cdk.eks/prune-c879b22fbad083af9ce1653fa5d5fbea46a8d33ba8\":\"\"},\"annotations\":{\"kubernetes.io/ingress.class\":\"alb\",\"alb.ingress.kubernetes.io/scheme\":\"internet-facing\"}},\"spec\":{\"rules\":[{\"http\":{\"paths\":[{\"backend\":{\"service\":{\"name\":\"httpecho-deployment-service-c8266ea6\",\"port\":{\"number\":8080}}},\"path\":\"/\",\"pathType\":\"Prefix\"}]}}]}}]",
+    "Manifest": "[{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"name\":\"httpecho-deployment-c87db546\",\"labels\":{\"aws.cdk.eks/prune-c879b22fbad083af9ce1653fa5d5fbea46a8d33ba8\":\"\"}},\"spec\":{\"minReadySeconds\":0,\"progressDeadlineSeconds\":600,\"replicas\":2,\"selector\":{\"matchLabels\":{\"cdk8s.io/metadata.addr\":\"HttpEcho-Deployment-c8a5d42d\"}},\"strategy\":{\"rollingUpdate\":{\"maxSurge\":\"25%\",\"maxUnavailable\":\"25%\"},\"type\":\"RollingUpdate\"},\"template\":{\"metadata\":{\"labels\":{\"cdk8s.io/metadata.addr\":\"HttpEcho-Deployment-c8a5d42d\"}},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"image\":\"paulbouwer/hello-kubernetes:1.5\",\"imagePullPolicy\":\"Always\",\"name\":\"main\",\"ports\":[{\"containerPort\":8080}],\"resources\":{\"limits\":{\"cpu\":\"1500m\",\"memory\":\"2048Mi\"},\"requests\":{\"cpu\":\"1000m\",\"memory\":\"512Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"privileged\":false,\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true,\"runAsUser\":1005},\"startupProbe\":{\"failureThreshold\":3,\"tcpSocket\":{\"port\":8080}}}],\"dnsPolicy\":\"ClusterFirst\",\"hostNetwork\":false,\"restartPolicy\":\"Always\",\"securityContext\":{\"fsGroupChangePolicy\":\"Always\",\"runAsNonRoot\":true},\"setHostnameAsFQDN\":false,\"terminationGracePeriodSeconds\":30}}}},{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"name\":\"httpecho-deployment-service-c8266ea6\",\"labels\":{\"aws.cdk.eks/prune-c879b22fbad083af9ce1653fa5d5fbea46a8d33ba8\":\"\"}},\"spec\":{\"externalIPs\":[],\"ports\":[{\"port\":8080,\"targetPort\":8080}],\"selector\":{\"cdk8s.io/metadata.addr\":\"HttpEcho-Deployment-c8a5d42d\"},\"type\":\"NodePort\"}},{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"Ingress\",\"metadata\":{\"name\":\"httpecho-ingress-c8dc70a7\",\"labels\":{\"aws.cdk.eks/prune-c879b22fbad083af9ce1653fa5d5fbea46a8d33ba8\":\"\"},\"annotations\":{\"kubernetes.io/ingress.class\":\"alb\",\"alb.ingress.kubernetes.io/scheme\":\"internet-facing\"}},\"spec\":{\"rules\":[{\"http\":{\"paths\":[{\"backend\":{\"service\":{\"name\":\"httpecho-deployment-service-c8266ea6\",\"port\":{\"number\":8080}}},\"path\":\"/\",\"pathType\":\"Prefix\"}]}}]}}]",
     "ClusterName": {
      "Ref": "Cluster9EE0221C"
     },
@@ -1212,7 +1212,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/751cb1d55358aaf58d177ec668552c473fd04f75dd6a3a13364f922e8d810b5d.json"
+       "/36cefa6ca218b294bc28597702a4b715ae9fd3f90339b622274642675fc70d67.json"
       ]
      ]
     },
@@ -1252,7 +1252,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/407802d83db5ab4c6452ca7731a0c53301dd7eeb9157f8daa2689e710bef3bf4.json"
+       "/9d9e7869b4407bb031205ee7a280e9279f1712d87a93e8d7ba6de40f026a2bde.json"
       ]
      ]
     },
@@ -1863,7 +1863,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VSXW+rMAz9LX0PWUc13T2Ooavd7uMWtROvUwhemxESlDitKsR/nwPr2J58bOKDfY5T3v+55cuFOPlE1k2iVcX7HQrZMCq99X71JrwH9DyLgfkVvw+yAbwXHpgWbVULnr+bZ3EGV4LzyhoGjed9roNHcCw7+SzggT2FCpwBBP8ijHoHj2zTgVnXuTUGJBbOHlVNDf9tDXtnQ8eId07+gW7zg3D4g2lTfVBnKXQAlumKmNBZrYlkB+6oJGRS2mBwYCBT3pedjJxlkbMiVFrJXaiIJ9ZmtLUB4VVUGub6XCMVrFQC45qXxxH8XRfjuAIfBMJJnFnh1JHgTLw2OI59eTBN8pVlSJofWjBIo8vgFJ4fLhr8KgxMiZb3WzvNN8bC0i4j4YSGgY1ukY97ZfZsC94GJ6mBLLHtnFL/D7wJ2IVJjfEACDz6uOevrm+f6POL6Lr4A4Kkfa2iLANb8tXi7uugrqYTSXS8j6Qh5yTq5Jje8KcJl+nNeDsDK854sOZqxa+X/DpdfHilEkfmqRb4doqfA0prRa4CAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VSTU/DMAz9LdzTABsIjpQKwfhataFeUZqaLTRNqsTZNFX97zjtRuHkZzd+td/zjHc3t/ziTOx9Iqs60ark3RqFrBmVPjs//xTeA3qexsD8nN8HWQPeCw9Mi6asBM++zKs4gCvAeWUNg9rzLtPBIziW7n0acMteQgnOAIJ/E0Z9gUe2bMEsqswaAxJzZ3eqooZ3W8HG2dAy4p2SJ9BNthUO/zAty2/qLIQOwFJdEhM6qzWRrMHtlIRUShsM9gzkjHdFKyNnkWcsD6VWch1K4om1Ca1sQPgQpYapPtVIBSuVwLjm6XEED4t8GFfgo0DYiwPLndoRnIgXBoexTw/GSY5ZiqT5tgGDNLoMTuHh8aTBv0LPlGh4t7LjfEPMLe0yEI6o79ngFvm4UWbDVuBtcJIayBLbTCn1/8HLgG0Y1RgOgMCzj3v+6/r1iT6/ibaNPyBI2lcqytKzC351dnc8qPPxRBId7yOpyTmJOtnNrvnLiIvZ9XA7PcsPuLXmfM4vI8G3Vypx5J1qgK/G+AMOQdv1rQIAAA=="
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/CDKMetadata/Default"
