@@ -1,4 +1,4 @@
-app: mvn clean compile && mvn exec:java -Dexec.mainClass="com.example.composition.WebServices"
+app: mvn -U clean compile && mvn exec:java -Dexec.mainClass="com.example.composition.WebServices"
 language: java
 imports:
   - k8s@1.26.0
