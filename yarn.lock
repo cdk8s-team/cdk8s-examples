@@ -1714,6 +1714,15 @@ cdk8s-plus-25@^2.17.0:
   dependencies:
     minimatch "^3.1.2"
 
+cdk8s-plus-25@^2.22.27:
+  version "2.22.27"
+  resolved "https://registry.yarnpkg.com/cdk8s-plus-25/-/cdk8s-plus-25-2.22.27.tgz#6ed96ce40a431d35e5d2be3262168e33ca9fdf6d"
+  integrity sha512-c572cX89TmumBjqQXRB+kmyQ3vko5vdpyUeY0nmYK+6oyEanLsLNxJEvQvh08RLvAZoATBfTZ45mza64VN8TSg==
+  dependencies:
+    minimatch "^3.1.2"
+  optionalDependencies:
+    backport "8.5.0"
+
 cdk8s-plus-26@^2.18.28:
   version "2.18.28"
   resolved "https://registry.yarnpkg.com/cdk8s-plus-26/-/cdk8s-plus-26-2.18.28.tgz#db2346b2da1456ed2221a8ef11402ee6b71dc1a8"
@@ -2076,10 +2085,15 @@ console-control-strings@^1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
-constructs@^10.1.295, constructs@^10.2.69:
+constructs@^10.2.69:
   version "10.2.69"
   resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.69.tgz#5bb06693b317140fe310797ffd52c0d6cc595913"
   integrity sha512-0AiM/uQe5Uk6JVe/62oolmSN2MjbFQkOlYrM3fFGZLKuT+g7xlAI10EebFhyCcZwI2JAcWuWCmmCAyCothxjuw==
+
+constructs@^10.2.70:
+  version "10.2.70"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.70.tgz#a7d414a717b64a5fab65ff68aaba2ddf73b522bf"
+  integrity sha512-z6zr1E8K/9tzJbCQzY0UGX0/oVKPFKu9C/mzEnghCG6TAJINnvlq0CMKm63XqqeMleadZYm5T3sZGJKcxJS/Pg==
 
 conventional-changelog-angular@5.0.12:
   version "5.0.12"

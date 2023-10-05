@@ -1,0 +1,14 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+constructs = "~={{ constructsVersion }}"
+cdk8s = "~={{ cdk8sVersion  }}"
+cdk8s-plus-26 = "~={{ cdk8sPlus26Version  }}"
+
+[requires]
+python_version = "3.10"

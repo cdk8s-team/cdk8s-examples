@@ -17,7 +17,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/5865e1b467a537ae481acdc383d7e9860b95a4fcd247b369fbaf345acf0b015a.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/535eb9f4d5ee4e795b9e9058d2613700317b1785af4dde2f77e26d47037ff5b1.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -453,12 +453,6 @@
             "data": "AwsCliLayerF44AAF94"
           }
         ],
-        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/HasEcrPublic": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "HasEcrPublic"
-          }
-        ],
         "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -577,12 +571,6 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomAWSCDKOpenIdConnectProviderCustomResourceProviderHandlerF2C543E0"
-          }
-        ],
-        "/kubernetes-end-to-end-aws/DefaultCrNodeVersionMap": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "DefaultCrNodeVersionMap"
           }
         ],
         "/kubernetes-end-to-end-aws/AWSCDKCfnUtilsProviderCustomResourceProvider/Role": [

@@ -34,11 +34,11 @@
         },
         "cdk8s": {
             "hashes": [
-                "sha256:08e361f600aad9998bb517d14917838b0eeda221742b4e3f377281834d36f1b5",
-                "sha256:897ee06d58d01452cd62986a907a40937dbdf636f29374ce7622bd6808af7f3b"
+                "sha256:2cc64a8c61ec837dba153df8a8308224b07b4f2bd04ad0e1612c258eb154f705",
+                "sha256:616c822d5f6e6f02c3549f109906ca427a4e869bb0913ea81c7c076fe794d513"
             ],
             "index": "pypi",
-            "version": "==2.66.2"
+            "version": "==2.66.4"
         },
         "constructs": {
             "hashes": [

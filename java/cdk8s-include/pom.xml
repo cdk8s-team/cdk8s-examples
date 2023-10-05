@@ -16,7 +16,7 @@
     <dependency>
       <groupId>software.constructs</groupId>
       <artifactId>constructs</artifactId>
-      <version>10.1.295</version>
+      <version>10.2.70</version>
     </dependency>
   </dependencies>
   <properties>

@@ -179,19 +179,31 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev --filter=@aws-cdk/lambda-layer-kubectl-v25,@types/node,@types/nunjucks,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,aws-cdk,aws-cdk-lib,cdk8s,cdk8s-cli,cdk8s-plus-26,constructs,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint,glob,lerna,npm-check-updates,nunjucks,ts-node"
+          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev --filter=@aws-cdk/lambda-layer-kubectl-v25,@types/node,@types/nunjucks,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,aws-cdk,aws-cdk-lib,cdk8s,cdk8s-cli,cdk8s-plus-25,cdk8s-plus-26,constructs,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint,glob,lerna,npm-check-updates,nunjucks,ts-node"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @aws-cdk/lambda-layer-kubectl-v25 @types/node @types/nunjucks @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-cdk aws-cdk-lib cdk8s cdk8s-cli cdk8s-plus-26 constructs eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint glob lerna npm-check-updates nunjucks ts-node"
+          "exec": "yarn upgrade @aws-cdk/lambda-layer-kubectl-v25 @types/node @types/nunjucks @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-cdk aws-cdk-lib cdk8s cdk8s-cli cdk8s-plus-25 cdk8s-plus-26 constructs eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint glob lerna npm-check-updates nunjucks ts-node"
         },
         {
           "exec": "npx projen"
         },
         {
           "spawn": "post-upgrade"
+        }
+      ]
+    },
+    "upgrade-runtime-dependencies": {
+      "name": "upgrade-runtime-dependencies",
+      "description": "upgrade runtime dependencies",
+      "env": {
+        "CI": "0"
+      },
+      "steps": [
+        {
+          "exec": "echo No dependencies to upgrade."
         }
       ]
     },

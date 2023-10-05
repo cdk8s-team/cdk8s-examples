@@ -29,7 +29,6 @@
     ".projenrc.js",
     "src/**/*.ts",
     "test/**/*.ts",
-    "render-versions.ts",
     ".projenrc.ts",
     "projenrc/**/*.ts"
   ],

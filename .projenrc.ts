@@ -5,7 +5,7 @@ import { Cdk8sTeamTypeScriptProject } from '@cdk8s/projen-common';
 import { globSync } from 'glob';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { renderString } from 'nunjucks';
-import { TextFile, YamlFile } from 'projen';
+import { TextFile } from 'projen';
 
 type Lang = 'go' | 'python' | 'java';
 
@@ -20,6 +20,7 @@ const project = new Cdk8sTeamTypeScriptProject({
     'cdk8s',
     'constructs',
     'cdk8s-plus-26',
+    'cdk8s-plus-25',
     'cdk8s-cli',
     'aws-cdk-lib',
     'aws-cdk',
@@ -93,11 +94,11 @@ project.synth();
 function manifestTemplate(lang: Lang) {
   switch (lang) {
     case 'go':
-      return 'go.mod';
+      return 'go.mod.template';
     case 'java':
-      return 'pom.xml';
+      return 'pom.xml.template';
     case 'python':
-      return 'Pipfile';
+      return 'Pipfile.template';
   }
 }
 
@@ -114,7 +115,9 @@ function renderManifests() {
 
   const context = {
     cdk8sVersion: manifest.devDependencies.cdk8s.slice(1),
-    cdk8sPlusVersion: manifest.devDependencies['cdk8s-plus-26'].slice(1),
+    constructsVersion: manifest.devDependencies.constructs.slice(1),
+    cdk8sPlus26Version: manifest.devDependencies['cdk8s-plus-26'].slice(1),
+    cdk8sPlus25Version: manifest.devDependencies['cdk8s-plus-25'].slice(1),
     awsCdkLibVersion: manifest.devDependencies['aws-cdk-lib'].slice(1),
   };
 
@@ -125,10 +128,12 @@ function renderManifests() {
   ];
 
   for (const f of files) {
-    const current = fs.readFileSync(`${f}.template`, { encoding: 'utf-8' });
+    const current = fs.readFileSync(f, { encoding: 'utf-8' });
     const rendered = renderString(current, context );
-    new TextFile(project, '', {
+    const relative = path.relative(__dirname, f).replace('.template', '');
+    new TextFile(project, relative, {
       lines: rendered.split('\n'),
+      readonly: false,
     });
   }
 

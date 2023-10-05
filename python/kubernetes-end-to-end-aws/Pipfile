@@ -9,7 +9,7 @@ verify_ssl = true
 constructs = "~=10.2.70"
 cdk8s = "~=2.66.2"
 cdk8s-plus-26 = "~=2.18.28"
-aws-cdk-lib = "~=2.78.0"
+aws-cdk-lib = "~=2.69.0"
 "aws-cdk.lambda-layer-kubectl-v25" = "~=2.0.3"
 
 [requires]

@@ -18,6 +18,7 @@
     "upgrade-compiler-dependencies": "npx projen upgrade-compiler-dependencies",
     "upgrade-configuration": "npx projen upgrade-configuration",
     "upgrade-dev-dependencies": "npx projen upgrade-dev-dependencies",
+    "upgrade-runtime-dependencies": "npx projen upgrade-runtime-dependencies",
     "watch": "npx projen watch",
     "projen": "npx projen"
   },
@@ -36,8 +37,9 @@
     "aws-cdk-lib": "^2.69.0",
     "cdk8s": "^2.66.2",
     "cdk8s-cli": "^2.2.5",
+    "cdk8s-plus-25": "^2.22.27",
     "cdk8s-plus-26": "^2.18.28",
-    "constructs": "^10.1.295",
+    "constructs": "^10.2.70",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-import-resolver-typescript": "^3.6.1",

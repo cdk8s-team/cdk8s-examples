@@ -2,7 +2,6 @@
   "files": [
     ".eslintrc.json",
     ".gitattributes",
-    ".github/dependabot.yml",
     ".github/ISSUE_TEMPLATE/bug.md",
     ".github/ISSUE_TEMPLATE/config.yml",
     ".github/ISSUE_TEMPLATE/feature-request.md",
@@ -16,6 +15,7 @@
     ".github/workflows/upgrade-compiler-dependencies.yml",
     ".github/workflows/upgrade-configuration.yml",
     ".github/workflows/upgrade-dev-dependencies.yml",
+    ".github/workflows/upgrade-runtime-dependencies.yml",
     ".gitignore",
     ".mergify.yml",
     ".npmignore",

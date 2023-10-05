@@ -53,23 +53,15 @@
       ]
      },
      {
-      "Fn::If": [
-       "HasEcrPublic",
-       {
-        "Fn::Join": [
-         "",
-         [
-          "arn:",
-          {
-           "Ref": "AWS::Partition"
-          },
-          ":iam::aws:policy/AmazonElasticContainerRegistryPublicReadOnly"
-         ]
-        ]
-       },
-       {
-        "Ref": "AWS::NoValue"
-       }
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/AmazonElasticContainerRegistryPublicReadOnly"
+       ]
       ]
      }
     ]
@@ -118,7 +110,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "9017774b84ae2457b1b2ad6fcbb4860d8ce2537062c77010b24d9b156ced5a1b.zip"
+     "S3Key": "92ea03f8b2e779503519f7781d06c03f95b46863db85f5c50a4e7debfd04be02.zip"
     },
     "Role": {
      "Fn::GetAtt": [
@@ -161,7 +153,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/Handler/Resource",
-    "aws:asset:path": "asset.9017774b84ae2457b1b2ad6fcbb4860d8ce2537062c77010b24d9b156ced5a1b",
+    "aws:asset:path": "asset.92ea03f8b2e779503519f7781d06c03f95b46863db85f5c50a4e7debfd04be02",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -282,7 +274,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "8e3d635893ea17fa3158623489cd42c680fad925b38de1ef51cb10d84f6e245e.zip"
+     "S3Key": "e8fea7e029780f03a78580d41b7ffbc4551d6e7d6caa190a451880191c166189.zip"
     },
     "Role": {
      "Fn::GetAtt": [
@@ -326,7 +318,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/Resource",
-    "aws:asset:path": "asset.8e3d635893ea17fa3158623489cd42c680fad925b38de1ef51cb10d84f6e245e",
+    "aws:asset:path": "asset.e8fea7e029780f03a78580d41b7ffbc4551d6e7d6caa190a451880191c166189",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -334,7 +326,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02PzY7CMAyEn4V76uXnwO4RKu1h4YC60l4jNzXINE2kOAGhqu++TakQp5nxSPbnNWw/YbnAuxSmaQvLNfRj0D21AodUk4n2FPyNGwrKYlc3CP13ciayd6o8u3d/xAeFPwoy5kExdtBX3lKuJj15y+aR49MNSjYaRSgK7LKMGfbJtBT3KDSoisSnYEhN7W/EC7vLjKFtvqZHWGMZdncpLU8AeX/pXcMTlkkSfafDvEng9U2mmqeD+sEbfqy+YAnrxVWYi5Bc5I6geuo/KYY+rigBAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02QQWvDMAyFf0vvjtZlMNixDezQ7VAy2NUojlrUODZYdksJ+e+z06709N5DSPqkGt4/YL3Ci1SmHyrLHUw56IkGga/UkYl2H/yZewrK4tj1CNNnciayd6o5uGf/jVcKvxQk51kxjjC13lIpLbr3ls21xJublbxpFKEosCmSM2yTGShuUWhWLYlPwZBaqj8Rj+yOdwxtyzadYY1l2FyksbwAKJMk+lGHe7PA44AC8j8y+8a7nuMCu8MzvrzmV0C9OglzFZKLPBK0N/0DPmht/igBAAA="
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/CDKMetadata/Default"
@@ -343,14 +335,6 @@
   }
  },
  "Conditions": {
-  "HasEcrPublic": {
-   "Fn::Equals": [
-    {
-     "Ref": "AWS::Partition"
-    },
-    "aws"
-   ]
-  },
   "CDKMetadataAvailable": {
    "Fn::Or": [
     {

@@ -957,7 +957,7 @@
       "OpenIdConnectIssuerUrl"
      ]
     },
-    "CodeHash": "48e9fd6cee1d2c5f41da5c382b67d28876e6930ade034bffcfe0739f878fec68"
+    "CodeHash": "11cf4c654fdecb838aba9be11ac974a5acae6063c836875cc24e39bb60fe8eac"
    },
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
@@ -1212,7 +1212,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/22ae37679f40374f129caa62f5003a312ed74a493093e6f261527dad624a1ded.json"
+       "/eaf6043cacdc1d748b0c64b856abeacc8fac9c6f0ce5c8c8bab09c0a5eeda18e.json"
       ]
      ]
     },
@@ -1252,7 +1252,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/d63be09ebdc661fc522b20423a4d8179645ce79c103cfe622ae0004faa4fe079.json"
+       "/d8b0508f7ae8c86fd2ccbd9b6932da5117e3bf2056666f2c605a903762213efa.json"
       ]
      ]
     },
@@ -1784,7 +1784,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "48e9fd6cee1d2c5f41da5c382b67d28876e6930ade034bffcfe0739f878fec68.zip"
+     "S3Key": "11cf4c654fdecb838aba9be11ac974a5acae6063c836875cc24e39bb60fe8eac.zip"
     },
     "Timeout": 900,
     "MemorySize": 128,
@@ -1802,7 +1802,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Handler",
-    "aws:asset:path": "asset.48e9fd6cee1d2c5f41da5c382b67d28876e6930ade034bffcfe0739f878fec68",
+    "aws:asset:path": "asset.11cf4c654fdecb838aba9be11ac974a5acae6063c836875cc24e39bb60fe8eac",
     "aws:asset:property": "Code"
    }
   },
@@ -1849,7 +1849,7 @@
       "Arn"
      ]
     },
-    "Runtime": "nodejs16.x"
+    "Runtime": "nodejs14.x"
    },
    "DependsOn": [
     "AWSCDKCfnUtilsProviderCustomResourceProviderRoleFE0EE867"
@@ -1863,7 +1863,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VSXW+jMBD8LXk3bkpaXR+PolObflxQcuK1MmabuBgb2etEEeK/dw3N0T7t7OIddmc25f2vO75ciJNPZN0kWlW836GQDaPSW+9Xb8J7QM+zGJhf8fsgG8B74YFp0Va14Pm7eRFncCU4r6xh0Hje5zp4BMeyk88CHthzqMAZQPCvwqh38Mg2HZh1nVtjQGLh7FHV1PDX1rB3NnSMeOfkEXSbH4TDb0yb6oM6S6EDsExXxITOak0kO3BHJSGT0gaDAwOZ8r7sZOQsi5wVodJK7kJFPLE2o60NCP9EpWGuzzVSwUolMK55eRzBn3UxjivwQSCcxJkVTh0JzsRrg+PYlwfTJF9ZhqT5oQWDNLoMTuH54aLBj8LAlGh5v7XTfGMsLO0yEk5oGNjoFvm4V2bPtuBtcJIayBLbzin1f8ObgF2Y1BgPgMCTj3v+6PrvE31+FV0Xf0CQtK9VlGVgS36z+P11UFfTiSQ63kfSkHMSdXJMb/nzhMv0drydgRVnPFhzteLXS36dLj68Uokj81QLfDvFTw20QDmuAgAA"
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VSwW7bMAz9lt5ptUvWAb3VNYYu69YYyeBrIctsolqWAolKEBj+91J2M7cnPlLiA/keF6L/cSduruQpZKppM6Nr0W9Jqha49NKH5YsMASmIPAUIS/EQVYv0IAOCkV3dSFG82j/yjL5CH7SzgG0QfWFiIPSQn0IeaQ9PsUZvkTD8lVa/YiBYH9CumsJZi4pK74664YZn1+DOu3gA5p2TX2i6Yi89fWJa12/cWUkTEXJTMxN5ZwyTbNEftcJcKRctDYBqIfrqoBJnVRZQxtpotY0186TajDYuEv6TtcG5PtdYBae0pLTm5XMCP1flOK6kR0l4kmcovT4ynIlXlsaxLx+mST6ynFjzfYeWeHQVvabz40WDL4UBtOxEv3HTfGMsHe8yEk5oGGB0i33cabuDDQYXveIGtsR1c8r9n/A60iFOaowHwOB3SHt+6frvEz+z4I1OWgxwI75f3X9c0fV0F5lJR5G1bJcikx0Xt+JpwtXidjyYAcoz7Z29XopvieAtaJ15Nkx3KDZTfAcy2HRSogIAAA=="
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/CDKMetadata/Default"
@@ -1950,109 +1950,6 @@
       }
      ]
     ]
-   }
-  }
- },
- "Mappings": {
-  "DefaultCrNodeVersionMap": {
-   "af-south-1": {
-    "value": "nodejs16.x"
-   },
-   "ap-east-1": {
-    "value": "nodejs16.x"
-   },
-   "ap-northeast-1": {
-    "value": "nodejs16.x"
-   },
-   "ap-northeast-2": {
-    "value": "nodejs16.x"
-   },
-   "ap-northeast-3": {
-    "value": "nodejs16.x"
-   },
-   "ap-south-1": {
-    "value": "nodejs16.x"
-   },
-   "ap-south-2": {
-    "value": "nodejs16.x"
-   },
-   "ap-southeast-1": {
-    "value": "nodejs16.x"
-   },
-   "ap-southeast-2": {
-    "value": "nodejs16.x"
-   },
-   "ap-southeast-3": {
-    "value": "nodejs16.x"
-   },
-   "ca-central-1": {
-    "value": "nodejs16.x"
-   },
-   "cn-north-1": {
-    "value": "nodejs16.x"
-   },
-   "cn-northwest-1": {
-    "value": "nodejs16.x"
-   },
-   "eu-central-1": {
-    "value": "nodejs16.x"
-   },
-   "eu-central-2": {
-    "value": "nodejs16.x"
-   },
-   "eu-north-1": {
-    "value": "nodejs16.x"
-   },
-   "eu-south-1": {
-    "value": "nodejs16.x"
-   },
-   "eu-south-2": {
-    "value": "nodejs16.x"
-   },
-   "eu-west-1": {
-    "value": "nodejs16.x"
-   },
-   "eu-west-2": {
-    "value": "nodejs16.x"
-   },
-   "eu-west-3": {
-    "value": "nodejs16.x"
-   },
-   "me-central-1": {
-    "value": "nodejs16.x"
-   },
-   "me-south-1": {
-    "value": "nodejs16.x"
-   },
-   "sa-east-1": {
-    "value": "nodejs16.x"
-   },
-   "us-east-1": {
-    "value": "nodejs16.x"
-   },
-   "us-east-2": {
-    "value": "nodejs16.x"
-   },
-   "us-gov-east-1": {
-    "value": "nodejs16.x"
-   },
-   "us-gov-west-1": {
-    "value": "nodejs16.x"
-   },
-   "us-iso-east-1": {
-    "value": "nodejs14.x"
-   },
-   "us-iso-west-1": {
-    "value": "nodejs14.x"
-   },
-   "us-isob-east-1": {
-    "value": "nodejs14.x"
-   },
-   "us-west-1": {
-    "value": "nodejs16.x"
-   },
-   "us-west-2": {
-    "value": "nodejs16.x"
    }
   }
  },
