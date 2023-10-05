@@ -6,15 +6,12 @@ github.com/aws/jsii-runtime-go v1.26.0/go.mod h1:9ddMDdGQwew6pQrfuTID/LxDDrpyryb
 github.com/aws/jsii-runtime-go v1.70.0/go.mod h1:Cd836+6/rhL8LbslPaGofAh8c7H75KVMF6bfHyNl7vY=
 github.com/aws/jsii-runtime-go v1.84.0/go.mod h1:sZ4/oNiaZBQFkzGWZYvqo/85M0EitkFa8SEEEMECt4w=
 github.com/aws/jsii-runtime-go v1.88.0/go.mod h1:rIisDqmDOviluOfibmnvjr1I9u2EFcbWLWUjOXy9/Ms=
-github.com/cdk8s-team/cdk8s-core-go/cdk8s/v2 v2.66.4 h1:bIeeQpVG9cQXLVP+NCnkOLRJX3kLuECqB3OUJoPTsnk=
-github.com/cdk8s-team/cdk8s-core-go/cdk8s/v2 v2.66.4/go.mod h1:gUz0rv7DDgKekSIMFcBCOu6VbnP/4Ms5Cqykc8ZKb28=
-github.com/cdk8s-team/cdk8s-plus-go/cdk8splus26/v2 v2.18.30 h1:tTFe3UY5kTe9bPCNV+4P+fkdp14q+QzRqW6P7YLUDiQ=
-github.com/cdk8s-team/cdk8s-plus-go/cdk8splus26/v2 v2.18.30/go.mod h1:8pp2d/b01dEB8OBh4N7HnoK3PByb9+/gyDGmGcovKLk=
 github.com/cdklabs/awscdk-asset-awscli-go/awscliv1/v2 v2.2.200 h1:CwkS78cin4h5A3IaDcL69GrBI1HgTEB/xtECTf1luCc=
 github.com/cdklabs/awscdk-asset-awscli-go/awscliv1/v2 v2.2.200/go.mod h1:sx6+u9s3UHyhm9BGrkGdQgNA0Ni5ekbJ9hW2Gupvoy0=
 github.com/cdklabs/awscdk-asset-kubectl-go/kubectlv20/v2 v2.1.2 h1:k+WD+6cERd59Mao84v0QtRrcdZuuSMfzlEmuIypKnVs=
 github.com/cdklabs/awscdk-asset-kubectl-go/kubectlv20/v2 v2.1.2/go.mod h1:CvFHBo0qcg8LUkJqIxQtP1rD/sNGv9bX3L2vHT2FUAo=
 github.com/cdklabs/awscdk-asset-node-proxy-agent-go/nodeproxyagentv6/v2 v2.0.1 h1:MBBQNKKPJ5GArbctgwpiCy7KmwGjHDjUUH5wEzwIq8w=
+github.com/cdklabs/awscdk-asset-node-proxy-agent-go/nodeproxyagentv6/v2 v2.0.1/go.mod h1:/2WiXEft9s8ViJjD01CJqDuyJ8HXBjhBLtK5OvJfdSc=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
