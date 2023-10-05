@@ -86,11 +86,13 @@ spec:
             tcpSocket:
               port: 5678
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
 ---
 apiVersion: v1
 kind: Service
@@ -152,11 +154,13 @@ spec:
             tcpSocket:
               port: 5678
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
 ---
 apiVersion: v1
 kind: Service
@@ -218,11 +222,13 @@ spec:
             tcpSocket:
               port: 5678
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
 ---
 apiVersion: v1
 kind: Service
@@ -284,11 +290,13 @@ spec:
             tcpSocket:
               port: 5678
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
 ---
 apiVersion: v1
 kind: Service

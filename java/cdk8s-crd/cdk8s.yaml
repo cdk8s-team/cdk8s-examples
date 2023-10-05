@@ -1,4 +1,4 @@
-app: mvn clean compile && mvn exec:java -Dexec.mainClass="com.example.crd.Crd"
+app: mvn -U clean compile && mvn exec:java -Dexec.mainClass="com.example.crd.Crd"
 language: java
 imports:
   - https://raw.githubusercontent.com/cert-manager/cert-manager/master/deploy/crds/crd-certificates.yaml

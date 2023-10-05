@@ -72,11 +72,13 @@ spec:
             tcpSocket:
               port: 8000
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
   updateStrategy:
     rollingUpdate:
       partition: 0
@@ -197,11 +199,13 @@ spec:
             tcpSocket:
               port: 7000
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
 ---
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -370,11 +374,13 @@ spec:
             tcpSocket:
               port: 6000
       dnsPolicy: ClusterFirst
+      hostNetwork: false
       restartPolicy: Always
       securityContext:
         fsGroupChangePolicy: Always
         runAsNonRoot: true
       setHostnameAsFQDN: false
+      terminationGracePeriodSeconds: 30
 ---
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy

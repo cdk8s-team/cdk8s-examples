@@ -1,2 +1,2 @@
-app: mvn clean compile && mvn exec:java -Dexec.mainClass="com.example.echo.HttpEcho"
+app: mvn -U clean compile && mvn exec:java -Dexec.mainClass="com.example.echo.HttpEcho"
 language: java
