@@ -9,14 +9,5 @@
     "build": "npm run synth",
     "helm:add": "helm repo add bitnami https://charts.bitnami.com/bitnami",
     "synth": "npm run helm:add && cdk8s synth"
-  },
-  "dependencies": {
-    "cdk8s": "^2.66.2",
-    "constructs": "^10.1.295"
-  },
-  "devDependencies": {
-    "cdk8s-cli": "^2.2.5",
-    "typescript": "^4.9.5",
-    "ts-node": "^10.9.1"
   }
 }

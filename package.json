@@ -27,7 +27,14 @@
     "@cdk8s/projen-common": "^0.0.458",
     "lerna": "^6.6.2",
     "npm-check-updates": "^16",
-    "projen": "^0.73.0"
+    "projen": "^0.73.0",
+    "cdk8s": "^2.66.2",
+    "constructs": "^10.1.295",
+    "cdk8s-plus-26": "^2.18.28",
+    "cdk8s-cli": "^2.2.5",
+    "aws-cdk-lib": "^2.69.0",
+    "@aws-cdk/lambda-layer-kubectl-v25": "^2.0.3",
+    "aws-cdk": "^2.69.0"
   },
   "resolutions": {
     "@yarnpkg/parsers": "3.0.0-rc.48.1"
