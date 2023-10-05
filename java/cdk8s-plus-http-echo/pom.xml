@@ -11,12 +11,12 @@
     <dependency>
       <groupId>org.cdk8s</groupId>
       <artifactId>cdk8s</artifactId>
-      <version>2.66.2</version>
+      <version>2.66.4</version>
     </dependency>
     <dependency>
       <groupId>org.cdk8s</groupId>
       <artifactId>cdk8s-plus-26</artifactId>
-      <version>2.18.28</version>
+      <version>2.18.30</version>
     </dependency>
     <dependency>
       <groupId>software.constructs</groupId>

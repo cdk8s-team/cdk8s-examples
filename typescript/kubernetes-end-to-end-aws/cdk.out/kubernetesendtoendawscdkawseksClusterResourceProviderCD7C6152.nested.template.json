@@ -7,13 +7,13 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "3f579d6c1ab146cac713730c96809dd4a9c5d9750440fb835ab20fd6925e528c.zip"
+     "S3Key": "9202bb21d52e07810fc1da0f6acf2dcb75a40a43a9a2efbcfc9ae39535c6260c.zip"
     },
     "Description": "/opt/nodejs/node_modules/proxy-agent"
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/NodeProxyAgentLayer/Resource",
-    "aws:asset:path": "asset.3f579d6c1ab146cac713730c96809dd4a9c5d9750440fb835ab20fd6925e528c.zip",
+    "aws:asset:path": "asset.9202bb21d52e07810fc1da0f6acf2dcb75a40a43a9a2efbcfc9ae39535c6260c.zip",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Content"
    }
@@ -59,7 +59,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "82989df3aceaed44a4e32e9da0d2ae053d937f0bbb1306da3ed99cc78c704f4d.zip"
+     "S3Key": "0341c848225d3d65d73ea163a4f6db8a7b978a337c14898ed7882290bbf04bab.zip"
     },
     "Description": "onEvent handler for EKS cluster resource provider",
     "Environment": {
@@ -87,7 +87,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Resource",
-    "aws:asset:path": "asset.82989df3aceaed44a4e32e9da0d2ae053d937f0bbb1306da3ed99cc78c704f4d",
+    "aws:asset:path": "asset.0341c848225d3d65d73ea163a4f6db8a7b978a337c14898ed7882290bbf04bab",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -133,7 +133,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "82989df3aceaed44a4e32e9da0d2ae053d937f0bbb1306da3ed99cc78c704f4d.zip"
+     "S3Key": "0341c848225d3d65d73ea163a4f6db8a7b978a337c14898ed7882290bbf04bab.zip"
     },
     "Description": "isComplete handler for EKS cluster resource provider",
     "Environment": {
@@ -161,7 +161,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Resource",
-    "aws:asset:path": "asset.82989df3aceaed44a4e32e9da0d2ae053d937f0bbb1306da3ed99cc78c704f4d",
+    "aws:asset:path": "asset.0341c848225d3d65d73ea163a4f6db8a7b978a337c14898ed7882290bbf04bab",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -285,7 +285,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "f2d30cfc360482320a52a4fcde8a70f3569df79ab30be24650fda58eb60052cf.zip"
+     "S3Key": "7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94.zip"
     },
     "Description": "AWS CDK resource provider framework - onEvent (kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
     "Environment": {
@@ -323,7 +323,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Resource",
-    "aws:asset:path": "asset.f2d30cfc360482320a52a4fcde8a70f3569df79ab30be24650fda58eb60052cf",
+    "aws:asset:path": "asset.7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -440,7 +440,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "f2d30cfc360482320a52a4fcde8a70f3569df79ab30be24650fda58eb60052cf.zip"
+     "S3Key": "7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94.zip"
     },
     "Description": "AWS CDK resource provider framework - isComplete (kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
     "Environment": {
@@ -475,7 +475,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Resource",
-    "aws:asset:path": "asset.f2d30cfc360482320a52a4fcde8a70f3569df79ab30be24650fda58eb60052cf",
+    "aws:asset:path": "asset.7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -592,7 +592,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "f2d30cfc360482320a52a4fcde8a70f3569df79ab30be24650fda58eb60052cf.zip"
+     "S3Key": "7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94.zip"
     },
     "Description": "AWS CDK resource provider framework - onTimeout (kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
     "Environment": {
@@ -627,7 +627,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Resource",
-    "aws:asset:path": "asset.f2d30cfc360482320a52a4fcde8a70f3569df79ab30be24650fda58eb60052cf",
+    "aws:asset:path": "asset.7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -774,7 +774,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zVQwW7CMAz9lt1TbwwhsSMgcRoIddKukUm8KjRNqjhhq6r++5JCT+89x35+8TtsP+DtBX+5UrqtrLnCeCaOpL8iqlZY7K4apcWBgnRek+yD/xskNuQinHPhUvSuyM/SJLKVHHktkZkiw66A4DXsk2op7pHpaQrj4cfNM98U2HgnjsmpWEh+WPgkDHYw1t5SKc948daoocgHmyYxr8mRG+MaURP7FBQJlTj6ToanZshh70bnlMVq6cr84J02y+oT9n22mUT5L9z49b7awmqTz3RjY6qQXDQdQf3Af9bfljBCAQAA"
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zVPy07DMBD8lt6dhVAh0WNbiRNUVZC4Wq69RNs4duS1C1GUf8dOm9PM7GN29gV2O6g36pcrbbrK0gWmE3JE8xWV7oRV/cUoadWIQTpvUA7B/41SteginHLhXPS+yI8yJLKVnHgrFTNGhn0BwVs4JN1hPCjGhylMxx+37HxjYPJOvCenYyG5sfJZkOpharzFUl7w7C3pscg7m2exnMmRW3KtaJB9ChqFThx9L8NDM+SwNzI5ZbFapzI/emdoPf2phiHbzKL8C1d+utVvUL/C8+bKRFVILlKP0NzxH0whl8NCAQAA"
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/CDKMetadata/Default"
@@ -1008,6 +1008,9 @@
    "ap-southeast-3": {
     "states": "states.ap-southeast-3.amazonaws.com"
    },
+   "ap-southeast-4": {
+    "states": "states.ap-southeast-4.amazonaws.com"
+   },
    "ca-central-1": {
     "states": "states.ca-central-1.amazonaws.com"
    },
@@ -1040,6 +1043,9 @@
    },
    "eu-west-3": {
     "states": "states.eu-west-3.amazonaws.com"
+   },
+   "il-central-1": {
+    "states": "states.il-central-1.amazonaws.com"
    },
    "me-central-1": {
     "states": "states.me-central-1.amazonaws.com"

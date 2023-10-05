@@ -1,5 +1,5 @@
 {
-  "version": "31.0.0",
+  "version": "34.0.0",
   "artifacts": {
     "kubernetes-end-to-end-aws.assets": {
       "type": "cdk:asset-manifest",
@@ -14,10 +14,11 @@
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
         "templateFile": "kubernetes-end-to-end-aws.template.json",
+        "terminationProtection": false,
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/becc60ef342a229e21ad8c21c52aee47043260e5b5e830c1bdab9c4be6249cfc.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e4e4f584631d32ddf4d9235428d21a82be606fe56376ddbf9ec6a9daeb2189e9.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -177,6 +178,18 @@
             "data": "ClusterDefaultVpcVPCGWC1D00388"
           }
         ],
+        "/kubernetes-end-to-end-aws/Cluster/KubectlHandlerRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterKubectlHandlerRole94549F93"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/KubectlHandlerRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterKubectlHandlerRoleDefaultPolicyE44083DD"
+          }
+        ],
         "/kubernetes-end-to-end-aws/Cluster/Role/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -213,22 +226,22 @@
             "data": "ClusterKubectlReadyBarrier200052AF"
           }
         ],
-        "/kubernetes-end-to-end-aws/Cluster/MastersRole/Resource": [
+        "/kubernetes-end-to-end-aws/Cluster/HasEcrPublic": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "ClusterMastersRole9AA35625"
-          }
-        ],
-        "/kubernetes-end-to-end-aws/Cluster/AwsAuth/manifest/Resource/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ClusterAwsAuthmanifestFE51F8AE"
+            "data": "ClusterHasEcrPublic8EE1114E"
           }
         ],
         "/kubernetes-end-to-end-aws/Cluster/OpenIdConnectProvider/Resource/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "ClusterOpenIdConnectProviderE7EB0530"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/Cluster/AwsAuth/manifest/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ClusterAwsAuthmanifestFE51F8AE"
           }
         ],
         "/kubernetes-end-to-end-aws/Cluster/NodegroupDefaultCapacity/NodeGroupRole/Resource": [
@@ -241,18 +254,6 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "ClusterNodegroupDefaultCapacityDA0920A3"
-          }
-        ],
-        "/kubernetes-end-to-end-aws/Cluster/ConfigCommand": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ClusterConfigCommand43AAE40F"
-          }
-        ],
-        "/kubernetes-end-to-end-aws/Cluster/GetTokenCommand": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ClusterGetTokenCommand06AE992E"
           }
         ],
         "/kubernetes-end-to-end-aws/Cluster/chart-KubeView/Resource/Default": [
@@ -291,12 +292,6 @@
             "data": "OnEventHandlerServiceRole15A26729"
           }
         ],
-        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "OnEventHandlerServiceRoleDefaultPolicyC57085D4"
-          }
-        ],
         "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -307,12 +302,6 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "IsCompleteHandlerServiceRole5810CC58"
-          }
-        ],
-        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "IsCompleteHandlerServiceRoleDefaultPolicy8F64197B"
           }
         ],
         "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Resource": [
@@ -411,34 +400,28 @@
             "data": "ServiceprincipalMap"
           }
         ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/kubernetesendtoendawsawscdkawseksClusterResourceProviderOnEventHandlerServiceRole972EB019Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "kubernetesendtoendawsawscdkawseksClusterResourceProviderOnEventHandlerServiceRole972EB019Arn"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/kubernetesendtoendawsawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRole8EE2DC14Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "kubernetesendtoendawsawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRole8EE2DC14Arn"
+          }
+        ],
         "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/kubernetesendtoendawsawscdkawseksClusterResourceProviderframeworkonEvent483954A1Arn": [
           {
             "type": "aws:cdk:logicalId",
             "data": "kubernetesendtoendawsawscdkawseksClusterResourceProviderframeworkonEvent483954A1Arn"
           }
         ],
-        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/reference-to-kubernetesendtoendawsClusterCreationRoleB04B6EE4Arn": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetokubernetesendtoendawsClusterCreationRoleB04B6EE4Arn"
-          }
-        ],
         "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStack/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "awscdkawseksClusterResourceProviderNestedStackawscdkawseksClusterResourceProviderNestedStackResource9827C454"
-          }
-        ],
-        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/Handler/ServiceRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "HandlerServiceRoleFCDC14AE"
-          }
-        ],
-        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/Handler/ServiceRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "HandlerServiceRoleDefaultPolicyCBD0CC91"
           }
         ],
         "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/Handler/Resource": [
@@ -489,22 +472,16 @@
             "data": "kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn"
           }
         ],
-        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendawsCluster42F39FFFArn": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetokubernetesendtoendawsCluster42F39FFFArn"
-          }
-        ],
-        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendawsClusterCreationRoleB04B6EE4Arn": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetokubernetesendtoendawsClusterCreationRoleB04B6EE4Arn"
-          }
-        ],
         "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendawsKubectl55510B5ARef": [
           {
             "type": "aws:cdk:logicalId",
             "data": "referencetokubernetesendtoendawsKubectl55510B5ARef"
+          }
+        ],
+        "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendawsClusterKubectlHandlerRole23C8E177Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetokubernetesendtoendawsClusterKubectlHandlerRole23C8E177Arn"
           }
         ],
         "/kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendawsClusterDefaultVpcPrivateSubnet1Subnet5D689C1ERef": [

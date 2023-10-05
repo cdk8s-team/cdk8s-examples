@@ -7,13 +7,13 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "3f579d6c1ab146cac713730c96809dd4a9c5d9750440fb835ab20fd6925e528c.zip"
+     "S3Key": "9202bb21d52e07810fc1da0f6acf2dcb75a40a43a9a2efbcfc9ae39535c6260c.zip"
     },
     "Description": "/opt/nodejs/node_modules/proxy-agent"
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/NodeProxyAgentLayer/Resource",
-    "aws:asset:path": "asset.3f579d6c1ab146cac713730c96809dd4a9c5d9750440fb835ab20fd6925e528c.zip",
+    "aws:asset:path": "asset.9202bb21d52e07810fc1da0f6acf2dcb75a40a43a9a2efbcfc9ae39535c6260c.zip",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Content"
    }
@@ -52,32 +52,6 @@
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/Resource"
    }
   },
-  "OnEventHandlerServiceRoleDefaultPolicyC57085D4": {
-   "Type": "AWS::IAM::Policy",
-   "Properties": {
-    "PolicyDocument": {
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Resource": {
-        "Ref": "referencetokubernetesendtoendawsClusterCreationRoleB04B6EE4Arn"
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "PolicyName": "OnEventHandlerServiceRoleDefaultPolicyC57085D4",
-    "Roles": [
-     {
-      "Ref": "OnEventHandlerServiceRole15A26729"
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/DefaultPolicy/Resource"
-   }
-  },
   "OnEventHandler42BEBAE0": {
    "Type": "AWS::Lambda::Function",
    "Properties": {
@@ -85,13 +59,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "80cd783cc1129abfee623bcf8db807c983409f1d26553706755668b8973bdcf4.zip"
-    },
-    "Role": {
-     "Fn::GetAtt": [
-      "OnEventHandlerServiceRole15A26729",
-      "Arn"
-     ]
+     "S3Key": "0341c848225d3d65d73ea163a4f6db8a7b978a337c14898ed7882290bbf04bab.zip"
     },
     "Description": "onEvent handler for EKS cluster resource provider",
     "Environment": {
@@ -105,16 +73,21 @@
       "Ref": "NodeProxyAgentLayer924C1971"
      }
     ],
-    "Runtime": "nodejs14.x",
+    "Role": {
+     "Fn::GetAtt": [
+      "OnEventHandlerServiceRole15A26729",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
     "Timeout": 60
    },
    "DependsOn": [
-    "OnEventHandlerServiceRoleDefaultPolicyC57085D4",
     "OnEventHandlerServiceRole15A26729"
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Resource",
-    "aws:asset:path": "asset.80cd783cc1129abfee623bcf8db807c983409f1d26553706755668b8973bdcf4",
+    "aws:asset:path": "asset.0341c848225d3d65d73ea163a4f6db8a7b978a337c14898ed7882290bbf04bab",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -153,32 +126,6 @@
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/Resource"
    }
   },
-  "IsCompleteHandlerServiceRoleDefaultPolicy8F64197B": {
-   "Type": "AWS::IAM::Policy",
-   "Properties": {
-    "PolicyDocument": {
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Resource": {
-        "Ref": "referencetokubernetesendtoendawsClusterCreationRoleB04B6EE4Arn"
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "PolicyName": "IsCompleteHandlerServiceRoleDefaultPolicy8F64197B",
-    "Roles": [
-     {
-      "Ref": "IsCompleteHandlerServiceRole5810CC58"
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/DefaultPolicy/Resource"
-   }
-  },
   "IsCompleteHandler7073F4DA": {
    "Type": "AWS::Lambda::Function",
    "Properties": {
@@ -186,13 +133,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "80cd783cc1129abfee623bcf8db807c983409f1d26553706755668b8973bdcf4.zip"
-    },
-    "Role": {
-     "Fn::GetAtt": [
-      "IsCompleteHandlerServiceRole5810CC58",
-      "Arn"
-     ]
+     "S3Key": "0341c848225d3d65d73ea163a4f6db8a7b978a337c14898ed7882290bbf04bab.zip"
     },
     "Description": "isComplete handler for EKS cluster resource provider",
     "Environment": {
@@ -206,16 +147,21 @@
       "Ref": "NodeProxyAgentLayer924C1971"
      }
     ],
-    "Runtime": "nodejs14.x",
+    "Role": {
+     "Fn::GetAtt": [
+      "IsCompleteHandlerServiceRole5810CC58",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
     "Timeout": 60
    },
    "DependsOn": [
-    "IsCompleteHandlerServiceRoleDefaultPolicy8F64197B",
     "IsCompleteHandlerServiceRole5810CC58"
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Resource",
-    "aws:asset:path": "asset.80cd783cc1129abfee623bcf8db807c983409f1d26553706755668b8973bdcf4",
+    "aws:asset:path": "asset.0341c848225d3d65d73ea163a4f6db8a7b978a337c14898ed7882290bbf04bab",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -339,13 +285,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "e8fea7e029780f03a78580d41b7ffbc4551d6e7d6caa190a451880191c166189.zip"
-    },
-    "Role": {
-     "Fn::GetAtt": [
-      "ProviderframeworkonEventServiceRole9FF04296",
-      "Arn"
-     ]
+     "S3Key": "7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94.zip"
     },
     "Description": "AWS CDK resource provider framework - onEvent (kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
     "Environment": {
@@ -368,7 +308,13 @@
      }
     },
     "Handler": "framework.onEvent",
-    "Runtime": "nodejs14.x",
+    "Role": {
+     "Fn::GetAtt": [
+      "ProviderframeworkonEventServiceRole9FF04296",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
     "Timeout": 900
    },
    "DependsOn": [
@@ -377,7 +323,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Resource",
-    "aws:asset:path": "asset.e8fea7e029780f03a78580d41b7ffbc4551d6e7d6caa190a451880191c166189",
+    "aws:asset:path": "asset.7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -494,13 +440,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "e8fea7e029780f03a78580d41b7ffbc4551d6e7d6caa190a451880191c166189.zip"
-    },
-    "Role": {
-     "Fn::GetAtt": [
-      "ProviderframeworkisCompleteServiceRoleB1087139",
-      "Arn"
-     ]
+     "S3Key": "7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94.zip"
     },
     "Description": "AWS CDK resource provider framework - isComplete (kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
     "Environment": {
@@ -520,7 +460,13 @@
      }
     },
     "Handler": "framework.isComplete",
-    "Runtime": "nodejs14.x",
+    "Role": {
+     "Fn::GetAtt": [
+      "ProviderframeworkisCompleteServiceRoleB1087139",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
     "Timeout": 900
    },
    "DependsOn": [
@@ -529,7 +475,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Resource",
-    "aws:asset:path": "asset.e8fea7e029780f03a78580d41b7ffbc4551d6e7d6caa190a451880191c166189",
+    "aws:asset:path": "asset.7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -646,13 +592,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "e8fea7e029780f03a78580d41b7ffbc4551d6e7d6caa190a451880191c166189.zip"
-    },
-    "Role": {
-     "Fn::GetAtt": [
-      "ProviderframeworkonTimeoutServiceRole28643D26",
-      "Arn"
-     ]
+     "S3Key": "7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94.zip"
     },
     "Description": "AWS CDK resource provider framework - onTimeout (kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
     "Environment": {
@@ -672,7 +612,13 @@
      }
     },
     "Handler": "framework.onTimeout",
-    "Runtime": "nodejs14.x",
+    "Role": {
+     "Fn::GetAtt": [
+      "ProviderframeworkonTimeoutServiceRole28643D26",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
     "Timeout": 900
    },
    "DependsOn": [
@@ -681,7 +627,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Resource",
-    "aws:asset:path": "asset.e8fea7e029780f03a78580d41b7ffbc4551d6e7d6caa190a451880191c166189",
+    "aws:asset:path": "asset.7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -828,7 +774,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zVOy07DMBD8lt6dpRCExLGtxAmqKEhcra29BBPHjrw2EEX5d+y0Oc3MPmbmAZ6eYb/DX66U7itrLjCfiSPp94iqFxaHi0ZpcaIgndckx+D/JokduQjnPGiKPhT5Wo5EtpIz1xKZKTIcCgiu4ZhUT/GITDdTmE+fbv35oMDGO/GSnIqF5MXGF2FwgLn1lsp4xcZbo6Yir2xZxBqTK3fGdaIl9ikoEipx9IMMN82Qy/4YnVsWq+0q85N32mzRbziO2WYRzRS/vLur4X4Pj7tvNqYKyUUzELRX/Af3iASXPwEAAA=="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zVOy07DMBD8lt6dhRIuPbaVOEEVBYmrtbWXYOLYkdcGoij/jp02p5nZx8w8weEA+x3+cqV0X1lzhflCHEm/R1S9sDhcNUqLEwXpvCY5Bv83SezIRbjkQVP0scjXciSylZy5lshMkeFYQHANp6R6iidkupvCfP50688HBTbeiZfkVCwkLza+CIMDzK23VMYrNt4aNRV5Y8si1phcuTOuEy2xT0GRUImjH2S4a4Zc9sfo3LJYbVeZn73TZot+w3HMNotopvjl3UMN+0d43n2zMVVILpqBoL3hP1jur9k/AQAA"
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/CDKMetadata/Default"
@@ -1062,6 +1008,9 @@
    "ap-southeast-3": {
     "states": "states.ap-southeast-3.amazonaws.com"
    },
+   "ap-southeast-4": {
+    "states": "states.ap-southeast-4.amazonaws.com"
+   },
    "ca-central-1": {
     "states": "states.ca-central-1.amazonaws.com"
    },
@@ -1094,6 +1043,9 @@
    },
    "eu-west-3": {
     "states": "states.eu-west-3.amazonaws.com"
+   },
+   "il-central-1": {
+    "states": "states.il-central-1.amazonaws.com"
    },
    "me-central-1": {
     "states": "states.me-central-1.amazonaws.com"
@@ -1134,6 +1086,22 @@
   }
  },
  "Outputs": {
+  "kubernetesendtoendawsawscdkawseksClusterResourceProviderOnEventHandlerServiceRole972EB019Arn": {
+   "Value": {
+    "Fn::GetAtt": [
+     "OnEventHandlerServiceRole15A26729",
+     "Arn"
+    ]
+   }
+  },
+  "kubernetesendtoendawsawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRole8EE2DC14Arn": {
+   "Value": {
+    "Fn::GetAtt": [
+     "IsCompleteHandlerServiceRole5810CC58",
+     "Arn"
+    ]
+   }
+  },
   "kubernetesendtoendawsawscdkawseksClusterResourceProviderframeworkonEvent483954A1Arn": {
    "Value": {
     "Fn::GetAtt": [
@@ -1141,11 +1109,6 @@
      "Arn"
     ]
    }
-  }
- },
- "Parameters": {
-  "referencetokubernetesendtoendawsClusterCreationRoleB04B6EE4Arn": {
-   "Type": "String"
   }
  }
 }

@@ -21,7 +21,7 @@
                     "path": "kubernetes-end-to-end/Kubectl/Code/Stage",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.AssetStaging",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "AssetBucket": {
@@ -29,13 +29,13 @@
                     "path": "kubernetes-end-to-end/Kubectl/Code/AssetBucket",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "Resource": {
@@ -56,7 +56,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_lambda.CfnLayerVersion",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               }
             },
@@ -93,7 +93,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnVPC",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "PublicSubnet1": {
@@ -141,7 +141,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnSubnet",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Acl": {
@@ -149,7 +149,7 @@
                         "path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet1/Acl",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "RouteTable": {
@@ -175,7 +175,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnRouteTable",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "RouteTableAssociation": {
@@ -194,7 +194,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnSubnetRouteTableAssociation",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "DefaultRoute": {
@@ -214,7 +214,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnRoute",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "EIP": {
@@ -238,7 +238,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnEIP",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "NATGateway": {
@@ -270,13 +270,13 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnNatGateway",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.PublicSubnet",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "PublicSubnet2": {
@@ -324,7 +324,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnSubnet",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Acl": {
@@ -332,7 +332,7 @@
                         "path": "kubernetes-end-to-end/Cluster/DefaultVpc/PublicSubnet2/Acl",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "RouteTable": {
@@ -358,7 +358,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnRouteTable",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "RouteTableAssociation": {
@@ -377,7 +377,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnSubnetRouteTableAssociation",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "DefaultRoute": {
@@ -397,7 +397,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnRoute",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "EIP": {
@@ -421,7 +421,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnEIP",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "NATGateway": {
@@ -453,13 +453,13 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnNatGateway",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.PublicSubnet",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "PrivateSubnet1": {
@@ -507,7 +507,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnSubnet",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Acl": {
@@ -515,7 +515,7 @@
                         "path": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet1/Acl",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "RouteTable": {
@@ -541,7 +541,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnRouteTable",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "RouteTableAssociation": {
@@ -560,7 +560,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnSubnetRouteTableAssociation",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "DefaultRoute": {
@@ -580,13 +580,13 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnRoute",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.PrivateSubnet",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "PrivateSubnet2": {
@@ -634,7 +634,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnSubnet",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Acl": {
@@ -642,7 +642,7 @@
                         "path": "kubernetes-end-to-end/Cluster/DefaultVpc/PrivateSubnet2/Acl",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "RouteTable": {
@@ -668,7 +668,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnRouteTable",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "RouteTableAssociation": {
@@ -687,7 +687,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnSubnetRouteTableAssociation",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "DefaultRoute": {
@@ -707,13 +707,13 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_ec2.CfnRoute",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.PrivateSubnet",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "IGW": {
@@ -732,7 +732,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnInternetGateway",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "VPCGW": {
@@ -751,13 +751,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnVPCGatewayAttachment",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_ec2.Vpc",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "KubectlHandlerRole": {
@@ -769,7 +769,7 @@
                     "path": "kubernetes-end-to-end/Cluster/KubectlHandlerRole/ImportKubectlHandlerRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Resource": {
@@ -852,7 +852,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "DefaultPolicy": {
@@ -900,19 +900,19 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.Policy",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Role",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "Role": {
@@ -924,7 +924,7 @@
                     "path": "kubernetes-end-to-end/Cluster/Role/ImportRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Resource": {
@@ -963,13 +963,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Role",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "ControlPlaneSecurityGroup": {
@@ -997,13 +997,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnSecurityGroup",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_ec2.SecurityGroup",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "Resource": {
@@ -1019,7 +1019,7 @@
                         "path": "kubernetes-end-to-end/Cluster/Resource/CreationRole/ImportCreationRole",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Resource": {
@@ -1073,7 +1073,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "DefaultPolicy": {
@@ -1162,19 +1162,19 @@
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.Policy",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.Role",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Resource": {
@@ -1186,13 +1186,13 @@
                         "path": "kubernetes-end-to-end/Cluster/Resource/Resource/Default",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CustomResource",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
@@ -1206,7 +1206,7 @@
                 "path": "kubernetes-end-to-end/Cluster/KubectlReadyBarrier",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "ClusterSecurityGroup": {
@@ -1214,7 +1214,7 @@
                 "path": "kubernetes-end-to-end/Cluster/ClusterSecurityGroup",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.Resource",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "HasEcrPublic": {
@@ -1222,7 +1222,7 @@
                 "path": "kubernetes-end-to-end/Cluster/HasEcrPublic",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnCondition",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "OpenIdConnectProvider": {
@@ -1238,19 +1238,19 @@
                         "path": "kubernetes-end-to-end/Cluster/OpenIdConnectProvider/Resource/Default",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CustomResource",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_eks.OpenIdConnectProvider",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "AwsAuth": {
@@ -1270,25 +1270,25 @@
                             "path": "kubernetes-end-to-end/Cluster/AwsAuth/manifest/Resource/Default",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.CfnResource",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CustomResource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_eks.KubernetesManifest",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_eks.AwsAuth",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "NodegroupDefaultCapacity": {
@@ -1304,7 +1304,7 @@
                         "path": "kubernetes-end-to-end/Cluster/NodegroupDefaultCapacity/NodeGroupRole/ImportNodeGroupRole",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Resource": {
@@ -1367,13 +1367,13 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.Role",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Resource": {
@@ -1413,13 +1413,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_eks.CfnNodegroup",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_eks.Nodegroup",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "chart-KubeView": {
@@ -1435,19 +1435,19 @@
                         "path": "kubernetes-end-to-end/Cluster/chart-KubeView/Resource/Default",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CustomResource",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_eks.HelmChart",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "kubeviewLoadBalancerAddress": {
@@ -1463,19 +1463,19 @@
                         "path": "kubernetes-end-to-end/Cluster/kubeviewLoadBalancerAddress/Resource/Default",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CustomResource",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_eks.KubernetesObjectValue",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "HttpEcho": {
@@ -1491,19 +1491,19 @@
                         "path": "kubernetes-end-to-end/Cluster/HttpEcho/Resource/Default",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CustomResource",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_eks.KubernetesManifest",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "httpecho-ingress-c8dc70a7LoadBalancerAddress": {
@@ -1519,25 +1519,25 @@
                         "path": "kubernetes-end-to-end/Cluster/httpecho-ingress-c8dc70a7LoadBalancerAddress/Resource/Default",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CustomResource",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_eks.KubernetesObjectValue",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_eks.Cluster",
-              "version": "2.89.0"
+              "version": "2.99.1"
             }
           },
           "@aws-cdk--aws-eks.ClusterResourceProvider": {
@@ -1557,7 +1557,7 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/NodeProxyAgentLayer/Code/Stage",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.AssetStaging",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "AssetBucket": {
@@ -1565,13 +1565,13 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/NodeProxyAgentLayer/Code/AssetBucket",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Resource": {
@@ -1584,20 +1584,20 @@
                           "s3Bucket": {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "s3Key": "3f579d6c1ab146cac713730c96809dd4a9c5d9750440fb835ab20fd6925e528c.zip"
+                          "s3Key": "9202bb21d52e07810fc1da0f6acf2dcb75a40a43a9a2efbcfc9ae39535c6260c.zip"
                         },
                         "description": "/opt/nodejs/node_modules/proxy-agent"
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_lambda.CfnLayerVersion",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.lambda_layer_node_proxy_agent.NodeProxyAgentLayer",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "OnEventHandler": {
@@ -1613,7 +1613,7 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/ImportServiceRole",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Resource": {
@@ -1652,13 +1652,13 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.Role",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Code": {
@@ -1670,7 +1670,7 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Code/Stage",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.AssetStaging",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "AssetBucket": {
@@ -1678,13 +1678,13 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Code/AssetBucket",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Resource": {
@@ -1697,7 +1697,7 @@
                           "s3Bucket": {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "s3Key": "82989df3aceaed44a4e32e9da0d2ae053d937f0bbb1306da3ed99cc78c704f4d.zip"
+                          "s3Key": "0341c848225d3d65d73ea163a4f6db8a7b978a337c14898ed7882290bbf04bab.zip"
                         },
                         "description": "onEvent handler for EKS cluster resource provider",
                         "environment": {
@@ -1723,13 +1723,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_lambda.Function",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "IsCompleteHandler": {
@@ -1745,7 +1745,7 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/ImportServiceRole",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Resource": {
@@ -1784,13 +1784,13 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.Role",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Code": {
@@ -1802,7 +1802,7 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Code/Stage",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.AssetStaging",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "AssetBucket": {
@@ -1810,13 +1810,13 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Code/AssetBucket",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Resource": {
@@ -1829,7 +1829,7 @@
                           "s3Bucket": {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "s3Key": "82989df3aceaed44a4e32e9da0d2ae053d937f0bbb1306da3ed99cc78c704f4d.zip"
+                          "s3Key": "0341c848225d3d65d73ea163a4f6db8a7b978a337c14898ed7882290bbf04bab.zip"
                         },
                         "description": "isComplete handler for EKS cluster resource provider",
                         "environment": {
@@ -1855,13 +1855,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_lambda.Function",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "Provider": {
@@ -1881,7 +1881,7 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/ImportServiceRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "Resource": {
@@ -1920,7 +1920,7 @@
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "DefaultPolicy": {
@@ -2007,19 +2007,19 @@
                                 },
                                 "constructInfo": {
                                   "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                                  "version": "2.89.0"
+                                  "version": "2.99.1"
                                 }
                               }
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.Policy",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.Role",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Code": {
@@ -2031,7 +2031,7 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Code/Stage",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.AssetStaging",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "AssetBucket": {
@@ -2039,13 +2039,13 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Code/AssetBucket",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Resource": {
@@ -2058,7 +2058,7 @@
                               "s3Bucket": {
                                 "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                               },
-                              "s3Key": "f2d30cfc360482320a52a4fcde8a70f3569df79ab30be24650fda58eb60052cf.zip"
+                              "s3Key": "7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94.zip"
                             },
                             "description": "AWS CDK resource provider framework - onEvent (kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
                             "environment": {
@@ -2093,13 +2093,13 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_lambda.Function",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "framework-isComplete": {
@@ -2115,7 +2115,7 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/ImportServiceRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "Resource": {
@@ -2154,7 +2154,7 @@
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "DefaultPolicy": {
@@ -2234,19 +2234,19 @@
                                 },
                                 "constructInfo": {
                                   "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                                  "version": "2.89.0"
+                                  "version": "2.99.1"
                                 }
                               }
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.Policy",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.Role",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Code": {
@@ -2258,7 +2258,7 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Code/Stage",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.AssetStaging",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "AssetBucket": {
@@ -2266,13 +2266,13 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Code/AssetBucket",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Resource": {
@@ -2285,7 +2285,7 @@
                               "s3Bucket": {
                                 "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                               },
-                              "s3Key": "f2d30cfc360482320a52a4fcde8a70f3569df79ab30be24650fda58eb60052cf.zip"
+                              "s3Key": "7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94.zip"
                             },
                             "description": "AWS CDK resource provider framework - isComplete (kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
                             "environment": {
@@ -2317,13 +2317,13 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_lambda.Function",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "framework-onTimeout": {
@@ -2339,7 +2339,7 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/ImportServiceRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "Resource": {
@@ -2378,7 +2378,7 @@
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "DefaultPolicy": {
@@ -2458,19 +2458,19 @@
                                 },
                                 "constructInfo": {
                                   "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                                  "version": "2.89.0"
+                                  "version": "2.99.1"
                                 }
                               }
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.Policy",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.Role",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Code": {
@@ -2482,7 +2482,7 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Code/Stage",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.AssetStaging",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "AssetBucket": {
@@ -2490,13 +2490,13 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Code/AssetBucket",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Resource": {
@@ -2509,7 +2509,7 @@
                               "s3Bucket": {
                                 "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                               },
-                              "s3Key": "f2d30cfc360482320a52a4fcde8a70f3569df79ab30be24650fda58eb60052cf.zip"
+                              "s3Key": "7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94.zip"
                             },
                             "description": "AWS CDK resource provider framework - onTimeout (kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider)",
                             "environment": {
@@ -2541,13 +2541,13 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_lambda.Function",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "waiter-state-machine": {
@@ -2563,7 +2563,7 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/ImportRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "Resource": {
@@ -2596,7 +2596,7 @@
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "DefaultPolicy": {
@@ -2676,19 +2676,19 @@
                                 },
                                 "constructInfo": {
                                   "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                                  "version": "2.89.0"
+                                  "version": "2.99.1"
                                 }
                               }
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.Policy",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.Role",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Resource": {
@@ -2696,7 +2696,7 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Resource",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
@@ -2708,7 +2708,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.custom_resources.Provider",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "CDKMetadata": {
@@ -2720,7 +2720,7 @@
                     "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/CDKMetadata/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Condition": {
@@ -2728,7 +2728,7 @@
                     "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/CDKMetadata/Condition",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnCondition",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
@@ -2742,7 +2742,7 @@
                 "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/Service-principalMap",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnMapping",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "kubernetesendtoendawscdkawseksClusterResourceProviderOnEventHandlerServiceRole89B277DFArn": {
@@ -2750,7 +2750,7 @@
                 "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/kubernetesendtoendawscdkawseksClusterResourceProviderOnEventHandlerServiceRole89B277DFArn",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnOutput",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "kubernetesendtoendawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRole181D209CArn": {
@@ -2758,7 +2758,7 @@
                 "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/kubernetesendtoendawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRole181D209CArn",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnOutput",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "kubernetesendtoendawscdkawseksClusterResourceProviderframeworkonEvent2529EE1FArn": {
@@ -2766,13 +2766,13 @@
                 "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.ClusterResourceProvider/kubernetesendtoendawscdkawseksClusterResourceProviderframeworkonEvent2529EE1FArn",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnOutput",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.NestedStack",
-              "version": "2.89.0"
+              "version": "2.99.1"
             }
           },
           "@aws-cdk--aws-eks.ClusterResourceProvider.NestedStack": {
@@ -2801,7 +2801,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/dbb7d453df155a36397b54959d56dac0c2da2a353a7942ab5094bf7ec5bc86d4.json"
+                          "/51857938d7cc805125ed2e2ad57b9314c8a37a660ab91db81e99ed315626f215.json"
                         ]
                       ]
                     }
@@ -2809,7 +2809,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnStack",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               }
             },
@@ -2835,7 +2835,7 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/Handler/Code/Stage",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.AssetStaging",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "AssetBucket": {
@@ -2843,13 +2843,13 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/Handler/Code/AssetBucket",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Resource": {
@@ -2862,7 +2862,7 @@
                           "s3Bucket": {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "s3Key": "9017774b84ae2457b1b2ad6fcbb4860d8ce2537062c77010b24d9b156ced5a1b.zip"
+                          "s3Key": "0f19e51d1e47290d7a33e0b67405e4722942dee4b92b9d29425fccf0d99017c3.zip"
                         },
                         "description": "onEvent handler for EKS kubectl resource provider",
                         "handler": "index.handler",
@@ -2878,7 +2878,7 @@
                         "role": {
                           "Ref": "referencetokubernetesendtoendClusterKubectlHandlerRoleCD163246Arn"
                         },
-                        "runtime": "python3.7",
+                        "runtime": "python3.10",
                         "timeout": 900,
                         "vpcConfig": {
                           "subnetIds": [
@@ -2899,13 +2899,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_lambda.Function",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "AwsCliLayer": {
@@ -2921,7 +2921,7 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/AwsCliLayer/Code/Stage",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.AssetStaging",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "AssetBucket": {
@@ -2929,13 +2929,13 @@
                         "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/AwsCliLayer/Code/AssetBucket",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Resource": {
@@ -2955,13 +2955,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_lambda.CfnLayerVersion",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.lambda_layer_awscli.AwsCliLayer",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "ConditionalPolicyArn": {
@@ -2969,7 +2969,7 @@
                 "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/ConditionalPolicyArn",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.Resource",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "conditionalPolicy": {
@@ -2977,7 +2977,7 @@
                 "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/conditionalPolicy",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.Resource",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "Provider": {
@@ -2997,7 +2997,7 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/ImportServiceRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "Resource": {
@@ -3048,7 +3048,7 @@
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "DefaultPolicy": {
@@ -3102,19 +3102,19 @@
                                 },
                                 "constructInfo": {
                                   "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                                  "version": "2.89.0"
+                                  "version": "2.99.1"
                                 }
                               }
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.Policy",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.Role",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Code": {
@@ -3126,7 +3126,7 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/Code/Stage",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.AssetStaging",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           },
                           "AssetBucket": {
@@ -3134,13 +3134,13 @@
                             "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/Code/AssetBucket",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Resource": {
@@ -3153,7 +3153,7 @@
                               "s3Bucket": {
                                 "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                               },
-                              "s3Key": "f2d30cfc360482320a52a4fcde8a70f3569df79ab30be24650fda58eb60052cf.zip"
+                              "s3Key": "7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94.zip"
                             },
                             "description": "AWS CDK resource provider framework - onEvent (kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/Provider)",
                             "environment": {
@@ -3194,19 +3194,19 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_lambda.Function",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.custom_resources.Provider",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "CDKMetadata": {
@@ -3218,7 +3218,7 @@
                     "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/CDKMetadata/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Condition": {
@@ -3226,7 +3226,7 @@
                     "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/CDKMetadata/Condition",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnCondition",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
@@ -3240,7 +3240,7 @@
                 "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/kubernetesendtoendawscdkawseksKubectlProviderframeworkonEvent5CD61922Arn",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnOutput",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "reference-to-kubernetesendtoendKubectl37714510Ref": {
@@ -3248,7 +3248,7 @@
                 "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendKubectl37714510Ref",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnParameter",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "reference-to-kubernetesendtoendClusterKubectlHandlerRoleCD163246Arn": {
@@ -3256,7 +3256,7 @@
                 "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendClusterKubectlHandlerRoleCD163246Arn",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnParameter",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "reference-to-kubernetesendtoendClusterDefaultVpcPrivateSubnet1Subnet0309CF62Ref": {
@@ -3264,7 +3264,7 @@
                 "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendClusterDefaultVpcPrivateSubnet1Subnet0309CF62Ref",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnParameter",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "reference-to-kubernetesendtoendClusterDefaultVpcPrivateSubnet2Subnet6E2BE4A8Ref": {
@@ -3272,7 +3272,7 @@
                 "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendClusterDefaultVpcPrivateSubnet2Subnet6E2BE4A8Ref",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnParameter",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "reference-to-kubernetesendtoendCluster81EDAB07ClusterSecurityGroupId": {
@@ -3280,13 +3280,13 @@
                 "path": "kubernetes-end-to-end/@aws-cdk--aws-eks.KubectlProvider/reference-to-kubernetesendtoendCluster81EDAB07ClusterSecurityGroupId",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnParameter",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_eks.KubectlProvider",
-              "version": "2.89.0"
+              "version": "2.99.1"
             }
           },
           "@aws-cdk--aws-eks.KubectlProvider.NestedStack": {
@@ -3338,7 +3338,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/961ffab18fd16feb8f1c9d299acb483b29324f55a4437ba83e211e24a95eba84.json"
+                          "/47a415c0398810d82a33decd509523e96e6b80cd00d8a6196efcf909168ec892.json"
                         ]
                       ]
                     }
@@ -3346,7 +3346,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnStack",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               }
             },
@@ -3376,19 +3376,19 @@
                             "path": "kubernetes-end-to-end/kubernetesendtoendCluster80063B22-AlbController/alb-sa/ConditionJson/Resource/Default",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.CfnResource",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CustomResource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnJson",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "Role": {
@@ -3400,7 +3400,7 @@
                         "path": "kubernetes-end-to-end/kubernetesendtoendCluster80063B22-AlbController/alb-sa/Role/ImportRole",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "Resource": {
@@ -3435,7 +3435,7 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       },
                       "DefaultPolicy": {
@@ -3671,19 +3671,19 @@
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.Policy",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.Role",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   },
                   "manifest-alb-saServiceAccountResource": {
@@ -3699,25 +3699,25 @@
                             "path": "kubernetes-end-to-end/kubernetesendtoendCluster80063B22-AlbController/alb-sa/manifest-alb-saServiceAccountResource/Resource/Default",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.CfnResource",
-                              "version": "2.89.0"
+                              "version": "2.99.1"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CustomResource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_eks.KubernetesManifest",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_eks.ServiceAccount",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "Resource": {
@@ -3733,25 +3733,25 @@
                         "path": "kubernetes-end-to-end/kubernetesendtoendCluster80063B22-AlbController/Resource/Resource/Default",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
-                          "version": "2.89.0"
+                          "version": "2.99.1"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CustomResource",
-                      "version": "2.89.0"
+                      "version": "2.99.1"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_eks.HelmChart",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_eks.AlbController",
-              "version": "2.89.0"
+              "version": "2.99.1"
             }
           },
           "Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider": {
@@ -3763,7 +3763,7 @@
                 "path": "kubernetes-end-to-end/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Staging",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.AssetStaging",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "Role": {
@@ -3771,7 +3771,7 @@
                 "path": "kubernetes-end-to-end/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Role",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "Handler": {
@@ -3779,13 +3779,13 @@
                 "path": "kubernetes-end-to-end/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Handler",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.CustomResourceProvider",
-              "version": "2.89.0"
+              "version": "2.99.1"
             }
           },
           "AWSCDKCfnUtilsProviderCustomResourceProvider": {
@@ -3797,7 +3797,7 @@
                 "path": "kubernetes-end-to-end/AWSCDKCfnUtilsProviderCustomResourceProvider/Staging",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.AssetStaging",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "Role": {
@@ -3805,7 +3805,7 @@
                 "path": "kubernetes-end-to-end/AWSCDKCfnUtilsProviderCustomResourceProvider/Role",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "Handler": {
@@ -3813,13 +3813,13 @@
                 "path": "kubernetes-end-to-end/AWSCDKCfnUtilsProviderCustomResourceProvider/Handler",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.CustomResourceProvider",
-              "version": "2.89.0"
+              "version": "2.99.1"
             }
           },
           "KubeViewEndpoint": {
@@ -3827,7 +3827,7 @@
             "path": "kubernetes-end-to-end/KubeViewEndpoint",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
-              "version": "2.89.0"
+              "version": "2.99.1"
             }
           },
           "ApplicationEndpoint": {
@@ -3835,7 +3835,7 @@
             "path": "kubernetes-end-to-end/ApplicationEndpoint",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
-              "version": "2.89.0"
+              "version": "2.99.1"
             }
           },
           "CDKMetadata": {
@@ -3847,7 +3847,7 @@
                 "path": "kubernetes-end-to-end/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               },
               "Condition": {
@@ -3855,7 +3855,7 @@
                 "path": "kubernetes-end-to-end/CDKMetadata/Condition",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnCondition",
-                  "version": "2.89.0"
+                  "version": "2.99.1"
                 }
               }
             },
@@ -3869,7 +3869,7 @@
             "path": "kubernetes-end-to-end/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
-              "version": "2.89.0"
+              "version": "2.99.1"
             }
           },
           "CheckBootstrapVersion": {
@@ -3877,13 +3877,13 @@
             "path": "kubernetes-end-to-end/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
-              "version": "2.89.0"
+              "version": "2.99.1"
             }
           }
         },
         "constructInfo": {
           "fqn": "aws-cdk-lib.Stack",
-          "version": "2.89.0"
+          "version": "2.99.1"
         }
       },
       "Tree": {
@@ -3897,7 +3897,7 @@
     },
     "constructInfo": {
       "fqn": "aws-cdk-lib.App",
-      "version": "2.89.0"
+      "version": "2.99.1"
     }
   }
 }
