@@ -49,7 +49,7 @@ project.package.addField('workspaces', {
 project.testTask.reset();
 
 project.buildTask._locked = false
-project.buildTask.reset('lerna run build');
+project.buildTask.reset('lerna run build --skip-nx-cache --no-bail');
 project.buildTask._locked = true
 
 // no package task is needed
