@@ -3,19 +3,19 @@ module example.com/kubernetes-end-to-end-aws
 go 1.18
 
 require (
-	github.com/aws/aws-cdk-go/awscdk/v2 v2.78.0
+	github.com/aws/aws-cdk-go/awscdk/v2 v2.99.1
 	github.com/aws/constructs-go/constructs/v10 v10.2.70
 	github.com/aws/jsii-runtime-go v1.89.0
-	github.com/cdk8s-team/cdk8s-core-go/cdk8s/v2 v2.66.2
-	github.com/cdk8s-team/cdk8s-plus-go/cdk8splus25/v2 v2.22.25
+	github.com/cdk8s-team/cdk8s-core-go/cdk8s/v2 v2.66.4
+	github.com/cdk8s-team/cdk8s-plus-go/cdk8splus25/v2 v2.22.27
 	github.com/cdklabs/awscdk-kubectl-go/kubectlv25/v2 v2.0.3
 )
 
 require (
 	github.com/Masterminds/semver/v3 v3.2.1 // indirect
-	github.com/cdklabs/awscdk-asset-awscli-go/awscliv1/v2 v2.2.154 // indirect
-	github.com/cdklabs/awscdk-asset-kubectl-go/kubectlv20/v2 v2.1.1 // indirect
-	github.com/cdklabs/awscdk-asset-node-proxy-agent-go/nodeproxyagentv5/v2 v2.0.129 // indirect
+	github.com/cdklabs/awscdk-asset-awscli-go/awscliv1/v2 v2.2.200 // indirect
+	github.com/cdklabs/awscdk-asset-kubectl-go/kubectlv20/v2 v2.1.2 // indirect
+	github.com/cdklabs/awscdk-asset-node-proxy-agent-go/nodeproxyagentv6/v2 v2.0.1 // indirect
 	github.com/fatih/color v1.15.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect

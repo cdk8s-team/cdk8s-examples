@@ -8,15 +8,5 @@
   "scripts": {
     "build": "npm run synth",
     "synth": "cdk8s synth"
-  },
-  "dependencies": {
-    "cdk8s": "^2.66.2",
-    "constructs": "^10.1.295",
-    "cdk8s-plus-26": "^2.18.28"
-  },
-  "devDependencies": {
-    "cdk8s-cli": "^2.2.5",
-    "typescript": "^4.9.5",
-    "ts-node": "^10.9.1"
   }
 }

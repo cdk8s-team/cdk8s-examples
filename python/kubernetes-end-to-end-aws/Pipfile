@@ -7,9 +7,9 @@ verify_ssl = true
 
 [packages]
 constructs = "~=10.2.70"
-cdk8s = "~=2.66.2"
-cdk8s-plus-26 = "~=2.18.28"
-aws-cdk-lib = "~=2.78.0"
+cdk8s = "~=2.66.4"
+cdk8s-plus-26 = "~=2.18.30"
+aws-cdk-lib = "~=2.99.1"
 "aws-cdk.lambda-layer-kubectl-v25" = "~=2.0.3"
 
 [requires]

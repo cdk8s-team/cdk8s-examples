@@ -997,7 +997,7 @@
       "OpenIdConnectIssuerUrl"
      ]
     },
-    "CodeHash": "48e9fd6cee1d2c5f41da5c382b67d28876e6930ade034bffcfe0739f878fec68"
+    "CodeHash": "a3f66c60067b06b5d9d00094e9e817ee39dd7cb5c315c8c254f5f3c571959ce5"
    },
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
@@ -1297,7 +1297,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/23589ff628d8e921ffbc44a5aed5d6d734ad64baad4018c81179583264bbedad.json"
+       "/78e62b55366bd923ab05ee70f75c56999e5fc050c5ffce5ec6d48ec159d28b42.json"
       ]
      ]
     }
@@ -1352,7 +1352,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/4aab3c63017b558feb0a529d159dafb4d1b307ca1ef19007974bd119b0ad9219.json"
+       "/23e1216904c0ed661c05f90516091c4d839030a4fee5cf5a8a757a385065a910.json"
       ]
      ]
     }
@@ -1857,7 +1857,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "48e9fd6cee1d2c5f41da5c382b67d28876e6930ade034bffcfe0739f878fec68.zip"
+     "S3Key": "a3f66c60067b06b5d9d00094e9e817ee39dd7cb5c315c8c254f5f3c571959ce5.zip"
     },
     "Timeout": 900,
     "MemorySize": 128,
@@ -1868,14 +1868,14 @@
       "Arn"
      ]
     },
-    "Runtime": "nodejs16.x"
+    "Runtime": "nodejs18.x"
    },
    "DependsOn": [
     "CustomAWSCDKOpenIdConnectProviderCustomResourceProviderRole517FED65"
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Handler",
-    "aws:asset:path": "asset.48e9fd6cee1d2c5f41da5c382b67d28876e6930ade034bffcfe0739f878fec68",
+    "aws:asset:path": "asset.a3f66c60067b06b5d9d00094e9e817ee39dd7cb5c315c8c254f5f3c571959ce5",
     "aws:asset:property": "Code"
    }
   },
@@ -1911,7 +1911,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "28739348edff6f1084f6a50d8d934e2d3fc2a3bb77442d8a9a1361d51ccd03c0.zip"
+     "S3Key": "f7fc8760e0f3c8e0059c1fb08137d328a5e548dac0a4ba7927fae7839b92ea12.zip"
     },
     "Timeout": 900,
     "MemorySize": 128,
@@ -1929,14 +1929,14 @@
    ],
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/AWSCDKCfnUtilsProviderCustomResourceProvider/Handler",
-    "aws:asset:path": "asset.28739348edff6f1084f6a50d8d934e2d3fc2a3bb77442d8a9a1361d51ccd03c0",
+    "aws:asset:path": "asset.f7fc8760e0f3c8e0059c1fb08137d328a5e548dac0a4ba7927fae7839b92ea12",
     "aws:asset:property": "Code"
    }
   },
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VSwW7bMAz9lt5lNXPXYbvNNYYu67YYSeFrIctsoliWApFyEBj+99F2M7cnPj6LzyQfU9l//SZXN+qMia6bxJpK9jtSuhFMvfR496IQgVBmYxB4Jx+iboAeFIKwqq1qJfNX91tdIJQQ0HgnoEHZ5zYiQRCbE7h1nXvnQFMRfGdqZrMzZpEO4ilWEBwQ4B/lzCsgib++hn3w8SRYd0l+gm3zgwr0rmZTHVm0VDaCyGzFP6HgrWX9HYTOaMi09tHRIECnsi9PetQsi1wUsbJG72LFOiO3oK2PBM+qsrDwC8db8NooGse8Ph7Bj3UxtavoURGc1UUUwXQMF+G1o6nt64O5k7csI975oQVH3LqOwdDl8bqDD8QgjGplv/Vzf1MsPM8yCc5oGMTkFvu4N24vtoA+Bs0FbIlvl5Tr32FeX22uk803wOAXjsSHwv8u8udNpFPkBa/k55vvb1d0O99FYsejSBq2S5NNuvRePs24TO+ngxmEY3/lEW+7T19kuuJDPKIxSWDPTAtyO8d/KbvQu6UCAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VS226DMAz9lr6HrGMXaW9jaNq6W1E78TqF4LUpIakSh6pC/PsMtGN78vEhPtg+jnl7d8cvZ+LgI1lWkVYFb9coZMWI+mr91ZfwHtDzpA/MX/GHICvAB+GBaVEXpeDpt3kTR3A5OK+sYVB53qY6eATHlnswizK1xoDEzNlGlcQmB58E3LLXUIAzgODfhVHf4JF92BI2zoY9I90peQZdp1vh8E/NstiRaC50AJbogn6CzmpN+mtwjZKQSGmDwY6BjHmb72WvmWcpy0KhlVyHgnR6bkIrGxA+RaFh4ieOtmClEtiPeX7cg8dFNrQr8EkgHMSRZU41BCfhhcGh7fODsZNTliDtfFuDQWpdBqfw+HTewT+iY0rUvF3Zsb8hZpZmGQRH1HVscIt83CizYSvwNjhJBWSJraeU6v9gWl+pzpONN0DgxffEv8JfF+nzMuA+0ILn/Hp2f7qii/EuIt0fRVSRXRJ11MQ3/HXEeXwzHEzHDPnLd/6iubzl8ZzPZzuvVOTIM1UDX43xBzRD5T6lAgAA"
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end/CDKMetadata/Default"
