@@ -75,6 +75,18 @@ func init() {
 		reflect.TypeOf((*CertificateSpecKeystoresPkcs12PasswordSecretRef)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
+		"cert-managerio.CertificateSpecNameConstraints",
+		reflect.TypeOf((*CertificateSpecNameConstraints)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"cert-managerio.CertificateSpecNameConstraintsExcluded",
+		reflect.TypeOf((*CertificateSpecNameConstraintsExcluded)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"cert-managerio.CertificateSpecNameConstraintsPermitted",
+		reflect.TypeOf((*CertificateSpecNameConstraintsPermitted)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"cert-managerio.CertificateSpecPrivateKey",
 		reflect.TypeOf((*CertificateSpecPrivateKey)(nil)).Elem(),
 	)

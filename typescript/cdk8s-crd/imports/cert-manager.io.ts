@@ -185,6 +185,14 @@ export interface CertificateSpec {
   readonly literalSubject?: string;
 
   /**
+   * x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10
+   * This is an Alpha Feature and is only enabled with the `--feature-gates=useCertificateRequestNameConstraints=true` option set on both the controller and webhook components.
+   *
+   * @schema CertificateSpec#nameConstraints
+   */
+  readonly nameConstraints?: CertificateSpecNameConstraints;
+
+  /**
    * Private key options. These include the key algorithm and size, the used encoding and the rotation policy.
    *
    * @schema CertificateSpec#privateKey
@@ -265,6 +273,7 @@ export function toJson_CertificateSpec(obj: CertificateSpec | undefined): Record
     'issuerRef': toJson_CertificateSpecIssuerRef(obj.issuerRef),
     'keystores': toJson_CertificateSpecKeystores(obj.keystores),
     'literalSubject': obj.literalSubject,
+    'nameConstraints': toJson_CertificateSpecNameConstraints(obj.nameConstraints),
     'privateKey': toJson_CertificateSpecPrivateKey(obj.privateKey),
     'renewBefore': obj.renewBefore,
     'revisionHistoryLimit': obj.revisionHistoryLimit,
@@ -385,6 +394,52 @@ export function toJson_CertificateSpecKeystores(obj: CertificateSpecKeystores | 
   const result = {
     'jks': toJson_CertificateSpecKeystoresJks(obj.jks),
     'pkcs12': toJson_CertificateSpecKeystoresPkcs12(obj.pkcs12),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10
+ * This is an Alpha Feature and is only enabled with the `--feature-gates=useCertificateRequestNameConstraints=true` option set on both the controller and webhook components.
+ *
+ * @schema CertificateSpecNameConstraints
+ */
+export interface CertificateSpecNameConstraints {
+  /**
+   * if true then the name constraints are marked critical.
+   *
+   * @schema CertificateSpecNameConstraints#critical
+   */
+  readonly critical?: boolean;
+
+  /**
+   * Excluded contains the constraints which must be disallowed. Any name matching a restriction in the excluded field is invalid regardless of information appearing in the permitted
+   *
+   * @schema CertificateSpecNameConstraints#excluded
+   */
+  readonly excluded?: CertificateSpecNameConstraintsExcluded;
+
+  /**
+   * Permitted contains the constraints in which the names must be located.
+   *
+   * @schema CertificateSpecNameConstraints#permitted
+   */
+  readonly permitted?: CertificateSpecNameConstraintsPermitted;
+
+}
+
+/**
+ * Converts an object of type 'CertificateSpecNameConstraints' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CertificateSpecNameConstraints(obj: CertificateSpecNameConstraints | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'critical': obj.critical,
+    'excluded': toJson_CertificateSpecNameConstraintsExcluded(obj.excluded),
+    'permitted': toJson_CertificateSpecNameConstraintsPermitted(obj.permitted),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -708,6 +763,112 @@ export function toJson_CertificateSpecKeystoresPkcs12(obj: CertificateSpecKeysto
   const result = {
     'create': obj.create,
     'passwordSecretRef': toJson_CertificateSpecKeystoresPkcs12PasswordSecretRef(obj.passwordSecretRef),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * Excluded contains the constraints which must be disallowed. Any name matching a restriction in the excluded field is invalid regardless of information appearing in the permitted
+ *
+ * @schema CertificateSpecNameConstraintsExcluded
+ */
+export interface CertificateSpecNameConstraintsExcluded {
+  /**
+   * DNSDomains is a list of DNS domains that are permitted or excluded.
+   *
+   * @schema CertificateSpecNameConstraintsExcluded#dnsDomains
+   */
+  readonly dnsDomains?: string[];
+
+  /**
+   * EmailAddresses is a list of Email Addresses that are permitted or excluded.
+   *
+   * @schema CertificateSpecNameConstraintsExcluded#emailAddresses
+   */
+  readonly emailAddresses?: string[];
+
+  /**
+   * IPRanges is a list of IP Ranges that are permitted or excluded. This should be a valid CIDR notation.
+   *
+   * @schema CertificateSpecNameConstraintsExcluded#ipRanges
+   */
+  readonly ipRanges?: string[];
+
+  /**
+   * URIDomains is a list of URI domains that are permitted or excluded.
+   *
+   * @schema CertificateSpecNameConstraintsExcluded#uriDomains
+   */
+  readonly uriDomains?: string[];
+
+}
+
+/**
+ * Converts an object of type 'CertificateSpecNameConstraintsExcluded' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CertificateSpecNameConstraintsExcluded(obj: CertificateSpecNameConstraintsExcluded | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'dnsDomains': obj.dnsDomains?.map(y => y),
+    'emailAddresses': obj.emailAddresses?.map(y => y),
+    'ipRanges': obj.ipRanges?.map(y => y),
+    'uriDomains': obj.uriDomains?.map(y => y),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * Permitted contains the constraints in which the names must be located.
+ *
+ * @schema CertificateSpecNameConstraintsPermitted
+ */
+export interface CertificateSpecNameConstraintsPermitted {
+  /**
+   * DNSDomains is a list of DNS domains that are permitted or excluded.
+   *
+   * @schema CertificateSpecNameConstraintsPermitted#dnsDomains
+   */
+  readonly dnsDomains?: string[];
+
+  /**
+   * EmailAddresses is a list of Email Addresses that are permitted or excluded.
+   *
+   * @schema CertificateSpecNameConstraintsPermitted#emailAddresses
+   */
+  readonly emailAddresses?: string[];
+
+  /**
+   * IPRanges is a list of IP Ranges that are permitted or excluded. This should be a valid CIDR notation.
+   *
+   * @schema CertificateSpecNameConstraintsPermitted#ipRanges
+   */
+  readonly ipRanges?: string[];
+
+  /**
+   * URIDomains is a list of URI domains that are permitted or excluded.
+   *
+   * @schema CertificateSpecNameConstraintsPermitted#uriDomains
+   */
+  readonly uriDomains?: string[];
+
+}
+
+/**
+ * Converts an object of type 'CertificateSpecNameConstraintsPermitted' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CertificateSpecNameConstraintsPermitted(obj: CertificateSpecNameConstraintsPermitted | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'dnsDomains': obj.dnsDomains?.map(y => y),
+    'emailAddresses': obj.emailAddresses?.map(y => y),
+    'ipRanges': obj.ipRanges?.map(y => y),
+    'uriDomains': obj.uriDomains?.map(y => y),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
