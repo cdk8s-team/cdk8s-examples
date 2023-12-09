@@ -160,6 +160,7 @@ class CertificateProps:
         "is_ca": "isCa",
         "keystores": "keystores",
         "literal_subject": "literalSubject",
+        "name_constraints": "nameConstraints",
         "private_key": "privateKey",
         "renew_before": "renewBefore",
         "revision_history_limit": "revisionHistoryLimit",
@@ -185,6 +186,7 @@ class CertificateSpec:
         is_ca: typing.Optional[builtins.bool] = None,
         keystores: typing.Optional[typing.Union["CertificateSpecKeystores", typing.Dict[builtins.str, typing.Any]]] = None,
         literal_subject: typing.Optional[builtins.str] = None,
+        name_constraints: typing.Optional[typing.Union["CertificateSpecNameConstraints", typing.Dict[builtins.str, typing.Any]]] = None,
         private_key: typing.Optional[typing.Union["CertificateSpecPrivateKey", typing.Dict[builtins.str, typing.Any]]] = None,
         renew_before: typing.Optional[builtins.str] = None,
         revision_history_limit: typing.Optional[jsii.Number] = None,
@@ -209,6 +211,7 @@ class CertificateSpec:
         :param is_ca: Requested basic constraints isCA value. The isCA value is used to set the ``isCA`` field on the created CertificateRequest resources. Note that the issuer may choose to ignore the requested isCA value, just like any other requested attribute. If true, this will automatically add the ``cert sign`` usage to the list of requested ``usages``.
         :param keystores: Additional keystore output formats to be stored in the Certificate's Secret.
         :param literal_subject: Requested X.509 certificate subject, represented using the LDAP "String Representation of a Distinguished Name" [1]. Important: the LDAP string format also specifies the order of the attributes in the subject, this is important when issuing certs for LDAP authentication. Example: ``CN=foo,DC=corp,DC=example,DC=com`` More info [1]: https://datatracker.ietf.org/doc/html/rfc4514 More info: https://github.com/cert-manager/cert-manager/issues/3203 More info: https://github.com/cert-manager/cert-manager/issues/4424 Cannot be set if the ``subject`` or ``commonName`` field is set. This is an Alpha Feature and is only enabled with the ``--feature-gates=LiteralCertificateSubject=true`` option set on both the controller and webhook components.
+        :param name_constraints: x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10 This is an Alpha Feature and is only enabled with the ``--feature-gates=useCertificateRequestNameConstraints=true`` option set on both the controller and webhook components.
         :param private_key: Private key options. These include the key algorithm and size, the used encoding and the rotation policy.
         :param renew_before: How long before the currently issued certificate's expiry cert-manager should renew the certificate. For example, if a certificate is valid for 60 minutes, and ``renewBefore=10m``, cert-manager will begin to attempt to renew the certificate 50 minutes after it was issued (i.e. when there are 10 minutes remaining until the certificate is no longer valid). NOTE: The actual lifetime of the issued certificate is used to determine the renewal time. If an issuer returns a certificate with a different lifetime than the one requested, cert-manager will use the lifetime of the issued certificate. If unset, this defaults to 1/3 of the issued certificate's lifetime. Minimum accepted value is 5 minutes. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
         :param revision_history_limit: The maximum number of CertificateRequest revisions that are maintained in the Certificate's history. Each revision represents a single ``CertificateRequest`` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number. If set, revisionHistoryLimit must be a value of ``1`` or greater. If unset (``nil``), revisions will not be garbage collected. Default value is ``nil``.
@@ -223,6 +226,8 @@ class CertificateSpec:
             issuer_ref = CertificateSpecIssuerRef(**issuer_ref)
         if isinstance(keystores, dict):
             keystores = CertificateSpecKeystores(**keystores)
+        if isinstance(name_constraints, dict):
+            name_constraints = CertificateSpecNameConstraints(**name_constraints)
         if isinstance(private_key, dict):
             private_key = CertificateSpecPrivateKey(**private_key)
         if isinstance(secret_template, dict):
@@ -243,6 +248,7 @@ class CertificateSpec:
             check_type(argname="argument is_ca", value=is_ca, expected_type=type_hints["is_ca"])
             check_type(argname="argument keystores", value=keystores, expected_type=type_hints["keystores"])
             check_type(argname="argument literal_subject", value=literal_subject, expected_type=type_hints["literal_subject"])
+            check_type(argname="argument name_constraints", value=name_constraints, expected_type=type_hints["name_constraints"])
             check_type(argname="argument private_key", value=private_key, expected_type=type_hints["private_key"])
             check_type(argname="argument renew_before", value=renew_before, expected_type=type_hints["renew_before"])
             check_type(argname="argument revision_history_limit", value=revision_history_limit, expected_type=type_hints["revision_history_limit"])
@@ -274,6 +280,8 @@ class CertificateSpec:
             self._values["keystores"] = keystores
         if literal_subject is not None:
             self._values["literal_subject"] = literal_subject
+        if name_constraints is not None:
+            self._values["name_constraints"] = name_constraints
         if private_key is not None:
             self._values["private_key"] = private_key
         if renew_before is not None:
@@ -415,6 +423,15 @@ class CertificateSpec:
         '''
         result = self._values.get("literal_subject")
         return typing.cast(typing.Optional[builtins.str], result)
+
+    @builtins.property
+    def name_constraints(self) -> typing.Optional["CertificateSpecNameConstraints"]:
+        '''x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10 This is an Alpha Feature and is only enabled with the ``--feature-gates=useCertificateRequestNameConstraints=true`` option set on both the controller and webhook components.
+
+        :schema: CertificateSpec#nameConstraints
+        '''
+        result = self._values.get("name_constraints")
+        return typing.cast(typing.Optional["CertificateSpecNameConstraints"], result)
 
     @builtins.property
     def private_key(self) -> typing.Optional["CertificateSpecPrivateKey"]:
@@ -962,6 +979,279 @@ class CertificateSpecKeystoresPkcs12PasswordSecretRef:
 
 
 @jsii.data_type(
+    jsii_type="iocert-manager.CertificateSpecNameConstraints",
+    jsii_struct_bases=[],
+    name_mapping={
+        "critical": "critical",
+        "excluded": "excluded",
+        "permitted": "permitted",
+    },
+)
+class CertificateSpecNameConstraints:
+    def __init__(
+        self,
+        *,
+        critical: typing.Optional[builtins.bool] = None,
+        excluded: typing.Optional[typing.Union["CertificateSpecNameConstraintsExcluded", typing.Dict[builtins.str, typing.Any]]] = None,
+        permitted: typing.Optional[typing.Union["CertificateSpecNameConstraintsPermitted", typing.Dict[builtins.str, typing.Any]]] = None,
+    ) -> None:
+        '''x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10 This is an Alpha Feature and is only enabled with the ``--feature-gates=useCertificateRequestNameConstraints=true`` option set on both the controller and webhook components.
+
+        :param critical: if true then the name constraints are marked critical.
+        :param excluded: Excluded contains the constraints which must be disallowed. Any name matching a restriction in the excluded field is invalid regardless of information appearing in the permitted
+        :param permitted: Permitted contains the constraints in which the names must be located.
+
+        :schema: CertificateSpecNameConstraints
+        '''
+        if isinstance(excluded, dict):
+            excluded = CertificateSpecNameConstraintsExcluded(**excluded)
+        if isinstance(permitted, dict):
+            permitted = CertificateSpecNameConstraintsPermitted(**permitted)
+        if __debug__:
+            type_hints = typing.get_type_hints(_typecheckingstub__4e41e90c83f48c5162562588989d0033ac0148b3c79315d65e7db457c8bbb031)
+            check_type(argname="argument critical", value=critical, expected_type=type_hints["critical"])
+            check_type(argname="argument excluded", value=excluded, expected_type=type_hints["excluded"])
+            check_type(argname="argument permitted", value=permitted, expected_type=type_hints["permitted"])
+        self._values: typing.Dict[builtins.str, typing.Any] = {}
+        if critical is not None:
+            self._values["critical"] = critical
+        if excluded is not None:
+            self._values["excluded"] = excluded
+        if permitted is not None:
+            self._values["permitted"] = permitted
+
+    @builtins.property
+    def critical(self) -> typing.Optional[builtins.bool]:
+        '''if true then the name constraints are marked critical.
+
+        :schema: CertificateSpecNameConstraints#critical
+        '''
+        result = self._values.get("critical")
+        return typing.cast(typing.Optional[builtins.bool], result)
+
+    @builtins.property
+    def excluded(self) -> typing.Optional["CertificateSpecNameConstraintsExcluded"]:
+        '''Excluded contains the constraints which must be disallowed.
+
+        Any name matching a restriction in the excluded field is invalid regardless of information appearing in the permitted
+
+        :schema: CertificateSpecNameConstraints#excluded
+        '''
+        result = self._values.get("excluded")
+        return typing.cast(typing.Optional["CertificateSpecNameConstraintsExcluded"], result)
+
+    @builtins.property
+    def permitted(self) -> typing.Optional["CertificateSpecNameConstraintsPermitted"]:
+        '''Permitted contains the constraints in which the names must be located.
+
+        :schema: CertificateSpecNameConstraints#permitted
+        '''
+        result = self._values.get("permitted")
+        return typing.cast(typing.Optional["CertificateSpecNameConstraintsPermitted"], result)
+
+    def __eq__(self, rhs: typing.Any) -> builtins.bool:
+        return isinstance(rhs, self.__class__) and rhs._values == self._values
+
+    def __ne__(self, rhs: typing.Any) -> builtins.bool:
+        return not (rhs == self)
+
+    def __repr__(self) -> str:
+        return "CertificateSpecNameConstraints(%s)" % ", ".join(
+            k + "=" + repr(v) for k, v in self._values.items()
+        )
+
+
+@jsii.data_type(
+    jsii_type="iocert-manager.CertificateSpecNameConstraintsExcluded",
+    jsii_struct_bases=[],
+    name_mapping={
+        "dns_domains": "dnsDomains",
+        "email_addresses": "emailAddresses",
+        "ip_ranges": "ipRanges",
+        "uri_domains": "uriDomains",
+    },
+)
+class CertificateSpecNameConstraintsExcluded:
+    def __init__(
+        self,
+        *,
+        dns_domains: typing.Optional[typing.Sequence[builtins.str]] = None,
+        email_addresses: typing.Optional[typing.Sequence[builtins.str]] = None,
+        ip_ranges: typing.Optional[typing.Sequence[builtins.str]] = None,
+        uri_domains: typing.Optional[typing.Sequence[builtins.str]] = None,
+    ) -> None:
+        '''Excluded contains the constraints which must be disallowed.
+
+        Any name matching a restriction in the excluded field is invalid regardless of information appearing in the permitted
+
+        :param dns_domains: DNSDomains is a list of DNS domains that are permitted or excluded.
+        :param email_addresses: EmailAddresses is a list of Email Addresses that are permitted or excluded.
+        :param ip_ranges: IPRanges is a list of IP Ranges that are permitted or excluded. This should be a valid CIDR notation.
+        :param uri_domains: URIDomains is a list of URI domains that are permitted or excluded.
+
+        :schema: CertificateSpecNameConstraintsExcluded
+        '''
+        if __debug__:
+            type_hints = typing.get_type_hints(_typecheckingstub__247066a7c5bf96c4f593b9dd37634902faee41c7166476230de716b98d28c0d1)
+            check_type(argname="argument dns_domains", value=dns_domains, expected_type=type_hints["dns_domains"])
+            check_type(argname="argument email_addresses", value=email_addresses, expected_type=type_hints["email_addresses"])
+            check_type(argname="argument ip_ranges", value=ip_ranges, expected_type=type_hints["ip_ranges"])
+            check_type(argname="argument uri_domains", value=uri_domains, expected_type=type_hints["uri_domains"])
+        self._values: typing.Dict[builtins.str, typing.Any] = {}
+        if dns_domains is not None:
+            self._values["dns_domains"] = dns_domains
+        if email_addresses is not None:
+            self._values["email_addresses"] = email_addresses
+        if ip_ranges is not None:
+            self._values["ip_ranges"] = ip_ranges
+        if uri_domains is not None:
+            self._values["uri_domains"] = uri_domains
+
+    @builtins.property
+    def dns_domains(self) -> typing.Optional[typing.List[builtins.str]]:
+        '''DNSDomains is a list of DNS domains that are permitted or excluded.
+
+        :schema: CertificateSpecNameConstraintsExcluded#dnsDomains
+        '''
+        result = self._values.get("dns_domains")
+        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
+
+    @builtins.property
+    def email_addresses(self) -> typing.Optional[typing.List[builtins.str]]:
+        '''EmailAddresses is a list of Email Addresses that are permitted or excluded.
+
+        :schema: CertificateSpecNameConstraintsExcluded#emailAddresses
+        '''
+        result = self._values.get("email_addresses")
+        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
+
+    @builtins.property
+    def ip_ranges(self) -> typing.Optional[typing.List[builtins.str]]:
+        '''IPRanges is a list of IP Ranges that are permitted or excluded.
+
+        This should be a valid CIDR notation.
+
+        :schema: CertificateSpecNameConstraintsExcluded#ipRanges
+        '''
+        result = self._values.get("ip_ranges")
+        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
+
+    @builtins.property
+    def uri_domains(self) -> typing.Optional[typing.List[builtins.str]]:
+        '''URIDomains is a list of URI domains that are permitted or excluded.
+
+        :schema: CertificateSpecNameConstraintsExcluded#uriDomains
+        '''
+        result = self._values.get("uri_domains")
+        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
+
+    def __eq__(self, rhs: typing.Any) -> builtins.bool:
+        return isinstance(rhs, self.__class__) and rhs._values == self._values
+
+    def __ne__(self, rhs: typing.Any) -> builtins.bool:
+        return not (rhs == self)
+
+    def __repr__(self) -> str:
+        return "CertificateSpecNameConstraintsExcluded(%s)" % ", ".join(
+            k + "=" + repr(v) for k, v in self._values.items()
+        )
+
+
+@jsii.data_type(
+    jsii_type="iocert-manager.CertificateSpecNameConstraintsPermitted",
+    jsii_struct_bases=[],
+    name_mapping={
+        "dns_domains": "dnsDomains",
+        "email_addresses": "emailAddresses",
+        "ip_ranges": "ipRanges",
+        "uri_domains": "uriDomains",
+    },
+)
+class CertificateSpecNameConstraintsPermitted:
+    def __init__(
+        self,
+        *,
+        dns_domains: typing.Optional[typing.Sequence[builtins.str]] = None,
+        email_addresses: typing.Optional[typing.Sequence[builtins.str]] = None,
+        ip_ranges: typing.Optional[typing.Sequence[builtins.str]] = None,
+        uri_domains: typing.Optional[typing.Sequence[builtins.str]] = None,
+    ) -> None:
+        '''Permitted contains the constraints in which the names must be located.
+
+        :param dns_domains: DNSDomains is a list of DNS domains that are permitted or excluded.
+        :param email_addresses: EmailAddresses is a list of Email Addresses that are permitted or excluded.
+        :param ip_ranges: IPRanges is a list of IP Ranges that are permitted or excluded. This should be a valid CIDR notation.
+        :param uri_domains: URIDomains is a list of URI domains that are permitted or excluded.
+
+        :schema: CertificateSpecNameConstraintsPermitted
+        '''
+        if __debug__:
+            type_hints = typing.get_type_hints(_typecheckingstub__0b620fa1b845e5778a32c4ec4360e6a1161a21008669ce3ff996e0e05cf7c7cf)
+            check_type(argname="argument dns_domains", value=dns_domains, expected_type=type_hints["dns_domains"])
+            check_type(argname="argument email_addresses", value=email_addresses, expected_type=type_hints["email_addresses"])
+            check_type(argname="argument ip_ranges", value=ip_ranges, expected_type=type_hints["ip_ranges"])
+            check_type(argname="argument uri_domains", value=uri_domains, expected_type=type_hints["uri_domains"])
+        self._values: typing.Dict[builtins.str, typing.Any] = {}
+        if dns_domains is not None:
+            self._values["dns_domains"] = dns_domains
+        if email_addresses is not None:
+            self._values["email_addresses"] = email_addresses
+        if ip_ranges is not None:
+            self._values["ip_ranges"] = ip_ranges
+        if uri_domains is not None:
+            self._values["uri_domains"] = uri_domains
+
+    @builtins.property
+    def dns_domains(self) -> typing.Optional[typing.List[builtins.str]]:
+        '''DNSDomains is a list of DNS domains that are permitted or excluded.
+
+        :schema: CertificateSpecNameConstraintsPermitted#dnsDomains
+        '''
+        result = self._values.get("dns_domains")
+        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
+
+    @builtins.property
+    def email_addresses(self) -> typing.Optional[typing.List[builtins.str]]:
+        '''EmailAddresses is a list of Email Addresses that are permitted or excluded.
+
+        :schema: CertificateSpecNameConstraintsPermitted#emailAddresses
+        '''
+        result = self._values.get("email_addresses")
+        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
+
+    @builtins.property
+    def ip_ranges(self) -> typing.Optional[typing.List[builtins.str]]:
+        '''IPRanges is a list of IP Ranges that are permitted or excluded.
+
+        This should be a valid CIDR notation.
+
+        :schema: CertificateSpecNameConstraintsPermitted#ipRanges
+        '''
+        result = self._values.get("ip_ranges")
+        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
+
+    @builtins.property
+    def uri_domains(self) -> typing.Optional[typing.List[builtins.str]]:
+        '''URIDomains is a list of URI domains that are permitted or excluded.
+
+        :schema: CertificateSpecNameConstraintsPermitted#uriDomains
+        '''
+        result = self._values.get("uri_domains")
+        return typing.cast(typing.Optional[typing.List[builtins.str]], result)
+
+    def __eq__(self, rhs: typing.Any) -> builtins.bool:
+        return isinstance(rhs, self.__class__) and rhs._values == self._values
+
+    def __ne__(self, rhs: typing.Any) -> builtins.bool:
+        return not (rhs == self)
+
+    def __repr__(self) -> str:
+        return "CertificateSpecNameConstraintsPermitted(%s)" % ", ".join(
+            k + "=" + repr(v) for k, v in self._values.items()
+        )
+
+
+@jsii.data_type(
     jsii_type="iocert-manager.CertificateSpecPrivateKey",
     jsii_struct_bases=[],
     name_mapping={
@@ -1408,6 +1698,9 @@ __all__ = [
     "CertificateSpecKeystoresJksPasswordSecretRef",
     "CertificateSpecKeystoresPkcs12",
     "CertificateSpecKeystoresPkcs12PasswordSecretRef",
+    "CertificateSpecNameConstraints",
+    "CertificateSpecNameConstraintsExcluded",
+    "CertificateSpecNameConstraintsPermitted",
     "CertificateSpecPrivateKey",
     "CertificateSpecPrivateKeyAlgorithm",
     "CertificateSpecPrivateKeyEncoding",
@@ -1451,6 +1744,7 @@ def _typecheckingstub__32dc1d8bfeef97dbd877eaeb718c4dc3768875c6ca7b447e1282f4788
     is_ca: typing.Optional[builtins.bool] = None,
     keystores: typing.Optional[typing.Union[CertificateSpecKeystores, typing.Dict[builtins.str, typing.Any]]] = None,
     literal_subject: typing.Optional[builtins.str] = None,
+    name_constraints: typing.Optional[typing.Union[CertificateSpecNameConstraints, typing.Dict[builtins.str, typing.Any]]] = None,
     private_key: typing.Optional[typing.Union[CertificateSpecPrivateKey, typing.Dict[builtins.str, typing.Any]]] = None,
     renew_before: typing.Optional[builtins.str] = None,
     revision_history_limit: typing.Optional[jsii.Number] = None,
@@ -1514,6 +1808,35 @@ def _typecheckingstub__20086e6fd1b2e1e2a9457b1cfb63413328de2c314da016e54e9a15a2a
     *,
     name: builtins.str,
     key: typing.Optional[builtins.str] = None,
+) -> None:
+    """Type checking stubs"""
+    pass
+
+def _typecheckingstub__4e41e90c83f48c5162562588989d0033ac0148b3c79315d65e7db457c8bbb031(
+    *,
+    critical: typing.Optional[builtins.bool] = None,
+    excluded: typing.Optional[typing.Union[CertificateSpecNameConstraintsExcluded, typing.Dict[builtins.str, typing.Any]]] = None,
+    permitted: typing.Optional[typing.Union[CertificateSpecNameConstraintsPermitted, typing.Dict[builtins.str, typing.Any]]] = None,
+) -> None:
+    """Type checking stubs"""
+    pass
+
+def _typecheckingstub__247066a7c5bf96c4f593b9dd37634902faee41c7166476230de716b98d28c0d1(
+    *,
+    dns_domains: typing.Optional[typing.Sequence[builtins.str]] = None,
+    email_addresses: typing.Optional[typing.Sequence[builtins.str]] = None,
+    ip_ranges: typing.Optional[typing.Sequence[builtins.str]] = None,
+    uri_domains: typing.Optional[typing.Sequence[builtins.str]] = None,
+) -> None:
+    """Type checking stubs"""
+    pass
+
+def _typecheckingstub__0b620fa1b845e5778a32c4ec4360e6a1161a21008669ce3ff996e0e05cf7c7cf(
+    *,
+    dns_domains: typing.Optional[typing.Sequence[builtins.str]] = None,
+    email_addresses: typing.Optional[typing.Sequence[builtins.str]] = None,
+    ip_ranges: typing.Optional[typing.Sequence[builtins.str]] = None,
+    uri_domains: typing.Optional[typing.Sequence[builtins.str]] = None,
 ) -> None:
     """Type checking stubs"""
     pass
