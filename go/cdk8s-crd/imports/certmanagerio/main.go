@@ -74,6 +74,15 @@ func init() {
 		"cert-managerio.CertificateSpecKeystoresPkcs12PasswordSecretRef",
 		reflect.TypeOf((*CertificateSpecKeystoresPkcs12PasswordSecretRef)(nil)).Elem(),
 	)
+	_jsii_.RegisterEnum(
+		"cert-managerio.CertificateSpecKeystoresPkcs12Profile",
+		reflect.TypeOf((*CertificateSpecKeystoresPkcs12Profile)(nil)).Elem(),
+		map[string]interface{}{
+			"LEGACY_RC2": CertificateSpecKeystoresPkcs12Profile_LEGACY_RC2,
+			"LEGACY_DES": CertificateSpecKeystoresPkcs12Profile_LEGACY_DES,
+			"MODERN2023": CertificateSpecKeystoresPkcs12Profile_MODERN2023,
+		},
+	)
 	_jsii_.RegisterStruct(
 		"cert-managerio.CertificateSpecNameConstraints",
 		reflect.TypeOf((*CertificateSpecNameConstraints)(nil)).Elem(),
@@ -85,6 +94,10 @@ func init() {
 	_jsii_.RegisterStruct(
 		"cert-managerio.CertificateSpecNameConstraintsPermitted",
 		reflect.TypeOf((*CertificateSpecNameConstraintsPermitted)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"cert-managerio.CertificateSpecOtherNames",
+		reflect.TypeOf((*CertificateSpecOtherNames)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"cert-managerio.CertificateSpecPrivateKey",
