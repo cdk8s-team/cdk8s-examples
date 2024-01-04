@@ -161,6 +161,7 @@ class CertificateProps:
         "keystores": "keystores",
         "literal_subject": "literalSubject",
         "name_constraints": "nameConstraints",
+        "other_names": "otherNames",
         "private_key": "privateKey",
         "renew_before": "renewBefore",
         "revision_history_limit": "revisionHistoryLimit",
@@ -187,6 +188,7 @@ class CertificateSpec:
         keystores: typing.Optional[typing.Union["CertificateSpecKeystores", typing.Dict[builtins.str, typing.Any]]] = None,
         literal_subject: typing.Optional[builtins.str] = None,
         name_constraints: typing.Optional[typing.Union["CertificateSpecNameConstraints", typing.Dict[builtins.str, typing.Any]]] = None,
+        other_names: typing.Optional[typing.Sequence[typing.Union["CertificateSpecOtherNames", typing.Dict[builtins.str, typing.Any]]]] = None,
         private_key: typing.Optional[typing.Union["CertificateSpecPrivateKey", typing.Dict[builtins.str, typing.Any]]] = None,
         renew_before: typing.Optional[builtins.str] = None,
         revision_history_limit: typing.Optional[jsii.Number] = None,
@@ -211,7 +213,8 @@ class CertificateSpec:
         :param is_ca: Requested basic constraints isCA value. The isCA value is used to set the ``isCA`` field on the created CertificateRequest resources. Note that the issuer may choose to ignore the requested isCA value, just like any other requested attribute. If true, this will automatically add the ``cert sign`` usage to the list of requested ``usages``.
         :param keystores: Additional keystore output formats to be stored in the Certificate's Secret.
         :param literal_subject: Requested X.509 certificate subject, represented using the LDAP "String Representation of a Distinguished Name" [1]. Important: the LDAP string format also specifies the order of the attributes in the subject, this is important when issuing certs for LDAP authentication. Example: ``CN=foo,DC=corp,DC=example,DC=com`` More info [1]: https://datatracker.ietf.org/doc/html/rfc4514 More info: https://github.com/cert-manager/cert-manager/issues/3203 More info: https://github.com/cert-manager/cert-manager/issues/4424 Cannot be set if the ``subject`` or ``commonName`` field is set. This is an Alpha Feature and is only enabled with the ``--feature-gates=LiteralCertificateSubject=true`` option set on both the controller and webhook components.
-        :param name_constraints: x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10 This is an Alpha Feature and is only enabled with the ``--feature-gates=useCertificateRequestNameConstraints=true`` option set on both the controller and webhook components.
+        :param name_constraints: x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10 This is an Alpha Feature and is only enabled with the ``--feature-gates=NameConstraints=true`` option set on both the controller and webhook components.
+        :param other_names: ``otherNames`` is an escape hatch for SAN that allows any type. We currently restrict the support to string like otherNames, cf RFC 5280 p 37 Any UTF8 String valued otherName can be passed with by setting the keys oid: x.x.x.x and UTF8Value: somevalue for ``otherName``. Most commonly this would be UPN set with oid: 1.3.6.1.4.1.311.20.2.3 You should ensure that any OID passed is valid for the UTF8String type as we do not explicitly validate this.
         :param private_key: Private key options. These include the key algorithm and size, the used encoding and the rotation policy.
         :param renew_before: How long before the currently issued certificate's expiry cert-manager should renew the certificate. For example, if a certificate is valid for 60 minutes, and ``renewBefore=10m``, cert-manager will begin to attempt to renew the certificate 50 minutes after it was issued (i.e. when there are 10 minutes remaining until the certificate is no longer valid). NOTE: The actual lifetime of the issued certificate is used to determine the renewal time. If an issuer returns a certificate with a different lifetime than the one requested, cert-manager will use the lifetime of the issued certificate. If unset, this defaults to 1/3 of the issued certificate's lifetime. Minimum accepted value is 5 minutes. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
         :param revision_history_limit: The maximum number of CertificateRequest revisions that are maintained in the Certificate's history. Each revision represents a single ``CertificateRequest`` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number. If set, revisionHistoryLimit must be a value of ``1`` or greater. If unset (``nil``), revisions will not be garbage collected. Default value is ``nil``.
@@ -249,6 +252,7 @@ class CertificateSpec:
             check_type(argname="argument keystores", value=keystores, expected_type=type_hints["keystores"])
             check_type(argname="argument literal_subject", value=literal_subject, expected_type=type_hints["literal_subject"])
             check_type(argname="argument name_constraints", value=name_constraints, expected_type=type_hints["name_constraints"])
+            check_type(argname="argument other_names", value=other_names, expected_type=type_hints["other_names"])
             check_type(argname="argument private_key", value=private_key, expected_type=type_hints["private_key"])
             check_type(argname="argument renew_before", value=renew_before, expected_type=type_hints["renew_before"])
             check_type(argname="argument revision_history_limit", value=revision_history_limit, expected_type=type_hints["revision_history_limit"])
@@ -282,6 +286,8 @@ class CertificateSpec:
             self._values["literal_subject"] = literal_subject
         if name_constraints is not None:
             self._values["name_constraints"] = name_constraints
+        if other_names is not None:
+            self._values["other_names"] = other_names
         if private_key is not None:
             self._values["private_key"] = private_key
         if renew_before is not None:
@@ -426,12 +432,23 @@ class CertificateSpec:
 
     @builtins.property
     def name_constraints(self) -> typing.Optional["CertificateSpecNameConstraints"]:
-        '''x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10 This is an Alpha Feature and is only enabled with the ``--feature-gates=useCertificateRequestNameConstraints=true`` option set on both the controller and webhook components.
+        '''x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10 This is an Alpha Feature and is only enabled with the ``--feature-gates=NameConstraints=true`` option set on both the controller and webhook components.
 
         :schema: CertificateSpec#nameConstraints
         '''
         result = self._values.get("name_constraints")
         return typing.cast(typing.Optional["CertificateSpecNameConstraints"], result)
+
+    @builtins.property
+    def other_names(self) -> typing.Optional[typing.List["CertificateSpecOtherNames"]]:
+        '''``otherNames`` is an escape hatch for SAN that allows any type.
+
+        We currently restrict the support to string like otherNames, cf RFC 5280 p 37 Any UTF8 String valued otherName can be passed with by setting the keys oid: x.x.x.x and UTF8Value: somevalue for ``otherName``. Most commonly this would be UPN set with oid: 1.3.6.1.4.1.311.20.2.3 You should ensure that any OID passed is valid for the UTF8String type as we do not explicitly validate this.
+
+        :schema: CertificateSpec#otherNames
+        '''
+        result = self._values.get("other_names")
+        return typing.cast(typing.Optional[typing.List["CertificateSpecOtherNames"]], result)
 
     @builtins.property
     def private_key(self) -> typing.Optional["CertificateSpecPrivateKey"]:
@@ -853,7 +870,11 @@ class CertificateSpecKeystoresJksPasswordSecretRef:
 @jsii.data_type(
     jsii_type="iocert-manager.CertificateSpecKeystoresPkcs12",
     jsii_struct_bases=[],
-    name_mapping={"create": "create", "password_secret_ref": "passwordSecretRef"},
+    name_mapping={
+        "create": "create",
+        "password_secret_ref": "passwordSecretRef",
+        "profile": "profile",
+    },
 )
 class CertificateSpecKeystoresPkcs12:
     def __init__(
@@ -861,11 +882,13 @@ class CertificateSpecKeystoresPkcs12:
         *,
         create: builtins.bool,
         password_secret_ref: typing.Union["CertificateSpecKeystoresPkcs12PasswordSecretRef", typing.Dict[builtins.str, typing.Any]],
+        profile: typing.Optional["CertificateSpecKeystoresPkcs12Profile"] = None,
     ) -> None:
         '''PKCS12 configures options for storing a PKCS12 keystore in the ``spec.secretName`` Secret resource.
 
         :param create: Create enables PKCS12 keystore creation for the Certificate. If true, a file named ``keystore.p12`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef``. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named ``truststore.p12`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
         :param password_secret_ref: PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the PKCS12 keystore.
+        :param profile: Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is ``LegacyRC2`` for backward compatibility. If provided, allowed values are: ``LegacyRC2``: Deprecated. Not supported by default in OpenSSL 3 or Java 20. ``LegacyDES``: Less secure algorithm. Use this option for maximal compatibility. ``Modern2023``: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.
 
         :schema: CertificateSpecKeystoresPkcs12
         '''
@@ -875,10 +898,13 @@ class CertificateSpecKeystoresPkcs12:
             type_hints = typing.get_type_hints(_typecheckingstub__c5382e8480294729cddd333c0c832e9c632efa49695fb65db41f2232ecd5fb79)
             check_type(argname="argument create", value=create, expected_type=type_hints["create"])
             check_type(argname="argument password_secret_ref", value=password_secret_ref, expected_type=type_hints["password_secret_ref"])
+            check_type(argname="argument profile", value=profile, expected_type=type_hints["profile"])
         self._values: typing.Dict[builtins.str, typing.Any] = {
             "create": create,
             "password_secret_ref": password_secret_ref,
         }
+        if profile is not None:
+            self._values["profile"] = profile
 
     @builtins.property
     def create(self) -> builtins.bool:
@@ -901,6 +927,18 @@ class CertificateSpecKeystoresPkcs12:
         result = self._values.get("password_secret_ref")
         assert result is not None, "Required property 'password_secret_ref' is missing"
         return typing.cast("CertificateSpecKeystoresPkcs12PasswordSecretRef", result)
+
+    @builtins.property
+    def profile(self) -> typing.Optional["CertificateSpecKeystoresPkcs12Profile"]:
+        '''Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore.
+
+        Default value is ``LegacyRC2`` for backward compatibility.
+        If provided, allowed values are: ``LegacyRC2``: Deprecated. Not supported by default in OpenSSL 3 or Java 20. ``LegacyDES``: Less secure algorithm. Use this option for maximal compatibility. ``Modern2023``: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.
+
+        :schema: CertificateSpecKeystoresPkcs12#profile
+        '''
+        result = self._values.get("profile")
+        return typing.cast(typing.Optional["CertificateSpecKeystoresPkcs12Profile"], result)
 
     def __eq__(self, rhs: typing.Any) -> builtins.bool:
         return isinstance(rhs, self.__class__) and rhs._values == self._values
@@ -978,6 +1016,24 @@ class CertificateSpecKeystoresPkcs12PasswordSecretRef:
         )
 
 
+@jsii.enum(jsii_type="iocert-manager.CertificateSpecKeystoresPkcs12Profile")
+class CertificateSpecKeystoresPkcs12Profile(enum.Enum):
+    '''Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore.
+
+    Default value is ``LegacyRC2`` for backward compatibility.
+    If provided, allowed values are: ``LegacyRC2``: Deprecated. Not supported by default in OpenSSL 3 or Java 20. ``LegacyDES``: Less secure algorithm. Use this option for maximal compatibility. ``Modern2023``: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.
+
+    :schema: CertificateSpecKeystoresPkcs12Profile
+    '''
+
+    LEGACY_RC2 = "LEGACY_RC2"
+    '''LegacyRC2.'''
+    LEGACY_DES = "LEGACY_DES"
+    '''LegacyDES.'''
+    MODERN2023 = "MODERN2023"
+    '''Modern2023.'''
+
+
 @jsii.data_type(
     jsii_type="iocert-manager.CertificateSpecNameConstraints",
     jsii_struct_bases=[],
@@ -995,7 +1051,7 @@ class CertificateSpecNameConstraints:
         excluded: typing.Optional[typing.Union["CertificateSpecNameConstraintsExcluded", typing.Dict[builtins.str, typing.Any]]] = None,
         permitted: typing.Optional[typing.Union["CertificateSpecNameConstraintsPermitted", typing.Dict[builtins.str, typing.Any]]] = None,
     ) -> None:
-        '''x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10 This is an Alpha Feature and is only enabled with the ``--feature-gates=useCertificateRequestNameConstraints=true`` option set on both the controller and webhook components.
+        '''x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10 This is an Alpha Feature and is only enabled with the ``--feature-gates=NameConstraints=true`` option set on both the controller and webhook components.
 
         :param critical: if true then the name constraints are marked critical.
         :param excluded: Excluded contains the constraints which must be disallowed. Any name matching a restriction in the excluded field is invalid regardless of information appearing in the permitted
@@ -1247,6 +1303,68 @@ class CertificateSpecNameConstraintsPermitted:
 
     def __repr__(self) -> str:
         return "CertificateSpecNameConstraintsPermitted(%s)" % ", ".join(
+            k + "=" + repr(v) for k, v in self._values.items()
+        )
+
+
+@jsii.data_type(
+    jsii_type="iocert-manager.CertificateSpecOtherNames",
+    jsii_struct_bases=[],
+    name_mapping={"oid": "oid", "utf8_value": "utf8Value"},
+)
+class CertificateSpecOtherNames:
+    def __init__(
+        self,
+        *,
+        oid: typing.Optional[builtins.str] = None,
+        utf8_value: typing.Optional[builtins.str] = None,
+    ) -> None:
+        '''
+        :param oid: OID is the object identifier for the otherName SAN. The object identifier must be expressed as a dotted string, for example, "1.2.840.113556.1.4.221".
+        :param utf8_value: utf8Value is the string value of the otherName SAN. The utf8Value accepts any valid UTF8 string to set as value for the otherName SAN.
+
+        :schema: CertificateSpecOtherNames
+        '''
+        if __debug__:
+            type_hints = typing.get_type_hints(_typecheckingstub__b7d18e6290327111a832f5aa91793478e1328e8cde647bcafbca8ee289177d21)
+            check_type(argname="argument oid", value=oid, expected_type=type_hints["oid"])
+            check_type(argname="argument utf8_value", value=utf8_value, expected_type=type_hints["utf8_value"])
+        self._values: typing.Dict[builtins.str, typing.Any] = {}
+        if oid is not None:
+            self._values["oid"] = oid
+        if utf8_value is not None:
+            self._values["utf8_value"] = utf8_value
+
+    @builtins.property
+    def oid(self) -> typing.Optional[builtins.str]:
+        '''OID is the object identifier for the otherName SAN.
+
+        The object identifier must be expressed as a dotted string, for example, "1.2.840.113556.1.4.221".
+
+        :schema: CertificateSpecOtherNames#oid
+        '''
+        result = self._values.get("oid")
+        return typing.cast(typing.Optional[builtins.str], result)
+
+    @builtins.property
+    def utf8_value(self) -> typing.Optional[builtins.str]:
+        '''utf8Value is the string value of the otherName SAN.
+
+        The utf8Value accepts any valid UTF8 string to set as value for the otherName SAN.
+
+        :schema: CertificateSpecOtherNames#utf8Value
+        '''
+        result = self._values.get("utf8_value")
+        return typing.cast(typing.Optional[builtins.str], result)
+
+    def __eq__(self, rhs: typing.Any) -> builtins.bool:
+        return isinstance(rhs, self.__class__) and rhs._values == self._values
+
+    def __ne__(self, rhs: typing.Any) -> builtins.bool:
+        return not (rhs == self)
+
+    def __repr__(self) -> str:
+        return "CertificateSpecOtherNames(%s)" % ", ".join(
             k + "=" + repr(v) for k, v in self._values.items()
         )
 
@@ -1698,9 +1816,11 @@ __all__ = [
     "CertificateSpecKeystoresJksPasswordSecretRef",
     "CertificateSpecKeystoresPkcs12",
     "CertificateSpecKeystoresPkcs12PasswordSecretRef",
+    "CertificateSpecKeystoresPkcs12Profile",
     "CertificateSpecNameConstraints",
     "CertificateSpecNameConstraintsExcluded",
     "CertificateSpecNameConstraintsPermitted",
+    "CertificateSpecOtherNames",
     "CertificateSpecPrivateKey",
     "CertificateSpecPrivateKeyAlgorithm",
     "CertificateSpecPrivateKeyEncoding",
@@ -1745,6 +1865,7 @@ def _typecheckingstub__32dc1d8bfeef97dbd877eaeb718c4dc3768875c6ca7b447e1282f4788
     keystores: typing.Optional[typing.Union[CertificateSpecKeystores, typing.Dict[builtins.str, typing.Any]]] = None,
     literal_subject: typing.Optional[builtins.str] = None,
     name_constraints: typing.Optional[typing.Union[CertificateSpecNameConstraints, typing.Dict[builtins.str, typing.Any]]] = None,
+    other_names: typing.Optional[typing.Sequence[typing.Union[CertificateSpecOtherNames, typing.Dict[builtins.str, typing.Any]]]] = None,
     private_key: typing.Optional[typing.Union[CertificateSpecPrivateKey, typing.Dict[builtins.str, typing.Any]]] = None,
     renew_before: typing.Optional[builtins.str] = None,
     revision_history_limit: typing.Optional[jsii.Number] = None,
@@ -1800,6 +1921,7 @@ def _typecheckingstub__c5382e8480294729cddd333c0c832e9c632efa49695fb65db41f2232e
     *,
     create: builtins.bool,
     password_secret_ref: typing.Union[CertificateSpecKeystoresPkcs12PasswordSecretRef, typing.Dict[builtins.str, typing.Any]],
+    profile: typing.Optional[CertificateSpecKeystoresPkcs12Profile] = None,
 ) -> None:
     """Type checking stubs"""
     pass
@@ -1837,6 +1959,14 @@ def _typecheckingstub__0b620fa1b845e5778a32c4ec4360e6a1161a21008669ce3ff996e0e05
     email_addresses: typing.Optional[typing.Sequence[builtins.str]] = None,
     ip_ranges: typing.Optional[typing.Sequence[builtins.str]] = None,
     uri_domains: typing.Optional[typing.Sequence[builtins.str]] = None,
+) -> None:
+    """Type checking stubs"""
+    pass
+
+def _typecheckingstub__b7d18e6290327111a832f5aa91793478e1328e8cde647bcafbca8ee289177d21(
+    *,
+    oid: typing.Optional[builtins.str] = None,
+    utf8_value: typing.Optional[builtins.str] = None,
 ) -> None:
     """Type checking stubs"""
     pass

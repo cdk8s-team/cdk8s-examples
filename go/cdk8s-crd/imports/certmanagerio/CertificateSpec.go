@@ -44,8 +44,12 @@ type CertificateSpec struct {
 	Keystores *CertificateSpecKeystores `field:"optional" json:"keystores" yaml:"keystores"`
 	// Requested X.509 certificate subject, represented using the LDAP "String Representation of a Distinguished Name" [1]. Important: the LDAP string format also specifies the order of the attributes in the subject, this is important when issuing certs for LDAP authentication. Example: `CN=foo,DC=corp,DC=example,DC=com` More info [1]: https://datatracker.ietf.org/doc/html/rfc4514 More info: https://github.com/cert-manager/cert-manager/issues/3203 More info: https://github.com/cert-manager/cert-manager/issues/4424 Cannot be set if the `subject` or `commonName` field is set. This is an Alpha Feature and is only enabled with the `--feature-gates=LiteralCertificateSubject=true` option set on both the controller and webhook components.
 	LiteralSubject *string `field:"optional" json:"literalSubject" yaml:"literalSubject"`
-	// x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10 This is an Alpha Feature and is only enabled with the `--feature-gates=useCertificateRequestNameConstraints=true` option set on both the controller and webhook components.
+	// x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10 This is an Alpha Feature and is only enabled with the `--feature-gates=NameConstraints=true` option set on both the controller and webhook components.
 	NameConstraints *CertificateSpecNameConstraints `field:"optional" json:"nameConstraints" yaml:"nameConstraints"`
+	// `otherNames` is an escape hatch for SAN that allows any type.
+	//
+	// We currently restrict the support to string like otherNames, cf RFC 5280 p 37 Any UTF8 String valued otherName can be passed with by setting the keys oid: x.x.x.x and UTF8Value: somevalue for `otherName`. Most commonly this would be UPN set with oid: 1.3.6.1.4.1.311.20.2.3 You should ensure that any OID passed is valid for the UTF8String type as we do not explicitly validate this.
+	OtherNames *[]*CertificateSpecOtherNames `field:"optional" json:"otherNames" yaml:"otherNames"`
 	// Private key options.
 	//
 	// These include the key algorithm and size, the used encoding and the rotation policy.

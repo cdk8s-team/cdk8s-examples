@@ -186,11 +186,18 @@ export interface CertificateSpec {
 
   /**
    * x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10
-   * This is an Alpha Feature and is only enabled with the `--feature-gates=useCertificateRequestNameConstraints=true` option set on both the controller and webhook components.
+   * This is an Alpha Feature and is only enabled with the `--feature-gates=NameConstraints=true` option set on both the controller and webhook components.
    *
    * @schema CertificateSpec#nameConstraints
    */
   readonly nameConstraints?: CertificateSpecNameConstraints;
+
+  /**
+   * `otherNames` is an escape hatch for SAN that allows any type. We currently restrict the support to string like otherNames, cf RFC 5280 p 37 Any UTF8 String valued otherName can be passed with by setting the keys oid: x.x.x.x and UTF8Value: somevalue for `otherName`. Most commonly this would be UPN set with oid: 1.3.6.1.4.1.311.20.2.3 You should ensure that any OID passed is valid for the UTF8String type as we do not explicitly validate this.
+   *
+   * @schema CertificateSpec#otherNames
+   */
+  readonly otherNames?: CertificateSpecOtherNames[];
 
   /**
    * Private key options. These include the key algorithm and size, the used encoding and the rotation policy.
@@ -274,6 +281,7 @@ export function toJson_CertificateSpec(obj: CertificateSpec | undefined): Record
     'keystores': toJson_CertificateSpecKeystores(obj.keystores),
     'literalSubject': obj.literalSubject,
     'nameConstraints': toJson_CertificateSpecNameConstraints(obj.nameConstraints),
+    'otherNames': obj.otherNames?.map(y => toJson_CertificateSpecOtherNames(y)),
     'privateKey': toJson_CertificateSpecPrivateKey(obj.privateKey),
     'renewBefore': obj.renewBefore,
     'revisionHistoryLimit': obj.revisionHistoryLimit,
@@ -402,7 +410,7 @@ export function toJson_CertificateSpecKeystores(obj: CertificateSpecKeystores | 
 
 /**
  * x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10
- * This is an Alpha Feature and is only enabled with the `--feature-gates=useCertificateRequestNameConstraints=true` option set on both the controller and webhook components.
+ * This is an Alpha Feature and is only enabled with the `--feature-gates=NameConstraints=true` option set on both the controller and webhook components.
  *
  * @schema CertificateSpecNameConstraints
  */
@@ -440,6 +448,41 @@ export function toJson_CertificateSpecNameConstraints(obj: CertificateSpecNameCo
     'critical': obj.critical,
     'excluded': toJson_CertificateSpecNameConstraintsExcluded(obj.excluded),
     'permitted': toJson_CertificateSpecNameConstraintsPermitted(obj.permitted),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CertificateSpecOtherNames
+ */
+export interface CertificateSpecOtherNames {
+  /**
+   * OID is the object identifier for the otherName SAN. The object identifier must be expressed as a dotted string, for example, "1.2.840.113556.1.4.221".
+   *
+   * @schema CertificateSpecOtherNames#oid
+   */
+  readonly oid?: string;
+
+  /**
+   * utf8Value is the string value of the otherName SAN. The utf8Value accepts any valid UTF8 string to set as value for the otherName SAN.
+   *
+   * @schema CertificateSpecOtherNames#utf8Value
+   */
+  readonly utf8Value?: string;
+
+}
+
+/**
+ * Converts an object of type 'CertificateSpecOtherNames' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CertificateSpecOtherNames(obj: CertificateSpecOtherNames | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'oid': obj.oid,
+    'utf8Value': obj.utf8Value,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -752,6 +795,14 @@ export interface CertificateSpecKeystoresPkcs12 {
    */
   readonly passwordSecretRef: CertificateSpecKeystoresPkcs12PasswordSecretRef;
 
+  /**
+   * Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.
+   * If provided, allowed values are: `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20. `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility. `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.
+   *
+   * @schema CertificateSpecKeystoresPkcs12#profile
+   */
+  readonly profile?: CertificateSpecKeystoresPkcs12Profile;
+
 }
 
 /**
@@ -763,6 +814,7 @@ export function toJson_CertificateSpecKeystoresPkcs12(obj: CertificateSpecKeysto
   const result = {
     'create': obj.create,
     'passwordSecretRef': toJson_CertificateSpecKeystoresPkcs12PasswordSecretRef(obj.passwordSecretRef),
+    'profile': obj.profile,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -991,4 +1043,19 @@ export function toJson_CertificateSpecKeystoresPkcs12PasswordSecretRef(obj: Cert
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
 /* eslint-enable max-len, quote-props */
+
+/**
+ * Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.
+ * If provided, allowed values are: `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20. `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility. `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.
+ *
+ * @schema CertificateSpecKeystoresPkcs12Profile
+ */
+export enum CertificateSpecKeystoresPkcs12Profile {
+  /** LegacyRC2 */
+  LEGACY_RC2 = "LegacyRC2",
+  /** LegacyDES */
+  LEGACY_DES = "LegacyDES",
+  /** Modern2023 */
+  MODERN2023 = "Modern2023",
+}
 
