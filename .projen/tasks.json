@@ -132,7 +132,7 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev --filter=constructs,lerna"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev --filter=lerna"
         },
         {
           "exec": "yarn install --check-files"
