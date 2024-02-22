@@ -3,7 +3,9 @@ package certmanagerio
 
 // Excluded contains the constraints which must be disallowed.
 //
-// Any name matching a restriction in the excluded field is invalid regardless of information appearing in the permitted.
+// Any name matching a
+// restriction in the excluded field is invalid regardless
+// of information appearing in the permitted.
 type CertificateSpecNameConstraintsExcluded struct {
 	// DNSDomains is a list of DNS domains that are permitted or excluded.
 	DnsDomains *[]*string `field:"optional" json:"dnsDomains" yaml:"dnsDomains"`

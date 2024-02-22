@@ -4,7 +4,8 @@ package certmanagerio
 type CertificateSpecOtherNames struct {
 	// OID is the object identifier for the otherName SAN.
 	//
-	// The object identifier must be expressed as a dotted string, for example, "1.2.840.113556.1.4.221".
+	// The object identifier must be expressed as a dotted string, for
+	// example, "1.2.840.113556.1.4.221".
 	Oid *string `field:"optional" json:"oid" yaml:"oid"`
 	// utf8Value is the string value of the otherName SAN.
 	//
