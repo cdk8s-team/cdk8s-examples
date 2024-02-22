@@ -4,8 +4,11 @@ import { Construct } from 'constructs';
 
 
 /**
- * A Certificate resource should be created to ensure an up to date and signed X.509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`. 
- The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`).
+ * A Certificate resource should be created to ensure an up to date and signed
+X.509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`.
+
+
+The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`).
  *
  * @schema Certificate
  */
@@ -59,7 +62,10 @@ export class Certificate extends ApiObject {
 }
 
 /**
- * A Certificate resource should be created to ensure an up to date and signed X.509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`.
+ * A Certificate resource should be created to ensure an up to date and signed
+ * X.509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`.
+ *
+ *
  * The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`).
  *
  * @schema Certificate
@@ -71,7 +77,8 @@ export interface CertificateProps {
   readonly metadata?: ApiObjectMetadata;
 
   /**
-   * Specification of the desired state of the Certificate resource. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+   * Specification of the desired state of the Certificate resource.
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
    *
    * @schema Certificate#spec
    */
@@ -95,22 +102,34 @@ export function toJson_CertificateProps(obj: CertificateProps | undefined): Reco
 /* eslint-enable max-len, quote-props */
 
 /**
- * Specification of the desired state of the Certificate resource. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+ * Specification of the desired state of the Certificate resource.
+ * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
  *
  * @schema CertificateSpec
  */
 export interface CertificateSpec {
   /**
-   * Defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret.
-   * This is an Alpha Feature and is only enabled with the `--feature-gates=AdditionalCertificateOutputFormats=true` option set on both the controller and webhook components.
+   * Defines extra output formats of the private key and signed certificate chain
+   * to be written to this Certificate's target Secret.
+   *
+   *
+   * This is an Alpha Feature and is only enabled with the
+   * `--feature-gates=AdditionalCertificateOutputFormats=true` option set on both
+   * the controller and webhook components.
    *
    * @schema CertificateSpec#additionalOutputFormats
    */
   readonly additionalOutputFormats?: CertificateSpecAdditionalOutputFormats[];
 
   /**
-   * Requested common name X509 certificate subject attribute. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6 NOTE: TLS clients will ignore this value when any subject alternative name is set (see https://tools.ietf.org/html/rfc6125#section-6.4.4).
-   * Should have a length of 64 characters or fewer to avoid generating invalid CSRs. Cannot be set if the `literalSubject` field is set.
+   * Requested common name X509 certificate subject attribute.
+   * More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
+   * NOTE: TLS clients will ignore this value when any subject alternative name is
+   * set (see https://tools.ietf.org/html/rfc6125#section-6.4.4).
+   *
+   *
+   * Should have a length of 64 characters or fewer to avoid generating invalid CSRs.
+   * Cannot be set if the `literalSubject` field is set.
    *
    * @schema CertificateSpec#commonName
    */
@@ -124,8 +143,14 @@ export interface CertificateSpec {
   readonly dnsNames?: string[];
 
   /**
-   * Requested 'duration' (i.e. lifetime) of the Certificate. Note that the issuer may choose to ignore the requested duration, just like any other requested attribute.
-   * If unset, this defaults to 90 days. Minimum accepted duration is 1 hour. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
+   * Requested 'duration' (i.e. lifetime) of the Certificate. Note that the
+   * issuer may choose to ignore the requested duration, just like any other
+   * requested attribute.
+   *
+   *
+   * If unset, this defaults to 90 days.
+   * Minimum accepted duration is 1 hour.
+   * Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
    *
    * @schema CertificateSpec#duration
    */
@@ -140,7 +165,10 @@ export interface CertificateSpec {
 
   /**
    * Whether the KeyUsage and ExtKeyUsage extensions should be set in the encoded CSR.
-   * This option defaults to true, and should only be disabled if the target issuer does not support CSRs with these X509 KeyUsage/ ExtKeyUsage extensions.
+   *
+   *
+   * This option defaults to true, and should only be disabled if the target
+   * issuer does not support CSRs with these X509 KeyUsage/ ExtKeyUsage extensions.
    *
    * @schema CertificateSpec#encodeUsagesInRequest
    */
@@ -154,15 +182,26 @@ export interface CertificateSpec {
   readonly ipAddresses?: string[];
 
   /**
-   * Requested basic constraints isCA value. The isCA value is used to set the `isCA` field on the created CertificateRequest resources. Note that the issuer may choose to ignore the requested isCA value, just like any other requested attribute.
-   * If true, this will automatically add the `cert sign` usage to the list of requested `usages`.
+   * Requested basic constraints isCA value.
+   * The isCA value is used to set the `isCA` field on the created CertificateRequest
+   * resources. Note that the issuer may choose to ignore the requested isCA value, just
+   * like any other requested attribute.
+   *
+   *
+   * If true, this will automatically add the `cert sign` usage to the list
+   * of requested `usages`.
    *
    * @schema CertificateSpec#isCA
    */
   readonly isCa?: boolean;
 
   /**
-   * Reference to the issuer responsible for issuing the certificate. If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace.
+   * Reference to the issuer responsible for issuing the certificate.
+   * If the issuer is namespace-scoped, it must be in the same namespace
+   * as the Certificate. If the issuer is cluster-scoped, it can be used
+   * from any namespace.
+   *
+   *
    * The `name` field of the reference must always be specified.
    *
    * @schema CertificateSpec#issuerRef
@@ -177,69 +216,121 @@ export interface CertificateSpec {
   readonly keystores?: CertificateSpecKeystores;
 
   /**
-   * Requested X.509 certificate subject, represented using the LDAP "String Representation of a Distinguished Name" [1]. Important: the LDAP string format also specifies the order of the attributes in the subject, this is important when issuing certs for LDAP authentication. Example: `CN=foo,DC=corp,DC=example,DC=com` More info [1]: https://datatracker.ietf.org/doc/html/rfc4514 More info: https://github.com/cert-manager/cert-manager/issues/3203 More info: https://github.com/cert-manager/cert-manager/issues/4424
-   * Cannot be set if the `subject` or `commonName` field is set. This is an Alpha Feature and is only enabled with the `--feature-gates=LiteralCertificateSubject=true` option set on both the controller and webhook components.
+   * Requested X.509 certificate subject, represented using the LDAP "String
+   * Representation of a Distinguished Name" [1].
+   * Important: the LDAP string format also specifies the order of the attributes
+   * in the subject, this is important when issuing certs for LDAP authentication.
+   * Example: `CN=foo,DC=corp,DC=example,DC=com`
+   * More info [1]: https://datatracker.ietf.org/doc/html/rfc4514
+   * More info: https://github.com/cert-manager/cert-manager/issues/3203
+   * More info: https://github.com/cert-manager/cert-manager/issues/4424
+   *
+   *
+   * Cannot be set if the `subject` or `commonName` field is set.
+   * This is an Alpha Feature and is only enabled with the
+   * `--feature-gates=LiteralCertificateSubject=true` option set on both
+   * the controller and webhook components.
    *
    * @schema CertificateSpec#literalSubject
    */
   readonly literalSubject?: string;
 
   /**
-   * x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10
-   * This is an Alpha Feature and is only enabled with the `--feature-gates=NameConstraints=true` option set on both the controller and webhook components.
+   * x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate.
+   * More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10
+   *
+   *
+   * This is an Alpha Feature and is only enabled with the
+   * `--feature-gates=NameConstraints=true` option set on both
+   * the controller and webhook components.
    *
    * @schema CertificateSpec#nameConstraints
    */
   readonly nameConstraints?: CertificateSpecNameConstraints;
 
   /**
-   * `otherNames` is an escape hatch for SAN that allows any type. We currently restrict the support to string like otherNames, cf RFC 5280 p 37 Any UTF8 String valued otherName can be passed with by setting the keys oid: x.x.x.x and UTF8Value: somevalue for `otherName`. Most commonly this would be UPN set with oid: 1.3.6.1.4.1.311.20.2.3 You should ensure that any OID passed is valid for the UTF8String type as we do not explicitly validate this.
+   * `otherNames` is an escape hatch for SAN that allows any type. We currently restrict the support to string like otherNames, cf RFC 5280 p 37
+   * Any UTF8 String valued otherName can be passed with by setting the keys oid: x.x.x.x and UTF8Value: somevalue for `otherName`.
+   * Most commonly this would be UPN set with oid: 1.3.6.1.4.1.311.20.2.3
+   * You should ensure that any OID passed is valid for the UTF8String type as we do not explicitly validate this.
    *
    * @schema CertificateSpec#otherNames
    */
   readonly otherNames?: CertificateSpecOtherNames[];
 
   /**
-   * Private key options. These include the key algorithm and size, the used encoding and the rotation policy.
+   * Private key options. These include the key algorithm and size, the used
+   * encoding and the rotation policy.
    *
    * @schema CertificateSpec#privateKey
    */
   readonly privateKey?: CertificateSpecPrivateKey;
 
   /**
-   * How long before the currently issued certificate's expiry cert-manager should renew the certificate. For example, if a certificate is valid for 60 minutes, and `renewBefore=10m`, cert-manager will begin to attempt to renew the certificate 50 minutes after it was issued (i.e. when there are 10 minutes remaining until the certificate is no longer valid).
-   * NOTE: The actual lifetime of the issued certificate is used to determine the renewal time. If an issuer returns a certificate with a different lifetime than the one requested, cert-manager will use the lifetime of the issued certificate.
-   * If unset, this defaults to 1/3 of the issued certificate's lifetime. Minimum accepted value is 5 minutes. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
+   * How long before the currently issued certificate's expiry cert-manager should
+   * renew the certificate. For example, if a certificate is valid for 60 minutes,
+   * and `renewBefore=10m`, cert-manager will begin to attempt to renew the certificate
+   * 50 minutes after it was issued (i.e. when there are 10 minutes remaining until
+   * the certificate is no longer valid).
+   *
+   *
+   * NOTE: The actual lifetime of the issued certificate is used to determine the
+   * renewal time. If an issuer returns a certificate with a different lifetime than
+   * the one requested, cert-manager will use the lifetime of the issued certificate.
+   *
+   *
+   * If unset, this defaults to 1/3 of the issued certificate's lifetime.
+   * Minimum accepted value is 5 minutes.
+   * Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
    *
    * @schema CertificateSpec#renewBefore
    */
   readonly renewBefore?: string;
 
   /**
-   * The maximum number of CertificateRequest revisions that are maintained in the Certificate's history. Each revision represents a single `CertificateRequest` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number.
-   * If set, revisionHistoryLimit must be a value of `1` or greater. If unset (`nil`), revisions will not be garbage collected. Default value is `nil`.
+   * The maximum number of CertificateRequest revisions that are maintained in
+   * the Certificate's history. Each revision represents a single `CertificateRequest`
+   * created by this Certificate, either when it was created, renewed, or Spec
+   * was changed. Revisions will be removed by oldest first if the number of
+   * revisions exceeds this number.
+   *
+   *
+   * If set, revisionHistoryLimit must be a value of `1` or greater.
+   * If unset (`nil`), revisions will not be garbage collected.
+   * Default value is `nil`.
    *
    * @schema CertificateSpec#revisionHistoryLimit
    */
   readonly revisionHistoryLimit?: number;
 
   /**
-   * Name of the Secret resource that will be automatically created and managed by this Certificate resource. It will be populated with a private key and certificate, signed by the denoted issuer. The Secret resource lives in the same namespace as the Certificate resource.
+   * Name of the Secret resource that will be automatically created and
+   * managed by this Certificate resource. It will be populated with a
+   * private key and certificate, signed by the denoted issuer. The Secret
+   * resource lives in the same namespace as the Certificate resource.
    *
    * @schema CertificateSpec#secretName
    */
   readonly secretName: string;
 
   /**
-   * Defines annotations and labels to be copied to the Certificate's Secret. Labels and annotations on the Secret will be changed as they appear on the SecretTemplate when added or removed. SecretTemplate annotations are added in conjunction with, and cannot overwrite, the base set of annotations cert-manager sets on the Certificate's Secret.
+   * Defines annotations and labels to be copied to the Certificate's Secret.
+   * Labels and annotations on the Secret will be changed as they appear on the
+   * SecretTemplate when added or removed. SecretTemplate annotations are added
+   * in conjunction with, and cannot overwrite, the base set of annotations
+   * cert-manager sets on the Certificate's Secret.
    *
    * @schema CertificateSpec#secretTemplate
    */
   readonly secretTemplate?: CertificateSpecSecretTemplate;
 
   /**
-   * Requested set of X509 certificate subject attributes. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
-   * The common name attribute is specified separately in the `commonName` field. Cannot be set if the `literalSubject` field is set.
+   * Requested set of X509 certificate subject attributes.
+   * More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
+   *
+   *
+   * The common name attribute is specified separately in the `commonName` field.
+   * Cannot be set if the `literalSubject` field is set.
    *
    * @schema CertificateSpec#subject
    */
@@ -253,7 +344,12 @@ export interface CertificateSpec {
   readonly uris?: string[];
 
   /**
-   * Requested key usages and extended key usages. These usages are used to set the `usages` field on the created CertificateRequest resources. If `encodeUsagesInRequest` is unset or set to `true`, the usages will additionally be encoded in the `request` field which contains the CSR blob.
+   * Requested key usages and extended key usages.
+   * These usages are used to set the `usages` field on the created CertificateRequest
+   * resources. If `encodeUsagesInRequest` is unset or set to `true`, the usages
+   * will additionally be encoded in the `request` field which contains the CSR blob.
+   *
+   *
    * If unset, defaults to `digital signature` and `key encipherment`.
    *
    * @schema CertificateSpec#usages
@@ -297,13 +393,16 @@ export function toJson_CertificateSpec(obj: CertificateSpec | undefined): Record
 /* eslint-enable max-len, quote-props */
 
 /**
- * CertificateAdditionalOutputFormat defines an additional output format of a Certificate resource. These contain supplementary data formats of the signed certificate chain and paired private key.
+ * CertificateAdditionalOutputFormat defines an additional output format of a
+ * Certificate resource. These contain supplementary data formats of the signed
+ * certificate chain and paired private key.
  *
  * @schema CertificateSpecAdditionalOutputFormats
  */
 export interface CertificateSpecAdditionalOutputFormats {
   /**
-   * Type is the name of the format type that should be written to the Certificate's target Secret.
+   * Type is the name of the format type that should be written to the
+   * Certificate's target Secret.
    *
    * @schema CertificateSpecAdditionalOutputFormats#type
    */
@@ -326,7 +425,12 @@ export function toJson_CertificateSpecAdditionalOutputFormats(obj: CertificateSp
 /* eslint-enable max-len, quote-props */
 
 /**
- * Reference to the issuer responsible for issuing the certificate. If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace.
+ * Reference to the issuer responsible for issuing the certificate.
+ * If the issuer is namespace-scoped, it must be in the same namespace
+ * as the Certificate. If the issuer is cluster-scoped, it can be used
+ * from any namespace.
+ *
+ *
  * The `name` field of the reference must always be specified.
  *
  * @schema CertificateSpecIssuerRef
@@ -378,14 +482,16 @@ export function toJson_CertificateSpecIssuerRef(obj: CertificateSpecIssuerRef | 
  */
 export interface CertificateSpecKeystores {
   /**
-   * JKS configures options for storing a JKS keystore in the `spec.secretName` Secret resource.
+   * JKS configures options for storing a JKS keystore in the
+   * `spec.secretName` Secret resource.
    *
    * @schema CertificateSpecKeystores#jks
    */
   readonly jks?: CertificateSpecKeystoresJks;
 
   /**
-   * PKCS12 configures options for storing a PKCS12 keystore in the `spec.secretName` Secret resource.
+   * PKCS12 configures options for storing a PKCS12 keystore in the
+   * `spec.secretName` Secret resource.
    *
    * @schema CertificateSpecKeystores#pkcs12
    */
@@ -409,8 +515,13 @@ export function toJson_CertificateSpecKeystores(obj: CertificateSpecKeystores | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10
- * This is an Alpha Feature and is only enabled with the `--feature-gates=NameConstraints=true` option set on both the controller and webhook components.
+ * x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate.
+ * More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10
+ *
+ *
+ * This is an Alpha Feature and is only enabled with the
+ * `--feature-gates=NameConstraints=true` option set on both
+ * the controller and webhook components.
  *
  * @schema CertificateSpecNameConstraints
  */
@@ -423,7 +534,9 @@ export interface CertificateSpecNameConstraints {
   readonly critical?: boolean;
 
   /**
-   * Excluded contains the constraints which must be disallowed. Any name matching a restriction in the excluded field is invalid regardless of information appearing in the permitted
+   * Excluded contains the constraints which must be disallowed. Any name matching a
+   * restriction in the excluded field is invalid regardless
+   * of information appearing in the permitted
    *
    * @schema CertificateSpecNameConstraints#excluded
    */
@@ -459,14 +572,17 @@ export function toJson_CertificateSpecNameConstraints(obj: CertificateSpecNameCo
  */
 export interface CertificateSpecOtherNames {
   /**
-   * OID is the object identifier for the otherName SAN. The object identifier must be expressed as a dotted string, for example, "1.2.840.113556.1.4.221".
+   * OID is the object identifier for the otherName SAN.
+   * The object identifier must be expressed as a dotted string, for
+   * example, "1.2.840.113556.1.4.221".
    *
    * @schema CertificateSpecOtherNames#oid
    */
   readonly oid?: string;
 
   /**
-   * utf8Value is the string value of the otherName SAN. The utf8Value accepts any valid UTF8 string to set as value for the otherName SAN.
+   * utf8Value is the string value of the otherName SAN.
+   * The utf8Value accepts any valid UTF8 string to set as value for the otherName SAN.
    *
    * @schema CertificateSpecOtherNames#utf8Value
    */
@@ -490,22 +606,35 @@ export function toJson_CertificateSpecOtherNames(obj: CertificateSpecOtherNames 
 /* eslint-enable max-len, quote-props */
 
 /**
- * Private key options. These include the key algorithm and size, the used encoding and the rotation policy.
+ * Private key options. These include the key algorithm and size, the used
+ * encoding and the rotation policy.
  *
  * @schema CertificateSpecPrivateKey
  */
 export interface CertificateSpecPrivateKey {
   /**
-   * Algorithm is the private key algorithm of the corresponding private key for this certificate.
-   * If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`. If `algorithm` is specified and `size` is not provided, key size of 2048 will be used for `RSA` key algorithm and key size of 256 will be used for `ECDSA` key algorithm. key size is ignored when using the `Ed25519` key algorithm.
+   * Algorithm is the private key algorithm of the corresponding private key
+   * for this certificate.
+   *
+   *
+   * If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`.
+   * If `algorithm` is specified and `size` is not provided,
+   * key size of 2048 will be used for `RSA` key algorithm and
+   * key size of 256 will be used for `ECDSA` key algorithm.
+   * key size is ignored when using the `Ed25519` key algorithm.
    *
    * @schema CertificateSpecPrivateKey#algorithm
    */
   readonly algorithm?: CertificateSpecPrivateKeyAlgorithm;
 
   /**
-   * The private key cryptography standards (PKCS) encoding for this certificate's private key to be encoded in.
-   * If provided, allowed values are `PKCS1` and `PKCS8` standing for PKCS#1 and PKCS#8, respectively. Defaults to `PKCS1` if not specified.
+   * The private key cryptography standards (PKCS) encoding for this
+   * certificate's private key to be encoded in.
+   *
+   *
+   * If provided, allowed values are `PKCS1` and `PKCS8` standing for PKCS#1
+   * and PKCS#8, respectively.
+   * Defaults to `PKCS1` if not specified.
    *
    * @default PKCS1` if not specified.
    * @schema CertificateSpecPrivateKey#encoding
@@ -513,8 +642,17 @@ export interface CertificateSpecPrivateKey {
   readonly encoding?: CertificateSpecPrivateKeyEncoding;
 
   /**
-   * RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.
-   * If set to `Never`, a private key will only be generated if one does not already exist in the target `spec.secretName`. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to `Always`, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is `Never` for backward compatibility.
+   * RotationPolicy controls how private keys should be regenerated when a
+   * re-issuance is being processed.
+   *
+   *
+   * If set to `Never`, a private key will only be generated if one does not
+   * already exist in the target `spec.secretName`. If one does exists but it
+   * does not have the correct algorithm or size, a warning will be raised
+   * to await user intervention.
+   * If set to `Always`, a private key matching the specified requirements
+   * will be generated whenever a re-issuance occurs.
+   * Default is `Never` for backward compatibility.
    *
    * @default Never` for backward compatibility.
    * @schema CertificateSpecPrivateKey#rotationPolicy
@@ -523,7 +661,14 @@ export interface CertificateSpecPrivateKey {
 
   /**
    * Size is the key bit size of the corresponding private key for this certificate.
-   * If `algorithm` is set to `RSA`, valid values are `2048`, `4096` or `8192`, and will default to `2048` if not specified. If `algorithm` is set to `ECDSA`, valid values are `256`, `384` or `521`, and will default to `256` if not specified. If `algorithm` is set to `Ed25519`, Size is ignored. No other values are allowed.
+   *
+   *
+   * If `algorithm` is set to `RSA`, valid values are `2048`, `4096` or `8192`,
+   * and will default to `2048` if not specified.
+   * If `algorithm` is set to `ECDSA`, valid values are `256`, `384` or `521`,
+   * and will default to `256` if not specified.
+   * If `algorithm` is set to `Ed25519`, Size is ignored.
+   * No other values are allowed.
    *
    * @schema CertificateSpecPrivateKey#size
    */
@@ -549,7 +694,11 @@ export function toJson_CertificateSpecPrivateKey(obj: CertificateSpecPrivateKey 
 /* eslint-enable max-len, quote-props */
 
 /**
- * Defines annotations and labels to be copied to the Certificate's Secret. Labels and annotations on the Secret will be changed as they appear on the SecretTemplate when added or removed. SecretTemplate annotations are added in conjunction with, and cannot overwrite, the base set of annotations cert-manager sets on the Certificate's Secret.
+ * Defines annotations and labels to be copied to the Certificate's Secret.
+ * Labels and annotations on the Secret will be changed as they appear on the
+ * SecretTemplate when added or removed. SecretTemplate annotations are added
+ * in conjunction with, and cannot overwrite, the base set of annotations
+ * cert-manager sets on the Certificate's Secret.
  *
  * @schema CertificateSpecSecretTemplate
  */
@@ -586,8 +735,12 @@ export function toJson_CertificateSpecSecretTemplate(obj: CertificateSpecSecretT
 /* eslint-enable max-len, quote-props */
 
 /**
- * Requested set of X509 certificate subject attributes. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
- * The common name attribute is specified separately in the `commonName` field. Cannot be set if the `literalSubject` field is set.
+ * Requested set of X509 certificate subject attributes.
+ * More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
+ *
+ *
+ * The common name attribute is specified separately in the `commonName` field.
+ * Cannot be set if the `literalSubject` field is set.
  *
  * @schema CertificateSpecSubject
  */
@@ -672,8 +825,36 @@ export function toJson_CertificateSpecSubject(obj: CertificateSpecSubject | unde
 /* eslint-enable max-len, quote-props */
 
 /**
- * KeyUsage specifies valid usage contexts for keys. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3 https://tools.ietf.org/html/rfc5280#section-4.2.1.12
- * Valid KeyUsage values are as follows: "signing", "digital signature", "content commitment", "key encipherment", "key agreement", "data encipherment", "cert sign", "crl sign", "encipher only", "decipher only", "any", "server auth", "client auth", "code signing", "email protection", "s/mime", "ipsec end system", "ipsec tunnel", "ipsec user", "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"
+ * KeyUsage specifies valid usage contexts for keys.
+ * See:
+ * https://tools.ietf.org/html/rfc5280#section-4.2.1.3
+ * https://tools.ietf.org/html/rfc5280#section-4.2.1.12
+ *
+ *
+ * Valid KeyUsage values are as follows:
+ * "signing",
+ * "digital signature",
+ * "content commitment",
+ * "key encipherment",
+ * "key agreement",
+ * "data encipherment",
+ * "cert sign",
+ * "crl sign",
+ * "encipher only",
+ * "decipher only",
+ * "any",
+ * "server auth",
+ * "client auth",
+ * "code signing",
+ * "email protection",
+ * "s/mime",
+ * "ipsec end system",
+ * "ipsec tunnel",
+ * "ipsec user",
+ * "timestamping",
+ * "ocsp signing",
+ * "microsoft sgc",
+ * "netscape sgc"
  *
  * @schema CertificateSpecUsages
  */
@@ -727,7 +908,8 @@ export enum CertificateSpecUsages {
 }
 
 /**
- * Type is the name of the format type that should be written to the Certificate's target Secret.
+ * Type is the name of the format type that should be written to the
+ * Certificate's target Secret.
  *
  * @schema CertificateSpecAdditionalOutputFormatsType
  */
@@ -739,20 +921,30 @@ export enum CertificateSpecAdditionalOutputFormatsType {
 }
 
 /**
- * JKS configures options for storing a JKS keystore in the `spec.secretName` Secret resource.
+ * JKS configures options for storing a JKS keystore in the
+ * `spec.secretName` Secret resource.
  *
  * @schema CertificateSpecKeystoresJks
  */
 export interface CertificateSpecKeystoresJks {
   /**
-   * Create enables JKS keystore creation for the Certificate. If true, a file named `keystore.jks` will be created in the target Secret resource, encrypted using the password stored in `passwordSecretRef`. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named `truststore.jks` will also be created in the target Secret resource, encrypted using the password stored in `passwordSecretRef` containing the issuing Certificate Authority
+   * Create enables JKS keystore creation for the Certificate.
+   * If true, a file named `keystore.jks` will be created in the target
+   * Secret resource, encrypted using the password stored in
+   * `passwordSecretRef`.
+   * The keystore file will be updated immediately.
+   * If the issuer provided a CA certificate, a file named `truststore.jks`
+   * will also be created in the target Secret resource, encrypted using the
+   * password stored in `passwordSecretRef`
+   * containing the issuing Certificate Authority
    *
    * @schema CertificateSpecKeystoresJks#create
    */
   readonly create: boolean;
 
   /**
-   * PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the JKS keystore.
+   * PasswordSecretRef is a reference to a key in a Secret resource
+   * containing the password used to encrypt the JKS keystore.
    *
    * @schema CertificateSpecKeystoresJks#passwordSecretRef
    */
@@ -776,28 +968,46 @@ export function toJson_CertificateSpecKeystoresJks(obj: CertificateSpecKeystores
 /* eslint-enable max-len, quote-props */
 
 /**
- * PKCS12 configures options for storing a PKCS12 keystore in the `spec.secretName` Secret resource.
+ * PKCS12 configures options for storing a PKCS12 keystore in the
+ * `spec.secretName` Secret resource.
  *
  * @schema CertificateSpecKeystoresPkcs12
  */
 export interface CertificateSpecKeystoresPkcs12 {
   /**
-   * Create enables PKCS12 keystore creation for the Certificate. If true, a file named `keystore.p12` will be created in the target Secret resource, encrypted using the password stored in `passwordSecretRef`. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named `truststore.p12` will also be created in the target Secret resource, encrypted using the password stored in `passwordSecretRef` containing the issuing Certificate Authority
+   * Create enables PKCS12 keystore creation for the Certificate.
+   * If true, a file named `keystore.p12` will be created in the target
+   * Secret resource, encrypted using the password stored in
+   * `passwordSecretRef`.
+   * The keystore file will be updated immediately.
+   * If the issuer provided a CA certificate, a file named `truststore.p12` will
+   * also be created in the target Secret resource, encrypted using the
+   * password stored in `passwordSecretRef` containing the issuing Certificate
+   * Authority
    *
    * @schema CertificateSpecKeystoresPkcs12#create
    */
   readonly create: boolean;
 
   /**
-   * PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the PKCS12 keystore.
+   * PasswordSecretRef is a reference to a key in a Secret resource
+   * containing the password used to encrypt the PKCS12 keystore.
    *
    * @schema CertificateSpecKeystoresPkcs12#passwordSecretRef
    */
   readonly passwordSecretRef: CertificateSpecKeystoresPkcs12PasswordSecretRef;
 
   /**
-   * Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.
-   * If provided, allowed values are: `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20. `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility. `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.
+   * Profile specifies the key and certificate encryption algorithms and the HMAC algorithm
+   * used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.
+   *
+   *
+   * If provided, allowed values are:
+   * `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20.
+   * `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility.
+   * `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms
+   * (eg. because of company policy). Please note that the security of the algorithm is not that important
+   * in reality, because the unencrypted certificate and private key are also stored in the Secret.
    *
    * @schema CertificateSpecKeystoresPkcs12#profile
    */
@@ -822,7 +1032,9 @@ export function toJson_CertificateSpecKeystoresPkcs12(obj: CertificateSpecKeysto
 /* eslint-enable max-len, quote-props */
 
 /**
- * Excluded contains the constraints which must be disallowed. Any name matching a restriction in the excluded field is invalid regardless of information appearing in the permitted
+ * Excluded contains the constraints which must be disallowed. Any name matching a
+ * restriction in the excluded field is invalid regardless
+ * of information appearing in the permitted
  *
  * @schema CertificateSpecNameConstraintsExcluded
  */
@@ -842,7 +1054,8 @@ export interface CertificateSpecNameConstraintsExcluded {
   readonly emailAddresses?: string[];
 
   /**
-   * IPRanges is a list of IP Ranges that are permitted or excluded. This should be a valid CIDR notation.
+   * IPRanges is a list of IP Ranges that are permitted or excluded.
+   * This should be a valid CIDR notation.
    *
    * @schema CertificateSpecNameConstraintsExcluded#ipRanges
    */
@@ -895,7 +1108,8 @@ export interface CertificateSpecNameConstraintsPermitted {
   readonly emailAddresses?: string[];
 
   /**
-   * IPRanges is a list of IP Ranges that are permitted or excluded. This should be a valid CIDR notation.
+   * IPRanges is a list of IP Ranges that are permitted or excluded.
+   * This should be a valid CIDR notation.
    *
    * @schema CertificateSpecNameConstraintsPermitted#ipRanges
    */
@@ -928,8 +1142,15 @@ export function toJson_CertificateSpecNameConstraintsPermitted(obj: CertificateS
 /* eslint-enable max-len, quote-props */
 
 /**
- * Algorithm is the private key algorithm of the corresponding private key for this certificate.
- * If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`. If `algorithm` is specified and `size` is not provided, key size of 2048 will be used for `RSA` key algorithm and key size of 256 will be used for `ECDSA` key algorithm. key size is ignored when using the `Ed25519` key algorithm.
+ * Algorithm is the private key algorithm of the corresponding private key
+ * for this certificate.
+ *
+ *
+ * If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`.
+ * If `algorithm` is specified and `size` is not provided,
+ * key size of 2048 will be used for `RSA` key algorithm and
+ * key size of 256 will be used for `ECDSA` key algorithm.
+ * key size is ignored when using the `Ed25519` key algorithm.
  *
  * @schema CertificateSpecPrivateKeyAlgorithm
  */
@@ -943,8 +1164,13 @@ export enum CertificateSpecPrivateKeyAlgorithm {
 }
 
 /**
- * The private key cryptography standards (PKCS) encoding for this certificate's private key to be encoded in.
- * If provided, allowed values are `PKCS1` and `PKCS8` standing for PKCS#1 and PKCS#8, respectively. Defaults to `PKCS1` if not specified.
+ * The private key cryptography standards (PKCS) encoding for this
+ * certificate's private key to be encoded in.
+ *
+ *
+ * If provided, allowed values are `PKCS1` and `PKCS8` standing for PKCS#1
+ * and PKCS#8, respectively.
+ * Defaults to `PKCS1` if not specified.
  *
  * @default PKCS1` if not specified.
  * @schema CertificateSpecPrivateKeyEncoding
@@ -957,8 +1183,17 @@ export enum CertificateSpecPrivateKeyEncoding {
 }
 
 /**
- * RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.
- * If set to `Never`, a private key will only be generated if one does not already exist in the target `spec.secretName`. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to `Always`, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is `Never` for backward compatibility.
+ * RotationPolicy controls how private keys should be regenerated when a
+ * re-issuance is being processed.
+ *
+ *
+ * If set to `Never`, a private key will only be generated if one does not
+ * already exist in the target `spec.secretName`. If one does exists but it
+ * does not have the correct algorithm or size, a warning will be raised
+ * to await user intervention.
+ * If set to `Always`, a private key matching the specified requirements
+ * will be generated whenever a re-issuance occurs.
+ * Default is `Never` for backward compatibility.
  *
  * @default Never` for backward compatibility.
  * @schema CertificateSpecPrivateKeyRotationPolicy
@@ -971,20 +1206,24 @@ export enum CertificateSpecPrivateKeyRotationPolicy {
 }
 
 /**
- * PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the JKS keystore.
+ * PasswordSecretRef is a reference to a key in a Secret resource
+ * containing the password used to encrypt the JKS keystore.
  *
  * @schema CertificateSpecKeystoresJksPasswordSecretRef
  */
 export interface CertificateSpecKeystoresJksPasswordSecretRef {
   /**
-   * The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.
+   * The key of the entry in the Secret resource's `data` field to be used.
+   * Some instances of this field may be defaulted, in others it may be
+   * required.
    *
    * @schema CertificateSpecKeystoresJksPasswordSecretRef#key
    */
   readonly key?: string;
 
   /**
-   * Name of the resource being referred to. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+   * Name of the resource being referred to.
+   * More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
    *
    * @schema CertificateSpecKeystoresJksPasswordSecretRef#name
    */
@@ -1008,20 +1247,24 @@ export function toJson_CertificateSpecKeystoresJksPasswordSecretRef(obj: Certifi
 /* eslint-enable max-len, quote-props */
 
 /**
- * PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the PKCS12 keystore.
+ * PasswordSecretRef is a reference to a key in a Secret resource
+ * containing the password used to encrypt the PKCS12 keystore.
  *
  * @schema CertificateSpecKeystoresPkcs12PasswordSecretRef
  */
 export interface CertificateSpecKeystoresPkcs12PasswordSecretRef {
   /**
-   * The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.
+   * The key of the entry in the Secret resource's `data` field to be used.
+   * Some instances of this field may be defaulted, in others it may be
+   * required.
    *
    * @schema CertificateSpecKeystoresPkcs12PasswordSecretRef#key
    */
   readonly key?: string;
 
   /**
-   * Name of the resource being referred to. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+   * Name of the resource being referred to.
+   * More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
    *
    * @schema CertificateSpecKeystoresPkcs12PasswordSecretRef#name
    */
@@ -1045,8 +1288,16 @@ export function toJson_CertificateSpecKeystoresPkcs12PasswordSecretRef(obj: Cert
 /* eslint-enable max-len, quote-props */
 
 /**
- * Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.
- * If provided, allowed values are: `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20. `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility. `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.
+ * Profile specifies the key and certificate encryption algorithms and the HMAC algorithm
+ * used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.
+ *
+ *
+ * If provided, allowed values are:
+ * `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20.
+ * `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility.
+ * `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms
+ * (eg. because of company policy). Please note that the security of the algorithm is not that important
+ * in reality, because the unencrypted certificate and private key are also stored in the Secret.
  *
  * @schema CertificateSpecKeystoresPkcs12Profile
  */

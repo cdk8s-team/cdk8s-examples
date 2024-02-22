@@ -9,7 +9,9 @@ import (
 	"github.com/cdk8s-team/cdk8s-core-go/cdk8s/v2"
 )
 
-// A Certificate resource should be created to ensure an up to date and signed X.509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`.  The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`).
+// A Certificate resource should be created to ensure an up to date and signed X.509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`.
+//
+// The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`).
 type Certificate interface {
 	cdk8s.ApiObject
 	// The group portion of the API version (e.g. `authorization.k8s.io`).
