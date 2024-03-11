@@ -804,7 +804,11 @@ class CertificateSpecKeystores:
 @jsii.data_type(
     jsii_type="iocert-manager.CertificateSpecKeystoresJks",
     jsii_struct_bases=[],
-    name_mapping={"create": "create", "password_secret_ref": "passwordSecretRef"},
+    name_mapping={
+        "create": "create",
+        "password_secret_ref": "passwordSecretRef",
+        "alias": "alias",
+    },
 )
 class CertificateSpecKeystoresJks:
     def __init__(
@@ -812,11 +816,13 @@ class CertificateSpecKeystoresJks:
         *,
         create: builtins.bool,
         password_secret_ref: typing.Union["CertificateSpecKeystoresJksPasswordSecretRef", typing.Dict[builtins.str, typing.Any]],
+        alias: typing.Optional[builtins.str] = None,
     ) -> None:
         '''JKS configures options for storing a JKS keystore in the ``spec.secretName`` Secret resource.
 
         :param create: Create enables JKS keystore creation for the Certificate. If true, a file named ``keystore.jks`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef``. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named ``truststore.jks`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
         :param password_secret_ref: PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the JKS keystore.
+        :param alias: Alias specifies the alias of the key in the keystore, required by the JKS format. If not provided, the default alias ``certificate`` will be used.
 
         :schema: CertificateSpecKeystoresJks
         '''
@@ -826,10 +832,13 @@ class CertificateSpecKeystoresJks:
             type_hints = typing.get_type_hints(_typecheckingstub__571b4581314dc6da5154732cbc505ea05f780b18877fbcbc24fd2e2fa8274e62)
             check_type(argname="argument create", value=create, expected_type=type_hints["create"])
             check_type(argname="argument password_secret_ref", value=password_secret_ref, expected_type=type_hints["password_secret_ref"])
+            check_type(argname="argument alias", value=alias, expected_type=type_hints["alias"])
         self._values: typing.Dict[builtins.str, typing.Any] = {
             "create": create,
             "password_secret_ref": password_secret_ref,
         }
+        if alias is not None:
+            self._values["alias"] = alias
 
     @builtins.property
     def create(self) -> builtins.bool:
@@ -859,6 +868,17 @@ class CertificateSpecKeystoresJks:
         result = self._values.get("password_secret_ref")
         assert result is not None, "Required property 'password_secret_ref' is missing"
         return typing.cast("CertificateSpecKeystoresJksPasswordSecretRef", result)
+
+    @builtins.property
+    def alias(self) -> typing.Optional[builtins.str]:
+        '''Alias specifies the alias of the key in the keystore, required by the JKS format.
+
+        If not provided, the default alias ``certificate`` will be used.
+
+        :schema: CertificateSpecKeystoresJks#alias
+        '''
+        result = self._values.get("alias")
+        return typing.cast(typing.Optional[builtins.str], result)
 
     def __eq__(self, rhs: typing.Any) -> builtins.bool:
         return isinstance(rhs, self.__class__) and rhs._values == self._values
@@ -2059,6 +2079,7 @@ def _typecheckingstub__571b4581314dc6da5154732cbc505ea05f780b18877fbcbc24fd2e2fa
     *,
     create: builtins.bool,
     password_secret_ref: typing.Union[CertificateSpecKeystoresJksPasswordSecretRef, typing.Dict[builtins.str, typing.Any]],
+    alias: typing.Optional[builtins.str] = None,
 ) -> None:
     """Type checking stubs"""
     pass

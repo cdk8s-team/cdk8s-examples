@@ -928,6 +928,14 @@ export enum CertificateSpecAdditionalOutputFormatsType {
  */
 export interface CertificateSpecKeystoresJks {
   /**
+   * Alias specifies the alias of the key in the keystore, required by the JKS format.
+   * If not provided, the default alias `certificate` will be used.
+   *
+   * @schema CertificateSpecKeystoresJks#alias
+   */
+  readonly alias?: string;
+
+  /**
    * Create enables JKS keystore creation for the Certificate.
    * If true, a file named `keystore.jks` will be created in the target
    * Secret resource, encrypted using the password stored in
@@ -959,6 +967,7 @@ export interface CertificateSpecKeystoresJks {
 export function toJson_CertificateSpecKeystoresJks(obj: CertificateSpecKeystoresJks | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
+    'alias': obj.alias,
     'create': obj.create,
     'passwordSecretRef': toJson_CertificateSpecKeystoresJksPasswordSecretRef(obj.passwordSecretRef),
   };

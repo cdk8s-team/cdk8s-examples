@@ -16,5 +16,9 @@ type CertificateSpecKeystoresJks struct {
 	Create *bool `field:"required" json:"create" yaml:"create"`
 	// PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the JKS keystore.
 	PasswordSecretRef *CertificateSpecKeystoresJksPasswordSecretRef `field:"required" json:"passwordSecretRef" yaml:"passwordSecretRef"`
+	// Alias specifies the alias of the key in the keystore, required by the JKS format.
+	//
+	// If not provided, the default alias `certificate` will be used.
+	Alias *string `field:"optional" json:"alias" yaml:"alias"`
 }
 
