@@ -24,10 +24,10 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.508",
+    "@cdk8s/projen-common": "^0.0.511",
     "constructs": "^10.0.0",
     "lerna": "^6.6.2",
-    "projen": "^0.80.16"
+    "projen": "^0.80.19"
   },
   "resolutions": {
     "@yarnpkg/parsers": "3.0.0-rc.48.1"
