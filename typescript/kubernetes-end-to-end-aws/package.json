@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "cdk8s": "^2.66.2",
-    "cdk8s-plus-25": "^2.22.25",
+    "cdk8s-plus-25": "^2.22.65",
     "aws-cdk-lib": "^2.69.0",
-    "constructs": "^10.1.279",
+    "constructs": "^10.3.0",
     "@aws-cdk/lambda-layer-kubectl-v25": "^2.0.3"
   },
   "devDependencies": {

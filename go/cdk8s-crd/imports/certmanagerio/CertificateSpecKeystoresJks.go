@@ -5,9 +5,20 @@ package certmanagerio
 type CertificateSpecKeystoresJks struct {
 	// Create enables JKS keystore creation for the Certificate.
 	//
-	// If true, a file named `keystore.jks` will be created in the target Secret resource, encrypted using the password stored in `passwordSecretRef`. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named `truststore.jks` will also be created in the target Secret resource, encrypted using the password stored in `passwordSecretRef` containing the issuing Certificate Authority
+	// If true, a file named `keystore.jks` will be created in the target
+	// Secret resource, encrypted using the password stored in
+	// `passwordSecretRef`.
+	// The keystore file will be updated immediately.
+	// If the issuer provided a CA certificate, a file named `truststore.jks`
+	// will also be created in the target Secret resource, encrypted using the
+	// password stored in `passwordSecretRef`
+	// containing the issuing Certificate Authority.
 	Create *bool `field:"required" json:"create" yaml:"create"`
 	// PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the JKS keystore.
 	PasswordSecretRef *CertificateSpecKeystoresJksPasswordSecretRef `field:"required" json:"passwordSecretRef" yaml:"passwordSecretRef"`
+	// Alias specifies the alias of the key in the keystore, required by the JKS format.
+	//
+	// If not provided, the default alias `certificate` will be used.
+	Alias *string `field:"optional" json:"alias" yaml:"alias"`
 }
 

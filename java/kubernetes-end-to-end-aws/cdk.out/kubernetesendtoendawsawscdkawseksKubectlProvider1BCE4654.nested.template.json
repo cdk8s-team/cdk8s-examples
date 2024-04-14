@@ -173,13 +173,13 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "e2277687077a2abf9ae1af1cc9565e6715e2ebb62f79ec53aa75a1af9298f642.zip"
+     "S3Key": "3322b7049fb0ed2b7cbb644a2ada8d1116ff80c32dca89e6ada846b5de26f961.zip"
     },
     "Description": "/opt/awscli/aws"
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/AwsCliLayer/Resource",
-    "aws:asset:path": "asset.e2277687077a2abf9ae1af1cc9565e6715e2ebb62f79ec53aa75a1af9298f642.zip",
+    "aws:asset:path": "asset.3322b7049fb0ed2b7cbb644a2ada8d1116ff80c32dca89e6ada846b5de26f961.zip",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Content"
    }
@@ -334,7 +334,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02PzY7CMAyEn4V76uXnwO4RKu1h4YC60l4jNzXINE2kOAGhqu++TakQp5nxSPbnNWw/YbnAuxSmaQvLNfRj0D21AodUk4n2FPyNGwrKYlc3CP13ciayd6o8u3d/xAeFPwoy5kExdtBX3lKuJj15y+aR49MNSjYaRSgK7LKMGfbJtBT3KDSoisSnYEhN7W/EC7vLjKFtvqZHWGMZdncpLU8AeX/pXcMTlkkSfafDvEng9U2mmqeD+sEbfqy+YAnrxVWYi5Bc5I6geuo/KYY+rigBAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02PQW/CMAyFfwv31GPlwHaEShyAAyoS18hNPWSaJlKcUKGq/31Kqaad3rOf9Py5hO0XrFc4SGHarrDcwIiD6JE6gVNqyER7Cf7JLQVlsW9ahPGQnInsnap+3H9/xheFGwVh7ybF2MNYe0s5mvXiLZtXHt9uUrLRKEJRYJdFyQb2yXQU9yg0qZrEp2BIzek14p3dfcHQNl/TOIixDLtBKsszQO6vvGt5xjJJou91WJoE/r7JVMt2Ukd84sfnN6yhXD2EuQjJRe4J6rf+AimGPq4oAQAA"
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/CDKMetadata/Default"
