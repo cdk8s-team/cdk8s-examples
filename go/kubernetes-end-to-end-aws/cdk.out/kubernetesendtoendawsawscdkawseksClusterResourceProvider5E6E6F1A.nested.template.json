@@ -828,7 +828,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zVOy27CMBD8Fu5moaFqewWknlqEUqlXa7G30ZLEjrxOaRTl32sHcpqZfcxMAa9vsF3hTdbG1uuGLzCeSCLZr4imVg22F4u6wYGCdt6S7oL/GzRW5CKc0uCc9T7Lj3ykkpUeZadRhKLAPoOSHRx6U1M8oNDDFMbjj5t/vikIe6fee2diJmmx8EkxtjCWvqE8nvHsGzZDlnc2TWqOSZUrdpUqSXwfDCnTS/StDg8tkMr+sk0ts9VylfjRO8tL9Cd2XbKZVOWfoNhCsbEYbuw22NqX59VVmNehd5FbgvKO/70acnRHAQAA"
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zWNzW7CMBCEn4W7MQWq/hwhUk8tioLUq7XYm2iJY0deuxBFeffKgZxmvtXszE6+f8iXFdx4rU27tnSR4wk5ojlH0K2w0F0MKAsDBuW8QdUHfx8UNOiiPHmDZeZDxu8cEnBjNfJeATNGlocsgvfymHSL8QiMz1I5FrWbf34xMHknvpLTMZuidoufBEEnx8pbzOdZS29JDxkfbprEPHOO0JBrRIXsU9AodOLoOxWezLIM/o8MhrlqSRW1K7wztEz/QN+TaybR+K3cbeXnxpJL9w105u11dWWidUguUoeyeug/lpMAH0YBAAA="
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.ClusterResourceProvider/CDKMetadata/Default"
