@@ -68,9 +68,6 @@ type CertificateSpec struct {
 	// Requested X.509 certificate subject, represented using the LDAP "String Representation of a Distinguished Name" [1]. Important: the LDAP string format also specifies the order of the attributes in the subject, this is important when issuing certs for LDAP authentication. Example: `CN=foo,DC=corp,DC=example,DC=com` More info [1]: https://datatracker.ietf.org/doc/html/rfc4514 More info: https://github.com/cert-manager/cert-manager/issues/3203 More info: https://github.com/cert-manager/cert-manager/issues/4424.
 	//
 	// Cannot be set if the `subject` or `commonName` field is set.
-	// This is an Alpha Feature and is only enabled with the
-	// `--feature-gates=LiteralCertificateSubject=true` option set on both
-	// the controller and webhook components.
 	LiteralSubject *string `field:"optional" json:"literalSubject" yaml:"literalSubject"`
 	// x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10.
 	//
