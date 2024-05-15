@@ -227,9 +227,6 @@ export interface CertificateSpec {
    *
    *
    * Cannot be set if the `subject` or `commonName` field is set.
-   * This is an Alpha Feature and is only enabled with the
-   * `--feature-gates=LiteralCertificateSubject=true` option set on both
-   * the controller and webhook components.
    *
    * @schema CertificateSpec#literalSubject
    */
