@@ -2241,9 +2241,9 @@ follow-redirects@^1.14.9, follow-redirects@^1.15.2, follow-redirects@^1.15.6:
   integrity sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==
 
 foreground-child@^3.1.0:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/foreground-child/-/foreground-child-3.1.1.tgz#1d173e776d75d2772fed08efe4a0de1ea1b12d0d"
-  integrity sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/foreground-child/-/foreground-child-3.2.0.tgz#5eb496c4ebf3bcc4572e8908a45a72f5a1d2d658"
+  integrity sha512-CrWQNaEl1/6WeZoarcM9LHupTo3RpZO2Pdk1vktwzPiQTsJnAKJmm3TACKeG5UZbWDfaH2AbvYxzP96y0MT7fA==
   dependencies:
     cross-spawn "^7.0.0"
     signal-exit "^4.0.1"
