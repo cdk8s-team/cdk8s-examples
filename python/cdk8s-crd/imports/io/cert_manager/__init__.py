@@ -168,6 +168,7 @@ class CertificateProps:
         "other_names": "otherNames",
         "private_key": "privateKey",
         "renew_before": "renewBefore",
+        "renew_before_percentage": "renewBeforePercentage",
         "revision_history_limit": "revisionHistoryLimit",
         "secret_template": "secretTemplate",
         "subject": "subject",
@@ -195,6 +196,7 @@ class CertificateSpec:
         other_names: typing.Optional[typing.Sequence[typing.Union["CertificateSpecOtherNames", typing.Dict[builtins.str, typing.Any]]]] = None,
         private_key: typing.Optional[typing.Union["CertificateSpecPrivateKey", typing.Dict[builtins.str, typing.Any]]] = None,
         renew_before: typing.Optional[builtins.str] = None,
+        renew_before_percentage: typing.Optional[jsii.Number] = None,
         revision_history_limit: typing.Optional[jsii.Number] = None,
         secret_template: typing.Optional[typing.Union["CertificateSpecSecretTemplate", typing.Dict[builtins.str, typing.Any]]] = None,
         subject: typing.Optional[typing.Union["CertificateSpecSubject", typing.Dict[builtins.str, typing.Any]]] = None,
@@ -220,7 +222,8 @@ class CertificateSpec:
         :param name_constraints: x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10. This is an Alpha Feature and is only enabled with the ``--feature-gates=NameConstraints=true`` option set on both the controller and webhook components.
         :param other_names: ``otherNames`` is an escape hatch for SAN that allows any type. We currently restrict the support to string like otherNames, cf RFC 5280 p 37 Any UTF8 String valued otherName can be passed with by setting the keys oid: x.x.x.x and UTF8Value: somevalue for ``otherName``. Most commonly this would be UPN set with oid: 1.3.6.1.4.1.311.20.2.3 You should ensure that any OID passed is valid for the UTF8String type as we do not explicitly validate this.
         :param private_key: Private key options. These include the key algorithm and size, the used encoding and the rotation policy.
-        :param renew_before: How long before the currently issued certificate's expiry cert-manager should renew the certificate. For example, if a certificate is valid for 60 minutes, and ``renewBefore=10m``, cert-manager will begin to attempt to renew the certificate 50 minutes after it was issued (i.e. when there are 10 minutes remaining until the certificate is no longer valid). NOTE: The actual lifetime of the issued certificate is used to determine the renewal time. If an issuer returns a certificate with a different lifetime than the one requested, cert-manager will use the lifetime of the issued certificate. If unset, this defaults to 1/3 of the issued certificate's lifetime. Minimum accepted value is 5 minutes. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
+        :param renew_before: How long before the currently issued certificate's expiry cert-manager should renew the certificate. For example, if a certificate is valid for 60 minutes, and ``renewBefore=10m``, cert-manager will begin to attempt to renew the certificate 50 minutes after it was issued (i.e. when there are 10 minutes remaining until the certificate is no longer valid). NOTE: The actual lifetime of the issued certificate is used to determine the renewal time. If an issuer returns a certificate with a different lifetime than the one requested, cert-manager will use the lifetime of the issued certificate. If unset, this defaults to 1/3 of the issued certificate's lifetime. Minimum accepted value is 5 minutes. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration. Cannot be set if the ``renewBeforePercentage`` field is set.
+        :param renew_before_percentage: ``renewBeforePercentage`` is like ``renewBefore``, except it is a relative percentage rather than an absolute duration. For example, if a certificate is valid for 60 minutes, and ``renewBeforePercentage=25``, cert-manager will begin to attempt to renew the certificate 45 minutes after it was issued (i.e. when there are 15 minutes (25%) remaining until the certificate is no longer valid). NOTE: The actual lifetime of the issued certificate is used to determine the renewal time. If an issuer returns a certificate with a different lifetime than the one requested, cert-manager will use the lifetime of the issued certificate. Value must be an integer in the range (0,100). The minimum effective ``renewBefore`` derived from the ``renewBeforePercentage`` and ``duration`` fields is 5 minutes. Cannot be set if the ``renewBefore`` field is set.
         :param revision_history_limit: The maximum number of CertificateRequest revisions that are maintained in the Certificate's history. Each revision represents a single ``CertificateRequest`` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number. If set, revisionHistoryLimit must be a value of ``1`` or greater. If unset (``nil``), revisions will not be garbage collected. Default value is ``nil``.
         :param secret_template: Defines annotations and labels to be copied to the Certificate's Secret. Labels and annotations on the Secret will be changed as they appear on the SecretTemplate when added or removed. SecretTemplate annotations are added in conjunction with, and cannot overwrite, the base set of annotations cert-manager sets on the Certificate's Secret.
         :param subject: Requested set of X509 certificate subject attributes. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6. The common name attribute is specified separately in the ``commonName`` field. Cannot be set if the ``literalSubject`` field is set.
@@ -259,6 +262,7 @@ class CertificateSpec:
             check_type(argname="argument other_names", value=other_names, expected_type=type_hints["other_names"])
             check_type(argname="argument private_key", value=private_key, expected_type=type_hints["private_key"])
             check_type(argname="argument renew_before", value=renew_before, expected_type=type_hints["renew_before"])
+            check_type(argname="argument renew_before_percentage", value=renew_before_percentage, expected_type=type_hints["renew_before_percentage"])
             check_type(argname="argument revision_history_limit", value=revision_history_limit, expected_type=type_hints["revision_history_limit"])
             check_type(argname="argument secret_template", value=secret_template, expected_type=type_hints["secret_template"])
             check_type(argname="argument subject", value=subject, expected_type=type_hints["subject"])
@@ -296,6 +300,8 @@ class CertificateSpec:
             self._values["private_key"] = private_key
         if renew_before is not None:
             self._values["renew_before"] = renew_before
+        if renew_before_percentage is not None:
+            self._values["renew_before_percentage"] = renew_before_percentage
         if revision_history_limit is not None:
             self._values["revision_history_limit"] = revision_history_limit
         if secret_template is not None:
@@ -511,11 +517,35 @@ class CertificateSpec:
         If unset, this defaults to 1/3 of the issued certificate's lifetime.
         Minimum accepted value is 5 minutes.
         Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
+        Cannot be set if the ``renewBeforePercentage`` field is set.
 
         :schema: CertificateSpec#renewBefore
         '''
         result = self._values.get("renew_before")
         return typing.cast(typing.Optional[builtins.str], result)
+
+    @builtins.property
+    def renew_before_percentage(self) -> typing.Optional[jsii.Number]:
+        '''``renewBeforePercentage`` is like ``renewBefore``, except it is a relative percentage rather than an absolute duration.
+
+        For example, if a certificate is valid for 60
+        minutes, and  ``renewBeforePercentage=25``, cert-manager will begin to attempt to
+        renew the certificate 45 minutes after it was issued (i.e. when there are 15
+        minutes (25%) remaining until the certificate is no longer valid).
+
+        NOTE: The actual lifetime of the issued certificate is used to determine the
+        renewal time. If an issuer returns a certificate with a different lifetime than
+        the one requested, cert-manager will use the lifetime of the issued certificate.
+
+        Value must be an integer in the range (0,100). The minimum effective
+        ``renewBefore`` derived from the ``renewBeforePercentage`` and ``duration`` fields is 5
+        minutes.
+        Cannot be set if the ``renewBefore`` field is set.
+
+        :schema: CertificateSpec#renewBeforePercentage
+        '''
+        result = self._values.get("renew_before_percentage")
+        return typing.cast(typing.Optional[jsii.Number], result)
 
     @builtins.property
     def revision_history_limit(self) -> typing.Optional[jsii.Number]:
@@ -2039,6 +2069,7 @@ def _typecheckingstub__32dc1d8bfeef97dbd877eaeb718c4dc3768875c6ca7b447e1282f4788
     other_names: typing.Optional[typing.Sequence[typing.Union[CertificateSpecOtherNames, typing.Dict[builtins.str, typing.Any]]]] = None,
     private_key: typing.Optional[typing.Union[CertificateSpecPrivateKey, typing.Dict[builtins.str, typing.Any]]] = None,
     renew_before: typing.Optional[builtins.str] = None,
+    renew_before_percentage: typing.Optional[jsii.Number] = None,
     revision_history_limit: typing.Optional[jsii.Number] = None,
     secret_template: typing.Optional[typing.Union[CertificateSpecSecretTemplate, typing.Dict[builtins.str, typing.Any]]] = None,
     subject: typing.Optional[typing.Union[CertificateSpecSubject, typing.Dict[builtins.str, typing.Any]]] = None,
