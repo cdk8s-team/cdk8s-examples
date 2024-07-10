@@ -2464,9 +2464,9 @@ glob@7.1.4:
     path-is-absolute "^1.0.0"
 
 glob@^10.2.2:
-  version "10.4.3"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-10.4.3.tgz#e0ba2253dd21b3d0acdfb5d507c59a29f513fc7a"
-  integrity sha512-Q38SGlYRpVtDBPSWEylRyctn7uDeTp4NQERTLiCT1FqA9JXPYWqAVmQU6qh4r/zMM5ehxTcbaO8EjhWnvEhmyg==
+  version "10.4.5"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-10.4.5.tgz#f4d9f0b90ffdbab09c9d77f5f29b4262517b0956"
+  integrity sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==
   dependencies:
     foreground-child "^3.1.0"
     jackspeak "^3.1.2"
@@ -2963,9 +2963,9 @@ isobject@^3.0.1:
   integrity sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==
 
 jackspeak@^3.1.2:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jackspeak/-/jackspeak-3.4.1.tgz#145422416740568e9fc357bf60c844b3c1585f09"
-  integrity sha512-U23pQPDnmYybVkYjObcuYMk43VRlMLLqLI+RdZy8s8WV8WsxO9SnqSroKaluuvcNOdCAlauKszDwd+umbot5Mg==
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/jackspeak/-/jackspeak-3.4.2.tgz#c3d1e00071d52dba8b0dac17cd2a12d0187d2989"
+  integrity sha512-qH3nOSj8q/8+Eg8LUPOq3C+6HWkpUioIjDsq1+D4zY91oZvpPttw8GwtF1nReRYKXl+1AORyFqtm2f5Q1SB6/Q==
   dependencies:
     "@isaacs/cliui" "^8.0.2"
   optionalDependencies:
@@ -3416,9 +3416,9 @@ lower-case@^2.0.2:
     tslib "^2.0.3"
 
 lru-cache@^10.2.0:
-  version "10.4.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.4.0.tgz#cb29b4b2dd55b22e4a729cdb096093d7f85df02d"
-  integrity sha512-bfJaPTuEiTYBu+ulDaeQ0F+uLmlfFkMgXj4cbwfuMSjgObGMzb55FMMbDvbRU0fAHZ4sLGkz2mKwcMg8Dvm8Ww==
+  version "10.4.3"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.4.3.tgz#410fc8a17b70e598013df257c2446b7f3383f119"
+  integrity sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==
 
 lru-cache@^6.0.0:
   version "6.0.0"
