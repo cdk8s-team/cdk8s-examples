@@ -7,7 +7,6 @@ import { Construct } from 'constructs';
  * A Certificate resource should be created to ensure an up to date and signed
 X.509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`.
 
-
 The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`).
  *
  * @schema Certificate
@@ -65,7 +64,6 @@ export class Certificate extends ApiObject {
  * A Certificate resource should be created to ensure an up to date and signed
  * X.509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`.
  *
- *
  * The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`).
  *
  * @schema Certificate
@@ -112,7 +110,6 @@ export interface CertificateSpec {
    * Defines extra output formats of the private key and signed certificate chain
    * to be written to this Certificate's target Secret.
    *
-   *
    * This is a Beta Feature enabled by default. It can be disabled with the
    * `--feature-gates=AdditionalCertificateOutputFormats=false` option set on both
    * the controller and webhook components.
@@ -126,7 +123,6 @@ export interface CertificateSpec {
    * More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
    * NOTE: TLS clients will ignore this value when any subject alternative name is
    * set (see https://tools.ietf.org/html/rfc6125#section-6.4.4).
-   *
    *
    * Should have a length of 64 characters or fewer to avoid generating invalid CSRs.
    * Cannot be set if the `literalSubject` field is set.
@@ -147,7 +143,6 @@ export interface CertificateSpec {
    * issuer may choose to ignore the requested duration, just like any other
    * requested attribute.
    *
-   *
    * If unset, this defaults to 90 days.
    * Minimum accepted duration is 1 hour.
    * Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
@@ -165,7 +160,6 @@ export interface CertificateSpec {
 
   /**
    * Whether the KeyUsage and ExtKeyUsage extensions should be set in the encoded CSR.
-   *
    *
    * This option defaults to true, and should only be disabled if the target
    * issuer does not support CSRs with these X509 KeyUsage/ ExtKeyUsage extensions.
@@ -187,7 +181,6 @@ export interface CertificateSpec {
    * resources. Note that the issuer may choose to ignore the requested isCA value, just
    * like any other requested attribute.
    *
-   *
    * If true, this will automatically add the `cert sign` usage to the list
    * of requested `usages`.
    *
@@ -200,7 +193,6 @@ export interface CertificateSpec {
    * If the issuer is namespace-scoped, it must be in the same namespace
    * as the Certificate. If the issuer is cluster-scoped, it can be used
    * from any namespace.
-   *
    *
    * The `name` field of the reference must always be specified.
    *
@@ -225,7 +217,6 @@ export interface CertificateSpec {
    * More info: https://github.com/cert-manager/cert-manager/issues/3203
    * More info: https://github.com/cert-manager/cert-manager/issues/4424
    *
-   *
    * Cannot be set if the `subject` or `commonName` field is set.
    *
    * @schema CertificateSpec#literalSubject
@@ -235,7 +226,6 @@ export interface CertificateSpec {
   /**
    * x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate.
    * More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10
-   *
    *
    * This is an Alpha Feature and is only enabled with the
    * `--feature-gates=NameConstraints=true` option set on both
@@ -270,11 +260,9 @@ export interface CertificateSpec {
    * 50 minutes after it was issued (i.e. when there are 10 minutes remaining until
    * the certificate is no longer valid).
    *
-   *
    * NOTE: The actual lifetime of the issued certificate is used to determine the
    * renewal time. If an issuer returns a certificate with a different lifetime than
    * the one requested, cert-manager will use the lifetime of the issued certificate.
-   *
    *
    * If unset, this defaults to 1/3 of the issued certificate's lifetime.
    * Minimum accepted value is 5 minutes.
@@ -292,11 +280,9 @@ export interface CertificateSpec {
    * renew the certificate 45 minutes after it was issued (i.e. when there are 15
    * minutes (25%) remaining until the certificate is no longer valid).
    *
-   *
    * NOTE: The actual lifetime of the issued certificate is used to determine the
    * renewal time. If an issuer returns a certificate with a different lifetime than
    * the one requested, cert-manager will use the lifetime of the issued certificate.
-   *
    *
    * Value must be an integer in the range (0,100). The minimum effective
    * `renewBefore` derived from the `renewBeforePercentage` and `duration` fields is 5
@@ -313,7 +299,6 @@ export interface CertificateSpec {
    * created by this Certificate, either when it was created, renewed, or Spec
    * was changed. Revisions will be removed by oldest first if the number of
    * revisions exceeds this number.
-   *
    *
    * If set, revisionHistoryLimit must be a value of `1` or greater.
    * If unset (`nil`), revisions will not be garbage collected.
@@ -348,7 +333,6 @@ export interface CertificateSpec {
    * Requested set of X509 certificate subject attributes.
    * More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
    *
-   *
    * The common name attribute is specified separately in the `commonName` field.
    * Cannot be set if the `literalSubject` field is set.
    *
@@ -368,7 +352,6 @@ export interface CertificateSpec {
    * These usages are used to set the `usages` field on the created CertificateRequest
    * resources. If `encodeUsagesInRequest` is unset or set to `true`, the usages
    * will additionally be encoded in the `request` field which contains the CSR blob.
-   *
    *
    * If unset, defaults to `digital signature` and `key encipherment`.
    *
@@ -450,7 +433,6 @@ export function toJson_CertificateSpecAdditionalOutputFormats(obj: CertificateSp
  * If the issuer is namespace-scoped, it must be in the same namespace
  * as the Certificate. If the issuer is cluster-scoped, it can be used
  * from any namespace.
- *
  *
  * The `name` field of the reference must always be specified.
  *
@@ -538,7 +520,6 @@ export function toJson_CertificateSpecKeystores(obj: CertificateSpecKeystores | 
 /**
  * x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate.
  * More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10
- *
  *
  * This is an Alpha Feature and is only enabled with the
  * `--feature-gates=NameConstraints=true` option set on both
@@ -637,7 +618,6 @@ export interface CertificateSpecPrivateKey {
    * Algorithm is the private key algorithm of the corresponding private key
    * for this certificate.
    *
-   *
    * If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`.
    * If `algorithm` is specified and `size` is not provided,
    * key size of 2048 will be used for `RSA` key algorithm and
@@ -652,7 +632,6 @@ export interface CertificateSpecPrivateKey {
    * The private key cryptography standards (PKCS) encoding for this
    * certificate's private key to be encoded in.
    *
-   *
    * If provided, allowed values are `PKCS1` and `PKCS8` standing for PKCS#1
    * and PKCS#8, respectively.
    * Defaults to `PKCS1` if not specified.
@@ -665,7 +644,6 @@ export interface CertificateSpecPrivateKey {
   /**
    * RotationPolicy controls how private keys should be regenerated when a
    * re-issuance is being processed.
-   *
    *
    * If set to `Never`, a private key will only be generated if one does not
    * already exist in the target `spec.secretName`. If one does exists but it
@@ -682,7 +660,6 @@ export interface CertificateSpecPrivateKey {
 
   /**
    * Size is the key bit size of the corresponding private key for this certificate.
-   *
    *
    * If `algorithm` is set to `RSA`, valid values are `2048`, `4096` or `8192`,
    * and will default to `2048` if not specified.
@@ -758,7 +735,6 @@ export function toJson_CertificateSpecSecretTemplate(obj: CertificateSpecSecretT
 /**
  * Requested set of X509 certificate subject attributes.
  * More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
- *
  *
  * The common name attribute is specified separately in the `commonName` field.
  * Cannot be set if the `literalSubject` field is set.
@@ -850,7 +826,6 @@ export function toJson_CertificateSpecSubject(obj: CertificateSpecSubject | unde
  * See:
  * https://tools.ietf.org/html/rfc5280#section-4.2.1.3
  * https://tools.ietf.org/html/rfc5280#section-4.2.1.12
- *
  *
  * Valid KeyUsage values are as follows:
  * "signing",
@@ -1031,7 +1006,6 @@ export interface CertificateSpecKeystoresPkcs12 {
    * Profile specifies the key and certificate encryption algorithms and the HMAC algorithm
    * used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.
    *
-   *
    * If provided, allowed values are:
    * `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20.
    * `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility.
@@ -1175,7 +1149,6 @@ export function toJson_CertificateSpecNameConstraintsPermitted(obj: CertificateS
  * Algorithm is the private key algorithm of the corresponding private key
  * for this certificate.
  *
- *
  * If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`.
  * If `algorithm` is specified and `size` is not provided,
  * key size of 2048 will be used for `RSA` key algorithm and
@@ -1197,7 +1170,6 @@ export enum CertificateSpecPrivateKeyAlgorithm {
  * The private key cryptography standards (PKCS) encoding for this
  * certificate's private key to be encoded in.
  *
- *
  * If provided, allowed values are `PKCS1` and `PKCS8` standing for PKCS#1
  * and PKCS#8, respectively.
  * Defaults to `PKCS1` if not specified.
@@ -1215,7 +1187,6 @@ export enum CertificateSpecPrivateKeyEncoding {
 /**
  * RotationPolicy controls how private keys should be regenerated when a
  * re-issuance is being processed.
- *
  *
  * If set to `Never`, a private key will only be generated if one does not
  * already exist in the target `spec.secretName`. If one does exists but it
@@ -1320,7 +1291,6 @@ export function toJson_CertificateSpecKeystoresPkcs12PasswordSecretRef(obj: Cert
 /**
  * Profile specifies the key and certificate encryption algorithms and the HMAC algorithm
  * used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.
- *
  *
  * If provided, allowed values are:
  * `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20.

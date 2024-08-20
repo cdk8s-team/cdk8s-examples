@@ -11,7 +11,6 @@ type CertificateSpec struct {
 	// as the Certificate. If the issuer is cluster-scoped, it can be used
 	// from any namespace.
 	//
-	//
 	// The `name` field of the reference must always be specified.
 	IssuerRef *CertificateSpecIssuerRef `field:"required" json:"issuerRef" yaml:"issuerRef"`
 	// Name of the Secret resource that will be automatically created and managed by this Certificate resource.
@@ -31,7 +30,6 @@ type CertificateSpec struct {
 	// More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
 	// NOTE: TLS clients will ignore this value when any subject alternative name is
 	// set (see https://tools.ietf.org/html/rfc6125#section-6.4.4).
-	//
 	//
 	// Should have a length of 64 characters or fewer to avoid generating invalid CSRs.
 	// Cannot be set if the `literalSubject` field is set.
@@ -58,7 +56,6 @@ type CertificateSpec struct {
 	// The isCA value is used to set the `isCA` field on the created CertificateRequest
 	// resources. Note that the issuer may choose to ignore the requested isCA value, just
 	// like any other requested attribute.
-	//
 	//
 	// If true, this will automatically add the `cert sign` usage to the list
 	// of requested `usages`.
@@ -94,11 +91,9 @@ type CertificateSpec struct {
 	// 50 minutes after it was issued (i.e. when there are 10 minutes remaining until
 	// the certificate is no longer valid).
 	//
-	//
 	// NOTE: The actual lifetime of the issued certificate is used to determine the
 	// renewal time. If an issuer returns a certificate with a different lifetime than
 	// the one requested, cert-manager will use the lifetime of the issued certificate.
-	//
 	//
 	// If unset, this defaults to 1/3 of the issued certificate's lifetime.
 	// Minimum accepted value is 5 minutes.
@@ -112,11 +107,9 @@ type CertificateSpec struct {
 	// renew the certificate 45 minutes after it was issued (i.e. when there are 15
 	// minutes (25%) remaining until the certificate is no longer valid).
 	//
-	//
 	// NOTE: The actual lifetime of the issued certificate is used to determine the
 	// renewal time. If an issuer returns a certificate with a different lifetime than
 	// the one requested, cert-manager will use the lifetime of the issued certificate.
-	//
 	//
 	// Value must be an integer in the range (0,100). The minimum effective
 	// `renewBefore` derived from the `renewBeforePercentage` and `duration` fields is 5
@@ -129,7 +122,6 @@ type CertificateSpec struct {
 	// created by this Certificate, either when it was created, renewed, or Spec
 	// was changed. Revisions will be removed by oldest first if the number of
 	// revisions exceeds this number.
-	//
 	//
 	// If set, revisionHistoryLimit must be a value of `1` or greater.
 	// If unset (`nil`), revisions will not be garbage collected.
@@ -154,7 +146,6 @@ type CertificateSpec struct {
 	// These usages are used to set the `usages` field on the created CertificateRequest
 	// resources. If `encodeUsagesInRequest` is unset or set to `true`, the usages
 	// will additionally be encoded in the `request` field which contains the CSR blob.
-	//
 	//
 	// If unset, defaults to `digital signature` and `key encipherment`.
 	Usages *[]CertificateSpecUsages `field:"optional" json:"usages" yaml:"usages"`

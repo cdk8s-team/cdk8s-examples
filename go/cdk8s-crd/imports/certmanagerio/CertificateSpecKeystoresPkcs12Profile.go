@@ -5,7 +5,6 @@ package certmanagerio
 //
 // Default value is `LegacyRC2` for backward compatibility.
 //
-//
 // If provided, allowed values are:
 // `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20.
 // `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility.
