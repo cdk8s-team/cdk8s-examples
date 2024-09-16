@@ -1,9 +1,7 @@
 {
   "files": [
     ".gitattributes",
-    ".github/ISSUE_TEMPLATE/bug.md",
     ".github/ISSUE_TEMPLATE/config.yml",
-    ".github/ISSUE_TEMPLATE/feature-request.md",
     ".github/pull_request_template.md",
     ".github/workflows/auto-approve.yml",
     ".github/workflows/build.yml",
