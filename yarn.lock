@@ -41,12 +41,12 @@
   resolved "https://registry.yarnpkg.com/@balena/dockerignore/-/dockerignore-1.0.2.tgz#9ffe4726915251e8eb69f44ef3547e0da2c03e0d"
   integrity sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q==
 
-"@cdk8s/projen-common@^0.0.554":
-  version "0.0.554"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.554.tgz#ca05cac40ecbd354df96bd31c2e20983aaa48cda"
-  integrity sha512-iUYaccME2kNMXWXz8ZN/lRr91T8WTVQL9fVnPWD3alo12IYXP2k6fSdFPxqOv32ftio5UjMxQiF7xGSc8pLaJA==
+"@cdk8s/projen-common@^0.0.558":
+  version "0.0.558"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.558.tgz#f726bf93efa2601f3ee0b3d6fee2f2fb2a8bf703"
+  integrity sha512-yR/9upulyAGpwDE8lGS8xzrqtkGR1U4/4VgDkjzqzg01HI6eDyJa5pm9K3zNn81oTJzk7mJFWHg87Ha1EnyvJg==
   dependencies:
-    codemaker "^1.104.0"
+    codemaker "^1.105.0"
     deepmerge "^4.3.1"
 
 "@colors/colors@1.5.0":
@@ -1498,10 +1498,10 @@ cmd-shim@^6.0.0:
   resolved "https://registry.yarnpkg.com/cmd-shim/-/cmd-shim-6.0.3.tgz#c491e9656594ba17ac83c4bd931590a9d6e26033"
   integrity sha512-FMabTRlc5t5zjdenF6mS0MBeFZm0XqHqeOkcskKFb/LYCcRQ5fVgLOHVc4Lq9CqABd9zhjwPjMBCJvMCziSVtA==
 
-codemaker@^1.104.0:
-  version "1.104.0"
-  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.104.0.tgz#e310320177d774e3c62e80e862802c3688b63a4d"
-  integrity sha512-BC95gULaPN4MMeWxeLXHGatkac6LOArHMAkPkl3wQdcVa7MO4OzST6e8tY71iqA3KrgamfP0vQ34N9rDkfDyGg==
+codemaker@^1.105.0:
+  version "1.105.0"
+  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.105.0.tgz#0ecc787a1277ad9c8e53052860f7fca663747fae"
+  integrity sha512-eTePuHlpXNDD4P1vdEv61j+O4f7cnzTSXfbl5bsz+dp8TC95B4YKUS7A/MfR39/CMfqjPn3+KjnCubRbqv5RMA==
   dependencies:
     camelcase "^6.3.0"
     decamelize "^5.0.1"
@@ -3774,9 +3774,9 @@ node-fetch@^2.6.7:
     whatwg-url "^5.0.0"
 
 node-gyp-build@^4.3.0:
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.8.2.tgz#4f802b71c1ab2ca16af830e6c1ea7dd1ad9496fa"
-  integrity sha512-IRUxE4BVsHWXkV/SFOut4qTlagw2aM8T5/vnTsmrHJvVoKueJHRc/JaFND7QDDc61kLYUJ6qlZM3sqTSyx2dTw==
+  version "4.8.3"
+  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.8.3.tgz#9187216d24dbee29e44eb20d2ebf62a296bbea1a"
+  integrity sha512-EMS95CMJzdoSKoIiXo8pxKoL8DYxwIZXYlLmgPb8KUv794abpnLK6ynsCAWNliOjREKruYKdzbh76HHYUHX7nw==
 
 node-gyp@^9.0.0:
   version "9.4.1"
@@ -4429,10 +4429,10 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
-projen@^0.90.2:
-  version "0.90.2"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.90.2.tgz#36682a65a28028e83edd804d848481dabfd9e9d2"
-  integrity sha512-AMCSpo/IDGKvww+b5PFMv1fOpXkId7Tn6ISJvUDxjAb+/VrAqequcAJrlvDl0tO75ZRDY18b2N1twZFPyeueew==
+projen@^0.90.3:
+  version "0.90.3"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.90.3.tgz#6d0d59d808b40b0c09d95721313fb4519e1425c0"
+  integrity sha512-hvnlTf4y4tVQS+DGsi8mAM3pTuTrJQMldr/gDL0sZOgpvUYP8FZ6SPb3sx5HSNql2iyaaU8S+e9WKZi3C3I7Zw==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"

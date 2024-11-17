@@ -1,5 +1,8 @@
-const { Cdk8sTeamNodeProject } = require('@cdk8s/projen-common');
+import { Cdk8sTeamNodeProject } from '@cdk8s/projen-common';
+import { typescript } from 'projen';
+
 const project = new Cdk8sTeamNodeProject({
+  projenrcJs: false,
   defaultReleaseBranch: 'main',
   name: 'root',
   devDeps: [
@@ -10,7 +13,7 @@ const project = new Cdk8sTeamNodeProject({
   jest: false,
   workflowBootstrapSteps: [
     {
-      uses: 'actions/setup-python@v4',
+      uses: 'actions/setup-python@v5',
       with: {
         'python-version': '3.10.4'
       },
@@ -20,7 +23,7 @@ const project = new Cdk8sTeamNodeProject({
       run: 'pip install pipenv'
     },
     {
-      uses: 'actions/setup-java@v3',
+      uses: 'actions/setup-java@v4',
       with: {
         'distribution': 'adopt',
         'java-version': '19.0.2'
@@ -28,13 +31,15 @@ const project = new Cdk8sTeamNodeProject({
     },
     {
       name: 'Install Maven',
-      uses: 'stCarolas/setup-maven@v4.5',
+      uses: 'stCarolas/setup-maven@v5',
       with: {
         'maven-version': '3.9.1',
       }
     }
   ],
 });
+
+new typescript.ProjenrcTs(project);
 
 project.package.addField('private', true);
 project.package.addField('workspaces', {
@@ -48,8 +53,10 @@ project.package.addField('workspaces', {
 
 project.testTask.reset();
 
-project.buildTask._locked = false
+ //@ts-ignore
+project.buildTask._locked = false;
 project.buildTask.reset('lerna run build --skip-nx-cache --no-bail');
+ //@ts-ignore
 project.buildTask._locked = true
 
 // no package task is needed
