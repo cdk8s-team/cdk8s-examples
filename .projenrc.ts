@@ -1,5 +1,8 @@
-const { Cdk8sTeamNodeProject } = require('@cdk8s/projen-common');
+import { Cdk8sTeamNodeProject } from '@cdk8s/projen-common';
+import { typescript } from 'projen';
+
 const project = new Cdk8sTeamNodeProject({
+  projenrcJs: false,
   defaultReleaseBranch: 'main',
   name: 'root',
   devDeps: [
@@ -36,6 +39,8 @@ const project = new Cdk8sTeamNodeProject({
   ],
 });
 
+new typescript.ProjenrcTs(project);
+
 project.package.addField('private', true);
 project.package.addField('workspaces', {
   packages: [
@@ -48,8 +53,10 @@ project.package.addField('workspaces', {
 
 project.testTask.reset();
 
-project.buildTask._locked = false
+ //@ts-ignore
+project.buildTask._locked = false;
 project.buildTask.reset('lerna run build --skip-nx-cache --no-bail');
+ //@ts-ignore
 project.buildTask._locked = true
 
 // no package task is needed
