@@ -833,8 +833,9 @@ class CertificateSpecKeystores:
     jsii_struct_bases=[],
     name_mapping={
         "create": "create",
-        "password_secret_ref": "passwordSecretRef",
         "alias": "alias",
+        "password": "password",
+        "password_secret_ref": "passwordSecretRef",
     },
 )
 class CertificateSpecKeystoresJks:
@@ -842,14 +843,16 @@ class CertificateSpecKeystoresJks:
         self,
         *,
         create: builtins.bool,
-        password_secret_ref: typing.Union["CertificateSpecKeystoresJksPasswordSecretRef", typing.Dict[builtins.str, typing.Any]],
         alias: typing.Optional[builtins.str] = None,
+        password: typing.Optional[builtins.str] = None,
+        password_secret_ref: typing.Optional[typing.Union["CertificateSpecKeystoresJksPasswordSecretRef", typing.Dict[builtins.str, typing.Any]]] = None,
     ) -> None:
         '''JKS configures options for storing a JKS keystore in the ``spec.secretName`` Secret resource.
 
-        :param create: Create enables JKS keystore creation for the Certificate. If true, a file named ``keystore.jks`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef``. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named ``truststore.jks`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
-        :param password_secret_ref: PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the JKS keystore.
+        :param create: Create enables JKS keystore creation for the Certificate. If true, a file named ``keystore.jks`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` or ``password``. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named ``truststore.jks`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
         :param alias: Alias specifies the alias of the key in the keystore, required by the JKS format. If not provided, the default alias ``certificate`` will be used.
+        :param password: Password provides a literal password used to encrypt the JKS keystore. Mutually exclusive with passwordSecretRef. One of password or passwordSecretRef must provide a password with a non-zero length.
+        :param password_secret_ref: PasswordSecretRef is a reference to a non-empty key in a Secret resource containing the password used to encrypt the JKS keystore. Mutually exclusive with password. One of password or passwordSecretRef must provide a password with a non-zero length.
 
         :schema: CertificateSpecKeystoresJks
         '''
@@ -858,14 +861,18 @@ class CertificateSpecKeystoresJks:
         if __debug__:
             type_hints = typing.get_type_hints(_typecheckingstub__571b4581314dc6da5154732cbc505ea05f780b18877fbcbc24fd2e2fa8274e62)
             check_type(argname="argument create", value=create, expected_type=type_hints["create"])
-            check_type(argname="argument password_secret_ref", value=password_secret_ref, expected_type=type_hints["password_secret_ref"])
             check_type(argname="argument alias", value=alias, expected_type=type_hints["alias"])
+            check_type(argname="argument password", value=password, expected_type=type_hints["password"])
+            check_type(argname="argument password_secret_ref", value=password_secret_ref, expected_type=type_hints["password_secret_ref"])
         self._values: typing.Dict[builtins.str, typing.Any] = {
             "create": create,
-            "password_secret_ref": password_secret_ref,
         }
         if alias is not None:
             self._values["alias"] = alias
+        if password is not None:
+            self._values["password"] = password
+        if password_secret_ref is not None:
+            self._values["password_secret_ref"] = password_secret_ref
 
     @builtins.property
     def create(self) -> builtins.bool:
@@ -873,7 +880,7 @@ class CertificateSpecKeystoresJks:
 
         If true, a file named ``keystore.jks`` will be created in the target
         Secret resource, encrypted using the password stored in
-        ``passwordSecretRef``.
+        ``passwordSecretRef`` or ``password``.
         The keystore file will be updated immediately.
         If the issuer provided a CA certificate, a file named ``truststore.jks``
         will also be created in the target Secret resource, encrypted using the
@@ -887,16 +894,6 @@ class CertificateSpecKeystoresJks:
         return typing.cast(builtins.bool, result)
 
     @builtins.property
-    def password_secret_ref(self) -> "CertificateSpecKeystoresJksPasswordSecretRef":
-        '''PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the JKS keystore.
-
-        :schema: CertificateSpecKeystoresJks#passwordSecretRef
-        '''
-        result = self._values.get("password_secret_ref")
-        assert result is not None, "Required property 'password_secret_ref' is missing"
-        return typing.cast("CertificateSpecKeystoresJksPasswordSecretRef", result)
-
-    @builtins.property
     def alias(self) -> typing.Optional[builtins.str]:
         '''Alias specifies the alias of the key in the keystore, required by the JKS format.
 
@@ -906,6 +903,32 @@ class CertificateSpecKeystoresJks:
         '''
         result = self._values.get("alias")
         return typing.cast(typing.Optional[builtins.str], result)
+
+    @builtins.property
+    def password(self) -> typing.Optional[builtins.str]:
+        '''Password provides a literal password used to encrypt the JKS keystore.
+
+        Mutually exclusive with passwordSecretRef.
+        One of password or passwordSecretRef must provide a password with a non-zero length.
+
+        :schema: CertificateSpecKeystoresJks#password
+        '''
+        result = self._values.get("password")
+        return typing.cast(typing.Optional[builtins.str], result)
+
+    @builtins.property
+    def password_secret_ref(
+        self,
+    ) -> typing.Optional["CertificateSpecKeystoresJksPasswordSecretRef"]:
+        '''PasswordSecretRef is a reference to a non-empty key in a Secret resource containing the password used to encrypt the JKS keystore.
+
+        Mutually exclusive with password.
+        One of password or passwordSecretRef must provide a password with a non-zero length.
+
+        :schema: CertificateSpecKeystoresJks#passwordSecretRef
+        '''
+        result = self._values.get("password_secret_ref")
+        return typing.cast(typing.Optional["CertificateSpecKeystoresJksPasswordSecretRef"], result)
 
     def __eq__(self, rhs: typing.Any) -> builtins.bool:
         return isinstance(rhs, self.__class__) and rhs._values == self._values
@@ -931,7 +954,10 @@ class CertificateSpecKeystoresJksPasswordSecretRef:
         name: builtins.str,
         key: typing.Optional[builtins.str] = None,
     ) -> None:
-        '''PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the JKS keystore.
+        '''PasswordSecretRef is a reference to a non-empty key in a Secret resource containing the password used to encrypt the JKS keystore.
+
+        Mutually exclusive with password.
+        One of password or passwordSecretRef must provide a password with a non-zero length.
 
         :param name: Name of the resource being referred to. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
         :param key: The key of the entry in the Secret resource's ``data`` field to be used. Some instances of this field may be defaulted, in others it may be required.
@@ -989,6 +1015,7 @@ class CertificateSpecKeystoresJksPasswordSecretRef:
     jsii_struct_bases=[],
     name_mapping={
         "create": "create",
+        "password": "password",
         "password_secret_ref": "passwordSecretRef",
         "profile": "profile",
     },
@@ -998,13 +1025,15 @@ class CertificateSpecKeystoresPkcs12:
         self,
         *,
         create: builtins.bool,
-        password_secret_ref: typing.Union["CertificateSpecKeystoresPkcs12PasswordSecretRef", typing.Dict[builtins.str, typing.Any]],
+        password: typing.Optional[builtins.str] = None,
+        password_secret_ref: typing.Optional[typing.Union["CertificateSpecKeystoresPkcs12PasswordSecretRef", typing.Dict[builtins.str, typing.Any]]] = None,
         profile: typing.Optional["CertificateSpecKeystoresPkcs12Profile"] = None,
     ) -> None:
         '''PKCS12 configures options for storing a PKCS12 keystore in the ``spec.secretName`` Secret resource.
 
-        :param create: Create enables PKCS12 keystore creation for the Certificate. If true, a file named ``keystore.p12`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef``. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named ``truststore.p12`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
-        :param password_secret_ref: PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the PKCS12 keystore.
+        :param create: Create enables PKCS12 keystore creation for the Certificate. If true, a file named ``keystore.p12`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` or in ``password``. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named ``truststore.p12`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
+        :param password: Password provides a literal password used to encrypt the PKCS#12 keystore. Mutually exclusive with passwordSecretRef. One of password or passwordSecretRef must provide a password with a non-zero length.
+        :param password_secret_ref: PasswordSecretRef is a reference to a non-empty key in a Secret resource containing the password used to encrypt the PKCS#12 keystore. Mutually exclusive with password. One of password or passwordSecretRef must provide a password with a non-zero length.
         :param profile: Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is ``LegacyRC2`` for backward compatibility. If provided, allowed values are: ``LegacyRC2``: Deprecated. Not supported by default in OpenSSL 3 or Java 20. ``LegacyDES``: Less secure algorithm. Use this option for maximal compatibility. ``Modern2023``: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.
 
         :schema: CertificateSpecKeystoresPkcs12
@@ -1014,12 +1043,16 @@ class CertificateSpecKeystoresPkcs12:
         if __debug__:
             type_hints = typing.get_type_hints(_typecheckingstub__c5382e8480294729cddd333c0c832e9c632efa49695fb65db41f2232ecd5fb79)
             check_type(argname="argument create", value=create, expected_type=type_hints["create"])
+            check_type(argname="argument password", value=password, expected_type=type_hints["password"])
             check_type(argname="argument password_secret_ref", value=password_secret_ref, expected_type=type_hints["password_secret_ref"])
             check_type(argname="argument profile", value=profile, expected_type=type_hints["profile"])
         self._values: typing.Dict[builtins.str, typing.Any] = {
             "create": create,
-            "password_secret_ref": password_secret_ref,
         }
+        if password is not None:
+            self._values["password"] = password
+        if password_secret_ref is not None:
+            self._values["password_secret_ref"] = password_secret_ref
         if profile is not None:
             self._values["profile"] = profile
 
@@ -1029,7 +1062,7 @@ class CertificateSpecKeystoresPkcs12:
 
         If true, a file named ``keystore.p12`` will be created in the target
         Secret resource, encrypted using the password stored in
-        ``passwordSecretRef``.
+        ``passwordSecretRef`` or in ``password``.
         The keystore file will be updated immediately.
         If the issuer provided a CA certificate, a file named ``truststore.p12`` will
         also be created in the target Secret resource, encrypted using the
@@ -1043,14 +1076,30 @@ class CertificateSpecKeystoresPkcs12:
         return typing.cast(builtins.bool, result)
 
     @builtins.property
-    def password_secret_ref(self) -> "CertificateSpecKeystoresPkcs12PasswordSecretRef":
-        '''PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the PKCS12 keystore.
+    def password(self) -> typing.Optional[builtins.str]:
+        '''Password provides a literal password used to encrypt the PKCS#12 keystore.
+
+        Mutually exclusive with passwordSecretRef.
+        One of password or passwordSecretRef must provide a password with a non-zero length.
+
+        :schema: CertificateSpecKeystoresPkcs12#password
+        '''
+        result = self._values.get("password")
+        return typing.cast(typing.Optional[builtins.str], result)
+
+    @builtins.property
+    def password_secret_ref(
+        self,
+    ) -> typing.Optional["CertificateSpecKeystoresPkcs12PasswordSecretRef"]:
+        '''PasswordSecretRef is a reference to a non-empty key in a Secret resource containing the password used to encrypt the PKCS#12 keystore.
+
+        Mutually exclusive with password.
+        One of password or passwordSecretRef must provide a password with a non-zero length.
 
         :schema: CertificateSpecKeystoresPkcs12#passwordSecretRef
         '''
         result = self._values.get("password_secret_ref")
-        assert result is not None, "Required property 'password_secret_ref' is missing"
-        return typing.cast("CertificateSpecKeystoresPkcs12PasswordSecretRef", result)
+        return typing.cast(typing.Optional["CertificateSpecKeystoresPkcs12PasswordSecretRef"], result)
 
     @builtins.property
     def profile(self) -> typing.Optional["CertificateSpecKeystoresPkcs12Profile"]:
@@ -1094,7 +1143,10 @@ class CertificateSpecKeystoresPkcs12PasswordSecretRef:
         name: builtins.str,
         key: typing.Optional[builtins.str] = None,
     ) -> None:
-        '''PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the PKCS12 keystore.
+        '''PasswordSecretRef is a reference to a non-empty key in a Secret resource containing the password used to encrypt the PKCS#12 keystore.
+
+        Mutually exclusive with password.
+        One of password or passwordSecretRef must provide a password with a non-zero length.
 
         :param name: Name of the resource being referred to. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
         :param key: The key of the entry in the Secret resource's ``data`` field to be used. Some instances of this field may be defaulted, in others it may be required.
@@ -2106,8 +2158,9 @@ def _typecheckingstub__304190a06d3e60433de1a2655ea13ece3d452ac5995f8f0e820230f00
 def _typecheckingstub__571b4581314dc6da5154732cbc505ea05f780b18877fbcbc24fd2e2fa8274e62(
     *,
     create: builtins.bool,
-    password_secret_ref: typing.Union[CertificateSpecKeystoresJksPasswordSecretRef, typing.Dict[builtins.str, typing.Any]],
     alias: typing.Optional[builtins.str] = None,
+    password: typing.Optional[builtins.str] = None,
+    password_secret_ref: typing.Optional[typing.Union[CertificateSpecKeystoresJksPasswordSecretRef, typing.Dict[builtins.str, typing.Any]]] = None,
 ) -> None:
     """Type checking stubs"""
     pass
@@ -2123,7 +2176,8 @@ def _typecheckingstub__4c705b97f1ec6666fe596694a6020ae107ebdb667b49d9a0e8e70230b
 def _typecheckingstub__c5382e8480294729cddd333c0c832e9c632efa49695fb65db41f2232ecd5fb79(
     *,
     create: builtins.bool,
-    password_secret_ref: typing.Union[CertificateSpecKeystoresPkcs12PasswordSecretRef, typing.Dict[builtins.str, typing.Any]],
+    password: typing.Optional[builtins.str] = None,
+    password_secret_ref: typing.Optional[typing.Union[CertificateSpecKeystoresPkcs12PasswordSecretRef, typing.Dict[builtins.str, typing.Any]]] = None,
     profile: typing.Optional[CertificateSpecKeystoresPkcs12Profile] = None,
 ) -> None:
     """Type checking stubs"""

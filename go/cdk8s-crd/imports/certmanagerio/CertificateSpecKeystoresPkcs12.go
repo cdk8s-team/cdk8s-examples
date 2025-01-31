@@ -7,15 +7,23 @@ type CertificateSpecKeystoresPkcs12 struct {
 	//
 	// If true, a file named `keystore.p12` will be created in the target
 	// Secret resource, encrypted using the password stored in
-	// `passwordSecretRef`.
+	// `passwordSecretRef` or in `password`.
 	// The keystore file will be updated immediately.
 	// If the issuer provided a CA certificate, a file named `truststore.p12` will
 	// also be created in the target Secret resource, encrypted using the
 	// password stored in `passwordSecretRef` containing the issuing Certificate
 	// Authority.
 	Create *bool `field:"required" json:"create" yaml:"create"`
-	// PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the PKCS12 keystore.
-	PasswordSecretRef *CertificateSpecKeystoresPkcs12PasswordSecretRef `field:"required" json:"passwordSecretRef" yaml:"passwordSecretRef"`
+	// Password provides a literal password used to encrypt the PKCS#12 keystore.
+	//
+	// Mutually exclusive with passwordSecretRef.
+	// One of password or passwordSecretRef must provide a password with a non-zero length.
+	Password *string `field:"optional" json:"password" yaml:"password"`
+	// PasswordSecretRef is a reference to a non-empty key in a Secret resource containing the password used to encrypt the PKCS#12 keystore.
+	//
+	// Mutually exclusive with password.
+	// One of password or passwordSecretRef must provide a password with a non-zero length.
+	PasswordSecretRef *CertificateSpecKeystoresPkcs12PasswordSecretRef `field:"optional" json:"passwordSecretRef" yaml:"passwordSecretRef"`
 	// Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore.
 	//
 	// Default value is `LegacyRC2` for backward compatibility.
