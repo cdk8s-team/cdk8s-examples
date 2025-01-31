@@ -1,7 +1,10 @@
 package certmanagerio
 
 
-// PasswordSecretRef is a reference to a key in a Secret resource containing the password used to encrypt the JKS keystore.
+// PasswordSecretRef is a reference to a non-empty key in a Secret resource containing the password used to encrypt the JKS keystore.
+//
+// Mutually exclusive with password.
+// One of password or passwordSecretRef must provide a password with a non-zero length.
 type CertificateSpecKeystoresJksPasswordSecretRef struct {
 	// Name of the resource being referred to.
 	//

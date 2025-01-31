@@ -935,7 +935,7 @@ export interface CertificateSpecKeystoresJks {
    * Create enables JKS keystore creation for the Certificate.
    * If true, a file named `keystore.jks` will be created in the target
    * Secret resource, encrypted using the password stored in
-   * `passwordSecretRef`.
+   * `passwordSecretRef` or `password`.
    * The keystore file will be updated immediately.
    * If the issuer provided a CA certificate, a file named `truststore.jks`
    * will also be created in the target Secret resource, encrypted using the
@@ -947,12 +947,23 @@ export interface CertificateSpecKeystoresJks {
   readonly create: boolean;
 
   /**
-   * PasswordSecretRef is a reference to a key in a Secret resource
+   * Password provides a literal password used to encrypt the JKS keystore.
+   * Mutually exclusive with passwordSecretRef.
+   * One of password or passwordSecretRef must provide a password with a non-zero length.
+   *
+   * @schema CertificateSpecKeystoresJks#password
+   */
+  readonly password?: string;
+
+  /**
+   * PasswordSecretRef is a reference to a non-empty key in a Secret resource
    * containing the password used to encrypt the JKS keystore.
+   * Mutually exclusive with password.
+   * One of password or passwordSecretRef must provide a password with a non-zero length.
    *
    * @schema CertificateSpecKeystoresJks#passwordSecretRef
    */
-  readonly passwordSecretRef: CertificateSpecKeystoresJksPasswordSecretRef;
+  readonly passwordSecretRef?: CertificateSpecKeystoresJksPasswordSecretRef;
 
 }
 
@@ -965,6 +976,7 @@ export function toJson_CertificateSpecKeystoresJks(obj: CertificateSpecKeystores
   const result = {
     'alias': obj.alias,
     'create': obj.create,
+    'password': obj.password,
     'passwordSecretRef': toJson_CertificateSpecKeystoresJksPasswordSecretRef(obj.passwordSecretRef),
   };
   // filter undefined values
@@ -983,7 +995,7 @@ export interface CertificateSpecKeystoresPkcs12 {
    * Create enables PKCS12 keystore creation for the Certificate.
    * If true, a file named `keystore.p12` will be created in the target
    * Secret resource, encrypted using the password stored in
-   * `passwordSecretRef`.
+   * `passwordSecretRef` or in `password`.
    * The keystore file will be updated immediately.
    * If the issuer provided a CA certificate, a file named `truststore.p12` will
    * also be created in the target Secret resource, encrypted using the
@@ -995,12 +1007,23 @@ export interface CertificateSpecKeystoresPkcs12 {
   readonly create: boolean;
 
   /**
-   * PasswordSecretRef is a reference to a key in a Secret resource
-   * containing the password used to encrypt the PKCS12 keystore.
+   * Password provides a literal password used to encrypt the PKCS#12 keystore.
+   * Mutually exclusive with passwordSecretRef.
+   * One of password or passwordSecretRef must provide a password with a non-zero length.
+   *
+   * @schema CertificateSpecKeystoresPkcs12#password
+   */
+  readonly password?: string;
+
+  /**
+   * PasswordSecretRef is a reference to a non-empty key in a Secret resource
+   * containing the password used to encrypt the PKCS#12 keystore.
+   * Mutually exclusive with password.
+   * One of password or passwordSecretRef must provide a password with a non-zero length.
    *
    * @schema CertificateSpecKeystoresPkcs12#passwordSecretRef
    */
-  readonly passwordSecretRef: CertificateSpecKeystoresPkcs12PasswordSecretRef;
+  readonly passwordSecretRef?: CertificateSpecKeystoresPkcs12PasswordSecretRef;
 
   /**
    * Profile specifies the key and certificate encryption algorithms and the HMAC algorithm
@@ -1027,6 +1050,7 @@ export function toJson_CertificateSpecKeystoresPkcs12(obj: CertificateSpecKeysto
   if (obj === undefined) { return undefined; }
   const result = {
     'create': obj.create,
+    'password': obj.password,
     'passwordSecretRef': toJson_CertificateSpecKeystoresPkcs12PasswordSecretRef(obj.passwordSecretRef),
     'profile': obj.profile,
   };
@@ -1207,8 +1231,10 @@ export enum CertificateSpecPrivateKeyRotationPolicy {
 }
 
 /**
- * PasswordSecretRef is a reference to a key in a Secret resource
+ * PasswordSecretRef is a reference to a non-empty key in a Secret resource
  * containing the password used to encrypt the JKS keystore.
+ * Mutually exclusive with password.
+ * One of password or passwordSecretRef must provide a password with a non-zero length.
  *
  * @schema CertificateSpecKeystoresJksPasswordSecretRef
  */
@@ -1248,8 +1274,10 @@ export function toJson_CertificateSpecKeystoresJksPasswordSecretRef(obj: Certifi
 /* eslint-enable max-len, quote-props */
 
 /**
- * PasswordSecretRef is a reference to a key in a Secret resource
- * containing the password used to encrypt the PKCS12 keystore.
+ * PasswordSecretRef is a reference to a non-empty key in a Secret resource
+ * containing the password used to encrypt the PKCS#12 keystore.
+ * Mutually exclusive with password.
+ * One of password or passwordSecretRef must provide a password with a non-zero length.
  *
  * @schema CertificateSpecKeystoresPkcs12PasswordSecretRef
  */
