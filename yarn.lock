@@ -2083,9 +2083,9 @@ execa@^5.0.0:
     strip-final-newline "^2.0.0"
 
 exponential-backoff@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/exponential-backoff/-/exponential-backoff-3.1.1.tgz#64ac7526fe341ab18a39016cd22c787d01e00bf6"
-  integrity sha512-dX7e/LHVJ6W3DE1MHWi9S1EYzDESENfLrYohG2G++ovZrYOkm4Knwa0mc1cn84xJOR4KEU0WSchhLbd0UklbHw==
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/exponential-backoff/-/exponential-backoff-3.1.2.tgz#a8f26adb96bf78e8cd8ad1037928d5e5c0679d91"
+  integrity sha512-8QxYTVXUkuy7fIIoitQkPwGonB8F3Zj8eEO8Sqg9Zv/bkI7RJAzowee4gr81Hak/dUTpA2Z7VfQgoijjPNlUZA==
 
 external-editor@^3.0.3:
   version "3.1.0"
@@ -4931,9 +4931,9 @@ socks-proxy-agent@^7.0.0:
     socks "^2.6.2"
 
 socks@^2.6.2:
-  version "2.8.3"
-  resolved "https://registry.yarnpkg.com/socks/-/socks-2.8.3.tgz#1ebd0f09c52ba95a09750afe3f3f9f724a800cb5"
-  integrity sha512-l5x7VUUWbjVFbafGLxPWkYsHIhEvmF85tbIeFZWc8ZPtoMyybuEhL7Jye/ooC4/d48FgOjSJXgsF/AJPYCW8Zw==
+  version "2.8.4"
+  resolved "https://registry.yarnpkg.com/socks/-/socks-2.8.4.tgz#07109755cdd4da03269bda4725baa061ab56d5cc"
+  integrity sha512-D3YaD0aRxR3mEcqnidIs7ReYJFVzWdd6fXJYUM8ixcQcJRGTka/b3saV0KflYhyVJXKhb947GndU35SxYNResQ==
   dependencies:
     ip-address "^9.0.5"
     smart-buffer "^4.2.0"
