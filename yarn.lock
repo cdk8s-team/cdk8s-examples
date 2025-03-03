@@ -41,10 +41,10 @@
   resolved "https://registry.yarnpkg.com/@balena/dockerignore/-/dockerignore-1.0.2.tgz#9ffe4726915251e8eb69f44ef3547e0da2c03e0d"
   integrity sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q==
 
-"@cdk8s/projen-common@^0.0.582":
-  version "0.0.582"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.582.tgz#7ea5059f02ed8a20e26f863b4831b11247d2ca03"
-  integrity sha512-UQ5NDLUYefBjx07WmgWuKA7MpRkTvds1Ta1f5Q6wk5WF1ivmZForBh6tbQ41TxuDiIcD3fx6rWgxTT8yYreTIg==
+"@cdk8s/projen-common@^0.0.583":
+  version "0.0.583"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.583.tgz#5e6ec2b492f919de4e85bc3e4e8ad27dc08fc199"
+  integrity sha512-IHj7epTrS35Ci/jIomxW8IXSokghc2XvTrCsLCdyYSCvD7R12tWCWPqzK0g/bC8xPTtQzPWTAB34AV4HLvBZTQ==
   dependencies:
     codemaker "^1.108.0"
     deepmerge "^4.3.1"
@@ -4520,10 +4520,10 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
-projen@^0.91.13:
-  version "0.91.13"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.91.13.tgz#f8f2051aa8920a3e7d169b147c51117bf7f080a5"
-  integrity sha512-qs06tT0JtE0170QlfsSWgQ2syo5IbKlrCNQwvSezbjPrB2eDUXa+f/bnY70/4To+VcVkHuatgEPBusQLfa71+Q==
+projen@^0.91.14:
+  version "0.91.14"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.91.14.tgz#9ab13917b5a5fe8d16a666d571bde63ae9ced344"
+  integrity sha512-ZwzOSotG+ZC8n4Frg1zfhPaeds6lFqGi4fH2jFwAojiO8kXKaKmV33JZJ0qSuoY3adOWLVoCSEZJC0v0BYEjnA==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
