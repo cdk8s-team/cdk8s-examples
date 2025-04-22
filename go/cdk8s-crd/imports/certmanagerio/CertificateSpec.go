@@ -134,6 +134,12 @@ type CertificateSpec struct {
 	// in conjunction with, and cannot overwrite, the base set of annotations
 	// cert-manager sets on the Certificate's Secret.
 	SecretTemplate *CertificateSpecSecretTemplate `field:"optional" json:"secretTemplate" yaml:"secretTemplate"`
+	// Signature algorith to use.
+	//
+	// Allowed values for RSA keys: SHA256WithRSA, SHA384WithRSA, SHA512WithRSA.
+	// Allowed values for ECDSA keys: ECDSAWithSHA256, ECDSAWithSHA384, ECDSAWithSHA512.
+	// Allowed values for Ed25519 keys: PureEd25519.
+	SignatureAlgorithm CertificateSpecSignatureAlgorithm `field:"optional" json:"signatureAlgorithm" yaml:"signatureAlgorithm"`
 	// Requested set of X509 certificate subject attributes. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6.
 	//
 	// The common name attribute is specified separately in the `commonName` field.
