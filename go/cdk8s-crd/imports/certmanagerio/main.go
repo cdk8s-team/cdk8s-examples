@@ -132,6 +132,19 @@ func init() {
 		"cert-managerio.CertificateSpecSecretTemplate",
 		reflect.TypeOf((*CertificateSpecSecretTemplate)(nil)).Elem(),
 	)
+	_jsii_.RegisterEnum(
+		"cert-managerio.CertificateSpecSignatureAlgorithm",
+		reflect.TypeOf((*CertificateSpecSignatureAlgorithm)(nil)).Elem(),
+		map[string]interface{}{
+			"SHA256_WITH_RSA": CertificateSpecSignatureAlgorithm_SHA256_WITH_RSA,
+			"SHA384_WITH_RSA": CertificateSpecSignatureAlgorithm_SHA384_WITH_RSA,
+			"SHA512_WITH_RSA": CertificateSpecSignatureAlgorithm_SHA512_WITH_RSA,
+			"ECDSA_WITH_SHA256": CertificateSpecSignatureAlgorithm_ECDSA_WITH_SHA256,
+			"ECDSA_WITH_SHA384": CertificateSpecSignatureAlgorithm_ECDSA_WITH_SHA384,
+			"ECDSA_WITH_SHA512": CertificateSpecSignatureAlgorithm_ECDSA_WITH_SHA512,
+			"PURE_ED25519": CertificateSpecSignatureAlgorithm_PURE_ED25519,
+		},
+	)
 	_jsii_.RegisterStruct(
 		"cert-managerio.CertificateSpecSubject",
 		reflect.TypeOf((*CertificateSpecSubject)(nil)).Elem(),
