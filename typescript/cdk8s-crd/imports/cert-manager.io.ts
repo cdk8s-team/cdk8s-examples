@@ -330,6 +330,16 @@ export interface CertificateSpec {
   readonly secretTemplate?: CertificateSpecSecretTemplate;
 
   /**
+   * Signature algorith to use.
+   * Allowed values for RSA keys: SHA256WithRSA, SHA384WithRSA, SHA512WithRSA.
+   * Allowed values for ECDSA keys: ECDSAWithSHA256, ECDSAWithSHA384, ECDSAWithSHA512.
+   * Allowed values for Ed25519 keys: PureEd25519.
+   *
+   * @schema CertificateSpec#signatureAlgorithm
+   */
+  readonly signatureAlgorithm?: CertificateSpecSignatureAlgorithm;
+
+  /**
    * Requested set of X509 certificate subject attributes.
    * More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6
    *
@@ -387,6 +397,7 @@ export function toJson_CertificateSpec(obj: CertificateSpec | undefined): Record
     'revisionHistoryLimit': obj.revisionHistoryLimit,
     'secretName': obj.secretName,
     'secretTemplate': toJson_CertificateSpecSecretTemplate(obj.secretTemplate),
+    'signatureAlgorithm': obj.signatureAlgorithm,
     'subject': toJson_CertificateSpecSubject(obj.subject),
     'uris': obj.uris?.map(y => y),
     'usages': obj.usages?.map(y => y),
@@ -731,6 +742,31 @@ export function toJson_CertificateSpecSecretTemplate(obj: CertificateSpecSecretT
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
 /* eslint-enable max-len, quote-props */
+
+/**
+ * Signature algorith to use.
+ * Allowed values for RSA keys: SHA256WithRSA, SHA384WithRSA, SHA512WithRSA.
+ * Allowed values for ECDSA keys: ECDSAWithSHA256, ECDSAWithSHA384, ECDSAWithSHA512.
+ * Allowed values for Ed25519 keys: PureEd25519.
+ *
+ * @schema CertificateSpecSignatureAlgorithm
+ */
+export enum CertificateSpecSignatureAlgorithm {
+  /** SHA256WithRSA */
+  SHA256_WITH_RSA = "SHA256WithRSA",
+  /** SHA384WithRSA */
+  SHA384_WITH_RSA = "SHA384WithRSA",
+  /** SHA512WithRSA */
+  SHA512_WITH_RSA = "SHA512WithRSA",
+  /** ECDSAWithSHA256 */
+  ECDSA_WITH_SHA256 = "ECDSAWithSHA256",
+  /** ECDSAWithSHA384 */
+  ECDSA_WITH_SHA384 = "ECDSAWithSHA384",
+  /** ECDSAWithSHA512 */
+  ECDSA_WITH_SHA512 = "ECDSAWithSHA512",
+  /** PureEd25519 */
+  PURE_ED25519 = "PureEd25519",
+}
 
 /**
  * Requested set of X509 certificate subject attributes.
