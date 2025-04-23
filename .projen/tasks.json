@@ -5,7 +5,7 @@
       "description": "Full release build",
       "steps": [
         {
-          "exec": "lerna run build --skip-nx-cache --no-bail"
+          "exec": "lerna run build --skip-nx-cache --no-bail --concurrency 1"
         }
       ]
     },
