@@ -7,7 +7,7 @@ package imports.io.cert_manager;
  * Allowed values for ECDSA keys: ECDSAWithSHA256, ECDSAWithSHA384, ECDSAWithSHA512.
  * Allowed values for Ed25519 keys: PureEd25519.
  */
-@javax.annotation.Generated(value = "jsii-pacmak/1.86.1 (build defb235)", date = "2025-04-22T15:11:09.640Z")
+@javax.annotation.Generated(value = "jsii-pacmak/1.86.1 (build defb235)", date = "2025-04-23T10:37:21.380Z")
 @software.amazon.jsii.Jsii(module = imports.io.cert_manager.$Module.class, fqn = "iocert-manager.CertificateSpecSignatureAlgorithm")
 public enum CertificateSpecSignatureAlgorithm {
     /**

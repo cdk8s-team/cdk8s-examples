@@ -53,10 +53,11 @@ project.package.addField('workspaces', {
 
 project.testTask.reset();
 
- //@ts-ignore
+//@ts-ignore
 project.buildTask._locked = false;
-project.buildTask.reset('lerna run build --skip-nx-cache --no-bail');
- //@ts-ignore
+// cannot run build in parallel because maven will throttle and fail downloads
+project.buildTask.reset('lerna run build --skip-nx-cache --no-bail --concurrency 1');
+//@ts-ignore
 project.buildTask._locked = true
 
 // no package task is needed
