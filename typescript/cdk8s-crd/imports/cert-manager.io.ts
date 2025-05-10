@@ -662,9 +662,13 @@ export interface CertificateSpecPrivateKey {
    * to await user intervention.
    * If set to `Always`, a private key matching the specified requirements
    * will be generated whenever a re-issuance occurs.
-   * Default is `Never` for backward compatibility.
+   * Default is `Always`.
+   * The default was changed from `Never` to `Always` in cert-manager >=v1.18.0.
+   * The new default can be disabled by setting the
+   * `--feature-gates=DefaultPrivateKeyRotationPolicyAlways=false` option on
+   * the controller component.
    *
-   * @default Never` for backward compatibility.
+   * @default Always`.
    * @schema CertificateSpecPrivateKey#rotationPolicy
    */
   readonly rotationPolicy?: CertificateSpecPrivateKeyRotationPolicy;
@@ -1069,7 +1073,7 @@ export interface CertificateSpecKeystoresPkcs12 {
    * `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20.
    * `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility.
    * `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms
-   * (eg. because of company policy). Please note that the security of the algorithm is not that important
+   * (e.g., because of company policy). Please note that the security of the algorithm is not that important
    * in reality, because the unencrypted certificate and private key are also stored in the Secret.
    *
    * @schema CertificateSpecKeystoresPkcs12#profile
@@ -1254,9 +1258,13 @@ export enum CertificateSpecPrivateKeyEncoding {
  * to await user intervention.
  * If set to `Always`, a private key matching the specified requirements
  * will be generated whenever a re-issuance occurs.
- * Default is `Never` for backward compatibility.
+ * Default is `Always`.
+ * The default was changed from `Never` to `Always` in cert-manager >=v1.18.0.
+ * The new default can be disabled by setting the
+ * `--feature-gates=DefaultPrivateKeyRotationPolicyAlways=false` option on
+ * the controller component.
  *
- * @default Never` for backward compatibility.
+ * @default Always`.
  * @schema CertificateSpecPrivateKeyRotationPolicy
  */
 export enum CertificateSpecPrivateKeyRotationPolicy {
@@ -1360,7 +1368,7 @@ export function toJson_CertificateSpecKeystoresPkcs12PasswordSecretRef(obj: Cert
  * `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20.
  * `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility.
  * `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms
- * (eg. because of company policy). Please note that the security of the algorithm is not that important
+ * (e.g., because of company policy). Please note that the security of the algorithm is not that important
  * in reality, because the unencrypted certificate and private key are also stored in the Secret.
  *
  * @schema CertificateSpecKeystoresPkcs12Profile

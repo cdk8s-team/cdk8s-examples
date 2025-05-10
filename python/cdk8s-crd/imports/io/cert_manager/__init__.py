@@ -1055,7 +1055,7 @@ class CertificateSpecKeystoresPkcs12:
         :param create: Create enables PKCS12 keystore creation for the Certificate. If true, a file named ``keystore.p12`` will be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` or in ``password``. The keystore file will be updated immediately. If the issuer provided a CA certificate, a file named ``truststore.p12`` will also be created in the target Secret resource, encrypted using the password stored in ``passwordSecretRef`` containing the issuing Certificate Authority
         :param password: Password provides a literal password used to encrypt the PKCS#12 keystore. Mutually exclusive with passwordSecretRef. One of password or passwordSecretRef must provide a password with a non-zero length.
         :param password_secret_ref: PasswordSecretRef is a reference to a non-empty key in a Secret resource containing the password used to encrypt the PKCS#12 keystore. Mutually exclusive with password. One of password or passwordSecretRef must provide a password with a non-zero length.
-        :param profile: Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is ``LegacyRC2`` for backward compatibility. If provided, allowed values are: ``LegacyRC2``: Deprecated. Not supported by default in OpenSSL 3 or Java 20. ``LegacyDES``: Less secure algorithm. Use this option for maximal compatibility. ``Modern2023``: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.
+        :param profile: Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is ``LegacyRC2`` for backward compatibility. If provided, allowed values are: ``LegacyRC2``: Deprecated. Not supported by default in OpenSSL 3 or Java 20. ``LegacyDES``: Less secure algorithm. Use this option for maximal compatibility. ``Modern2023``: Secure algorithm. Use this option in case you have to always use secure algorithms (e.g., because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.
 
         :schema: CertificateSpecKeystoresPkcs12
         '''
@@ -1132,7 +1132,7 @@ class CertificateSpecKeystoresPkcs12:
         ``LegacyRC2``: Deprecated. Not supported by default in OpenSSL 3 or Java 20.
         ``LegacyDES``: Less secure algorithm. Use this option for maximal compatibility.
         ``Modern2023``: Secure algorithm. Use this option in case you have to always use secure algorithms
-        (eg. because of company policy). Please note that the security of the algorithm is not that important
+        (e.g., because of company policy). Please note that the security of the algorithm is not that important
         in reality, because the unencrypted certificate and private key are also stored in the Secret.
 
         :schema: CertificateSpecKeystoresPkcs12#profile
@@ -1230,7 +1230,7 @@ class CertificateSpecKeystoresPkcs12Profile(enum.Enum):
     ``LegacyRC2``: Deprecated. Not supported by default in OpenSSL 3 or Java 20.
     ``LegacyDES``: Less secure algorithm. Use this option for maximal compatibility.
     ``Modern2023``: Secure algorithm. Use this option in case you have to always use secure algorithms
-    (eg. because of company policy). Please note that the security of the algorithm is not that important
+    (e.g., because of company policy). Please note that the security of the algorithm is not that important
     in reality, because the unencrypted certificate and private key are also stored in the Secret.
 
     :schema: CertificateSpecKeystoresPkcs12Profile
@@ -1614,7 +1614,7 @@ class CertificateSpecPrivateKey:
 
         :param algorithm: Algorithm is the private key algorithm of the corresponding private key for this certificate. If provided, allowed values are either ``RSA``, ``ECDSA`` or ``Ed25519``. If ``algorithm`` is specified and ``size`` is not provided, key size of 2048 will be used for ``RSA`` key algorithm and key size of 256 will be used for ``ECDSA`` key algorithm. key size is ignored when using the ``Ed25519`` key algorithm.
         :param encoding: The private key cryptography standards (PKCS) encoding for this certificate's private key to be encoded in. If provided, allowed values are ``PKCS1`` and ``PKCS8`` standing for PKCS#1 and PKCS#8, respectively. Defaults to ``PKCS1`` if not specified. Default: PKCS1` if not specified.
-        :param rotation_policy: RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed. If set to ``Never``, a private key will only be generated if one does not already exist in the target ``spec.secretName``. If one does exist but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to ``Always``, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is ``Never`` for backward compatibility. Default: Never` for backward compatibility.
+        :param rotation_policy: RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed. If set to ``Never``, a private key will only be generated if one does not already exist in the target ``spec.secretName``. If one does exist but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to ``Always``, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is ``Always``. The default was changed from ``Never`` to ``Always`` in cert-manager >=v1.18.0. The new default can be disabled by setting the ``--feature-gates=DefaultPrivateKeyRotationPolicyAlways=false`` option on the controller component. Default: Always`.
         :param size: Size is the key bit size of the corresponding private key for this certificate. If ``algorithm`` is set to ``RSA``, valid values are ``2048``, ``4096`` or ``8192``, and will default to ``2048`` if not specified. If ``algorithm`` is set to ``ECDSA``, valid values are ``256``, ``384`` or ``521``, and will default to ``256`` if not specified. If ``algorithm`` is set to ``Ed25519``, Size is ignored. No other values are allowed.
 
         :schema: CertificateSpecPrivateKey
@@ -1677,9 +1677,13 @@ class CertificateSpecPrivateKey:
         to await user intervention.
         If set to ``Always``, a private key matching the specified requirements
         will be generated whenever a re-issuance occurs.
-        Default is ``Never`` for backward compatibility.
+        Default is ``Always``.
+        The default was changed from ``Never`` to ``Always`` in cert-manager >=v1.18.0.
+        The new default can be disabled by setting the
+        ``--feature-gates=DefaultPrivateKeyRotationPolicyAlways=false`` option on
+        the controller component.
 
-        :default: Never` for backward compatibility.
+        :default: Always`.
 
         :schema: CertificateSpecPrivateKey#rotationPolicy
         '''
@@ -1764,9 +1768,13 @@ class CertificateSpecPrivateKeyRotationPolicy(enum.Enum):
     to await user intervention.
     If set to ``Always``, a private key matching the specified requirements
     will be generated whenever a re-issuance occurs.
-    Default is ``Never`` for backward compatibility.
+    Default is ``Always``.
+    The default was changed from ``Never`` to ``Always`` in cert-manager >=v1.18.0.
+    The new default can be disabled by setting the
+    ``--feature-gates=DefaultPrivateKeyRotationPolicyAlways=false`` option on
+    the controller component.
 
-    :default: Never` for backward compatibility.
+    :default: Always`.
 
     :schema: CertificateSpecPrivateKeyRotationPolicy
     '''
