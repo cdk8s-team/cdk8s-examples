@@ -211,7 +211,7 @@ class CertificateSpec:
 
         :param issuer_ref: Reference to the issuer responsible for issuing the certificate. If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace. The ``name`` field of the reference must always be specified.
         :param secret_name: Name of the Secret resource that will be automatically created and managed by this Certificate resource. It will be populated with a private key and certificate, signed by the denoted issuer. The Secret resource lives in the same namespace as the Certificate resource.
-        :param additional_output_formats: Defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret. This is a Beta Feature enabled by default. It can be disabled with the ``--feature-gates=AdditionalCertificateOutputFormats=false`` option set on both the controller and webhook components.
+        :param additional_output_formats: Defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret.
         :param common_name: Requested common name X509 certificate subject attribute. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6 NOTE: TLS clients will ignore this value when any subject alternative name is set (see https://tools.ietf.org/html/rfc6125#section-6.4.4). Should have a length of 64 characters or fewer to avoid generating invalid CSRs. Cannot be set if the ``literalSubject`` field is set.
         :param dns_names: Requested DNS subject alternative names.
         :param duration: Requested 'duration' (i.e. lifetime) of the Certificate. Note that the issuer may choose to ignore the requested duration, just like any other requested attribute. If unset, this defaults to 90 days. Minimum accepted duration is 1 hour. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.
@@ -354,10 +354,6 @@ class CertificateSpec:
         self,
     ) -> typing.Optional[typing.List["CertificateSpecAdditionalOutputFormats"]]:
         '''Defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret.
-
-        This is a Beta Feature enabled by default. It can be disabled with the
-        ``--feature-gates=AdditionalCertificateOutputFormats=false`` option set on both
-        the controller and webhook components.
 
         :schema: CertificateSpec#additionalOutputFormats
         '''
