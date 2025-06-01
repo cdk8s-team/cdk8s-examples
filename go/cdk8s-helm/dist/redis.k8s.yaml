@@ -667,6 +667,7 @@ metadata:
   name: redis-c82bfc2f-node
   namespace: default
 spec:
+  minReadySeconds: 0
   replicas: 3
   selector:
     matchLabels:
