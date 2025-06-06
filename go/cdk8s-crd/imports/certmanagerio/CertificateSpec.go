@@ -120,8 +120,7 @@ type CertificateSpec struct {
 	// revisions exceeds this number.
 	//
 	// If set, revisionHistoryLimit must be a value of `1` or greater.
-	// If unset (`nil`), revisions will not be garbage collected.
-	// Default value is `nil`.
+	// Default value is `1`.
 	RevisionHistoryLimit *float64 `field:"optional" json:"revisionHistoryLimit" yaml:"revisionHistoryLimit"`
 	// Defines annotations and labels to be copied to the Certificate's Secret.
 	//

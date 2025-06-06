@@ -297,8 +297,7 @@ export interface CertificateSpec {
    * revisions exceeds this number.
    *
    * If set, revisionHistoryLimit must be a value of `1` or greater.
-   * If unset (`nil`), revisions will not be garbage collected.
-   * Default value is `nil`.
+   * Default value is `1`.
    *
    * @schema CertificateSpec#revisionHistoryLimit
    */
