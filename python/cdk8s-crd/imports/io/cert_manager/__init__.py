@@ -228,7 +228,7 @@ class CertificateSpec:
         :param renew_before_percentage: ``renewBeforePercentage`` is like ``renewBefore``, except it is a relative percentage rather than an absolute duration. For example, if a certificate is valid for 60 minutes, and ``renewBeforePercentage=25``, cert-manager will begin to attempt to renew the certificate 45 minutes after it was issued (i.e. when there are 15 minutes (25%) remaining until the certificate is no longer valid). NOTE: The actual lifetime of the issued certificate is used to determine the renewal time. If an issuer returns a certificate with a different lifetime than the one requested, cert-manager will use the lifetime of the issued certificate. Value must be an integer in the range (0,100). The minimum effective ``renewBefore`` derived from the ``renewBeforePercentage`` and ``duration`` fields is 5 minutes. Cannot be set if the ``renewBefore`` field is set.
         :param revision_history_limit: The maximum number of CertificateRequest revisions that are maintained in the Certificate's history. Each revision represents a single ``CertificateRequest`` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number. If set, revisionHistoryLimit must be a value of ``1`` or greater. Default value is ``1``.
         :param secret_template: Defines annotations and labels to be copied to the Certificate's Secret. Labels and annotations on the Secret will be changed as they appear on the SecretTemplate when added or removed. SecretTemplate annotations are added in conjunction with, and cannot overwrite, the base set of annotations cert-manager sets on the Certificate's Secret.
-        :param signature_algorithm: Signature algorith to use. Allowed values for RSA keys: SHA256WithRSA, SHA384WithRSA, SHA512WithRSA. Allowed values for ECDSA keys: ECDSAWithSHA256, ECDSAWithSHA384, ECDSAWithSHA512. Allowed values for Ed25519 keys: PureEd25519.
+        :param signature_algorithm: Signature algorithm to use. Allowed values for RSA keys: SHA256WithRSA, SHA384WithRSA, SHA512WithRSA. Allowed values for ECDSA keys: ECDSAWithSHA256, ECDSAWithSHA384, ECDSAWithSHA512. Allowed values for Ed25519 keys: PureEd25519.
         :param subject: Requested set of X509 certificate subject attributes. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6. The common name attribute is specified separately in the ``commonName`` field. Cannot be set if the ``literalSubject`` field is set.
         :param uris: Requested URI subject alternative names.
         :param usages: Requested key usages and extended key usages. These usages are used to set the ``usages`` field on the created CertificateRequest resources. If ``encodeUsagesInRequest`` is unset or set to ``true``, the usages will additionally be encoded in the ``request`` field which contains the CSR blob. If unset, defaults to ``digital signature`` and ``key encipherment``.
@@ -584,7 +584,7 @@ class CertificateSpec:
     def signature_algorithm(
         self,
     ) -> typing.Optional["CertificateSpecSignatureAlgorithm"]:
-        '''Signature algorith to use.
+        '''Signature algorithm to use.
 
         Allowed values for RSA keys: SHA256WithRSA, SHA384WithRSA, SHA512WithRSA.
         Allowed values for ECDSA keys: ECDSAWithSHA256, ECDSAWithSHA384, ECDSAWithSHA512.
@@ -1848,7 +1848,7 @@ class CertificateSpecSecretTemplate:
 
 @jsii.enum(jsii_type="iocert-manager.CertificateSpecSignatureAlgorithm")
 class CertificateSpecSignatureAlgorithm(enum.Enum):
-    '''Signature algorith to use.
+    '''Signature algorithm to use.
 
     Allowed values for RSA keys: SHA256WithRSA, SHA384WithRSA, SHA512WithRSA.
     Allowed values for ECDSA keys: ECDSAWithSHA256, ECDSAWithSHA384, ECDSAWithSHA512.
