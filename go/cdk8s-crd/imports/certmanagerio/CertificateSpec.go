@@ -129,7 +129,7 @@ type CertificateSpec struct {
 	// in conjunction with, and cannot overwrite, the base set of annotations
 	// cert-manager sets on the Certificate's Secret.
 	SecretTemplate *CertificateSpecSecretTemplate `field:"optional" json:"secretTemplate" yaml:"secretTemplate"`
-	// Signature algorith to use.
+	// Signature algorithm to use.
 	//
 	// Allowed values for RSA keys: SHA256WithRSA, SHA384WithRSA, SHA512WithRSA.
 	// Allowed values for ECDSA keys: ECDSAWithSHA256, ECDSAWithSHA384, ECDSAWithSHA512.
