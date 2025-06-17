@@ -334,7 +334,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02PzWrDQAyEnyX3tdImpu01MfTSHoILvS7yWjWK9wdWu3WD8buXdUzpaUYaGH06wPMLPOxwksr0Y2W5gxkn0TONAm+5I5PsJYZv7ikqi67rEebX7E3i4FXz5f/7d7xR/KQoHPyiGB3MbbBUolUvwbK5lfHuFiVHjSKUBE5FlBzhnM1I6YxCi2pJQo6G1Jp+JBzYDxuGtuWaxkmMZThN0lheAUp/E3zPK5bJkoLTcWsS+PumUG3bRQ3hEQ411HvLPv/s0fVP9e4qzFXMPrEjaO/6C1nU7VQxAQAA"
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02PQWvDMAyFf0vvjrq1Ydu1DeyyHUoKuxrF1oIWxwbLbigh/304DWOn96QHT58O8PoGTzucpDJ2qBx3MOMkeqZB4CN3ZJK7xHBjS1E5HDuLML9nbxIHr5pv/99/4p3iF0Xh4BfFOMLcBkclWvUSHJt7GR9uUXLUKEJJ4FREyRHO2QyUzii0qJYk5GhIrek1Yc++3zC0K9c0TmIcw2mSxvEKUPqb4C2vWCZLCqOOW5PA3zeFatsuqg/PcKih3luME/s9xvGl3v0IcxWzTzwStA/9BTCx4FcyAQAA"
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/CDKMetadata/Default"
