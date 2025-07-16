@@ -173,13 +173,13 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "2e8ea9d657c30715826b809f41d1f2482ff4e16f37385f55fbcf7d8ccfdd14db.zip"
+     "S3Key": "4ba3e3c030a1f70fc64f87fd55bbb3f01854e1d1deb5a4d51572d0ca94b9da74.zip"
     },
     "Description": "/opt/awscli/aws"
    },
    "Metadata": {
     "aws:cdk:path": "kubernetes-end-to-end-aws/@aws-cdk--aws-eks.KubectlProvider/AwsCliLayer/Resource",
-    "aws:asset:path": "asset.2e8ea9d657c30715826b809f41d1f2482ff4e16f37385f55fbcf7d8ccfdd14db.zip",
+    "aws:asset:path": "asset.4ba3e3c030a1f70fc64f87fd55bbb3f01854e1d1deb5a4d51572d0ca94b9da74.zip",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Content"
    }
