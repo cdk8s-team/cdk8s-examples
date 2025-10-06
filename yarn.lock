@@ -2052,9 +2052,9 @@ env-paths@^2.2.0:
   integrity sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==
 
 envinfo@^7.7.4:
-  version "7.16.0"
-  resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-7.16.0.tgz#3e6335ac118b19446db940724cdd0b533aaa077f"
-  integrity sha512-LqGbDxROFEWnYpUm9KiU2xHiYbjlHZS6NZQUpm1Lg1To4p+FJLks5crEhUnw+s/ZLHzI8U0QB+oVG7e8cXckMg==
+  version "7.16.1"
+  resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-7.16.1.tgz#69a0e2a7c1bd1306ab5902f7d709f81b967fdb81"
+  integrity sha512-IugkinfKJlINIece0m1tAtjn4LGNP3APqchokVe090oSI5E3mixxKuc34ZiDHO17MTPODwjHWEt7QdC8Y+xtyQ==
 
 err-code@^2.0.2:
   version "2.0.3"
