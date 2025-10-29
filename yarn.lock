@@ -41,10 +41,10 @@
   resolved "https://registry.yarnpkg.com/@balena/dockerignore/-/dockerignore-1.0.2.tgz#9ffe4726915251e8eb69f44ef3547e0da2c03e0d"
   integrity sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q==
 
-"@cdk8s/projen-common@^0.0.634":
-  version "0.0.634"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.634.tgz#64fe02abbfe853f5baa6bad68360b7d1e54eb8dd"
-  integrity sha512-qs7YawczUMjybXwo0VDOEuJI/6OzXIx2LTbTZLlqm+7qm/jeUNb/w0PuJPX5OTpt/IUzSEpG0/8/3EcMMmWUrA==
+"@cdk8s/projen-common@^0.0.635":
+  version "0.0.635"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.635.tgz#b8cf554e8e62c0f318d1b34055b3b171021be46f"
+  integrity sha512-gveUZ9093+wYA/stqS1AUH8MR55gMTSEVbYd4DBttm0RSv4xLHjSBRqE64fI4WPL6FKWzbwwN0sSh428pQFVXQ==
   dependencies:
     codemaker "^1.117.0"
     deepmerge "^4.3.1"
@@ -1520,9 +1520,9 @@ cmd-shim@^6.0.0:
   integrity sha512-FMabTRlc5t5zjdenF6mS0MBeFZm0XqHqeOkcskKFb/LYCcRQ5fVgLOHVc4Lq9CqABd9zhjwPjMBCJvMCziSVtA==
 
 codemaker@^1.117.0:
-  version "1.117.0"
-  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.117.0.tgz#e67f1b138ba5078394e3f0d5d50a7bafb4bfef6b"
-  integrity sha512-JV/ZjfZtw8tAXIQPRw3lUEVzRo/GAHihUYj0CulnjN2A1+WDKzGR9Yzle/yxLnO+dZCxfIRzikev/FmfFA8r6A==
+  version "1.118.0"
+  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.118.0.tgz#2587611d167bdece0beff9f2748b2baae04c655b"
+  integrity sha512-d6ddG2oKNwkYBRJtsdEaKbJLBaxZJO0ImSG89wi6j5y549olTB3ERsqGGRZ47HlRuaVpkbOXnG/kb8I6ELxtMA==
   dependencies:
     camelcase "^6.3.0"
     decamelize "^5.0.1"
