@@ -28,5 +28,5 @@
 /LICENSE linguist-generated
 /package.json linguist-generated
 /SECURITY.md linguist-generated
-/tsconfig.projen.json linguist-generated
+/tsconfig.projen.json linguist-generated linguist-language=JSON-with-Comments
 /yarn.lock linguist-generated
