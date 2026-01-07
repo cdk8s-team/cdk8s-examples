@@ -3079,7 +3079,7 @@
                           "s3Bucket": {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "s3Key": "4c0f7bf9173df1c120604820692548150b09e29f6fba95f38b11caa17c9696bb.zip"
+                          "s3Key": "c11bb74337ffcfd7229a14b04310e9fd8b2e90383caff4d894e8ea855f1f4899.zip"
                         },
                         "description": "/opt/awscli/aws"
                       }
@@ -3462,7 +3462,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/afc9ee02d59eaf889e7c85fa9df63dc6875cbafc228a66b87913fc94ed122258.json"
+                          "/e902793395a29c925d797611ac77afa647249762b68b3be79f405df34163b93c.json"
                         ]
                       ]
                     },
