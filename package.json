@@ -27,7 +27,7 @@
     "@cdk8s/projen-common": "^0.0.660",
     "constructs": "^10.0.0",
     "lerna": "^6.6.2",
-    "projen": "^0.99.1"
+    "projen": "^0.99.3"
   },
   "resolutions": {
     "@yarnpkg/parsers": "3.0.0-rc.48.1"
