@@ -41,10 +41,10 @@
   resolved "https://registry.yarnpkg.com/@balena/dockerignore/-/dockerignore-1.0.2.tgz#9ffe4726915251e8eb69f44ef3547e0da2c03e0d"
   integrity sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q==
 
-"@cdk8s/projen-common@^0.0.660":
-  version "0.0.660"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.660.tgz#20ea6e093e67ba35a5329d0f2a7a5bff10dd18b2"
-  integrity sha512-HrlHpBhqoEPbVXc13bqdLu9Og92QU2++xfaQvxSz3IN2VP+TJY1dp0UlD6XCat2LUX7mH/BTcj5baJ+SBj4AzQ==
+"@cdk8s/projen-common@^0.0.661":
+  version "0.0.661"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.661.tgz#bc9df67f6311fe229f3d5a21506d8dbe900b3861"
+  integrity sha512-rRoCCQi8lHZEJummoqF1Nb76bGE5BCN51IFMd6xalf9VxnqSyHl9cYsSk2ZnNdtReJwWcjAxUOKizI93P2gdpA==
   dependencies:
     codemaker "^1.125.0"
     deepmerge "^4.3.1"
@@ -1520,9 +1520,9 @@ cmd-shim@^6.0.0:
   integrity sha512-FMabTRlc5t5zjdenF6mS0MBeFZm0XqHqeOkcskKFb/LYCcRQ5fVgLOHVc4Lq9CqABd9zhjwPjMBCJvMCziSVtA==
 
 codemaker@^1.125.0:
-  version "1.125.0"
-  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.125.0.tgz#9ddac534f919d1692330349d705bcc6deb5e8130"
-  integrity sha512-SmWZmRLE/Awxb/F99yd3VwJPomOMLFS+1CAJ8rKYZUORQQL5esqsAmQs7KxhrU6Wt1Tr2Cf7MAFPNDJbUd9SYg==
+  version "1.126.0"
+  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.126.0.tgz#82b3430ea6bf7c3465b033178f9e5f25d3e7e7b9"
+  integrity sha512-0Qi6XXOJU8SIh62BDGsNBwVXHqd+k3a4iDJyDktotQGb1mmSp+/vdE7gWafi2+LLMIYHjwFIC1cOPVvHWBUZsw==
   dependencies:
     camelcase "^6.3.0"
     decamelize "^5.0.1"
@@ -4638,10 +4638,10 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
-projen@^0.99.7:
-  version "0.99.7"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.99.7.tgz#fee4334f7ae338f1bad0d0f8883860ee6886750b"
-  integrity sha512-hnhNIup4v7/6oGIF4hzzu175+XQY7ZO8eVBPIyk5z4cZd2A7f+R4VnbtaLhDdotzALlwEN/rd3K7/+RTCCowdA==
+projen@^0.99.8:
+  version "0.99.8"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.99.8.tgz#aa9b004f254ba132fe2dcc90cff61e4d0bfb2ee5"
+  integrity sha512-1loAy1XQ5rZ0vobXOdt+ytHTz/6F77H4d4Rtn1Kz0TA/UzTxPgCgBmfOy6ZYAmsXE7Jq+ODGjYdZhaKSQDw10Q==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
