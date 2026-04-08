@@ -5,29 +5,29 @@
     "url": "https://github.com/cdk8s-team/root.git"
   },
   "scripts": {
-    "build": "npx projen build",
-    "clobber": "npx projen clobber",
-    "compile": "npx projen compile",
-    "default": "npx projen default",
-    "eject": "npx projen eject",
-    "package": "npx projen package",
-    "post-compile": "npx projen post-compile",
-    "post-upgrade": "npx projen post-upgrade",
-    "pre-compile": "npx projen pre-compile",
-    "upgrade-configuration": "npx projen upgrade-configuration",
-    "upgrade-dev-dependencies": "npx projen upgrade-dev-dependencies",
-    "upgrade-runtime-dependencies": "npx projen upgrade-runtime-dependencies",
-    "projen": "npx projen"
+    "build": "projen build",
+    "clobber": "projen clobber",
+    "compile": "projen compile",
+    "default": "projen default",
+    "eject": "projen eject",
+    "package": "projen package",
+    "post-compile": "projen post-compile",
+    "post-upgrade": "projen post-upgrade",
+    "pre-compile": "projen pre-compile",
+    "upgrade-configuration": "projen upgrade-configuration",
+    "upgrade-dev-dependencies": "projen upgrade-dev-dependencies",
+    "upgrade-runtime-dependencies": "projen upgrade-runtime-dependencies",
+    "projen": "projen"
   },
   "author": {
     "name": "Amazon Web Services",
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.681",
+    "@cdk8s/projen-common": "^0.0.682",
     "constructs": "^10.0.0",
     "lerna": "^6.6.2",
-    "projen": "^0.99.36"
+    "projen": "^0.99.40"
   },
   "resolutions": {
     "@yarnpkg/parsers": "3.0.0-rc.48.1"
