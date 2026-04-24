@@ -41,12 +41,12 @@
   resolved "https://registry.yarnpkg.com/@balena/dockerignore/-/dockerignore-1.0.2.tgz#9ffe4726915251e8eb69f44ef3547e0da2c03e0d"
   integrity sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q==
 
-"@cdk8s/projen-common@^0.0.682":
-  version "0.0.682"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.682.tgz#466e5c61e8a273e7f7b12654cf21aa5b7563a2bf"
-  integrity sha512-OyJ1W89Qf8710xunQzi6kKMROMkDeAJRkQKaFRjJgl5jvNAFztDKaOApstIocA9526ClkTy81bD4e7WTFzsTNA==
+"@cdk8s/projen-common@^0.0.688":
+  version "0.0.688"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.688.tgz#3e44ee3680b69807d0154560b5124044f80fbd00"
+  integrity sha512-Q5g5nEB8rGn7sjqRWx/+CkiCH9k0il0HpdIKosk2VYjKBEUehScEVIXstDxddixQlc25pNALsiVoUI2MTw6TgQ==
   dependencies:
-    codemaker "^1.127.0"
+    codemaker "^1.128.0"
     deepmerge "^4.3.1"
 
 "@colors/colors@1.5.0":
@@ -1519,10 +1519,10 @@ cmd-shim@^6.0.0:
   resolved "https://registry.yarnpkg.com/cmd-shim/-/cmd-shim-6.0.3.tgz#c491e9656594ba17ac83c4bd931590a9d6e26033"
   integrity sha512-FMabTRlc5t5zjdenF6mS0MBeFZm0XqHqeOkcskKFb/LYCcRQ5fVgLOHVc4Lq9CqABd9zhjwPjMBCJvMCziSVtA==
 
-codemaker@^1.127.0:
-  version "1.127.0"
-  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.127.0.tgz#fe3c5089585676033049eaec847f6a52f0a75ce1"
-  integrity sha512-iX64GnNH86f88aRj/McYBSNRKT+bn21Okng0v/aGI/G66uOx7bKAf5bhGiqSaip7s5OcXfvjyJ6iA0VhLL4bSg==
+codemaker@^1.128.0:
+  version "1.128.0"
+  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.128.0.tgz#c7cf503e56815357fd66e853f9102cf1cda9160d"
+  integrity sha512-QqIZBuVAE5wap5DJrIgk0v4pl2VRB5Bl3YWwPDloerM621fpgmzIm2lbw5hM+saV0zg+K+r4cCjWBVDIvRLExA==
   dependencies:
     camelcase "^6.3.0"
     decamelize "^5.0.1"
@@ -4645,10 +4645,10 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
-projen@^0.99.44:
-  version "0.99.44"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.99.44.tgz#605ac8cf34ab7d4c0cc0d12c801dd8dcc44ee8c7"
-  integrity sha512-EBETaDLka95FHGe0/YbrHQttC28hb1TqDFn1SJbka0tNW95odokLuYaIedWid66MWSgqQC5uIqnk48+YI5lghg==
+projen@^0.99.52:
+  version "0.99.52"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.99.52.tgz#5d7939a7dacec518e048ad67e45ed414c920749c"
+  integrity sha512-LJA4NgNMpUzQLcrJ6tNFcQJu/YqD4KB4X2PGqXXCkcuroNnPY/sKEBxQOXh8TUbGO5NCqTgD1jAPrgN1NZibfQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -4917,16 +4917,7 @@ resolve-from@^4.0.0:
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
   integrity sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==
 
-resolve@^1.1.6:
-  version "1.22.11"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.11.tgz#aad857ce1ffb8bfa9b0b1ac29f1156383f68c262"
-  integrity sha512-RfqAvLnMl313r7c9oclB1HhUEAezcpLjz95wFH4LVuhk9JF/r22qmVP9AMmOU4vMX7Q8pN8jwNg/CSpdFnMjTQ==
-  dependencies:
-    is-core-module "^2.16.1"
-    path-parse "^1.0.7"
-    supports-preserve-symlinks-flag "^1.0.0"
-
-resolve@^1.10.0:
+resolve@^1.1.6, resolve@^1.10.0:
   version "1.22.12"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.12.tgz#f5b2a680897c69c238a13cd16b15671f8b73549f"
   integrity sha512-TyeJ1zif53BPfHootBGwPRYT1RUt6oGWsaQr8UyZW/eAm9bKoijtvruSDEmZHm92CwS9nj7/fWttqPCgzep8CA==
