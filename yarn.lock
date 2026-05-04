@@ -808,9 +808,9 @@
   integrity sha512-MTBk/3jGLNB2tVxv6uLlFh1iu64iYOQ2PbdOSK3NW8JZsmlaOh2q6sdtKowBhfw8QFLmYNzTW4/oK4uATIi6ZA==
 
 "@tootallnate/once@2":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"
-  integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-2.0.1.tgz#35adc6222e3662fa2222ce123b961476a746b9ea"
+  integrity sha512-HqmEUIGRJ5fSXchkVgR5F7qn48bDBzv0kWj/Kfu5e6uci4UlEeng4331LnBkWffb++Ei3FOVLxo8JJWMFBDMeQ==
 
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
@@ -1124,11 +1124,11 @@ axios@^0.27.2:
     form-data "^4.0.0"
 
 axios@^1.0.0:
-  version "1.15.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.15.2.tgz#eb8fb6d30349abace6ade5b4cb4d9e8a0dc23e5b"
-  integrity sha512-wLrXxPtcrPTsNlJmKjkPnNPK2Ihe0hn0wGSaTEiHRPxwjvJwT3hKmXF4dpqxmPO9SoNb2FsYXj/xEo0gHN+D5A==
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.16.0.tgz#f8e5dd931cef2a5f8c32216d5784eda2f8750eb7"
+  integrity sha512-6hp5CwvTPlN2A31g5dxnwAX0orzM7pmCRDLnZSX772mv8WDqICwFjowHuPs04Mc8deIld1+ejhtaMn5vp6b+1w==
   dependencies:
-    follow-redirects "^1.15.11"
+    follow-redirects "^1.16.0"
     form-data "^4.0.5"
     proxy-from-env "^2.1.0"
 
@@ -2301,7 +2301,7 @@ follow-redirects@^1.14.9, follow-redirects@^1.15.2:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
   integrity sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==
 
-follow-redirects@^1.15.11:
+follow-redirects@^1.16.0:
   version "1.16.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.16.0.tgz#28474a159d3b9d11ef62050a14ed60e4df6d61bc"
   integrity sha512-y5rN/uOsadFT/JfYwhxRS5R7Qce+g3zG97+JrtFZlC9klX/W5hD7iiLzScI4nZqUS7DNUdhPgw4xI8W2LuXlUw==
@@ -2960,10 +2960,10 @@ interpret@^1.0.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.4.0.tgz#665ab8bc4da27a774a40584e812e3e0fa45b1a1e"
   integrity sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
 
-ip-address@^10.0.1:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/ip-address/-/ip-address-10.1.0.tgz#d8dcffb34d0e02eb241427444a6e23f5b0595aa4"
-  integrity sha512-XXADHxXmvT9+CRxhXg56LJovE+bmWnEWB78LB83VZTprKTmaC5QfruXocxzTZ2Kl0DNwKuBdlIhjL8LeY8Sf8Q==
+ip-address@^10.1.1:
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/ip-address/-/ip-address-10.2.0.tgz#805fc178b20c518bd4c8548b24fe30892d7f3206"
+  integrity sha512-/+S6j4E9AHvW9SWMSEY9Xfy66O5PWvVEJ08O0y5JGyEKQpojb0K0GKpz/v5HJ/G0vi3D2sjGK78119oXZeE0qA==
 
 is-arrayish@^0.2.1:
   version "0.2.1"
@@ -5179,11 +5179,11 @@ socks-proxy-agent@^7.0.0:
     socks "^2.6.2"
 
 socks@^2.6.2:
-  version "2.8.7"
-  resolved "https://registry.yarnpkg.com/socks/-/socks-2.8.7.tgz#e2fb1d9a603add75050a2067db8c381a0b5669ea"
-  integrity sha512-HLpt+uLy/pxB+bum/9DzAgiKS8CX1EvbWxI4zlmgGCExImLdiad2iCwXT5Z4c9c3Eq8rP2318mPW2c+QbtjK8A==
+  version "2.8.8"
+  resolved "https://registry.yarnpkg.com/socks/-/socks-2.8.8.tgz#23bef6d02748eac847ad75610deb6c472554c67a"
+  integrity sha512-NlGELfPrgX2f1TAAcz0WawlLn+0r3FyhhCRpFFK2CemXenPYvzMWWZINv3eDNo9ucdwme7oCHRY0Jnbs4aIkog==
   dependencies:
-    ip-address "^10.0.1"
+    ip-address "^10.1.1"
     smart-buffer "^4.2.0"
 
 sort-json@^2.0.1:
