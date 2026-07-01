@@ -54,7 +54,19 @@
       "description": "Synthesize project files",
       "steps": [
         {
-          "exec": "npx -y ts-node --project tsconfig.projen.json .projenrc.ts"
+          "execArgs": [
+            "ts-node",
+            "--project",
+            "tsconfig.projen.json",
+            ".projenrc.ts"
+          ],
+          "shell": [
+            "npx",
+            "-y",
+            "-p",
+            "ts-node",
+            "-c"
+          ]
         }
       ]
     },
