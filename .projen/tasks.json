@@ -124,13 +124,27 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@20 --upgrade --target=minor --peer --no-deprecated --dep=dev --filter=projen,@cdk8s/projen-common"
+          "execArgs": [
+            "npx",
+            "npm-check-updates@20",
+            "--upgrade",
+            "--target=minor",
+            "--peer",
+            "--no-deprecated",
+            "--dep=dev",
+            "--filter=projen,@cdk8s/projen-common"
+          ]
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade projen @cdk8s/projen-common"
+          "execArgs": [
+            "yarn",
+            "upgrade",
+            "projen",
+            "@cdk8s/projen-common"
+          ]
         },
         {
           "exec": "npx projen"
@@ -148,13 +162,27 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@20 --upgrade --target=minor --peer --no-deprecated --dep=dev --filter=lerna"
+          "execArgs": [
+            "npx",
+            "npm-check-updates@20",
+            "--upgrade",
+            "--target=minor",
+            "--peer",
+            "--no-deprecated",
+            "--dep=dev,prod",
+            "--filter=lerna"
+          ]
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade constructs lerna"
+          "execArgs": [
+            "yarn",
+            "upgrade",
+            "constructs",
+            "lerna"
+          ]
         },
         {
           "exec": "npx projen"
