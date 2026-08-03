@@ -1029,7 +1029,7 @@
                 },
                 "constructInfo": {
                   "fqn": "constructs.Construct",
-                  "version": "10.8.0"
+                  "version": "10.8.1"
                 }
               },
               "KubectlReadyBarrier": {
@@ -2681,7 +2681,7 @@
                     },
                     "constructInfo": {
                       "fqn": "constructs.Construct",
-                      "version": "10.8.0"
+                      "version": "10.8.1"
                     }
                   }
                 },
@@ -2713,7 +2713,7 @@
                 },
                 "constructInfo": {
                   "fqn": "constructs.Construct",
-                  "version": "10.8.0"
+                  "version": "10.8.1"
                 }
               },
               "Service-principalMap": {
@@ -2794,7 +2794,7 @@
             },
             "constructInfo": {
               "fqn": "constructs.Construct",
-              "version": "10.8.0"
+              "version": "10.8.1"
             }
           },
           "@aws-cdk--aws-eks.KubectlProvider": {
@@ -3079,7 +3079,7 @@
                           "s3Bucket": {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "s3Key": "2e169d5991e1e07cc2f4e2fceecf6056cc6a612cad3892f76837cf01bcbbe3ce.zip"
+                          "s3Key": "98f62bef9320f8c0a0a7be21d7c746f069131f196f51ffe3008a6bb730b368ec.zip"
                         },
                         "description": "/opt/awscli/aws"
                       }
@@ -3371,7 +3371,7 @@
                 },
                 "constructInfo": {
                   "fqn": "constructs.Construct",
-                  "version": "10.8.0"
+                  "version": "10.8.1"
                 }
               },
               "kubernetesendtoendawsawscdkawseksKubectlProviderframeworkonEvent4E305AC6Arn": {
@@ -3462,7 +3462,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/f2951240bb77d7185524651bca40b8291381bc66d0f5f7939974dc82f6611ba6.json"
+                          "/e5240cca9179ec8e9a90a3eab52041a5bba197385a65f9258c8840007c2938f1.json"
                         ]
                       ]
                     },
@@ -3505,7 +3505,7 @@
             },
             "constructInfo": {
               "fqn": "constructs.Construct",
-              "version": "10.8.0"
+              "version": "10.8.1"
             }
           },
           "kubernetesendtoendawsCluster3E3D3F76-AlbController": {
@@ -4022,7 +4022,7 @@
             },
             "constructInfo": {
               "fqn": "constructs.Construct",
-              "version": "10.8.0"
+              "version": "10.8.1"
             }
           },
           "BootstrapVersion": {
@@ -4052,7 +4052,7 @@
         "path": "Tree",
         "constructInfo": {
           "fqn": "constructs.Construct",
-          "version": "10.8.0"
+          "version": "10.8.1"
         }
       }
     },
