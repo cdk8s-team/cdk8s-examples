@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout
         id: checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - id: auto_8dd8b1ae
         uses: actions/setup-python@v5
         with:
@@ -36,7 +36,7 @@ jobs:
           maven-version: 3.9.1
       - name: Setup Node.js
         id: setup_node_js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: lts/*
           package-manager-cache: false
@@ -71,7 +71,7 @@ jobs:
     steps:
       - name: Checkout
         id: checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Download patch
         id: download_patch
         uses: actions/download-artifact@v8
