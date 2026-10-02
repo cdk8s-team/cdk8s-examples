@@ -41,12 +41,12 @@
   resolved "https://registry.yarnpkg.com/@balena/dockerignore/-/dockerignore-1.0.2.tgz#9ffe4726915251e8eb69f44ef3547e0da2c03e0d"
   integrity sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q==
 
-"@cdk8s/projen-common@^0.1.32":
-  version "0.1.32"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.1.32.tgz#32e60ea1b7546beeef63b39f967057f15c58df06"
-  integrity sha512-H24N19wsDhfFvK+YVprvAQecg71B0BzoS30570eh818/trqiz670LvBUcWn/eFORrJlF3pRjFRCaojyg60F59A==
+"@cdk8s/projen-common@^0.1.34":
+  version "0.1.34"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.1.34.tgz#0e65c953b27c958903c917434b682e4f52f9dd8c"
+  integrity sha512-HRKMLxIfublJW/LjLKbhw54T9jysGP3zofWZGP99wv8QIJU+PaVRmQQujlM1C+ZPpsmqWJD8Bs/IQoR1RAbRAA==
   dependencies:
-    codemaker "^1.140.0"
+    codemaker "^1.141.0"
     deepmerge "^4.3.1"
 
 "@colors/colors@1.5.0":
@@ -1520,10 +1520,10 @@ cmd-shim@^6.0.0:
   resolved "https://registry.yarnpkg.com/cmd-shim/-/cmd-shim-6.0.3.tgz#c491e9656594ba17ac83c4bd931590a9d6e26033"
   integrity sha512-FMabTRlc5t5zjdenF6mS0MBeFZm0XqHqeOkcskKFb/LYCcRQ5fVgLOHVc4Lq9CqABd9zhjwPjMBCJvMCziSVtA==
 
-codemaker@^1.140.0:
-  version "1.140.0"
-  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.140.0.tgz#aac0ea372f982e911299e25480a681fc366b899a"
-  integrity sha512-/EPlxI+2i9ji7aZac2kLEUyjzfgHWBl8hDZ98T6BnED9mTLRInCNToA0vqgZPcTotiP6g6YNeZo7cBAc90Ok9A==
+codemaker@^1.141.0:
+  version "1.141.0"
+  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.141.0.tgz#cbbc4902de5d7404ee22ec61e6b688afa8b0d6af"
+  integrity sha512-OpueAw6U+vDjYOOZ0RLexINaMaybJUus64+CoJa6u9d3oWaI43sSQFMAuJT2jT6zyGlFkeRlbk/vT2E5396fcg==
   dependencies:
     camelcase "^6.3.0"
     decamelize "^5.0.1"
