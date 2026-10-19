@@ -41,10 +41,10 @@
   resolved "https://registry.yarnpkg.com/@balena/dockerignore/-/dockerignore-1.0.2.tgz#9ffe4726915251e8eb69f44ef3547e0da2c03e0d"
   integrity sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q==
 
-"@cdk8s/projen-common@^0.1.37":
-  version "0.1.37"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.1.37.tgz#ab76c6e3d669a361045996c60c092997d9e124fe"
-  integrity sha512-KdwxPNzNWWzjp8Lv8kt7BJ9Ynd13xbs6c5xx/X2ugHYOK4DwqwnbaZo0mMHabSJMgd3o+u++OGJl0y8zzDwBuA==
+"@cdk8s/projen-common@^0.1.39":
+  version "0.1.39"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.1.39.tgz#6ba6bc162ae7bf0709f1bfa9c2ffd845f7a07db2"
+  integrity sha512-RrUiS+bPpm/kBXC6IXI2l/F9b3tcpSxnQwqYvVYmxV2fwpWJFfoBs8rHLIMACrrqZ5cHU+tBiCGBF+N+yM1CVA==
   dependencies:
     codemaker "^1.141.0"
     deepmerge "^4.3.1"
