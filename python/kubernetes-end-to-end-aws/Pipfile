@@ -13,4 +13,4 @@ aws-cdk-lib = "~=2.78.0"
 "aws-cdk.lambda-layer-kubectl-v25" = "~=2.0.3"
 
 [requires]
-python_version = "3.10"
+python_version = "3.12"

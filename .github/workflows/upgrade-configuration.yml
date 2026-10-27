@@ -20,7 +20,7 @@ jobs:
       - id: auto_8dd8b1ae
         uses: actions/setup-python@v5
         with:
-          python-version: 3.10.4
+          python-version: 3.12.13
       - name: Install pipenv
         id: install_pipenv
         run: pip install pipenv
