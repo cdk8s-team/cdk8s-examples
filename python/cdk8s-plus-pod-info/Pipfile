@@ -11,4 +11,4 @@ cdk8s = "~=2.66.2"
 cdk8s-plus-26 = "~=2.18.28"
 
 [requires]
-python_version = "3.10"
+python_version = "3.12"
