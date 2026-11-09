@@ -67,9 +67,4 @@ project.gitignore.exclude('.vscode')
 
 project.tasks.removeTask('test');
 project.tasks.removeTask('test:update');
-// next version requires node >= 18
-project.package.addField('resolutions', {
-  '@yarnpkg/parsers': '3.0.0-rc.48.1',
-});
-
 project.synth();
