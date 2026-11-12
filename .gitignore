@@ -33,6 +33,7 @@ jspm_packages/
 .yarn-integrity
 .cache
 !/.github/workflows/build.yml
+!/.github/workflows/self-mutation.yml
 !/.github/workflows/upgrade-runtime-dependencies.yml
 !/.github/pull_request_template.md
 !/CODE_OF_CONDUCT.md
