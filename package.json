@@ -27,7 +27,7 @@
     "@cdk8s/projen-common": "^0.1.47",
     "constructs": "^10.0.0",
     "lerna": "^10",
-    "projen": "^0.104.29"
+    "projen": "^0.104.31"
   },
   "engines": {
     "node": ">= 16.20.0"
