@@ -563,9 +563,9 @@
     proc-log "^7.0.0"
 
 "@nx/devkit@>=23.1.0 < 24.0.0":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@nx/devkit/-/devkit-23.3.1.tgz#d74b064a86fea338b5ddd9f300c5863c6ed7054a"
-  integrity sha512-Cw6YISZUjit22Trfo/p6rnrNklIKHYgRyp2IyOgr0i9naDgO3Ufllib9D/v0SInwX2zKevaWJWMyreqVvHRU0w==
+  version "23.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/devkit/-/devkit-23.3.2.tgz#0f79b82ad4a82ee20fbb5fa7cd597760fa08b798"
+  integrity sha512-31VVMbrL3zZLvrQTTKsjP5utGpzEueweWktgUBZ2X0uGn75OdkBl5tUvyFEI2FWScqMrW14mG2EAWZKapZFPAg==
   dependencies:
     ejs "5.0.1"
     minimatch "10.2.5"
@@ -573,55 +573,55 @@
     tslib "^2.3.0"
     yargs-parser "21.1.1"
 
-"@nx/nx-darwin-arm64@23.3.1":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@nx/nx-darwin-arm64/-/nx-darwin-arm64-23.3.1.tgz#51231d136bf5432f249a4faa86f4192ecc86fa33"
-  integrity sha512-T3KOTrUIdWaqlIIMyusbpKHujXTumoltkYwBjqjw9Py6Fb3c8Eb7uvWVW6dP8ODknqr9oEcTlk+C8Nid+bunAQ==
+"@nx/nx-darwin-arm64@23.3.2":
+  version "23.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-darwin-arm64/-/nx-darwin-arm64-23.3.2.tgz#9a03d5cfd0cd8f5cd1a53570a7b5ad307848a0c4"
+  integrity sha512-ISE7G82zpttQkm6NgXUyLpfYGtJE/DAvHCJF8M/NIE5KN7MrSHqcmw89f7q54dLm8+9WvRQG/z5cVKE5c5rxpQ==
 
-"@nx/nx-darwin-x64@23.3.1":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@nx/nx-darwin-x64/-/nx-darwin-x64-23.3.1.tgz#bc3d73144279f6de18f2e400ec73ef5e27840bcd"
-  integrity sha512-GnbMF9xEGIdUI/7KoQdcTILWmRUrMLbbFi3CO8KgKcA1Be7eaoeKdgBQoCQ2yF7r7DyQOR1PXp7sF3s7gqUATQ==
+"@nx/nx-darwin-x64@23.3.2":
+  version "23.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-darwin-x64/-/nx-darwin-x64-23.3.2.tgz#801390a9cc53b197c7cab29313d4f99d1e45b72f"
+  integrity sha512-693h8b4DjqNZZNc9KH1gRzE46VGKTZfXkbQijOaEZHA5+m6+YMoNpOaaIefSz3OVq78HD0qQE/27XDAElcdwzg==
 
-"@nx/nx-freebsd-x64@23.3.1":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@nx/nx-freebsd-x64/-/nx-freebsd-x64-23.3.1.tgz#58003c3611fad85f781af2b844d1ff1d4807b272"
-  integrity sha512-RzLx1pVL/MQQ/fSreMFIufAfsrj/TpD1+69n5kBcr3An2FaqKdQ6BhKLWRlAeOSKq6Su75Y0la8e2AU5zlmdpw==
+"@nx/nx-freebsd-x64@23.3.2":
+  version "23.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-freebsd-x64/-/nx-freebsd-x64-23.3.2.tgz#811be34ec03b62f07b77bbd440337726db6b514b"
+  integrity sha512-y4+49JCkQBunbppopKNGNuxbpFOhXUl2mBvEzA/osaR69ymnJSrB3/YUNGfQl71dWMSHppifzwcJ64tzGxnGEQ==
 
-"@nx/nx-linux-arm-gnueabihf@23.3.1":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@nx/nx-linux-arm-gnueabihf/-/nx-linux-arm-gnueabihf-23.3.1.tgz#ed8dfe436ce7c4167479be2e99101f708c792d42"
-  integrity sha512-/K7ig9xL4FMO2eQovTSLtk4QR7d0phbKoWf1wYQZ2r0ZrHNo2gPYmS8wU0Ci4d6oSiqa2fdeHKVDtEvWldTBaQ==
+"@nx/nx-linux-arm-gnueabihf@23.3.2":
+  version "23.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-linux-arm-gnueabihf/-/nx-linux-arm-gnueabihf-23.3.2.tgz#76b19876b700bfa4a960f976712f2eb96043c350"
+  integrity sha512-hV7ZJLFbo9SfertQUmO06DX9LHpz0zDoC20jtRCSrVD+2JE8NEOPjRut7UG/Q3amxjRukTgyPYjjD7+njc8bXQ==
 
-"@nx/nx-linux-arm64-gnu@23.3.1":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@nx/nx-linux-arm64-gnu/-/nx-linux-arm64-gnu-23.3.1.tgz#a2ba4f91a9fdfb4b016bd4adfdbf7b8810e006e3"
-  integrity sha512-Uj3xl5aLXUV6EQ/vWbZBqMqZO9K58CxRIsMTISC1+LxjvGnf4uUL73ObTi3K1eih3f1CVCGsU95LF3Kf6T2Frw==
+"@nx/nx-linux-arm64-gnu@23.3.2":
+  version "23.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-linux-arm64-gnu/-/nx-linux-arm64-gnu-23.3.2.tgz#0daf8f3ea75f6cf08e2ea29e6b7ade477c18dee1"
+  integrity sha512-xSEzRSA7wUGFwNsAXbAFW+r8MuLbRjEq5UNZLokcYoAUBJNoMfMvw7Kbp2TIU06T44XNKNd+hRJTXoSH50ui6A==
 
-"@nx/nx-linux-arm64-musl@23.3.1":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@nx/nx-linux-arm64-musl/-/nx-linux-arm64-musl-23.3.1.tgz#e8608e746e5d6475364eae6029752664f59d9b0c"
-  integrity sha512-woeNHutXYgiWU0SQnvKQ4VNgVbqwy1uer6bS0HF2RbfN80HglsjhtzTAUZY2pZiWBLbHcHZwTNmDGTAXSNMLAw==
+"@nx/nx-linux-arm64-musl@23.3.2":
+  version "23.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-linux-arm64-musl/-/nx-linux-arm64-musl-23.3.2.tgz#ea2237a8749f2f2796fc8d3cf5a459ca9e0baca6"
+  integrity sha512-X/IHk3oh4g4CxXACe3uxw4p7JbJIYlvDqaFoNrP+NYvOg9zHkMawC9p6pr5NjPiNRh4i5ERaPqZqSRwZLjZPNA==
 
-"@nx/nx-linux-x64-gnu@23.3.1":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@nx/nx-linux-x64-gnu/-/nx-linux-x64-gnu-23.3.1.tgz#7e2172e1740fc4c95b90c996c82432d67709d824"
-  integrity sha512-GckqfXo7BAIrcR07CoI0IM06h1wbUim+4AyUYosokrI4Gx1zHZFRwrE3vpPrMpSKVVYZD7BGQp2bhZBPvgGaxg==
+"@nx/nx-linux-x64-gnu@23.3.2":
+  version "23.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-linux-x64-gnu/-/nx-linux-x64-gnu-23.3.2.tgz#bcc4f9ca4b452aa9337d0fa0e9a13aa1ce669853"
+  integrity sha512-myldp7ZpCHBp6PXNg+D+K0hbNFdwLswERu12YSTYgguWa/jas+iR+ICImXmmbTCIZokoLTsdjcRJ2AGGHbXdJg==
 
-"@nx/nx-linux-x64-musl@23.3.1":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@nx/nx-linux-x64-musl/-/nx-linux-x64-musl-23.3.1.tgz#904234d96e20a16e41f8bc8ea6646de97b6ad4a8"
-  integrity sha512-QjOj5S/X39OxVykltLFSvNxaZtnI9uRk0Uqfyt69kOrZn+/Ap2SM/bT70Xqn8PFxj5hfA0viI2vU1AlOM4JQxg==
+"@nx/nx-linux-x64-musl@23.3.2":
+  version "23.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-linux-x64-musl/-/nx-linux-x64-musl-23.3.2.tgz#ce054aa646f71ebed9e3516de6ad847a48b2bef3"
+  integrity sha512-ScD4FTv6qrQf7SxLzKTeKNTlOroYZdvR9YvpEz+vUZIeWzA7yj1s0NEWFv9IrwgaH328TYv0r8Cdt5fVALOeyw==
 
-"@nx/nx-win32-arm64-msvc@23.3.1":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@nx/nx-win32-arm64-msvc/-/nx-win32-arm64-msvc-23.3.1.tgz#3712195d8b65e4a0d15591d9c7ae4640d4adc52a"
-  integrity sha512-Jf5kc3zhek8Fz06DaMxaJTJxgNJIN2tddE8yxt+XaIHtulmW+MMjy6Z91QPKPf9iZA70N+oT9vwgvYPmOsdO8w==
+"@nx/nx-win32-arm64-msvc@23.3.2":
+  version "23.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-win32-arm64-msvc/-/nx-win32-arm64-msvc-23.3.2.tgz#de9ae080fba1c21b827e7b3fa55236e4513333a0"
+  integrity sha512-zjfzOtxdkneHWYimvLEPggbwulcvM2pJ9GXbbyVXQQar2ACG4qYmw++1r4Z4kl+wDf9O2cc++kHmhCDfd16Rog==
 
-"@nx/nx-win32-x64-msvc@23.3.1":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@nx/nx-win32-x64-msvc/-/nx-win32-x64-msvc-23.3.1.tgz#66228b6ed929d81742ae428fbfc55e660edc1885"
-  integrity sha512-RKQ5t6u4fgOWQyVt61y5Jn/xzXCYxqXOKz2okDbuWccBShQddF8jsqRaLMZDlGT5d8CJTLIso8Y9BiY12/7x7g==
+"@nx/nx-win32-x64-msvc@23.3.2":
+  version "23.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/nx-win32-x64-msvc/-/nx-win32-x64-msvc-23.3.2.tgz#5920d9a916bed66b15a678367adae04273daf064"
+  integrity sha512-+vtHBK+INDn2NWNZPp06cmbip5DGVsZGOu1thg6zFiBwgfxJCZ2uZ/zOpDE9LQnTc8P6ZbqgetO52euo2ubo7g==
 
 "@octokit/auth-token@^2.4.4":
   version "2.5.0"
@@ -2371,9 +2371,9 @@ glob@^13.0.0, glob@^13.0.6:
     path-scurry "^2.0.2"
 
 glob@^14.0.3:
-  version "14.0.5"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-14.0.5.tgz#54cdf0bfe9de24f140d7cbb244f7395165450182"
-  integrity sha512-nbKW5Sl53DEM5PkmZ5Jwfeyss1ohuqcgOBjOarSjz1fp8W4ss4EOOvKADQRbApD6JmVBX+HkpZYfBez4wXbeQQ==
+  version "14.0.6"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-14.0.6.tgz#40f3f37b4bbd06ad274ba87be801b59dcea71164"
+  integrity sha512-OwXjVP2svY5EyLY75Vek96C8qK43gqrt4xsZ+qSILdnaEiJPXkd62mcfUSNx/TQErQRdu5uM5kF67sfONragKw==
   dependencies:
     minimatch "^11.0.5"
     minipass "^7.1.3"
@@ -2408,12 +2408,12 @@ gopd@^1.2.0:
   resolved "https://registry.yarnpkg.com/gopd/-/gopd-1.2.0.tgz#89f56b8217bdbc8802bd299df6d7f1081d7e51a1"
   integrity sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==
 
-graceful-fs@^4.1.6, graceful-fs@^4.2.0:
+graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.6:
   version "4.2.12"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.12.tgz#7f6162dee07bc600281cea1b038e5f7cf215a6c2"
   integrity sha512-iuyGF2E4oafQfPsRrG2wtY2ILupMhvtdrhzrxB+0VcjsPpSPttpfYdjnGFGsTi5MaJFjI1jOKHPQ6UTbTj9TAw==
 
-graceful-fs@^4.2.4, graceful-fs@^4.2.6:
+graceful-fs@^4.2.4:
   version "4.2.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
@@ -3479,9 +3479,9 @@ npm-run-path@^6.0.0:
     unicorn-magic "^0.3.0"
 
 "nx@>=23.1.0 < 24.0.0":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/nx/-/nx-23.3.1.tgz#724c9025c1b1dee35c6ed20fe4f1ee414682ebc9"
-  integrity sha512-dufPxsiUazuSejFYdtLAotKXeda9ufz3B9gVtsrvgxkjWjpAM23rOpIJoqZj3FFauig64lYsaMX+nX2hh+YhYQ==
+  version "23.3.2"
+  resolved "https://registry.yarnpkg.com/nx/-/nx-23.3.2.tgz#1ef257a5a65d86fbb1a56f6d7576dfa3e4d5d6d6"
+  integrity sha512-LRC8YbJ7QreO4lYXM8SFfcCaHELtE7F/Jy25WPrFJYLsIyLwn6NwEkDC61wf2O1lDNa8/AeN+bh4Zf53T1au+w==
   dependencies:
     "@clack/core" "1.4.3"
     "@clack/prompts" "1.7.0"
@@ -3581,16 +3581,16 @@ npm-run-path@^6.0.0:
     yargs "17.7.2"
     yargs-parser "21.1.1"
   optionalDependencies:
-    "@nx/nx-darwin-arm64" "23.3.1"
-    "@nx/nx-darwin-x64" "23.3.1"
-    "@nx/nx-freebsd-x64" "23.3.1"
-    "@nx/nx-linux-arm-gnueabihf" "23.3.1"
-    "@nx/nx-linux-arm64-gnu" "23.3.1"
-    "@nx/nx-linux-arm64-musl" "23.3.1"
-    "@nx/nx-linux-x64-gnu" "23.3.1"
-    "@nx/nx-linux-x64-musl" "23.3.1"
-    "@nx/nx-win32-arm64-msvc" "23.3.1"
-    "@nx/nx-win32-x64-msvc" "23.3.1"
+    "@nx/nx-darwin-arm64" "23.3.2"
+    "@nx/nx-darwin-x64" "23.3.2"
+    "@nx/nx-freebsd-x64" "23.3.2"
+    "@nx/nx-linux-arm-gnueabihf" "23.3.2"
+    "@nx/nx-linux-arm64-gnu" "23.3.2"
+    "@nx/nx-linux-arm64-musl" "23.3.2"
+    "@nx/nx-linux-x64-gnu" "23.3.2"
+    "@nx/nx-linux-x64-musl" "23.3.2"
+    "@nx/nx-win32-arm64-msvc" "23.3.2"
+    "@nx/nx-win32-x64-msvc" "23.3.2"
 
 once@1.4.0, once@^1.3.0, once@^1.4.0:
   version "1.4.0"
@@ -3881,9 +3881,9 @@ pkg-dir@^4.2.0:
     find-up "^4.0.0"
 
 postcss-selector-parser@^7.0.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-7.2.0.tgz#e892f2002e8997690c080c9690b727a16151fb16"
-  integrity sha512-Khh/tERVBn0I1499dvBSHY0pWJloMJWUxDsOBM0CCDPAcVZ10Jl2L1qy1f19uEX22spa8Mv7DCdEQJc0cGwBhQ==
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-7.2.1.tgz#7d53306479cfe1f40117f80aa6331e31667bc845"
+  integrity sha512-GwxlMgTTXwIom+ebC7an3k6RaJDwklRQQnfiXsLPGicu8FYV/k/+1/9YY2OU2+r938H2t4X0TDxoif+HP2rjzQ==
   dependencies:
     util-deprecate "^1.0.2"
 
