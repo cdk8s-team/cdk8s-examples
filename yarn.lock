@@ -495,14 +495,14 @@
     npm-normalize-package-bin "^6.0.0"
 
 "@npmcli/map-workspaces@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@npmcli/map-workspaces/-/map-workspaces-6.0.0.tgz#2a14129cb3503d4b89c16466e561be818ddc9f13"
-  integrity sha512-Dsex7XBea0BoFRbfALMbNuaNqeI3kbZJxiBMQhFvPUNluv0yEeKMd5FLIXy0NCsOuGMYQkLa+i219CadnoqLbg==
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@npmcli/map-workspaces/-/map-workspaces-6.0.1.tgz#df7b28ff665e4d2deda6a46f4d06e547decdb0de"
+  integrity sha512-7jUv56bxKcWpHBr5uGr1U9jMCCyPrWe0XDZoMkZtsS6+efTlVRqXDqiShoGtfI8RBBnotXaYL2e/iPepW/DA7Q==
   dependencies:
     "@npmcli/name-from-folder" "^5.0.0"
-    "@npmcli/package-json" "^8.0.0"
-    glob "^13.0.0"
-    minimatch "^10.0.3"
+    "@npmcli/package-json" "^8.0.1"
+    glob "^14.0.5"
+    minimatch "^11.0.2"
 
 "@npmcli/metavuln-calculator@^10.0.0":
   version "10.0.0"
@@ -538,7 +538,7 @@
     semver "^7.5.3"
     spdx-expression-parse "^4.0.0"
 
-"@npmcli/package-json@^8.0.0":
+"@npmcli/package-json@^8.0.0", "@npmcli/package-json@^8.0.1":
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/@npmcli/package-json/-/package-json-8.0.1.tgz#464f3150cabdfed46b5e817363c67a4e76e63560"
   integrity sha512-pm/9c8qwjdV+FnApJDa7ZF6BLtXg+fJ3MrB2eUePCKg2gOqpzLQt4XyDuBL+fZ01zgdJJ8q2il+9+h5YW8svFg==
@@ -570,13 +570,24 @@
   resolved "https://registry.yarnpkg.com/@npmcli/redact/-/redact-5.0.0.tgz#534b39fca1158e2e87bb29d3c255fa0e56f45adc"
   integrity sha512-3zcN5Q3yEmeyxXBzqB6fXPQFzYa2ROsGFSr69W0ArXIAGJqxl/aFECOVPD2kbkYPm0U/EHxFKgclK3UA9WQg5A==
 
-"@npmcli/run-script@11.0.0", "@npmcli/run-script@^11.0.0":
+"@npmcli/run-script@11.0.0":
   version "11.0.0"
   resolved "https://registry.yarnpkg.com/@npmcli/run-script/-/run-script-11.0.0.tgz#31ec7b54001a2be5caaefc764fe63396ba5cf1ec"
   integrity sha512-leBRl6F5F0TvWut8m1/aZcMTUHi2vXjKeMJ/Ik1lW7Q7Yy16Dhtkklu+cEqQww1p1NeLnUNzV3+uwpzqRcy9vw==
   dependencies:
     "@npmcli/node-gyp" "^6.0.0"
     "@npmcli/package-json" "^8.0.0"
+    "@npmcli/promise-spawn" "^10.0.0"
+    node-gyp "^13.0.0"
+    proc-log "^7.0.0"
+
+"@npmcli/run-script@^11.0.0":
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/@npmcli/run-script/-/run-script-11.0.1.tgz#0bba5d4883df54ef19f7bc2719beb6afe21bcee1"
+  integrity sha512-8A6ICbU8FBUd5a1jPlCozJj5HDF3MaYUbIIM0K57QcKaZcK/9vTuYf+ME+ThzaMO5XAxhvrAQRO4zL+/fEt98A==
+  dependencies:
+    "@npmcli/node-gyp" "^6.0.0"
+    "@npmcli/package-json" "^8.0.1"
     "@npmcli/promise-spawn" "^10.0.0"
     node-gyp "^13.0.0"
     proc-log "^7.0.0"
@@ -2396,7 +2407,7 @@ glob@^13.0.0, glob@^13.0.6:
     minipass "^7.1.3"
     path-scurry "^2.0.2"
 
-glob@^14.0.3:
+glob@^14.0.3, glob@^14.0.5:
   version "14.0.6"
   resolved "https://registry.yarnpkg.com/glob/-/glob-14.0.6.tgz#40f3f37b4bbd06ad274ba87be801b59dcea71164"
   integrity sha512-OwXjVP2svY5EyLY75Vek96C8qK43gqrt4xsZ+qSILdnaEiJPXkd62mcfUSNx/TQErQRdu5uM5kF67sfONragKw==
@@ -2552,11 +2563,11 @@ ieee754@1.2.1, ieee754@^1.1.13:
   integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
 
 ignore-walk@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/ignore-walk/-/ignore-walk-9.0.0.tgz#6887ed358399fc12e1336c7f5f1180b1973fcd1e"
-  integrity sha512-tCBEZV2z2FNpIDl2vrhiWzIHzs4qOAuIDEO85eS02vZ3L1U3P56qpPL8GuGGAijDktAEaq2swMkO/Fmbo7YmfQ==
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/ignore-walk/-/ignore-walk-9.0.1.tgz#f59bf3d5fd52b50670b3fde3baabec232f9a262d"
+  integrity sha512-2SvJvF/GIOPrVy3wT7w4PXWUI9sSk4naOTlO3f0Dblf/UM51ISAKz4FIvtj3Um9WhvcKy1MySJN+sGjpE2AznQ==
   dependencies:
-    minimatch "^10.0.3"
+    minimatch "^11.0.2"
 
 ignore@7.0.6:
   version "7.0.6"
@@ -3258,7 +3269,7 @@ minimatch@10.2.6, minimatch@^10.0.3, minimatch@^10.2.2, minimatch@^10.2.6:
   dependencies:
     brace-expansion "^5.0.8"
 
-minimatch@^11.0.5:
+minimatch@^11.0.2, minimatch@^11.0.5:
   version "11.0.9"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-11.0.9.tgz#00d0088671fa0d872ba1e2578f5abf3be0fe878e"
   integrity sha512-KCFkfyjqerNlSstjlhIGNXIKZGA/6O4V4RlhZ+Dsr621SPPw0mzlypE9D9ZOoPiVefHID+j7/XuMMlqfD/F60Q==
