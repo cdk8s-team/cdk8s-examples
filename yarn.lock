@@ -895,10 +895,10 @@
   dependencies:
     "@sigstore/protobuf-specs" "^0.5.2"
 
-"@sigstore/core@^4.0.0", "@sigstore/core@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@sigstore/core/-/core-4.0.1.tgz#cb02f4a0947953422fbe755f515793311e972c06"
-  integrity sha512-9v5hRjujn5NXq8o7XFEUgLyAtdr5Iisb4pzM05u3K61IS5q3hP3luWAndk0RkPPLTUFoTbg7Vb84UQ1ZQeajWQ==
+"@sigstore/core@^4.0.0", "@sigstore/core@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@sigstore/core/-/core-4.0.2.tgz#fc39cd900112dddc827b763dd6fb1f86e448f6c0"
+  integrity sha512-wf6WUZeztW4jUqCqFoofr9kcIKbDjhgIU1nddbb8H7Iwug36vOJkcvS5/6inmjjlLqgsHiHkfYh0ty0WQNBVTA==
 
 "@sigstore/protobuf-specs@^0.5.2":
   version "0.5.2"
@@ -926,12 +926,12 @@
     tuf-js "^6.0.2"
 
 "@sigstore/verify@^4.1.3":
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@sigstore/verify/-/verify-4.1.3.tgz#019a0ecd4f96b9bc6fc7bebef74d9f10a1c1c90d"
-  integrity sha512-V2ik+fLz2YTZOV4USVnjvLJWDjmBMWi7XhFR8CNp1tj7y09OrogDxPZZdbSWXIA7IpenJTyGukIgF2CFtH/8rA==
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/@sigstore/verify/-/verify-4.1.4.tgz#93677835ef0650d47540c558d2b4b794cab730eb"
+  integrity sha512-5QPG+E4Lakpqy2IBNTiz7Bf/rVtu8J/z6B6p6QGzjTVnDTwHECAAz/9s9p8DweX4iZ6tvNG3EeQETJZZco4M1A==
   dependencies:
     "@sigstore/bundle" "^5.0.1"
-    "@sigstore/core" "^4.0.1"
+    "@sigstore/core" "^4.0.2"
     "@sigstore/protobuf-specs" "^0.5.2"
 
 "@simple-libs/child-process-utils@^2.0.0":
@@ -3129,7 +3129,7 @@ make-fetch-happen@16.0.1:
     proc-log "^7.0.0"
     ssri "^14.0.0"
 
-make-fetch-happen@^16.0.0, make-fetch-happen@^16.0.1:
+make-fetch-happen@^16.0.0, make-fetch-happen@^16.0.1, make-fetch-happen@^16.0.2:
   version "16.0.2"
   resolved "https://registry.yarnpkg.com/make-fetch-happen/-/make-fetch-happen-16.0.2.tgz#5799c4fcd9bbffa53bae4ece0c6b1d408c0b6251"
   integrity sha512-IUlTXyoHTIWxcy4ZoQEyWzPwyE5GX9At5NcJTWzlW+5JXhvWDjDOj0F0qYIgoREKRR8csah8wNpxRuDeiGlEGQ==
@@ -3426,7 +3426,7 @@ npm-pick-manifest@^12.0.0:
     npm-package-arg "^14.0.0"
     semver "^7.3.5"
 
-npm-registry-fetch@20.0.1, npm-registry-fetch@^20.0.1:
+npm-registry-fetch@20.0.1:
   version "20.0.1"
   resolved "https://registry.yarnpkg.com/npm-registry-fetch/-/npm-registry-fetch-20.0.1.tgz#49cf550c1ebe25e7d53c5acc5225565636332345"
   integrity sha512-vzc1svxw/kw1IRjFsLi6gaxe1Olqm88V0tIfu2u5raL0b1gChe6ZEXNkyUlKxUC7s/egt5NxZHkbY18tMKKLfQ==
@@ -3434,6 +3434,20 @@ npm-registry-fetch@20.0.1, npm-registry-fetch@^20.0.1:
     "@npmcli/redact" "^5.0.0"
     jsonparse "^1.3.1"
     make-fetch-happen "^16.0.0"
+    minipass "^7.0.2"
+    minipass-fetch "^6.0.0"
+    minizlib "^3.0.1"
+    npm-package-arg "^14.0.0"
+    proc-log "^7.0.0"
+
+npm-registry-fetch@^20.0.1:
+  version "20.0.2"
+  resolved "https://registry.yarnpkg.com/npm-registry-fetch/-/npm-registry-fetch-20.0.2.tgz#b879972e6973193ebf75bb95dc4646088c679e39"
+  integrity sha512-bWLzEezfbIY2U23lUCQFA16j5PboZxB1QrYhZUQEFXZ1+y+CRmsTeMbMsqfYmu+qi6BAfMKsa23tlRTKDHzM3A==
+  dependencies:
+    "@npmcli/redact" "^5.0.0"
+    jsonparse "^1.3.1"
+    make-fetch-happen "^16.0.2"
     minipass "^7.0.2"
     minipass-fetch "^6.0.0"
     minizlib "^3.0.1"
